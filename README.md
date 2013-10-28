@@ -4,8 +4,8 @@ ISEL MEIC si1314 ASI Grupo
 
 ===================
 Members:
-	Frederico Ferreira
-	David Coelho
-	Rui Miranda
+*  Frederico Ferreira
+*  David Coelho
+*  Rui Miranda
 
 ===================
