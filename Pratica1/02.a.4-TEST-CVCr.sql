@@ -8,11 +8,11 @@ select '	>Produto de Desporto antes'
 select '		>@CV Criancas global View'
 select * from [viewProduto]
 where cod=11112
-select '		>@Sede'
-select * from produtosede
+select '		>@CV produto crianca'
+select * from [dbo].[produto]
 where cod=11112
-select '		>@CV Desporto'
-select * from produtodesp
+select '		>@CV produto Desporto'
+select * from [dbo].[ProdutoDespTemp]
 where cod=11112
 go
 
@@ -26,10 +26,10 @@ select '	>Produto de Desporto depois'
 select '		>@CV Criancas global View'
 select * from [viewProduto]
 where cod=11112
-select '		>@Sede'
-select * from produtosede
+select '		>@CV produto crianca'
+select * from [dbo].[produto]
 where cod=11112
-select '		>@CV Desporto'
-select * from produtodesp
+select '		>@CV produto Desporto'
+select * from [dbo].[ProdutoDespTemp]
 where cod=11112
 go
