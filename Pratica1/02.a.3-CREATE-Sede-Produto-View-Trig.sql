@@ -2,7 +2,7 @@ USE[ASI]
 GO
 
 --TODO: Comment stvar in batch/SSMS: Activate Query>SQLCMD Mode
-:connect $(CVCr)
+:connect [$(CVCr)]
 
 USE[ASI]
 GO
