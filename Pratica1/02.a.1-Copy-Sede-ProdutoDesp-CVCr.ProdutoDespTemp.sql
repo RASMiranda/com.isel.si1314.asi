@@ -1,8 +1,8 @@
 USE[ASI]
 GO
 
---TODO: Receber nome da instacia de fora?/SSMS: Activate Query>SQLCMD Mode
-:setvar CVCr [MIRANDA-LAPTOP\SQL2012DEINST2]
+--TODO: Comment stvar in batch/SSMS: Activate Query>SQLCMD Mode
+--:setvar CVCr [MIRANDA-LAPTOP\SQL2012DEINST2]
 
 DELETE FROM $(CVCr).[ASI].[dbo].[ProdutoDespTemp]
 
