@@ -2,6 +2,7 @@ USE[ASI]
 GO
 
 --TODO: Comment stvar in batch/SSMS: Activate Query>SQLCMD Mode
+--:setvar CVCr MIRANDA-LAPTOP\SQL2012DEINST2
 :connect [$(CVCr)]
 
 USE[ASI]
