@@ -13,10 +13,10 @@ INTO #ProdutoDespTemp
 GO
 
 --TODO: Comment stvar in batch/SSMS: Activate Query>SQLCMD Mode
---:setvar CVDp [MIRANDA-LAPTOP\SQL2012DEINST3]
+--:setvar CVDp MIRANDA-LAPTOP\SQL2012DEINST3
 DROP SYNONYM [dbo].[ProdutoDesp]
 GO
-CREATE SYNONYM [dbo].[ProdutoDesp] FOR $(CVDp).[ASI].[dbo].[Produto]
+CREATE SYNONYM [dbo].[ProdutoDesp] FOR [$(CVDp)].[ASI].[dbo].[Produto]
 GO
 
 DELETE FROM [dbo].[ProdutoDesp]
@@ -36,7 +36,7 @@ GO
 
 --TODO: Comment stvar in batch/SSMS: Activate Query>SQLCMD Mode
 --:setvar CVCr "MIRANDA-LAPTOP\SQL2012DEINST2"
-:connect $(CVCr)
+:connect [$(CVCr)]
 USE[ASI]
 GO
 DROP VIEW [dbo].[viewProduto];
