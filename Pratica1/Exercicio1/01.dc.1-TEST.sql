@@ -36,14 +36,6 @@ EXECUTE @RC = [dbo].produtosEncomendadosForamRecebidos
 
 select 'depois de produtosEncomendadosForamRecebidos', p.* from viewProduto p where cod = 12346;
 
--- simular a venda de 40% do stock -------------------------------------------------------------------------------------------
-
-update viewProduto 
-	set qtStock = floor(qtStock * 0.60)
-;
-
-select 'depois da venda de 40% do stock', p.* from viewProduto p;
-
 ----------------------------------------------------------------------- [produtosQueDevemSerEncomendados] --------------------
 
 -- determinar que produtos precisam ser encomendados:

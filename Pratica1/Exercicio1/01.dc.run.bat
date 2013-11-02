@@ -1,7 +1,7 @@
 @echo off
 
 REM Set SQL Server Instances Names from configuration file
-for /f "delims=" %%x in (00.config_inst.txt) do (set "%%x")
+for /f "delims=" %%x in (..\00.config_inst.txt) do (set "%%x")
 
 
 REM Exercico 1 alineas c) & d)----------------------------------------------------------------------------------------
