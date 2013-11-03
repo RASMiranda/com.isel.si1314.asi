@@ -1,11 +1,6 @@
-
-
-
 USE [ASI]
 GO
 
-DROP PROCEDURE [dbo].produtoEncomendadoFoiRecebido
-GO
 
 SET ANSI_NULLS ON
 GO
@@ -13,19 +8,39 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
+DROP PROCEDURE [dbo].[receberProduto]
+GO
 
-create procedure [dbo].produtoEncomendadoFoiRecebido 
-	@cod			[int],
-	@qtdEncomenda	[int]
+create procedure [dbo].[receberProduto] 
+	@codProd		[int],
+	@qtEncomenda	[int]
 as
+    declare @encomendaId int
 begin
-
-	UPDATE [dbo].[viewProduto]
-	SET	
-		qtStock = qtStock + @qtdEncomenda,
-		estado = case when qtMinStock < (qtStock + @qtdEncomenda) then 0 else 1 end
-	WHERE cod=@cod AND estado=1
-		
-end
+		-- se existe uma encomenda aberta para este produto nesta quantidade
+		-- recebe o produto marcando que ja nao tem encomenda pendente e ajusta o stock actual
+	SET XACT_ABORT ON
+	BEGIN Transaction
+		select @encomendaId = codEnc from [dbo].ProdutosEncomendados
+         where cod = @codProd 
+           and qtEncomenda = @qtEncomenda
+           and estado = 1;
+           
+		if @encomendaId >=0
+        BEGIN
+			update [dbo].viewProduto
+			   set qtStock = qtStock + @qtEncomenda, estado = 0
+			 where cod = @codProd;
+            
+			update [dbo].ProdutosEncomendados
+			   set estado = 0
+			 where codEnc = @encomendaId;
+        END
+             
+	Commit Transaction;
+       
+	return @@rowcount
+END
 
 GO
+

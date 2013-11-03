@@ -6,73 +6,45 @@ GO
 
 DECLARE @RC int
 DECLARE @cod int
-DECLARE @codFornecedor int
 DECLARE @qtEncomenda int
-DECLARE @estado bit
-DECLARE @tipo char(1)
-DECLARE @preco money
-DECLARE @qtMinStock int
-DECLARE @qtStock int
 
------------------------------------------------------------------------ [produtosQueDevemSerEncomendados] --------------------
+----------------------------------------------------------------------- [encomendarProdutos] --------------------
+
+update [dbo].viewProduto set qtStock = qtMinStock -1, estado = 0
+where cod in (11112, 12345)
+
 
 -- determinar que produtos precisam ser encomendados:
-select 'test [produtosQueDevemSerEncomendados]:'
-EXECUTE @RC = [dbo].[produtosQueDevemSerEncomendados] 
+select 'test [encomendarProdutos]:'
+EXECUTE @RC = [dbo].[encomendarProdutos] 
 
+-- verifica se criou a encomenda:
+select 'test [ProdutosEncomendados]:'
 
----------------------------------------------------------------------- [produtosEfectivamenteEncomendados] -------------------
+select p.cod, e.qtEncomenda, e.diaHora, f.nome, p.qtStock, p.qtMinStock 
+  from [dbo].[ProdutosEncomendados] e, [dbo].ViewProduto p, [dbo].[fornecedor] f
+ where e.cod= p.cod
+   and e.codFornecedor = f.cod
+   and e.estado= 1
+   
 
--- indicar ao sistema que os produtos foram efectivamente encomendados:
-select 'test [produtosEfectivamenteEncomendados]:'
-EXECUTE @RC = [dbo].[produtosEfectivamenteEncomendados] 
+ 
+ 
+select TOP 1  @cod = cod, @qtEncomenda = qtEncomenda
+  from [dbo].[ProdutosEncomendados]
+ where estado = 1
+ 
 
----------------------------------------------------------------------- [produtosEncomendadosForamRecebidos] ------------------
+ 
+ EXECUTE @RC= [dbo].[receberProduto] @cod, @qtEncomenda
+  
+select 'test [receberProduto]:'
 
-select 'antes de produtosEncomendadosForamRecebidos', p.* from viewProduto p where estado = 1;
-
--- indicar ao sistema que os produtos encomendados foram recebidos dos fornecedores
-EXECUTE @RC = [dbo].produtosEncomendadosForamRecebidos
-
-select 'depois de produtosEncomendadosForamRecebidos', p.* from viewProduto p where cod = 12346;
-
------------------------------------------------------------------------ [produtosQueDevemSerEncomendados] --------------------
-
--- determinar que produtos precisam ser encomendados:
-select 'test [produtosQueDevemSerEncomendados]:'
-EXECUTE @RC = [dbo].[produtosQueDevemSerEncomendados] 
-
----------------------------------------------------------------------- [produtosEfectivamenteEncomendados] -------------------
-
--- indicar ao sistema que os produtos foram efectivamente encomendados:
-select 'test [produtosEfectivamenteEncomendados]:'
-EXECUTE @RC = [dbo].[produtosEfectivamenteEncomendados] 
-
----------------------------------------------------------------------- [produtoEncomendadoFoiRecebido] -----------------------
-
-select 'antes de produtoEncomendadoFoiRecebido (em excesso)', p.* from viewProduto p where cod = 12345;
-
--- indicar ao sistema que um dos produtos encomendados foi recebido do fornecedor:
-select
-	@cod = 12345, @qtEncomenda = 20;
-
-EXECUTE @RC = [dbo].[produtoEncomendadoFoiRecebido] @cod, @qtEncomenda
-
-select 'depois de produtoEncomendadoFoiRecebido (em excesso)', p.* from viewProduto p where cod = 12345;
-
----------------------------------------------------------------------- [produtosEncomendadosForamRecebidos] ------------------
-
-select 'antes de produtosEncomendadosForamRecebidos', p.* from viewProduto p where estado = 1;
-
--- indicar ao sistema que os produtos encomendados foram recebidos dos fornecedores
-EXECUTE @RC = [dbo].produtosEncomendadosForamRecebidos
-
-select 'depois de produtosEncomendadosForamRecebidos', p.* from viewProduto p where p.cod in (11112, 33333, 77775);
-
------------------------------------------------------------------------ [produtosQueDevemSerEncomendados] --------------------
-
--- determinar que produtos precisam ser encomendados:
-select 'test [produtosQueDevemSerEncomendados]:'
-EXECUTE @RC = [dbo].[produtosQueDevemSerEncomendados] 
-
+select p.cod, e.qtEncomenda, e.diaHora, f.nome, p.qtStock, p.qtMinStock 
+  from [dbo].[ProdutosEncomendados] e, [dbo].ViewProduto p, [dbo].[fornecedor] f
+ where e.cod= p.cod
+   and e.codFornecedor = f.cod
+   and e.estado= 0 
+   
 GO
+ 

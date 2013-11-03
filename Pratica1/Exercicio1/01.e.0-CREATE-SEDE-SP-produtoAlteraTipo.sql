@@ -1,6 +1,3 @@
-
-
-
 USE [ASI]
 GO
 
@@ -15,88 +12,52 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
+drop procedure [dbo].produtoAlteraTipo 
+GO
 
-
-create procedure [dbo].[produtoAlteraTipo] 
-	@cod			[int],
+create procedure [dbo].produtoAlteraTipo 
+	@codProd			[int],
 	@tipo			[char](1)
 as
 begin
-	SET XACT_ABORT ON
-	BEGIN TRANSACTION T_produtoAlteraTipo
-		DECLARE @oldtipo [char](1)
+	DECLARE @oldtipo [char](1)
 	
-		SELECT @oldtipo = tipo
-		FROM [dbo].[produto]
-		WHERE cod=@cod
+	SELECT @oldtipo = tipo
+	  FROM [dbo].[produto]
+	 WHERE cod =@codProd
+       and tipo <> @tipo;
 
-		IF @oldtipo <> @tipo
-		BEGIN
-			DECLARE @preco [money],
-					@qtStock [int],
-					@qtMinStock [int]
+	IF @@rowcount > 0
+		begin
+        SET XACT_ABORT ON
+        Begin transaction
+            if @oldtipo = 'c'
+                begin
+                    insert into [dbo].ProdutoDesp (cod, preco, qtStock, qtMinStock)
+                        select new.cod, new.preco, new.qtStock, new.qtMinStock
+                          from [dbo].ProdutoCrianca new
+                         where new.cod = @codProd;
 
-			UPDATE [dbo].[produto]
-			SET	tipo=@tipo
-			WHERE cod=@cod
+                    delete [dbo].ProdutoCrianca
+                      where cod = @codProd;
+                end
+            if @oldtipo = 'd'
+                begin
+                    insert into [dbo].ProdutoCrianca (cod, preco, qtStock, qtMinStock)
+                        select new.cod, new.preco, new.qtStock, new.qtMinStock
+                          from [dbo].ProdutoDesp new
+                         where new.cod = @codProd;
 
-			IF @oldtipo = 'C' AND @tipo = 'D'
-			BEGIN
-			
-				SELECT TOP 1
-					@preco = preco,
-					@qtStock = qtStock,
-					@qtMinStock = qtMinStock
-				FROM ProdutoCrianca
-				WHERE cod=@cod
+                    delete [dbo].ProdutoDesp
+                      where cod = @codProd;
+                end
+            update [dbo].Produto
+               set tipo = @tipo 
+             where cod = @codProd;
+         commit transaction
+     end
 
-				DELETE FROM ProdutoCrianca
-				WHERE cod=@cod
-
-				INSERT INTO ProdutoDesp
-						   ([cod]
-						   ,[preco]
-						   ,[qtStock]
-						   ,[qtMinStock])
-					 VALUES
-						   (@cod
-						   ,@preco
-						   ,@qtStock
-						   ,@qtMinStock)
-
-			END
-			IF @oldtipo = 'D' AND @tipo = 'C'
-			BEGIN
-				SELECT TOP 1
-					@preco = preco,
-					@qtStock = qtStock,
-					@qtMinStock = qtMinStock
-				FROM ProdutoDesp
-				WHERE cod=@cod
-
-				DELETE FROM ProdutoDesp
-				WHERE cod=@cod
-
-				INSERT INTO ProdutoCrianca
-						   ([cod]
-						   ,[preco]
-						   ,[qtStock]
-						   ,[qtMinStock])
-					 VALUES
-						   (@cod
-						   ,@preco
-						   ,@qtStock
-						   ,@qtMinStock)
-
-			END
-		END
-
-	
-	COMMIT TRANSACTION T_produtoAlteraTipo
-	RETURN 		
+    return @@rowcount
 end
 
-
 GO
-
-
