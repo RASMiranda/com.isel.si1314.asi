@@ -77,6 +77,35 @@ begin
 	RETURN 		
 end
 
+GO
+
+DROP PROCEDURE [dbo].[removeProduto]
+GO
+
+create procedure [dbo].[removeProduto] 
+	@cod			[int]
+as
+begin
+	SET XACT_ABORT ON
+	BEGIN TRANSACTION T_removeProduto
+		IF @tipo = 'D'
+		BEGIN
+            DELETE ProdutoDesp
+             WHERE cod = @cod;
+		END
+		IF @tipo = 'C'
+		BEGIN
+            DELETE ProdutoCrianca
+             WHERE cod = @cod;
+		END
+        -- apaga na tabela da sede
+		DELETE [dbo].[produto]
+         WHERE cod = @cod;
+
+         COMMIT TRANSACTION T_removeProduto
+	RETURN 		
+end
+
 
 GO
 
