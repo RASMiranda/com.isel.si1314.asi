@@ -1,0 +1,3 @@
+Pare A e arranque B e espere que B assuma o papel de principal. Arranque A e
+espere que A e B se sincronizem. Pare C. Pare B. Verifique que não há failover
+automático. Justifique.

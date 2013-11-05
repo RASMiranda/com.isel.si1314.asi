@@ -1,0 +1,3 @@
+Pare a instância A e espere que B assuma o papel de principal. Execute em B
+insert into t values(3) e verifique que a operação sucede. Pare B. Active A e
+verifique se ela toma o papel de principal. Justifique o que observa.

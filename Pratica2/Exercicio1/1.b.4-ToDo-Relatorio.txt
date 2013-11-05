@@ -1,0 +1,1 @@
+Arranque a instância A e verifique que papel ela toma. Justifique.
