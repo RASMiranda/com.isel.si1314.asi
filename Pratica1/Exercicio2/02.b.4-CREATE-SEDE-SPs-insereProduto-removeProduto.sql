@@ -1,26 +1,3 @@
-USE [ASI];
-GO
-
-ALTER TABLE [dbo].[produto]
-ADD 
-	[preco] [money] NULL,
-	[qtStock] [int] NULL,
-	[qtMinStock] [int] NULL
-;
-GO
-
-UPDATE [dbo].[produto]
-	SET [dbo].[produto].[preco] = [dbo].[produtoCV].[preco],
-		[dbo].[produto].[qtStock] = [dbo].[produtoCV].[qtStock],
-		[dbo].[produto].[qtMinStock] = [dbo].[produtoCV].[qtMinStock]
-FROM
-	[dbo].[produto]
-INNER JOIN
-	[dbo].[produtoCV]
-ON
-	[dbo].[produtoCV].cod = [dbo].[produto].cod
-GO
-
 
 
 USE [ASI]
@@ -58,19 +35,26 @@ begin
 					,[qtEncomenda]
 					,[cod]
 					,[estado]
-					,[tipo]
-					,[preco]
-					,[qtStock]
-					,[qtMinStock])
+					,[tipo])
 				VALUES
 					(@codFornecedor
 					,@qtEncomenda
 					,@cod
 					,@estado
-					,@tipo
+					,@tipo)
+					
+		INSERT INTO [dbo].[ProdutoCV]
+					([cod]
+					,[preco]
+					,[qtStock]
+					,[qtMinStock])
+				VALUES
+					(@cod
 					,@preco
 					,@qtStock
 					,@qtMinStock)
+		
+
 	
 	COMMIT TRANSACTION T_insereProduto
 	RETURN 		
@@ -87,6 +71,9 @@ as
 begin
 	SET XACT_ABORT ON
 	BEGIN TRANSACTION T_removeProduto
+	
+		DELETE [dbo].[ProdutoCV]
+		 WHERE cod = @cod;
 		 
         -- apaga na tabela da sede
 		DELETE [dbo].[produto]
@@ -97,25 +84,6 @@ begin
 end
 
 
-GO
-
-USE [ASI]
-GO
-
-/****** Object:  Trigger [trViewProduto]    Script Date: 24-10-2013 12:33:44 ******/
-IF OBJECT_ID ('trViewProduto','TR') IS NOT NULL
-	DROP TRIGGER [dbo].[trViewProduto]
-GO
-
-USE [ASI]
-GO
-
-/****** Object:  View [dbo].[viewProduto]    Script Date: 17-10-2013 21:20:07 ******/
-IF OBJECT_ID ('viewProduto','V') IS NOT NULL
-	DROP VIEW [dbo].[viewProduto]
-GO
-
-CREATE SYNONYM [dbo].[viewProduto] FOR [ASI].[dbo].[produto]
 GO
 
 

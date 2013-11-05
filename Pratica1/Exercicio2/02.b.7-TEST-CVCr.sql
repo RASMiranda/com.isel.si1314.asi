@@ -11,7 +11,7 @@ where cod=11112
 go
 
 select '	>venda de produto de Desporto @ CV Criancas'
-update [dbo].[produto]
+update [dbo].[produtoCV]
 set qtStock=qtStock-1
 where cod=11112--Tipo D (Desportivo)
 go

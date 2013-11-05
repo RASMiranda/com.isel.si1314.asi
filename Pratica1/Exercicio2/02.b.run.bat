@@ -22,13 +22,23 @@ sqlcmd -H localhost -S "%SEDE%" -i 02.b.3-CREATE-SEDE-TRG-trViewProduto.sql -v C
 if not %errorlevel% == 0 goto end
 
 
-echo Running 02.b.4-TEST-CVCr.sql
-sqlcmd -H localhost -S "%CVCr%" -i 02.b.4-TEST-CVCr.sql -v CVCr="%CVCr%" CVDp="%CVDp%" SEDE="%SEDE%"  
+echo Running 02.b.4-CREATE-SEDE-SPs-insereProduto-removeProduto.sql
+sqlcmd -H localhost -S "%SEDE%" -i 02.b.4-CREATE-SEDE-SPs-insereProduto-removeProduto.sql -v CVCr="%CVCr%" CVDp="%CVDp%" SEDE="%SEDE%"  
+if not %errorlevel% == 0 goto end
+
+
+echo Running 02.b.5-CREATE-SEDE-SP-produtoAlteraTipo.sql
+sqlcmd -H localhost -S "%SEDE%" -i 02.b.5-CREATE-SEDE-SP-produtoAlteraTipo.sql -v CVCr="%CVCr%" CVDp="%CVDp%" SEDE="%SEDE%"  
 if not %errorlevel% == 0 goto end
 
 
 echo Running 02.b.5-TEST-Sede.sql
-sqlcmd -H localhost -S "%SEDE%" -i 02.b.5-TEST-Sede.sql -v CVCr="%CVCr%" CVDp="%CVDp%" SEDE="%SEDE%"  
+sqlcmd -H localhost -S "%SEDE%" -i02.b.5-TEST-Sede.sql -v CVCr="%CVCr%" CVDp="%CVDp%" SEDE="%SEDE%"  
+if not %errorlevel% == 0 goto end
+
+
+echo Running 02.b.7-TEST-CVCr.sql
+sqlcmd -H localhost -S "%CVCr%" -i 02.b.7-TEST-CVCr.sql -v CVCr="%CVCr%" CVDp="%CVDp%" SEDE="%SEDE%"  
 if not %errorlevel% == 0 goto end
 
 :end

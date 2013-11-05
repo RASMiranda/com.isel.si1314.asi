@@ -6,8 +6,8 @@ for /f "delims=" %%x in (..\00.config_inst.txt) do (set "%%x")
 
 REM Exercico 1 alinea b)----------------------------------------------------------------------------------------
 
-echo Running 01.b.0-CREATE-SEDE-SP-insereProduto.sql
-sqlcmd -H localhost -S "%SEDE%" -i 01.b.0-CREATE-SEDE-SP-insereProduto.sql
+echo Running 01.b.0-CREATE-SEDE-SPs-insereProduto-removeProduto.sql
+sqlcmd -H localhost -S "%SEDE%" -i 01.b.0-CREATE-SEDE-SPs-insereProduto-removeProduto.sql
 if not %errorlevel% == 0 goto end
 
 echo Running 01.b.1-CREATE-SEDE-VW-viewProduto.sql
