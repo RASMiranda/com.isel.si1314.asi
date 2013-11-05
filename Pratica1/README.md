@@ -10,8 +10,4 @@ ToDo:
 	Exercicio 3
 	Relatorio 
 		?
-		02.a.6-ToDo-Relatorio.txt
-		02.b.6-ToDo-Relatorio.txt
-		02.c.3-ToDo-Relatorio.txt
-		?
 ===================
