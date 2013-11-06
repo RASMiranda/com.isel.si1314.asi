@@ -14,6 +14,7 @@ ToDo:
 	*  1.d.3-ToDo-Relatorio.txt
 	*  1.e.9-ToDo-Relatorio.txt		
 *  Exercicio 2
+*  Exercicio 3
 *  Relatorio 
 
 ===================
