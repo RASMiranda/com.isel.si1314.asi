@@ -7,10 +7,12 @@ Pratica 2
 
 ===================
 ToDo:
-	Exercicio 1
-		Alinea e) 
-			Aparitr do estado A como Pricipal, B como Mirror, e C Off (1.d.6-Failover-B.png)
-			Utilizar #Recursos_eng\Program.cs
-	Exercicio 2
-	Relatorio 
+	*  Exercicio 1
+		*  1.a.2-ToDo-Relatorio.txt
+		*  1.b.4-ToDo-Relatorio.txt
+		*  1.c.5-ToDo-Relatorio.txt
+		*  1.d.3-ToDo-Relatorio.txt
+		*  1.e.9-ToDo-Relatorio.txt		
+	*  Exercicio 2
+	*  Relatorio 
 ===================
