@@ -1,3 +1,0 @@
-Arranque C e teste o mecanismo do ADO.NET para reencaminhamento de
-conexões na presença de mirroring. Indique como realizou o teste e que conclusões
-tirou.
