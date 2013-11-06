@@ -7,7 +7,7 @@ Pratica 1
 
 ===================
 ToDo:
-	Exercicio 3
-	Relatorio 
-		?
+*  Exercicio 3
+*  Relatorio 
+
 ===================
