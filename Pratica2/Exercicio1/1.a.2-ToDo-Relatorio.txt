@@ -1,3 +1,7 @@
 Pare a instância A e verifique que B toma o papel de principal. Em B, execute a
 instrução insert into t values(2) e faça select * from t. Faz sentido haver failover
 automático?
+
+Sim, porque foi configurado Mirroring (em A com B como mirror) com Failover automatico através de C como witness (ver 1.13-ConfgMirror-Mirror-A.png). Ao ficar indisponivel A (principal), C (witness) e B (mirror) detectam que a A (principal) já não está disponivel. B assume o papel de principal.
+
+Source: http://technet.microsoft.com/en-us/library/ms189590(v=sql.105).aspx

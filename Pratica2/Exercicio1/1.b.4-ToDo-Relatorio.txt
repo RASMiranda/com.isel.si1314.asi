@@ -1,1 +1,5 @@
 Arranque a instância A e verifique que papel ela toma. Justifique.
+
+Ao arrancar A, e reconectar-se à sessão de mirroring, verifica que B tem o papel principal, por essa razão A assume o papel de Mirro.
+
+Source: http://technet.microsoft.com/en-us/library/ms189590(v=sql.105).aspx
