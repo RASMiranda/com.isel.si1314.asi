@@ -1,0 +1,3 @@
+PrincipalDB=aluno_siad-pc\one
+MirrorDB=aluno_siad-pc\two
+WitnessDB=aluno_siad-pc\three
