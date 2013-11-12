@@ -8,15 +8,19 @@ using System.Data.Common;
 using System.Data.SqlClient;
 
 
+
 namespace TesteMirror
 {
     class Program
     {
         static void Main(string[] args)
         {
+
             string strConn = "Address=(local)\\instancia1;Database=DBMirror;Failover Partner=(local)\\instancia2;Integrated Security = true";
+            
             SqlConnection cn = new SqlConnection(strConn);
             string strSQL = "Select TOP 1 @i = i from t";
+
             for (; ; )
             {
                 try
@@ -30,7 +34,11 @@ namespace TesteMirror
                     Console.WriteLine(i.Value.ToString());
                     cn.Close();
                 }
-                catch (SqlException e) { cn.Close(); }
+                catch (SqlException e)
+                {
+                    
+                    cn.Close(); 
+                }
             }
 
    	
