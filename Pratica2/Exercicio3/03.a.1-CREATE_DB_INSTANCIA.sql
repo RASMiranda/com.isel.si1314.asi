@@ -10,10 +10,13 @@ GO
 
 USE [DB2_3]
 GO
+
 SET ANSI_NULLS ON
 GO
+
 SET QUOTED_IDENTIFIER ON
 GO
+
 SET ANSI_PADDING ON
 GO
 
@@ -30,13 +33,11 @@ CREATE TABLE Disciplinas (
 	designacao varchar(30)
 );
 
-
-
 CREATE TABLE Inscricao (
 	numero	int not null,
 	codigo	int not null,
 	nota	int,
-	numSeq	int identity  ( $(ValorInicial), $(Incremento)) not for replication primary key,
+	numSeq	int identity  ( $(ValorInicial), $(Incremento)) 
 );
 
 
@@ -54,5 +55,4 @@ ALTER TABLE Inscricao
 	ADD CONSTRAINT FK_Inscricao_Disciplinas FOREIGN KEY (codigo) REFERENCES Disciplinas (codigo);
 
 GO
-
 
