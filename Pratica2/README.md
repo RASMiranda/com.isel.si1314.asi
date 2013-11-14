@@ -8,6 +8,8 @@ Pratica 2
 ===================
 ToDo:	
 *  Exercicio 2
+	unificar batchs
+	alineas
 *  Exercicio 3
 *  Relatorio 
 	*  Se necessário Inserir conteudo de Exercicio1 - Rui\1.a.2-ToDo-Relatorio.txt

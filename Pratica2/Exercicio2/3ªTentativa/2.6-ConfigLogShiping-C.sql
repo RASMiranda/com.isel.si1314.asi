@@ -1,13 +1,18 @@
-use [msdb]
-GO
-
 -- Execute the following statements at the Secondary to configure Log Shipping 
--- for the database [MIRANDA-LAPTOP\SQL2012DEINST3].[BDLS],
+-- for the database [SERVER_INST_C].[BDLS],
 -- the script needs to be run at the Secondary in the context of the [msdb] database. 
 ------------------------------------------------------------------------------------- 
 -- Adding the Log Shipping configuration 
 
--- ****** Begin: Script to be run at Secondary: [MIRANDA-LAPTOP\SQL2012DEINST3] ******
+-- ****** Begin: Script to be run at Secondary: [SERVER_INST_C] ******
+use [msdb]
+GO
+
+:setvar primary_server "MIRANDA-LAPTOP\SQL2012DEINST1"
+:setvar backup_source_directory "\\MIRANDA-LAPTOP\Backup"
+:setvar backup_destination_directory "\\MIRANDA-LAPTOP\BackupLogShipINST3cTemp"
+:setvar restore_mode 1
+:setvar disconnect_users 1
 
 
 DECLARE @LS_Secondary__CopyJobId	AS uniqueidentifier 
@@ -16,13 +21,13 @@ DECLARE @LS_Secondary__SecondaryId	AS uniqueidentifier
 DECLARE @LS_Add_RetCode	As int 
 
 
-EXEC @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary 
-		@primary_server = N'MIRANDA-LAPTOP\SQL2012DEINST1' 
+EXEC @LS_Add_RetCode = master.dbo.sp_add_log_shipping_secondary_primary  
+		@primary_server = N'$(primary_server)' 
 		,@primary_database = N'BDLS' 
-		,@backup_source_directory = N'\\MIRANDA-LAPTOP\Backup' 
-		,@backup_destination_directory = N'\\MIRANDA-LAPTOP\BackupLogShipINST3CTemp' 
-		,@copy_job_name = N'LSCopy_MIRANDA-LAPTOP\SQL2012DEINST1_BDLS' 
-		,@restore_job_name = N'LSRestore_MIRANDA-LAPTOP\SQL2012DEINST1_BDLS' 
+		,@backup_source_directory = N'$(backup_source_directory)' 
+		,@backup_destination_directory = N'$(backup_destination_directory)'  
+		,@copy_job_name = N'LSCopy_SERVER_INST_A_BDLS' 
+		,@restore_job_name = N'LSRestore_SERVER_INST_A_BDLS'  
 		,@file_retention_period = 4320 
 		,@overwrite = 1 
 		,@copy_job_id = @LS_Secondary__CopyJobId OUTPUT 
@@ -90,11 +95,11 @@ BEGIN
 
 EXEC @LS_Add_RetCode2 = master.dbo.sp_add_log_shipping_secondary_database 
 		@secondary_database = N'BDLS' 
-		,@primary_server = N'MIRANDA-LAPTOP\SQL2012DEINST1' 
+		,@primary_server = N'$(primary_server)' 
 		,@primary_database = N'BDLS' 
 		,@restore_delay = 0 
-		,@restore_mode = 1 
-		,@disconnect_users	= 1 
+		,@restore_mode = N'$(restore_mode)'  
+		,@disconnect_users	= N'$(disconnect_users)'   
 		,@restore_threshold = 45   
 		,@threshold_alert_enabled = 1 
 		,@history_retention_period	= 5760 
@@ -115,8 +120,7 @@ EXEC msdb.dbo.sp_update_job
 		,@enabled = 1 
 
 END 
-
-
--- ****** End: Script to be run at Secondary: [MIRANDA-LAPTOP\SQL2012DEINST3] ******
 GO
+
+-- ****** End: Script to be run at Secondary: [SERVER_INST_C] ******
 

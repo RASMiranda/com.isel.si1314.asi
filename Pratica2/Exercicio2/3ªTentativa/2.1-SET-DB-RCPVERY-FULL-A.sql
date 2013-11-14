@@ -1,3 +1,5 @@
+-- ****** Begin: Script to be run at Primary: [SERVER_INST_A] ******
+
 SELECT name, recovery_model_desc FROM sys.databases WHERE name = 'BDLS'
 GO
 
@@ -8,3 +10,5 @@ GO
 
 SELECT name, recovery_model_desc FROM sys.databases WHERE name = 'BDLS'
 GO
+
+-- ****** End: Script to be run at Primary: [SERVER_INST_A]  ******
