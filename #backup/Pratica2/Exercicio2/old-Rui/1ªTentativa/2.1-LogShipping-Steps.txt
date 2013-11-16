@@ -1,0 +1,1 @@
+1) Inicialmente, faz-se um backup total da BD primária e restaura-se esse backup na BD secundária.

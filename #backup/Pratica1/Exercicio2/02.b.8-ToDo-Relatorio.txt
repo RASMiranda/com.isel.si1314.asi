@@ -1,0 +1,3 @@
+Discuta o impacto desta alteração sobre o código
+desenvolvido na alínea b) do ponto 1 e sobre as aplicações que fazem acesso global à base de
+dados.

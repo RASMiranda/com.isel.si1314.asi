@@ -1,0 +1,6 @@
+Nas pastas (file share e locais) é necessário dar direitos de acesso read/write aos users
+  NT Service\MSSQL$INSTANCIA1 e para leitura aos users  NT Service\SqlAgent$INSTANCIA? das
+instâncias secundárias.
+
+Se continuar a ter dificuldades, para prosseguir, atribuir acesso completo a everyone nessas pastas.
+
