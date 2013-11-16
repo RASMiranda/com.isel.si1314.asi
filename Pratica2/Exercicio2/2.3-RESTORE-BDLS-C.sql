@@ -29,7 +29,7 @@ GO
 
 RESTORE DATABASE [BDLS]
    FROM DISK = '$(BackupFileA)'
-   WITH NORECOVERY,
+   WITH REPLACE,RECOVERY,	--se não DB fica sempre em Restoring, TODO: FAZ SENTIDO? -- WITH NORECOVERY,
    MOVE 'BDLS' TO '$(SecondaryDataFile_C)',
    MOVE 'BDLS_Log' TO '$(SecondaryLogFile_C)'
 GO
