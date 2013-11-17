@@ -11,7 +11,7 @@ if not %errorlevel% == 0 goto end
 
 rem echo Compasso de espera...
 rem ping -n 2 127.0.0.1 > nul
-icacls C:\Windows\Temp\BDMirror.bak /grant:r everyone:f
+icacls C:\Windows\Temp\BDMirror.bak /t /grant:r everyone:(F)
 
 echo Running "0.2. execute restore @MirrorDB.sql"
 sqlcmd -H localhost -S "%MirrorDB%" -i "0.2. execute restore @MirrorDB.sql" -v backupFile="%windir%\Temp\BDMirror.bak"
