@@ -1,5 +1,7 @@
 @echo off
 
+REM Pratica 2 Exercico 2 Alinea a)----------------------------------------------------------------------------------------
+
 echo.
 echo seting variables...
 for /f "delims=" %%x in (2.0.config_vars.txt) do (set "%%x")
