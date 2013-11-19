@@ -30,8 +30,8 @@ sqlcmd -H localhost -S "%primary_server%" -i "2.0-CREATE_BDLS_TBL-A.sql" -v prim
 REM pause
 
 echo.
-echo Running "2.1-SET-BDLS-RCPVERY-FULL-A.sql"...
-sqlcmd -H localhost -S "%primary_server%" -i "2.1-SET-BDLS-RCPVERY-FULL-A.sql" -v primary_server="%primary_server%"
+echo Running "2.1-SET-BDLS-RECOVERY-FULL-A.sql"...
+sqlcmd -H localhost -S "%primary_server%" -i "2.1-SET-BDLS-RECOVERY-FULL-A.sql" -v primary_server="%primary_server%"
 REM pause
 
 echo.
