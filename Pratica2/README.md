@@ -21,11 +21,11 @@ ToDo:
 	*  ?
 *  Relatorio 
 	*  Inserir conteuo de Exercicio2/2.0.ToDo-Relatorio.txt quando terminado
-	*  Se necess�rio Inserir conteudo de Exercicio1 - Rui\1.a.2-ToDo-Relatorio.txt
-	*  Se necess�rio Inserir conteudo de Exercicio1 - Rui\1.b.4-ToDo-Relatorio.txt
-	*  Se necess�rio Inserir conteudo de Exercicio1 - Rui\1.c.5-ToDo-Relatorio.txt
-	*  Se necess�rio Inserir conteudo de Exercicio1 - Rui\1.d.3-ToDo-Relatorio.
-	*  Se necess�rio Inserir conteudo de Exercicio1 - Rui\1.e.11-ToDo-Relatorio.txt 
+	*  Se necessario Inserir conteudo de Exercicio1 - Rui\1.a.2-ToDo-Relatorio.txt
+	*  Se necessario Inserir conteudo de Exercicio1 - Rui\1.b.4-ToDo-Relatorio.txt
+	*  Se necessario Inserir conteudo de Exercicio1 - Rui\1.c.5-ToDo-Relatorio.txt
+	*  Se necessario Inserir conteudo de Exercicio1 - Rui\1.d.3-ToDo-Relatorio.
+	*  Se necessario Inserir conteudo de Exercicio1 - Rui\1.e.11-ToDo-Relatorio.txt 
 	*  ?
 
 ===================
