@@ -1,1 +1,41 @@
-2.0.ToDo-Relatorio.txt
+Pre-configuração:
+  Alterar valores das variáveis em 2.0.config_vars.txt para o(s) ambiente(s) desejados
+  
+Configuração Log Shipping:
+  Executar 2.0.run.setup.bat, este batch vai executar os seguintes scripts sql:
+    2.0-CREATE_BDLS_TBL-A.sql
+      ToDo Descricao
+    2.1-SET-BDLS-RECOVERY-FULL-A.sql
+      ToDo Descricao
+    2.2-BACKUP-BDLS-A.sql
+      ToDo Descricao
+    2.3-RESTORE-BDLS-B.sql
+      ToDo Descricao
+    2.3-RESTORE-BDLS-C.sql
+      ToDo Descricao
+    2.4-ConfigLogShiping-BDLS-A-B-C.sql
+      ToDo Descricao
+      
+Aline a):
+  Executar 2.a.run.test.bat, batch executa o script sql 2.a-INSERT-A-SELECT-C.sql
+    Como esperado é possivel vizualizar após algum tempo em C o registo inserido em A
+      
+Aline b):
+  Para efectuar o Role Change de B para A, será necessário necessário configurar o Log Shipping em B como primario, 
+  tendo como secundario C.
+  Executar 2.b.0.run.setup.bat, este batch vai executar os seguintes scripts sql:
+    2.b.0-BACKUP-BDLS-A.sql
+      ToDo Descricao
+    2.b.1-RESTORE-BDLS-B.sql
+      ToDo Descricao
+    2.b.1-RESTORE-BDLS-C.sql
+      ToDo Descricao
+    2.b.2-BACKUP-BDLS-B.sql
+      ToDo Descricao
+    2.b.3-RESTORE-BDLS-C.sql
+      ToDo Descricao
+    2.b.4-ConfigLogShiping-BDLS-B-C.sql
+      ToDo Descricao
+      
+    
+    
