@@ -14,7 +14,10 @@ Configuração Log Shipping:
     2.3-RESTORE-BDLS-C.sql
       Efectua o restore do ficheiro de backup da Base de dados BDLS do nó A, no nó C, caso BDLS exista em C elimina a base de dados.
     2.4-ConfigLogShiping-BDLS-A-B-C.sql
-      ToDo Descricao
+      Neste script incialmente vamos eliminar todas as configuração já existentes de Log Shipping, quer no nó primário quer nos secundários.
+      De seguinda configuramos o log shipping como primário no nó A, como também o agendamento do backup, e adicionamos a refência para os nós secundários, B e C.
+      Depois no nó B configuramos como nó secundário do log shipping de A, e também o agendamento para restore.
+      O mesmo se aplica no nó secundário C, sendo que neste nó colocamos em stand-by no log shipping.
       
 Aline a):
   Executar 2.a.run.test.bat, batch executa o script sql 2.a-INSERT-A-SELECT-C.sql
@@ -35,7 +38,6 @@ Aline b):
     2.b.3-RESTORE-BDLS-C.sql
       Efectua o restore do ficheiro de backup da Base de dados BDLS do nó B, no nó C, caso BDLS exista em C elimina a base de dados.
     2.b.4-ConfigLogShiping-BDLS-B-C.sql
-      ToDo Descricao
-      
-    
-    
+      Neste script incialmente vamos eliminar todas as configuração já existentes de Log Shipping, quer no nó inicial mente primário quer nos incialmente secundários.
+      De seguinda configuramos o log shipping como primário no nó B, como também o agendamento do backup, e adicionamos a refência para o nó secundário C.
+      Depois no nó C configuramos como nó secundário do log shipping de A (desta vez normalmente, sem ser em stand-by), e também o agendamento para restore.
