@@ -4,15 +4,15 @@ Pre-configuração:
 Configuração Log Shipping:
   Executar 2.0.run.setup.bat, este batch vai executar os seguintes scripts sql:
     2.0-CREATE_BDLS_TBL-A.sql
-      ToDo Descricao
+      Script a executar no nó A que cria a Base de Dados BDLS, nessa mesma base de dados cria a tabela t e insere o valor 1, inicialmente caso os obejctos já existam elimina-os.
     2.1-SET-BDLS-RECOVERY-FULL-A.sql
-      ToDo Descricao
+      Para garantir que a base de dados BDLS se encontra em FULL ou BULK-LOGGED RECOVERY, necessário executar este script.
     2.2-BACKUP-BDLS-A.sql
-      ToDo Descricao
+      Efectua o Backup da Base de Dados BDLS no nó A, com overwrite do ficheiro.
     2.3-RESTORE-BDLS-B.sql
-      ToDo Descricao
+      Efectua o restore do ficheiro de backup da Base de dados BDLS do nó A, no nó B, caso BDLS exista em B elimina a base de dados.
     2.3-RESTORE-BDLS-C.sql
-      ToDo Descricao
+      Efectua o restore do ficheiro de backup da Base de dados BDLS do nó A, no nó C, caso BDLS exista em C elimina a base de dados.
     2.4-ConfigLogShiping-BDLS-A-B-C.sql
       ToDo Descricao
       
@@ -25,15 +25,15 @@ Aline b):
   tendo como secundario C.
   Executar 2.b.0.run.setup.bat, este batch vai executar os seguintes scripts sql:
     2.b.0-BACKUP-BDLS-A.sql
-      ToDo Descricao
+      Efectua o Backup da Base de Dados BDLS no nó A, com overwrite do ficheiro.
     2.b.1-RESTORE-BDLS-B.sql
-      ToDo Descricao
+      Efectua o restore do ficheiro de backup da Base de dados BDLS do nó A, no nó B, caso BDLS exista em B elimina a base de dados.
     2.b.1-RESTORE-BDLS-C.sql
-      ToDo Descricao
+      Efectua o restore do ficheiro de backup da Base de dados BDLS do nó A, no nó C, caso BDLS exista em C elimina a base de dados.
     2.b.2-BACKUP-BDLS-B.sql
-      ToDo Descricao
+      Efectua o Backup da Base de Dados BDLS no nó B, com overwrite do ficheiro.
     2.b.3-RESTORE-BDLS-C.sql
-      ToDo Descricao
+      Efectua o restore do ficheiro de backup da Base de dados BDLS do nó B, no nó C, caso BDLS exista em C elimina a base de dados.
     2.b.4-ConfigLogShiping-BDLS-B-C.sql
       ToDo Descricao
       
