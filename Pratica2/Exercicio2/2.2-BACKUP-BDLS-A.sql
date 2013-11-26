@@ -1,16 +1,21 @@
 -- ****** Begin: Script to be run at Primary: [SERVER_INST_A] ******
 
 --TODO COMMENT WHEN RUNNING FROM BATCH, AND PASS VARIABLES FROM COMMAND
---:setvar primary_server "MIRANDA-LAPTOP\SQL2012DEINST1"
+--:setvar InstanciaA "MIRANDA-LAPTOP\SQL2012DEINST1"
+--:setvar backupFile C:\ASITemp\BDLSbackup.bin
 
-:connect $(primary_server)
+--:connect $(InstanciaA)
 
 USE [master]
 GO
 
+print 'Backup to file ''$(backupFile)'''
+
 BACKUP DATABASE [BDLS]
-TO DISK = 'BDLS.bak'	--RUI => C:\Program Files\Microsoft SQL Server\MSSQL11.SQL2012DEINST1\MSSQL\Backup	
+TO DISK = '$(backupFile)'	
 WITH INIT --overwrite existing
 GO
+
+
 
 -- ****** End: Script to be run at Primary: [SERVER_INST_A]  ******

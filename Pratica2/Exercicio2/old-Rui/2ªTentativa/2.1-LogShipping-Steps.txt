@@ -1,7 +1,0 @@
-http://www.mssqltips.com/sqlservertip/2301/step-by-step-sql-server-log-shipping/
-
-1. Make sure your database is in full or bulk-logged recovery model. You can change the database recovery model using the below query. You can check the database recovery model by querying sys.databases 
-
-2. On the primary server, right click on the database in SSMS and select Properties. Then select the Transaction Log Shipping Page. Check the "Enable this as primary database in a log shipping configuration" check box.
-
-

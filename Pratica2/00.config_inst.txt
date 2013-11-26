@@ -1,7 +1,11 @@
 PrincipalDB=aluno_siad-pc\one
 MirrorDB=aluno_siad-pc\two
 WitnessDB=aluno_siad-pc\three
-## p2_ex3
-Rep0=FFSS
-Rep1=FFSS\ISELALFA
-Rep2=FFSS\ISELBETA
+
+Rep0=aluno_siad-pc\one
+Rep1=aluno_siad-pc\two
+Rep2=aluno_siad-pc\three
+
+InstanciaA=aluno_siad-pc\one
+InstanciaB=aluno_siad-pc\two
+InstanciaC=aluno_siad-pc\three
