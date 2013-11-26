@@ -5,6 +5,8 @@ backup_share=\\MIRANDA-LAPTOP\Backup
 backup_source_directory=\\MIRANDA-LAPTOP\Backup
 
 secondary_server_B=MIRANDA-LAPTOP\SQL2012DEINST2
+backup_directory_B=C:\Program Files\Microsoft SQL Server\MSSQL11.SQL2012DEINST2\MSSQL\Backup
+BackupFileB=C:\Program Files\Microsoft SQL Server\MSSQL11.SQL2012DEINST2\MSSQL\Backup\BDLS.bak
 SecondaryDataDir_B=C:\Program Files\Microsoft SQL Server\MSSQL11.SQL2012DEINST2\MSSQL\DATA\
 SecondaryDataFile_B=C:\Program Files\Microsoft SQL Server\MSSQL11.SQL2012DEINST2\MSSQL\DATA\BDLS.mdf
 SecondaryLogFile_B=C:\Program Files\Microsoft SQL Server\MSSQL11.SQL2012DEINST2\MSSQL\DATA\BDLS_log.ldf

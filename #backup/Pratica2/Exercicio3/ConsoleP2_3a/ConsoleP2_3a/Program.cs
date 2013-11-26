@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
+
 
 
 namespace ConsoleP2_3a
@@ -14,31 +16,54 @@ namespace ConsoleP2_3a
         private bool _disposed;
         private int NumNodes = 3;   // numero de nos do sharding
             // localizacao das instancias das replicas
-        private string connectionStringRep0 =
-            "Data Source=(local);Initial Catalog=DB2_3;"
+        private string connectionStringBase = "Data Source=(local) ;Initial Catalog=DB2_3;"
             + "Integrated Security=true";
-        private string connectionStringRep1 =
-            "Data Source=FFSS\\ISELALFA;Initial Catalog=DB2_3;"
-            + "Integrated Security=true";
-        private string connectionStringRep2 =
-            "Data Source=FFSS\\ISELBETA;Initial Catalog=DB2_3;"
-            + "Integrated Security=true";
+        private string connectionStringRep0;
+        private string connectionStringRep1;
+        private string connectionStringRep2;
         private List<SqlConnection> connectionsList = new List<SqlConnection>();
 
         public Sharding()
         {
-            // _disposed = false
-            // open das connections
-            // implementação do método 
-            // chamada à distribuição do sharding ....
+            // configures connections for the three instancies /replicas
+            connectionStringRep0 = connectionStringBase;
+            connectionStringRep1 = connectionStringRep0.Replace("(local)", "FFSS\\ISELALFA");
+            connectionStringRep2 = connectionStringRep0.Replace("(local)", "FFSS\\ISELBETA");
+            //read conf. file to adjust to the specific environment 
+            using (StreamReader reader = new StreamReader(@"..\..\..\..\..\00.config_inst.txt"))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    switch (line.Substring(0, 4))
+                    {
+                        case "Rep0":
+                            connectionStringRep0 = connectionStringBase.Replace("(local)", line.Substring(5));
+                            break;
+                        case "Rep1":
+                            connectionStringRep1 = connectionStringBase.Replace("(local)", line.Substring(5));
+                            break;
+                        case "Rep2":
+                            connectionStringRep2 = connectionStringBase.Replace("(local)", line.Substring(5));
+                            break;
+                    }
+                }
+            }
             connectionsList.Add(new SqlConnection(connectionStringRep0));
             connectionsList.Add(new SqlConnection(connectionStringRep1));
             connectionsList.Add(new SqlConnection(connectionStringRep2));
-            foreach (SqlConnection connection in connectionsList)
+            try
             {
-                connection.Open();
+                foreach (SqlConnection connection in connectionsList)
+                {
+                    connection.Open();
+                }
+                _disposed = false;
             }
-            _disposed = false;
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} - Open connection exception.", e);
+            }
 
         }
         public SqlConnection getShard(int numero)

@@ -1,5 +1,7 @@
 @echo off
 
+REM Pratica 2 Exercico 2----------------------------------------------------------------------------------------
+
 echo.
 echo seting variables...
 for /f "delims=" %%x in (2.0.config_vars.txt) do (set "%%x")
@@ -7,16 +9,19 @@ REM pause
 
 echo.
 echo seting sql server directories permissions...
-icacls "%backup_directory%" /grant:r everyone:f
-icacls "%SecondaryDataDir_B%" /grant:r everyone:f
-icacls "%SecondaryDataDir_C%" /grant:r everyone:f
+icacls "%backup_directory%" /t /grant:r everyone:(F)
+icacls "%SecondaryDataDir_B%" /t /grant:r everyone:(F)
+icacls "%SecondaryDataDir_C%" /t /grant:r everyone:(F)
 REM pause
 
 echo.
-echo seting sql server network shares...TODO: FIX THIS!
-REM net share Backup="%backup_directory%" /UNLIMITED REM TODO: FIX THIS!
-REM net share BackupLogShipINST2BTemp="%BackupLogShipINST2BTemp%" /UNLIMITED REM TODO: FIX THIS!
-REM net share BackupLogShipINST3CTemp="%BackupLogShipINST3CTemp%" /UNLIMITED REM TODO: FIX THIS!
+echo seting sql server network shares...
+net share Backup /delete /y
+net share Backup="%backup_directory%" /unlimited
+net share BackupLogShipINST2BTemp /delete /y
+net share BackupLogShipINST2BTemp="%BackupLogShipINST2BTemp%" /unlimited
+net share BackupLogShipINST3CTemp /delete /y
+net share BackupLogShipINST3CTemp="%BackupLogShipINST3CTemp%" /unlimited
 REM pause
 
 echo.
@@ -25,8 +30,8 @@ sqlcmd -H localhost -S "%primary_server%" -i "2.0-CREATE_BDLS_TBL-A.sql" -v prim
 REM pause
 
 echo.
-echo Running "2.1-SET-BDLS-RCPVERY-FULL-A.sql"...
-sqlcmd -H localhost -S "%primary_server%" -i "2.1-SET-BDLS-RCPVERY-FULL-A.sql" -v primary_server="%primary_server%"
+echo Running "2.1-SET-BDLS-RECOVERY-FULL-A.sql"...
+sqlcmd -H localhost -S "%primary_server%" -i "2.1-SET-BDLS-RECOVERY-FULL-A.sql" -v primary_server="%primary_server%"
 REM pause
 
 echo.
