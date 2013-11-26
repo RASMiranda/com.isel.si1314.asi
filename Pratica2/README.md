@@ -4,25 +4,22 @@ ISEL MEIC si1314 ASI Grupo 5
 
 ===================
 Instrucoes:
+*  Exercicio 1
+	*  Alterar .\00.config_inst conforme o ambiente local
+	*  Executar .\Exercicio1\0. run setup inicial.bat
+	*  Executar .\Exercicio1\1. realizar failovers.bat
+	
 *  Exercicio 2
 	*  Alterar $\com.isel.si1314.asi\Pratica2\Exercicio2\2.0.config_vars.txt conforme o ambiente local
 	*  Executar $\com.isel.si1314.asi\Pratica2\Exercicio2\2.run.all.bat
 		*  Executar $\com.isel.si1314.asi\Pratica2\Exercicio2\2.0.run.setup.bat	
+		*  Executar $\com.isel.si1314.asi\Pratica2\Exercicio2\2.4-run.setup.LogShiping.bat	
 		*  Executar $\com.isel.si1314.asi\Pratica2\Exercicio2\2.a.run.test.bat
-		*  Executar $\com.isel.si1314.asi\Pratica2\Exercicio2\2.b.0.run.setup.bat
+		*  Executar $\com.isel.si1314.asi\Pratica2\Exercicio2\2.b.0-setup.LogShiping.CenarioDesastre.bat
+		*  Executar $\com.isel.si1314.asi\Pratica2\Exercicio2\2.b.5-run.test.bat
 	
-===================
-ToDo:	
-*  Exercicio 2
-	*  Validar? 
-*  Exercicio 3
-	*  ?
-*  Relatorio 
-	*  Se necessário Inserir conteudo de Exercicio1 - Rui\1.a.2-ToDo-Relatorio.txt
-	*  Se necessário Inserir conteudo de Exercicio1 - Rui\1.b.4-ToDo-Relatorio.txt
-	*  Se necessário Inserir conteudo de Exercicio1 - Rui\1.c.5-ToDo-Relatorio.txt
-	*  Se necessário Inserir conteudo de Exercicio1 - Rui\1.d.3-ToDo-Relatorio.
-	*  Se necessário Inserir conteudo de Exercicio1 - Rui\1.e.11-ToDo-Relatorio.txt 
-	*  ?
-
+*  Exercicio 1
+	*  Alterar .\00.config_inst conforme o ambiente local
+	*  Executar .\Exercicio3\03.a.run.bat
+	
 ===================
