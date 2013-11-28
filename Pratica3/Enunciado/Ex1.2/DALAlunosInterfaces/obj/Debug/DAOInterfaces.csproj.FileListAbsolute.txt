@@ -1,0 +1,9 @@
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DAOInterfaces\obj\Debug\DAOInterfaces.csprojResolveAssemblyReference.cache
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DAOInterfaces\bin\Debug\DAOInterfaces.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DAOInterfaces\bin\Debug\DAOInterfaces.pdb
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DAOInterfaces\bin\Debug\ClassLibrary2.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DAOInterfaces\bin\Debug\DALInterfaces.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DAOInterfaces\bin\Debug\ClassLibrary2.pdb
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DAOInterfaces\bin\Debug\DALInterfaces.pdb
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DAOInterfaces\obj\Debug\DAOInterfaces.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DAOInterfaces\obj\Debug\DAOInterfaces.pdb

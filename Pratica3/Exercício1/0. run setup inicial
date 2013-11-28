@@ -1,0 +1,11 @@
+@echo off
+
+REM Set SQL Server Instances Names from configuration file
+for /f "delims=" %%x in (..\00.config_inst.txt) do (set "%%x")
+
+echo Running "0.1. setup bd,"
+sqlcmd -H localhost -S "%PrincipalDB%" -i "0.1. setup bd, table and execute backup @PrincipalDB.sql" -v backupFile="%windir%\Temp\BDMirror.bak"
+if not %errorlevel% == 0 goto end
+
+:end
+pause
