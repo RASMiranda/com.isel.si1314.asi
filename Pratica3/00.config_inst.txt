@@ -1,0 +1,3 @@
+PrincipalDB=FFSS
+MirrorDB=FFSS\ISELALFA
+WitnessDB=FFSS\ISELBETA
