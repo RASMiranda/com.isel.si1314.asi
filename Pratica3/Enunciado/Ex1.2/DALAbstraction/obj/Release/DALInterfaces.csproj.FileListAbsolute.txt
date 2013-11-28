@@ -1,0 +1,4 @@
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DALInterfaces\bin\Release\DALInterfaces.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DALInterfaces\bin\Release\DALInterfaces.pdb
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DALInterfaces\obj\Release\DALInterfaces.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\DALInterfaces\obj\Release\DALInterfaces.pdb
