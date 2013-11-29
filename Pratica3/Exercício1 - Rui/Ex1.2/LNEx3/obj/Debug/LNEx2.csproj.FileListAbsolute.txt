@@ -1,0 +1,17 @@
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\bin\Debug\LNEx2.exe.config
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\obj\Debug\LNEx2.csprojResolveAssemblyReference.cache
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\bin\Debug\LNEx2.exe
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\bin\Debug\LNEx2.pdb
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\bin\Debug\ClassLibrary2.dll
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\bin\Debug\DALInterfaces.dll
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\bin\Debug\DAOInterfaces.dll
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\bin\Debug\SpecificDAL.dll
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\bin\Debug\SpecificDAL.pdb
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\bin\Debug\DALInterfaces.pdb
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\bin\Debug\ClassLibrary2.pdb
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\bin\Debug\DAOInterfaces.pdb
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\obj\Debug\LNEx2.exe
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex2\LNEx2\obj\Debug\LNEx2.pdb
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex3\LNEx2\bin\Debug\LNEx2.exe.config
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex3\LNEx2\obj\Debug\LNEx2.exe
+C:\Users\wvieira\Desktop\2012_2013\Exemplos\LAD\Ex3\LNEx2\obj\Debug\LNEx2.pdb

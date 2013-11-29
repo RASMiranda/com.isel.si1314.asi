@@ -1,0 +1,5 @@
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\ClassLibrary2\obj\Debug\Ex2Entidades.csprojResolveAssemblyReference.cache

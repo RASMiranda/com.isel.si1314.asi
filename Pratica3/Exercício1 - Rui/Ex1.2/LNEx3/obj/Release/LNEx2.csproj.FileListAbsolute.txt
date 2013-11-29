@@ -1,0 +1,14 @@
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\bin\Release\LNEx2.exe.config
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\bin\Release\LNEx2.exe
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\bin\Release\LNEx2.pdb
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\bin\Release\SpecificDAL.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\bin\Release\DAOInterfaces.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\bin\Release\ClassLibrary2.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\bin\Release\DALInterfaces.dll
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\bin\Release\SpecificDAL.pdb
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\bin\Release\DAOInterfaces.pdb
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\bin\Release\ClassLibrary2.pdb
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\bin\Release\DALInterfaces.pdb
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\obj\Release\LNEx2.csprojResolveAssemblyReference.cache
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\obj\Release\LNEx2.exe
+C:\Users\wvieira\Documents\Visual Studio 2012\Projects\ExemplosLAD\LNEx2\obj\Release\LNEx2.pdb

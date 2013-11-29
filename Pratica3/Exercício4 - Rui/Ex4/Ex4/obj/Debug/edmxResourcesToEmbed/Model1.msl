@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ASIModelStoreContainer" CdmEntityContainer="ASIEntities7">
+    <EntitySetMapping Name="Alunos">
+      <EntityTypeMapping TypeName="ASIModel.Aluno">
+        <MappingFragment StoreEntitySet="Alunos">
+          <ScalarProperty Name="NumAl" ColumnName="NumAl" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlunosAssEsts">
+      <EntityTypeMapping TypeName="ASIModel.AlunosAssEst">
+        <MappingFragment StoreEntitySet="AlunosAssEst">
+          <ScalarProperty Name="NumAl" ColumnName="NumAl" />
+          <ScalarProperty Name="nSeq" ColumnName="nSeq" />
+          <ScalarProperty Name="Interesse" ColumnName="Interesse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
