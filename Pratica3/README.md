@@ -33,9 +33,7 @@ ToDo - Rui:
 *  Exercicio 5
 	*  com.isel.si1314.asi\Pratica3\Exercício5 - Rui
 		*  Ex2\Ex2\Program.cs
-		
-				```
-				
+					
 				//TODO: Correcto?
 				
 				al1.AlunosAssEsts.Add(i1);
@@ -53,8 +51,6 @@ ToDo - Rui:
 				//TODO: System.InvalidOperationException {"The object cannot be deleted because it was not found in the ObjectStateManager."}
 				
 				ctx3.Alunos.Remove(al1); 
-				
-				```
 	
 *  Exercicio 6
 	*  All
