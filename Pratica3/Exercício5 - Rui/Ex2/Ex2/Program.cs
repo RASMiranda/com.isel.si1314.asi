@@ -143,7 +143,8 @@ namespace Ex2
 
                 ctx3.Configuration.AutoDetectChangesEnabled = false;
 
-                ctx3.Alunos.Remove(al1); //TODO: System.InvalidOperationException {"The object cannot be deleted because it was not found in the ObjectStateManager."}
+				//TODO: System.InvalidOperationException {"The object cannot be deleted because it was not found in the ObjectStateManager."}
+                ctx3.Alunos.Remove(al1); 
 
                 ctx3.SaveChanges();
 
