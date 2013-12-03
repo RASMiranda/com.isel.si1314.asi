@@ -33,7 +33,7 @@ ToDo - Rui:
 *  Exercicio 5
 	*  com.isel.si1314.asi\Pratica3\Exercício5 - Rui
 		*  Ex2\Ex2\Program.cs
-				```
+				```C#
 				//TODO: Correcto?
 				al1.AlunosAssEsts.Add(i1);
 				al1.AlunosAssEsts.Add(i2);
