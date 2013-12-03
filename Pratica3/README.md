@@ -33,6 +33,11 @@ ToDo - Rui:
 *  Exercicio 5
 	*  com.isel.si1314.asi\Pratica3\Exercício5 - Rui
 		*  Ex2\Ex2\Program.cs
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```		
 ```csharp
 //TODO: Correcto?
 al1.AlunosAssEsts.Add(i1);
