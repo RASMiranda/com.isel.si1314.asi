@@ -51,8 +51,6 @@ ToDo - Rui:
 				//TODO: System.InvalidOperationException {"The object cannot be deleted because it was not found in the ObjectStateManager."}
 				
 				ctx3.Alunos.Remove(al1); 
-				
-				```
 	
 *  Exercicio 6
 	*  All
