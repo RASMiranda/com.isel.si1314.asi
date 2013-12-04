@@ -1,0 +1,1 @@
+b) Explique de forma resumida a razão do código TSQL observado.

@@ -54,7 +54,7 @@ namespace Ex3
 
                 
 // ponto 1: correr o programa primeiro com o comentário na linha seguinte e depois, sem
-                ctx.ChangeTracker.DetectChanges();
+                //ctx.ChangeTracker.DetectChanges();
 
                 ctx.SaveChanges();
 

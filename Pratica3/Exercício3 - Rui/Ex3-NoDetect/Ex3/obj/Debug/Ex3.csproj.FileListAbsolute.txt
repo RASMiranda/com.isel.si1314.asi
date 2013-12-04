@@ -17,3 +17,13 @@ D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3\Ex3\bin\D
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3\Ex3\bin\Debug\EntityFramework.xml
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3\Ex3\bin\Debug\EntityFramework.SqlServer.xml
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3\Ex3\obj\Debug\Ex3.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3-NoDetect\Ex3\bin\Debug\Ex1.exe.config
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3-NoDetect\Ex3\obj\Debug\Ex1.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3-NoDetect\Ex3\obj\Debug\Ex1.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3-NoDetect\Ex3\bin\Debug\Ex1.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3-NoDetect\Ex3\bin\Debug\Ex1.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3-NoDetect\Ex3\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3-NoDetect\Ex3\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3-NoDetect\Ex3\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3-NoDetect\Ex3\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício3 - Rui\Ex3-NoDetect\Ex3\obj\Debug\Ex3.csprojResolveAssemblyReference.cache

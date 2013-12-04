@@ -8,3 +8,13 @@ C:\Users\wv_000\Desktop\ASI_2013_2014\2013_2014\Práticas\Prática 3\Ex4\Ex4\bin
 C:\Users\wv_000\Desktop\ASI_2013_2014\2013_2014\Práticas\Prática 3\Ex4\Ex4\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\wv_000\Desktop\ASI_2013_2014\2013_2014\Práticas\Prática 3\Ex4\Ex4\bin\Debug\EntityFramework.xml
 C:\Users\wv_000\Desktop\ASI_2013_2014\2013_2014\Práticas\Prática 3\Ex4\Ex4\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício4 - Rui\Ex4-original\Ex4\bin\Debug\Ex1.exe.config
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício4 - Rui\Ex4-original\Ex4\bin\Debug\Ex1.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício4 - Rui\Ex4-original\Ex4\bin\Debug\Ex1.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício4 - Rui\Ex4-original\Ex4\bin\Debug\EntityFramework.dll
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício4 - Rui\Ex4-original\Ex4\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício4 - Rui\Ex4-original\Ex4\bin\Debug\EntityFramework.xml
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício4 - Rui\Ex4-original\Ex4\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício4 - Rui\Ex4-original\Ex4\obj\Debug\Ex4.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício4 - Rui\Ex4-original\Ex4\obj\Debug\Ex1.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica3\Exercício4 - Rui\Ex4-original\Ex4\obj\Debug\Ex1.pdb

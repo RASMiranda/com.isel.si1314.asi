@@ -30,6 +30,9 @@ namespace Ex4
 
                 using (var ctx = new ASIEntities7())
                 {
+                    // em alternativa a usar o Sql Server Profiler, pode fazer:
+                    ctx.Database.Log = Console.Write;
+
                     //Em EF 5:
                     //((IObjectContextAdapter)ctx).ObjectContext.Connection.Open(); 
                     ctx.Database.Connection.Open();
@@ -45,6 +48,9 @@ namespace Ex4
                    
                     using (var ctx1 = new ASIEntities7())
                     {
+                        // em alternativa a usar o Sql Server Profiler, pode fazer:
+                        ctx1.Database.Log = Console.Write;
+
                         //Em EF5:
                         //((IObjectContextAdapter)ctx1).ObjectContext.Connection.Open(); 
                         ctx1.Database.Connection.Open();

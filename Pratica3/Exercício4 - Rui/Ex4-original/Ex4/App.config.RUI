@@ -26,6 +26,6 @@
     <add name="ASIEntities5" connectionString="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=MIRANDA-LAPTOP\SQL2012DEINST1;initial catalog=BD3_1;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
     <add name="ASIEntities6" connectionString="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=MIRANDA-LAPTOP\SQL2012DEINST1;initial catalog=BD3_1;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
     <add name="ASIEntities7" connectionString="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=MIRANDA-LAPTOP\SQL2012DEINST1;initial catalog=BD3_1;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
-    <add name="base dados" connectionString="Data Source=MIRANDA-LAPTOP\SQL2012DEINST1;initial catalog=BD3_1;Integrated Security=true" providerName="System.Data.SqlClient" />
+    <add name="base dados" connectionString="data source=MIRANDA-LAPTOP\SQL2012DEINST1;initial catalog=BD3_1;Integrated Security=true" providerName="System.Data.SqlClient" />
   </connectionStrings>
 </configuration>
