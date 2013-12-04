@@ -27,7 +27,10 @@ ToDo - Rui:
 		*  Relatorio?
 		
 *  Exercicio 6
-	*  All
+	*  com.isel.si1314.asi\Pratica3\Exercício6 - Rui
+		*  \Ex2-DeleteInteresses-Optimistic\Ex2\Program.cs
+			*  Implementar controlo transaccional optimista
+		*  Relatorio?
 	
 ===================
 Instrucoes:
