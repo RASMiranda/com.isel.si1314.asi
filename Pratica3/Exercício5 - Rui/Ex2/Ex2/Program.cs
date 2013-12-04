@@ -32,61 +32,6 @@ namespace Ex2
         static void Main(string[] args)
         {
             Main1(args);
-            //Main2(args);
-        }
-
-        static void Main2(string[] args)
-        {
-
-            using (var ts = new TransactionScope())
-            {
-
-
-                var al1 = new Aluno { NumAl = 1001, Nome = "Pedro" };
-                al1.AlunosAssEsts = new HashSet<AlunosAssEst>();
-
-                var al2 = new Aluno { NumAl = 1002, Nome = "Paula" };
-                al2.AlunosAssEsts = new HashSet<AlunosAssEst>();
-
-                var i1 = new AlunosAssEst { NumAl = 1002, Interesse = "i1" };
-                var i2 = new AlunosAssEst { NumAl = 1002, Interesse = "i2" };
-
-                EntityConnection cn = new EntityConnection("name=ASIEntities7");
-                using (var ctx = new ASIEntities7(cn))
-                {
-                    // em alternativa a usar o Sql Server Profiler, pode fazer:
-                    ctx.Database.Log = Console.Write;
-
-                    //Em EF 5:
-                    //((IObjectContextAdapter)ctx).ObjectContext.Connection.Open(); 
-                    ctx.Database.Connection.Open();
-
-
-                    ctx.Alunos.Add(al1);
-                    ctx.Alunos.Add(al2);
-
-
-                    using (var ctx1 = new ASIEntities7(cn))
-                    {
-                        ctx1.AlunosAssEsts.Add(i1);
-                        ctx1.AlunosAssEsts.Add(i2);
-
-
-                        using (var ctx2 = new ASIEntities7(cn))
-                        {
-                            ctx2.Alunos.Remove(al1);
-
-                            ctx1.SaveChanges();
-                        }
-
-                        ctx1.SaveChanges();
-                    }
-
-                    ctx.SaveChanges();
-                }
-                // ponto 1: observar no Sql Server Profiler
-                ts.Complete();
-            }
         }
 
         static void Main1(string[] args)
@@ -105,6 +50,8 @@ namespace Ex2
             {
                 // em alternativa a usar o Sql Server Profiler, pode fazer:
                 ctx.Database.Log = Console.Write;
+
+                ctx.Database.Connection.Open();
 
                 ctx.Configuration.AutoDetectChangesEnabled = false;
 
@@ -143,15 +90,17 @@ namespace Ex2
 
                 ctx3.Configuration.AutoDetectChangesEnabled = false;
 
-				//TODO: System.InvalidOperationException {"The object cannot be deleted because it was not found in the ObjectStateManager."}
-                ctx3.Alunos.Remove(al1); 
+                ctx3.Alunos.Attach(al2);
 
+				//TODO: System.InvalidOperationException {"The object cannot be deleted because it was not found in the ObjectStateManager."}
+                ctx3.Alunos.Remove(al2); 
+                
                 ctx3.SaveChanges();
 
             }
 
-
-
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadLine();
         }
     }
 }
