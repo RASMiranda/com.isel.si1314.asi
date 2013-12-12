@@ -5,9 +5,9 @@ GO
 
 if exists (select * from sys.databases where name = 'BD3_1')
 begin
-	ALTER DATABASE BDMIRROR SET PARTNER OFF -- turn off mirror
+	ALTER DATABASE [BD3_1] SET PARTNER OFF -- turn off mirror
 	EXEC msdb.dbo.sp_delete_database_backuphistory @database_name = N'BD3_1'
-	ALTER DATABASE BDMIRROR SET SINGLE_USER WITH ROLLBACK IMMEDIATE	--TODO: NAO FUNCIONA,Cannot drop database "BD3_1" because it is currently in use.
+	ALTER DATABASE [BD3_1] SET SINGLE_USER WITH ROLLBACK IMMEDIATE	--TODO: NAO FUNCIONA,Cannot drop database "BD3_1" because it is currently in use.
 	DROP DATABASE [BD3_1]
 end
 GO
