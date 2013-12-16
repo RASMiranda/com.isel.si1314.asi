@@ -6,7 +6,10 @@ ISEL MEIC si1314 ASI Grupo 5
 ToDo - Rui:
 *  Exercicio 1
 	*  com.isel.si1314.asi\Pratica3\Exercício1 - Rui
-		*  Ex1-Relatorio-TODO.txt
+		*  Ex1.a.5-Comportamento-Relatorio-ToAdd.png
+		*  Ex1.a-Relatorio-ToAdd.txt
+		*  Ex1.b.3.SqlException.MSDTC-Relatorio-ToAdd.png
+		*  Ex1-Relatorio-ToAdd.txt
 	
 *  Exercicio 2
 	*  com.isel.si1314.asi\Pratica3\Exercício2 - Rui
