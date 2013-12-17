@@ -66,12 +66,12 @@ namespace LNEx2
             a1.Interesses = new List<AlunoInteresse>();
             ai = new AlunoInteresse();
             ai.Numero = a1.Numero;
-            ai.Interesse="i2";
+            ai.Interesse = "i2";
             a1.Interesses.Add(ai);
 
             ai = new AlunoInteresse();
             ai.Numero = a1.Numero;
-            ai.Interesse="i3";
+            ai.Interesse = "i3";
             a1.Interesses.Add(ai);
 
             Session s = new Session();

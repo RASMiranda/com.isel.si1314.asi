@@ -1,4 +1,0 @@
-Explique a rezão porque os dois comportamentos que observa são diferentes.
-
-Na alinea b obtemos uma excpção devido ao MSDTC estar parado, isto porque o programa executado pelo Ex2 utiliza TransactionScope, 
-isto só seria possivel se o MSDTC estivesse a correr.

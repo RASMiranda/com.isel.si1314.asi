@@ -1,2 +1,0 @@
-a) Justifique o que observa no Sql Profiler, tendo em conta os instantes em que as observações são
-realizadas.

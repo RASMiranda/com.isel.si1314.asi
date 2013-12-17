@@ -1,4 +1,0 @@
-a) Elimine todos os registos das duas tabelas e corra o código do exemplo Ex1.1. Verifique o
-comportamento.
-
-Como esperado verifica-se que todos os dados afectos nos objectos entidades são inseridos nas respectivas tabelas.

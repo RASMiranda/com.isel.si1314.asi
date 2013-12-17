@@ -82,10 +82,6 @@ namespace LNEx2
                 dao.Create(a1);
                 ts.Complete();
             }
-
-         
-           
-           
         }
     }
 }
