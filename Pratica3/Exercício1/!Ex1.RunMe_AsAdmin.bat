@@ -1,8 +1,7 @@
-@setlocal enableextensions
-@cd /d "%~dp0"
-
 @echo off
 
+setlocal enableextensions
+cd /d "%~dp0"
 
 rem call 0.stop.MSDTC-RunAsAdmin.bat
 net start | find "Distributed Transaction Coordinator" > nul
