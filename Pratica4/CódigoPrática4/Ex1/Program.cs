@@ -8,6 +8,7 @@ using System.Data.Linq.Mapping;
 using System.Data.Linq;
 
 using System.Runtime.Serialization;
+using System.IO;
 
 namespace Ex1
 {
@@ -43,87 +44,116 @@ namespace Ex1
         void Transferir(int c1, int c2, float montante);
     }
 
-      [ServiceBehavior(
-                    TransactionIsolationLevel = System.Transactions.IsolationLevel.ReadCommitted,
-                    TransactionTimeout = "00:03:00",
-                    InstanceContextMode=InstanceContextMode.Single,                  
-                    IncludeExceptionDetailInFaults=true                    
-                   )
-      ]
-      public class Servico : IServico
-      {
-          int n = 0;
+    [ServiceBehavior(
+                  TransactionIsolationLevel = System.Transactions.IsolationLevel.ReadCommitted,
+                  TransactionTimeout = "00:03:00",
+                  InstanceContextMode = InstanceContextMode.Single,
+                  IncludeExceptionDetailInFaults = true
+                 )
+    ]
+    public class Servico : IServico
+    {
+        int n = 0;
 
-          public Conta obterConta(int numero)
-          {
-             
-
-              Console.WriteLine("obter " + numero);
-
-              DataContext dc = new DataContext(@"Data Source=MIRANDA-LAPTOP\SQL2012DEINST1;Initial Catalog=ASI;Integrated Security=true");//TODO: CONFIGURATION FILE!
-              Table<Conta> tc = dc.GetTable<Conta>();
-              var conta = (from c in dc.GetTable<Conta>()
-                           where c.Numero == numero
-                           select c).SingleOrDefault();
-              return conta;
-          }
+        public Conta obterConta(int numero)
+        {
 
 
-          public void inserirConta(Conta c)
-          {
-              DataContext dc = new DataContext(@"Data Source=MIRANDA-LAPTOP\SQL2012DEINST1;Initial Catalog=ASI;Integrated Security=true");//TODO: CONFIGURATION FILE!
-              Table<Conta> tc = dc.GetTable<Conta>();
-              tc.InsertOnSubmit(c);
-              dc.SubmitChanges();
-          }
+            Console.WriteLine("obter " + numero);
 
-          public void alterarConta(Conta c)
-          {
-              DataContext dc = new DataContext(@"Data Source=MIRANDA-LAPTOP\SQL2012DEINST1;Initial Catalog=ASI;Integrated Security=true");//TODO: CONFIGURATION FILE!
-              Table<Conta> tc = dc.GetTable<Conta>();
-              tc.Attach(c, true);
-              try
-              {
-                  dc.SubmitChanges(ConflictMode.ContinueOnConflict);
-              }
-              catch (ChangeConflictException e)
-              {
-                  dc.ChangeConflicts.ResolveAll(RefreshMode.KeepCurrentValues); // last -in - wins
-                  dc.SubmitChanges();
-              }
-          }
+            DataContext dc = new DataContext(@"Data Source=MIRANDA-LAPTOP\SQL2012DEINST1;Initial Catalog=ASI;Integrated Security=true");//TODO: CONFIGURATION FILE!
+            Table<Conta> tc = dc.GetTable<Conta>();
+            var conta = (from c in dc.GetTable<Conta>()
+                         where c.Numero == numero
+                         select c).SingleOrDefault();
+            return conta;
+        }
 
-          [OperationBehavior(
-                TransactionScopeRequired = true // false por omissão
-            )]
-          public void Transferir(int c1, int c2, float montante)
-          {
-              try
-              {
-                  Console.WriteLine("Transferir " + montante + " euros de " + c1 + " para " + c2);
 
-                  DataContext dc = new DataContext(@"Data Source=MIRANDA-LAPTOP\SQL2012DEINST1;Initial Catalog=ASI;Integrated Security=true");//TODO: CONFIGURATION FILE!
-                  Table<Conta> tc = dc.GetTable<Conta>();
-                  var conta1 = (from c in dc.GetTable<Conta>()
-                                where c.Numero == c1
-                                select c).SingleOrDefault();
-                  var conta2 = (from c in dc.GetTable<Conta>()
-                                where c.Numero == c2
-                                select c).SingleOrDefault();
+        public void inserirConta(Conta c)
+        {
+            DataContext dc = new DataContext(@"Data Source=MIRANDA-LAPTOP\SQL2012DEINST1;Initial Catalog=ASI;Integrated Security=true");//TODO: CONFIGURATION FILE!
+            Table<Conta> tc = dc.GetTable<Conta>();
+            tc.InsertOnSubmit(c);
+            dc.SubmitChanges();
+        }
 
-                  conta1.Saldo -= montante;
-                  dc.SubmitChanges();
-                  conta2.Saldo += montante;
-                  dc.SubmitChanges();
-                  
+        public void alterarConta(Conta c)
+        {
+            DataContext dc = new DataContext(@"Data Source=MIRANDA-LAPTOP\SQL2012DEINST1;Initial Catalog=ASI;Integrated Security=true");//TODO: CONFIGURATION FILE!
+            Table<Conta> tc = dc.GetTable<Conta>();
+            tc.Attach(c, true);
+            try
+            {
+                dc.SubmitChanges(ConflictMode.ContinueOnConflict);
+            }
+            catch (ChangeConflictException e)
+            {
+                dc.ChangeConflicts.ResolveAll(RefreshMode.KeepCurrentValues); // last -in - wins
+                dc.SubmitChanges();
+            }
+        }
 
-                  Console.WriteLine("No fim de transferir n = {0}", n++);
-                  //Console.WriteLine("this.GetHashCode().ToString(): {0}" , this.GetHashCode().ToString());
+        [OperationBehavior(
+              TransactionScopeRequired = true // false por omissão
+          )]
+        public void Transferir(int c1, int c2, float montante)
+        {
+            try
+            {
+                Console.WriteLine("Transferir " + montante + " euros de " + c1 + " para " + c2);
+                String conStr = getConnectionString();
+                //DataContext dc = new DataContext(@"Data Source=MIRANDA-LAPTOP\SQL2012DEINST1;Initial Catalog=ASI;Integrated Security=true");//TODO: CONFIGURATION FILE!
+                DataContext dc = new DataContext(conStr);
+                Table<Conta> tc = dc.GetTable<Conta>();
+                var conta1 = (from c in dc.GetTable<Conta>()
+                              where c.Numero == c1
+                              select c).SingleOrDefault();
+                var conta2 = (from c in dc.GetTable<Conta>()
+                              where c.Numero == c2
+                              select c).SingleOrDefault();
 
-              }
-              catch (Exception) { }
-          }
-      }
+                conta1.Saldo -= montante;
+                dc.SubmitChanges();
+                conta2.Saldo += montante;
+                dc.SubmitChanges();
+
+
+                Console.WriteLine("No fim de transferir n = {0}", n++);
+                //Console.WriteLine("this.GetHashCode().ToString(): {0}" , this.GetHashCode().ToString());
+
+            }
+            catch (Exception) { }
+        }
+
+        private string getConnectionString()
+        {
+
+            string connectionStringBase = @"Server=(myServerAddress) ;Database=ASI;"
+             + "User Id=(myUsername);"
+             + "Password=(myPassword)";
+            using (StreamReader reader = new StreamReader(@"..\..\..\..\00.config_inst.txt"))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    switch (line.Substring(0, 12))
+                    {
+                        case "PrincipalDBA":
+                            connectionStringBase = connectionStringBase.Replace("(myServerAddress)", line.Substring(13));
+                            break;
+                        case "PrincipalUSR":
+                            connectionStringBase = connectionStringBase.Replace("(myUsername)", line.Substring(13));
+                            break;
+                        case "PrincipalPWD":
+                            connectionStringBase = connectionStringBase.Replace("(myPassword)", line.Substring(13));
+                            break;
+                    }
+                }
+            }
+            return connectionStringBase;
+        }
+    }
 
 
     class Program

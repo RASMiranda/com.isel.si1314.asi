@@ -1,3 +1,0 @@
-4. Considere o serviço apresentado no projecto Ex4 e o cliente apresentado no projecto Ex4Cliente. Volte a colocar o saldo de ambas as contas com o valor 1000.
-a) Tire os comentários da zona de código da aplicação cliente comentada com “alínea a)”, execute a aplicação cliente e comente o que acontece.
-b) Execute o código marcado com “alínea b)” e compare o resultado com o que observou na alínea anterior.

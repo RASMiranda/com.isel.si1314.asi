@@ -1,1 +1,3 @@
-PrincipalDB=MIRANDA-LAPTOP\SQL2012DEINST1
+PrincipalDBA=isel-asi-g5-vm1.cloudapp.net
+PrincipalUSR=meic1314si
+PrincipalPWD=t5U3qdNyS
