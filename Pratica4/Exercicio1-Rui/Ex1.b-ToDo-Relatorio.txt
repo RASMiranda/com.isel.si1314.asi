@@ -1,7 +1,0 @@
-b) Execute o serviço e o cliente e justifique os valores de n que observa escritos na consola
-da aplicação hospedeira do serviço.
-
-Observa-se que a variavel n tem sempre o valor inicial, zero.
-Sendo "n" uma variável global do Servico (Ex1.Servico.n), inciada a zero na instânciação do Servico, e incrementada no final da operação Transferir.
-Observando a ServiceBehavior InstanceContextMode.Single, no Servico seria esperado que o valor de n incrementa-se com cada chamada da operação Transferir.
-No entanto como a operação Transferir tem o OperationBehavior TransactionScopeRequired a verdadeiro, a execução desta operação implica a criação de uma nova transacção, o que por sua vez implica a instanciação de um novo Servico e subconsequentemente a inciação de n a zero.

@@ -1,6 +1,0 @@
-c) Volte a colocar o saldo das contas com o valor 1000. Altere o cliente de forma a que a
-segunda transferência de 500 euros seja feita da conta 1 para a conta 1111. Verifique o
-valor do saldo da conta 1. Justifique a existência deste saldo. Qual a solução?
-
-O saldo de 500 é debitado apesar de a conta destino não existir, no serviço é gerada excpção, mas no método Transferir não existe código para o bloco de catch.
-Uma possível solução será nesse bloco de catch fazer throw da excpção gerada, assim como a operação tem TransactionScopeRequired a true, será o prório WCF encarrege de fazer rollback de toda a operação. Observamos nesse caso, que saldo já não é debitado, caso a conta destino não exista.
