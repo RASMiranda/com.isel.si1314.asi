@@ -7,6 +7,8 @@
   echo "00.config_inst.txt" >> .gitignore
 
   git add .gitignore
+
+  git add .
   
   git commit -m "Add 00.config_inst.txt to .gitignore"
   
