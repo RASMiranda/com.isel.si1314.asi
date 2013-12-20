@@ -1,0 +1,24 @@
+D:\USERS\wv\ISEL\Aulas\MEIC\ASI\2009_2010\Práticas\Prática5\CódigoPrática5\Ex1\obj\Debug\ResolveAssemblyReference.cache
+D:\USERS\wv\ISEL\Aulas\MEIC\ASI\2009_2010\Práticas\Prática5\CódigoPrática5\Ex1\bin\Debug\Ex1.exe
+D:\USERS\wv\ISEL\Aulas\MEIC\ASI\2009_2010\Práticas\Prática5\CódigoPrática5\Ex1\bin\Debug\Ex1.pdb
+D:\USERS\wv\ISEL\Aulas\MEIC\ASI\2009_2010\Práticas\Prática5\CódigoPrática5\Ex1\obj\Debug\Ex1.exe
+D:\USERS\wv\ISEL\Aulas\MEIC\ASI\2009_2010\Práticas\Prática5\CódigoPrática5\Ex1\obj\Debug\Ex1.pdb
+D:\USERS\wv\ISEL\Aulas\MEIC\ASI\2009_2010\Práticas\Prática5\CódigoPrática5\Ex1\bin\Debug\Ex1.exe.config
+C:\Users\wv_000\Desktop\ASI_2012_2013\2012_2013\Práticas\Prática 4\CódigoPrática4\Ex1\bin\Debug\Ex1.exe.config
+C:\Users\wv_000\Desktop\ASI_2012_2013\2012_2013\Práticas\Prática 4\CódigoPrática4\Ex1\obj\Debug\Ex1.exe
+C:\Users\wv_000\Desktop\ASI_2012_2013\2012_2013\Práticas\Prática 4\CódigoPrática4\Ex1\obj\Debug\Ex1.pdb
+C:\Users\wv_000\Desktop\ASI_2012_2013\2012_2013\Práticas\Prática 4\CódigoPrática4\Ex1\bin\Debug\Ex1.exe
+C:\Users\wv_000\Desktop\ASI_2012_2013\2012_2013\Práticas\Prática 4\CódigoPrática4\Ex1\bin\Debug\Ex1.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex1\bin\Debug\Ex1.exe.config
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex1\bin\Debug\Ex1.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex1\bin\Debug\Ex1.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex1\obj\Debug\Ex1.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex1\obj\Debug\Ex1.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1\bin\Debug\Ex1.exe.config
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1\obj\Debug\Ex1.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1\obj\Debug\Ex1.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\CódigoPrática4\Ex1\bin\Debug\Ex1.exe.config
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\CódigoPrática4\Ex1\obj\Debug\Ex1.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\CódigoPrática4\Ex1\obj\Debug\Ex1.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\CódigoPrática4\Ex1\bin\Debug\Ex1.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\CódigoPrática4\Ex1\bin\Debug\Ex1.pdb

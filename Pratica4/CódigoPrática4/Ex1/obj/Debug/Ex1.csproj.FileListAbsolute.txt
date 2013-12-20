@@ -14,3 +14,6 @@ D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex1\bin\Debug\
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex1\bin\Debug\Ex1.pdb
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex1\obj\Debug\Ex1.exe
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex1\obj\Debug\Ex1.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1\bin\Debug\Ex1.exe.config
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1\obj\Debug\Ex1.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1\obj\Debug\Ex1.pdb
