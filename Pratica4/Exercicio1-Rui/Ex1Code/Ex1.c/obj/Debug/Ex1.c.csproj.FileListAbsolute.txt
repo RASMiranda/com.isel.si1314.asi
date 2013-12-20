@@ -9,3 +9,9 @@ D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\CódigoPrática4
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\CódigoPrática4\Ex1.c\obj\Debug\Ex1.c.csprojResolveAssemblyReference.cache
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\CódigoPrática4\Ex1.c\obj\Debug\Ex1.c.exe
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\CódigoPrática4\Ex1.c\obj\Debug\Ex1.c.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1Code\Ex1.c\bin\Debug\Ex1.c.exe.config
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1Code\Ex1.c\bin\Debug\Ex1.c.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1Code\Ex1.c\bin\Debug\Ex1.c.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1Code\Ex1.c\obj\Debug\Ex1.c.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1Code\Ex1.c\obj\Debug\Ex1.c.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1Code\Ex1.c\obj\Debug\Ex1.c.pdb
