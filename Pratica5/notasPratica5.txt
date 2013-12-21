@@ -1,0 +1,47 @@
+ASI Pratica 5 
+EX1
+a)
+    em cima do item criado selecionar Publish
+        Configurar server e Database
+    Erro 
+        static int i
+            CREATE ASSEMBLY failed because type 'UserDefinedFunctions' in safe assembly 'p5ex1_SqlClr' has a static field 'i'. Attributes of static fields in safe assemblies must be marked  readonly in Visual C#, ReadOnly in Visual Basic
+        solucao 
+            readonly static int i;
+        alternativas: 
+            1) modo safe 
+            2) var in readonly
+            
+    Validação de execução
+    
+b)
+    create table t ( i int primary key, j as [dbo].[SqlFunction1]() persisted )
+    erro:
+        Msg 4936, Level 16, State 1, Line 1
+        Computed column 'j' in table 't' cannot be persisted because the column is non-deterministic.
+
+EX2
+a)
+    error 
+        Msg 10306, Level 16, State 1, Procedure f2, Line 1 The SqlFunctionAttribute of the Init method for a CLR table-valued function must set the FillRowMethodName property.
+    A função criada é do tipo TVFs ( função que retorna uma tsbela ) pelo que é necessário indicar ao SQL Server
+        a definição da composiçao da tabela (que estrutura e tipo de dados tem ) e também como pode obter cada linha.
+        Apenas a primeira estava indicada pelo que é preciso implmentar a segunda.
+    
+EX3
+a) create and insert table t1; create table t2
+
+    create trigger TriggerEx3 on t1
+    For update
+    as EXTERNAL NAME [p5ex1_SqlClr].Triggers.Ex3
+
+    A correcção é dada com 
+                cmd.CommandText = "insert into t2 select c1 from inserted where c2 is null";
+
+        NOTA: Não consegui fazer o debug no Visual Studio
+
+EX4
+    Notas:
+    
+        ** rever as funcções que são mesmo necessarias e o processameto dos nUlls
+        
