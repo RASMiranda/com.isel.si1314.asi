@@ -14,3 +14,9 @@ D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex2\bin\Debug\
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex2\bin\Debug\Ex2.pdb
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex2\obj\Debug\Ex2.exe
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\CódigoPrática4\Ex2\obj\Debug\Ex2.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio2-Rui\Ex2Code\Ex2\bin\Debug\Ex2.exe.config
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio2-Rui\Ex2Code\Ex2\obj\Debug\Ex2.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio2-Rui\Ex2Code\Ex2\obj\Debug\Ex2.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio2-Rui\Ex2Code\Ex2\bin\Debug\Ex2.exe
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio2-Rui\Ex2Code\Ex2\bin\Debug\Ex2.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio2-Rui\Ex2Code\Ex2\obj\Debug\Ex2.csprojResolveAssemblyReference.cache

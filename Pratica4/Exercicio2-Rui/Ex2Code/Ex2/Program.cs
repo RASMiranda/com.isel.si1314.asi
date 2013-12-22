@@ -7,6 +7,7 @@ using System.Text;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Transactions;
+using System.IO;
 
 namespace Ex2
 {
@@ -59,7 +60,7 @@ namespace Ex2
 
             Console.WriteLine("obter " + numero);
 
-            DataContext dc = new DataContext(@"Data Source=wv-toshiba\instancia1;Initial Catalog=ASI;User ID=sa;Password=123");
+            DataContext dc = getDataContext();
             Table<Conta> tc = dc.GetTable<Conta>();
             var conta = (from c in dc.GetTable<Conta>()
                          where c.Numero == numero
@@ -70,7 +71,7 @@ namespace Ex2
 
         public void inserirConta(Conta c)
         {
-            DataContext dc = new DataContext(@"Data Source=wv-toshiba\instancia1;Initial Catalog=ASI;User ID=sa;Password=123");
+            DataContext dc = getDataContext();
             Table<Conta> tc = dc.GetTable<Conta>();
             tc.InsertOnSubmit(c);
             dc.SubmitChanges();
@@ -78,14 +79,14 @@ namespace Ex2
 
         public void alterarConta(Conta c)
         {
-            DataContext dc = new DataContext(@"Data Source=wv-toshiba\instancia1;Initial Catalog=ASI;User ID=sa;Password=123");
+            DataContext dc = getDataContext();
             Table<Conta> tc = dc.GetTable<Conta>();
             tc.Attach(c, true);
             try
             {
                 dc.SubmitChanges(ConflictMode.ContinueOnConflict);
             }
-            catch (ChangeConflictException e)
+            catch (ChangeConflictException)
             {
                 dc.ChangeConflicts.ResolveAll(RefreshMode.KeepCurrentValues); // last -in - wins
                 dc.SubmitChanges();
@@ -101,7 +102,7 @@ namespace Ex2
             
                 Console.WriteLine("Transferir " + montante + " euros de " + c1 + " para " + c2);
 
-                DataContext dc = new DataContext(@"Data Source=wv-toshiba\instancia1;Initial Catalog=ASI;User ID=sa;Password=123");
+                DataContext dc = getDataContext();
                 Table<Conta> tc = dc.GetTable<Conta>();
                 var conta1 = (from c in dc.GetTable<Conta>()
                               where c.Numero == c1
@@ -118,7 +119,41 @@ namespace Ex2
                
                 Console.WriteLine("Fim de transferir");
 
-           
+
+        }
+
+        private DataContext getDataContext()
+        {
+            String conStr = getConnectionString();
+            return new DataContext(conStr);
+        }
+
+        private string getConnectionString()
+        {
+
+            string connectionStringBase = @"Server=(myServerAddress) ;Database=ASI;"
+             + "User Id=(myUsername);"
+             + "Password=(myPassword)";
+            using (StreamReader reader = new StreamReader(@"..\..\..\..\..\00.config_inst.txt"))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    switch (line.Substring(0, 12))
+                    {
+                        case "PrincipalDBA":
+                            connectionStringBase = connectionStringBase.Replace("(myServerAddress)", line.Substring(13));
+                            break;
+                        case "PrincipalUSR":
+                            connectionStringBase = connectionStringBase.Replace("(myUsername)", line.Substring(13));
+                            break;
+                        case "PrincipalPWD":
+                            connectionStringBase = connectionStringBase.Replace("(myPassword)", line.Substring(13));
+                            break;
+                    }
+                }
+            }
+            return connectionStringBase;
         }
 
     
