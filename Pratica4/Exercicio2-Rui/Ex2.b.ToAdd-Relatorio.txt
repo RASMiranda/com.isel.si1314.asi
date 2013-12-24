@@ -1,0 +1,2 @@
+b) Faça close do proxy e verifique que a transacção não produziu efeito. Justifique porquê.
+R: Isto sucede porque o método Ex2.Servico.Transferir está configurado com o OperationBehavior TransactionAutoComplete a Falso, ou seja, isto faz com o WCF não termine a transição quando a execução da operação termina, sendo essa responsabilidade passada para o interior da operação, como a operação encerra sem terminar a transacção o WCF faz rollback da transacção, fazendo com que os valores não se alterem

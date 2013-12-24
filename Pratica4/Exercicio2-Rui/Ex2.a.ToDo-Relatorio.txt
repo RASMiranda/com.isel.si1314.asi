@@ -4,4 +4,3 @@ colocar os saldos das duas contas com o valor 1000.
 a) Execute passo-a-passo o cliente e verifique com um select realizado no management studio
 que após a transferência e enquanto não se fechar o proxy, a transacção continua a existir.
 Justifique este comportamento.
-R: Isto sucede porque o método Ex2.Servico.Transferir está configurado com o OperationBehavior TransactionAutoComplete a Falso, ou seja, isto faz com o WCF não termine a transição quando a execução da operação termina, sendo essa responsabilidade passada para o interior da operação.
