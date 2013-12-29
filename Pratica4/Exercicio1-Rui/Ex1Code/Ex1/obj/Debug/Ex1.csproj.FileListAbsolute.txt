@@ -27,3 +27,4 @@ D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1Code\Ex1\bin\
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1Code\Ex1\bin\Debug\Ex1.pdb
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1Code\Ex1\obj\Debug\Ex1.exe
 D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1Code\Ex1\obj\Debug\Ex1.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio1-Rui\Ex1Code\Ex1\obj\Debug\Ex1.csprojResolveAssemblyReference.cache
