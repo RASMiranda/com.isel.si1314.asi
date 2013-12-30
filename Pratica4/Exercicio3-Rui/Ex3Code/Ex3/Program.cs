@@ -46,7 +46,7 @@ namespace Ex3
 
 
     }
-
+    
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)] // com sessionless também pode ser PerSession
     public class Servico : IServicoMSMQ
     {
@@ -90,7 +90,6 @@ namespace Ex3
             }
             catch (Exception e)
             {
-                //MessageBox.Show("Erro ao alterar a conta");
                 Console.WriteLine("Erro ao alterar a conta: Exception");
                 Console.WriteLine("Exception.Message: {0}", e.Message);
                 Console.WriteLine("Exception.StackTrace: {0}", e.StackTrace);
@@ -151,6 +150,7 @@ namespace Ex3
             Console.WriteLine("Serviço iniciado. Enter para terminar");
             Console.ReadLine();
             host.Close();
+            MessageQueue.Delete(@".\private$\filaWCF");//grupo5
 
         }
     }

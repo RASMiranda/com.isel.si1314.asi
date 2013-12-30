@@ -145,12 +145,15 @@ namespace Ex1
                     {
                         case "PrincipalDBA":
                             connectionStringBase = connectionStringBase.Replace("(myServerAddress)", line.Substring(13));
+                            Console.WriteLine("myServerAddress: {0}", line.Substring(13));
                             break;
                         case "PrincipalUSR":
                             connectionStringBase = connectionStringBase.Replace("(myUsername)", line.Substring(13));
+                            Console.WriteLine("myUsername: {0}", line.Substring(13));
                             break;
                         case "PrincipalPWD":
                             connectionStringBase = connectionStringBase.Replace("(myPassword)", line.Substring(13));
+                            Console.WriteLine("myPassword: {0}", line.Substring(13));
                             break;
                     }
                 }
