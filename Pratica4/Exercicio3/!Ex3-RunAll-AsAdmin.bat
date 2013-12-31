@@ -8,7 +8,7 @@ for /f "delims=" %%x in (..\00.config_inst.txt) do (set "%%x")
 
 REM Config DTC ===================================================
 
-call Ex3.0-Start-CompSrv
+call Ex3.0-Start-CompSrv.bat
 
 type Ex3.1-ConfigDTC.txt
 
