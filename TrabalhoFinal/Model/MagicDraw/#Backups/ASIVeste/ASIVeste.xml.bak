@@ -40,7 +40,6 @@
 					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1389302049586_594477_1068' name='Efectua Venda' visibility='public'>
 						<include xmi:type='uml:Include' xmi:id='_16_0_1796040d_1389302281135_193665_1196' visibility='public' addition='_16_0_1796040d_1389302061548_305691_1081'/>
 					</packagedElement>
-					<packagedElement xmi:type='uml:Actor' xmi:id='_16_0_1796040d_1389302560936_81620_1237' name='Funcionario Loja' visibility='public'/>
 				</packagedElement>
 				<packagedElement xmi:type='uml:Dependency' xmi:id='_16_0_1796040d_1389299455866_425100_1141' visibility='public'>
 					<supplier xmi:idref='_16_0_1796040d_1389299376344_283143_1093'/>
@@ -100,8 +99,9 @@
 						</extensionPoint>
 					</packagedElement>
 					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1389302073549_737735_1093' name='Lista Produtos' visibility='public'/>
-					<packagedElement xmi:type='uml:Actor' xmi:id='_16_0_1796040d_1389302645505_745881_1292' name='Funcionario Sede' visibility='public'/>
+					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1389302187431_414299_1181' visibility='public'/>
 				</packagedElement>
+				<packagedElement xmi:type='uml:Actor' xmi:id='_16_0_1796040d_1389302560936_81620_1237' name='Funcionario Loja' visibility='public'/>
 				<packagedElement xmi:type='uml:Association' xmi:id='_16_0_1796040d_1389302622927_737559_1266' visibility='public'>
 					<memberEnd xmi:idref='_16_0_1796040d_1389302622927_358926_1267'/>
 					<memberEnd xmi:idref='_16_0_1796040d_1389302622927_168968_1268'/>
@@ -110,6 +110,7 @@
 					<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1389302622927_358926_1267' visibility='private' type='_16_0_1796040d_1389302049586_594477_1068' association='_16_0_1796040d_1389302622927_737559_1266'/>
 					<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1389302622927_168968_1268' visibility='private' type='_16_0_1796040d_1389302560936_81620_1237' association='_16_0_1796040d_1389302622927_737559_1266'/>
 				</packagedElement>
+				<packagedElement xmi:type='uml:Actor' xmi:id='_16_0_1796040d_1389302645505_745881_1292' name='Funcionario Sede' visibility='public'/>
 				<packagedElement xmi:type='uml:Association' xmi:id='_16_0_1796040d_1389302665494_5512_1342' visibility='public'>
 					<memberEnd xmi:idref='_16_0_1796040d_1389302665494_468327_1343'/>
 					<memberEnd xmi:idref='_16_0_1796040d_1389302665494_935177_1344'/>
@@ -1046,7 +1047,7 @@
 						<mdElement elementClass='StringProperty'>
 							<propertyID>INFO_PROPERTY</propertyID>
 							<propertyDescriptionID>INFO_PROPERTY_DESCRIPTION</propertyDescriptionID>
-							<value>22 4f 16 71 33 37 7 51 1a 51 5a f5 bc 5c d8 ee 4e d1 64 d3 e1 c0 a f3 bb 57 87 d3 40 d2 53 b 85 84 7f b4 43 31 52 ec c6 f5 c3 9 e4 b7 7c 83 d1 61 53 fc 40 a3 54 bb 76 50 6 33 70 94 6b cf ea 75 c6 d8 29 2d 13 </value>
+							<value>22 4f 16 71 33 37 7 51 1a 51 5a f5 bc 5c d8 ee 4e d1 64 d3 e1 c0 a f3 bb 57 87 d3 41 dc 53 b 85 84 7f b4 43 31 52 ec c6 f5 c3 9 e4 b7 7c 83 d1 61 53 fc 40 a3 54 bb 76 50 6 33 70 94 6b cf ea 75 c6 d8 29 2d 13 </value>
 						</mdElement>
 						<mdElement elementClass='LIST_PROPERTY'>
 							<propertyID>ADDITIONAL_CONTAINMENT_TREES</propertyID>
