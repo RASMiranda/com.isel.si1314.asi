@@ -1,0 +1,13 @@
+Component Services
+	Computers
+		My Computer
+			Distributed Transaction Coordinator
+				Local DTC (Right-Click)
+					Properties
+						Security (Tab)
+							Check:
+								Network DTC Access
+								Allow Remote Clients
+								Allow Remote Administration
+								Allow Inbound
+								Allow Outbound

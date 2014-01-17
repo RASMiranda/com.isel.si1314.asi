@@ -1,0 +1,103 @@
+venda de produtos de vestuário
+um conjuntos de lojas de produtos para criança e senhora 
+um conjuntos de lojas de produtos para homem e desportistas
+Cada conjunto de lojas tem o seu próprio servidor aplicacional e SGBD.
+
+» 2 instancias de BD's?
+» IIS como servidor aplicacional com dois web sites?
+
+O stock físico, existe nos armazéns da empresa.
+As encomendas firmadas pelos clientes são expedidas para a morada dos mesmos. 
+
+
+A empresa também possui uma sede q tb tem o seu próprio servidor aplicacional e SGBD.
+
+» +1 instancia de BD's?
+» +1 web site no IIS?
+
+Aqui são realizados:
+os procedimentos de gestão comuns aos dois conjuntos de lojas, tais como 
+encomendas a fornecedores,
+» proc encomendarProdutos
+inserção de novos produtos e 
+» proc insereProduto
+recepção de encomendas de fornecedores.
+» proc receberProduto
+
+
+Um 'produto' consiste em 
+um código, 
+um tipo, 
+uma designação, 
+um preço, 
+a quantidade disponível em stock, 
+a quantidade mínima de stock e 
+a indicação do respectivo fornecedor. 
+
+
+Nas lojas apenas é relevante a informação relativa 
+ao código e
+quantidade disponível em stock.
+» CREATE TABLE [dbo].[produto](
+[cod] [int] NOT NULL,
+[preco] [money] NULL,
+[qtStock] [int] NULL,
+[qtMinStock] [int] NULL   «««««««« mover para a sede!
+)
+
+Na sede é relevante a informação sobre 
+código, 
+quantidade mínima de stock e 
+fornecedor. 
+» CREATE TABLE [dbo].[produto](
+[codFornecedor] [int] NULL,
+[qtEncomenda] [int] NULL,
+[cod] [int] NOT NULL,
+[estado] [bit] NULL,	 «««««««« n faz parte do enunciado mas faz falta para gerir as encomendas. significa 'encomenda pendente?'
+[tipo] [char](1) NOT NULL
+)
+
+» falta a coluna designação (sede ou loja?)
+
+
+Um 'fornecedor' consiste em
+número de fornecedor, 
+o nome e 
+a morada, 
+esta informação é relevante apenas na sede.
+» CREATE TABLE [dbo].[fornecedor](
+[cod] [int] NOT NULL,
+[nome] [varchar](20) NULL,
+[morada] [varchar](60) NULL
+)
+
+
+As lojas realizam vendas de produtos e, nestes processos, 
+apenas dependem do servidor aplicacional e SGBD do respectivo conjunto de lojas, 
+» ok, a info necessaria à realizacao de uma venda ja se encontra na loja. As vendas geradas sao registadas na loja e enviadas à sede via queue?
+devendo funcionar com total autonomia, relativamente à sede e ao outro conjunto de lojas.
+» uma queue trataria deste requisito. autonomia entre lojas é non-issue; a queue não resolve nenhum problema entre lojas;
+
+
+Pretende-se, no entanto, que a informação das vendas seja transmitida à sede, 
+para que esta possa expedir as encomendas para os clientes e 
+» TODO: nocao de cliente e expedicao de encomendas para o mesmo nao está implementada
+realizar as encomendas aos fornecedores, se for o caso.
+» proc encomendarProdutos & proc receberProduto. Acho que por "se for o caso" o Eng entende "se hover motivo para isso". A flag de estado serve precisamente para não fazer encomendas umas atrás das outras se já houver uma encomenda pendente.
+
+
+Quando a sede recebe produtos dos fornecedores, deve 
+actualizar os stocks no SGBD do conjunto de lojas adequado, de forma síncrona.
+» o proc receberProduto actualiza uma view sobre db links. Penso que esta actualização é realizada síncrona entre as várias DB's.
+
+A sede também realiza encomendas a fornecedores, de forma autónoma. 
+» OK, o conceito de fornecedor é exclusivo à sede
+
+
+Na sede são também 
+inseridos novos produtos e 
+» proc insereProduto
+inseridos novos fornecedores e 
+» TODO: actualmente os fornecedores são adicionados via SQL Insert
+realizadas listagens do estado dos produtos (quantidade em stock).
+» TODO: penso que uma versão modificada do proc encomendarProdutos ou da view viewProduto resolve esta questão

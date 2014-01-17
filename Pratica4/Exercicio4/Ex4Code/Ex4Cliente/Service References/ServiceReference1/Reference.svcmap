@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e5db6931-4f3b-4302-8f5c-91ae9599f251" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8001/Servico" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Servico.xsd" MetadataType="Schema" ID="c6b556eb-991a-4414-a255-dff6267b995d" SourceId="1" SourceUrl="http://localhost:8001/Servico?xsd=xsd0" />
+    <MetadataFile FileName="Servico.disco" MetadataType="Disco" ID="330ac5ea-15d9-44d4-b8a3-ba04f90653eb" SourceId="1" SourceUrl="http://localhost:8001/Servico?disco" />
+    <MetadataFile FileName="Servico.wsdl" MetadataType="Wsdl" ID="6412f777-3bea-4b01-b9d0-9b92a8532c6e" SourceId="1" SourceUrl="http://localhost:8001/Servico?wsdl" />
+    <MetadataFile FileName="Servico1.xsd" MetadataType="Schema" ID="8eeb964a-be4d-4a4f-8479-998a800f447b" SourceId="1" SourceUrl="http://localhost:8001/Servico?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

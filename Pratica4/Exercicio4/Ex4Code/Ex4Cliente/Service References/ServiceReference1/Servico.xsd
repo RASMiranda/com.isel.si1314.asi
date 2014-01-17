@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TransferirSessionFull">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="c1" type="xs:int" />
+        <xs:element minOccurs="0" name="c2" type="xs:int" />
+        <xs:element minOccurs="0" name="montante" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferirSessionFullResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Finalizar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinalizarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferirSessionLess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="c1" type="xs:int" />
+        <xs:element minOccurs="0" name="c2" type="xs:int" />
+        <xs:element minOccurs="0" name="montante" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TransferirSessionLessResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
