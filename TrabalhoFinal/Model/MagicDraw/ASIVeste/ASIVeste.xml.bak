@@ -465,7 +465,7 @@
 					<diagramScrollPositionX xmi:value='0'/>
 					<diagramScrollPositionY xmi:value='0'/>
 					<maximized xmi:value='false'/>
-					<active xmi:value='true'/>
+					<active xmi:value='false'/>
 					<mdOwnedViews>
 						<mdElement elementClass='Class' xmi:id='_16_0_1796040d_1389299044731_766669_942'>
 							<elementID xmi:idref='_16_0_1796040d_1389299044730_300289_940'/>
@@ -634,18 +634,18 @@
 					<elementID xmi:idref='_16_0_1796040d_1389301985163_44641_993'/>
 					<type>Use Case Diagram</type>
 					<umlType>Use Case Diagram</umlType>
-					<zoomFactor xmi:value='1.0'/>
+					<zoomFactor xmi:value='0.46011817'/>
 					<diagramOpened xmi:value='true'/>
 					<diagramFrameInitialSizeSet xmi:value='true'/>
 					<diagramWindowBounds>2, 24, 1095, 651</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
-					<diagramScrollPositionY xmi:value='28'/>
+					<diagramScrollPositionY xmi:value='0'/>
 					<maximized xmi:value='false'/>
-					<active xmi:value='false'/>
+					<active xmi:value='true'/>
 					<mdOwnedViews>
 						<mdElement elementClass='DiagramFrame' xmi:id='_16_0_1796040d_1389301985165_564899_1006'>
 							<elementID xmi:idref='_16_0_1796040d_1389301985163_44641_993'/>
-							<geometry>5, 5, 1431, 1337</geometry>
+							<geometry>5, 5, 712, 543</geometry>
 						</mdElement>
 						<mdElement elementClass='Package' xmi:id='_16_0_1796040d_1389302483311_815796_1215'>
 							<elementID xmi:idref='_16_0_1796040d_1389302483310_399023_1213'/>
@@ -880,27 +880,6 @@
 							</mdOwnedViews>
 							<associationFirstEndID xmi:idref='_16_0_1796040d_1389302679634_334328_1411'/>
 							<associationSecondEndID xmi:idref='_16_0_1796040d_1389302679634_732221_1410'/>
-						</mdElement>
-					</mdOwnedViews>
-				</mdElement>
-			</mdElement>
-			<mdElement elementClass='Diagram' xmi:id='_16_0_1796040d_1389557323166_228831_2342' name='Expedir Encomenda' visibility='public' context='_16_0_1796040d_1389557323166_42555_2344' ownerOfDiagram='_16_0_1796040d_1389557323166_42555_2344'>
-				<mdElement elementClass='DiagramPresentationElement' xmi:id='_16_0_1796040d_1389557323166_418567_2343'>
-					<elementID xmi:idref='_16_0_1796040d_1389557323166_228831_2342'/>
-					<type>Sequence Diagram</type>
-					<umlType>Sequence Diagram</umlType>
-					<zoomFactor xmi:value='1.0'/>
-					<diagramOpened xmi:value='true'/>
-					<diagramFrameInitialSizeSet xmi:value='true'/>
-					<diagramWindowBounds>2, 24, 1095, 651</diagramWindowBounds>
-					<diagramScrollPositionX xmi:value='0'/>
-					<diagramScrollPositionY xmi:value='0'/>
-					<maximized xmi:value='false'/>
-					<active xmi:value='false'/>
-					<mdOwnedViews>
-						<mdElement elementClass='DiagramFrame' xmi:id='_16_0_1796040d_1389557323169_425618_2357'>
-							<elementID xmi:idref='_16_0_1796040d_1389557323166_228831_2342'/>
-							<geometry>5, 5, 1178, 641</geometry>
 						</mdElement>
 					</mdOwnedViews>
 				</mdElement>
@@ -1143,6 +1122,22 @@
 					</mdOwnedViews>
 				</mdElement>
 			</mdElement>
+			<mdElement elementClass='Diagram' xmi:id='_16_0_1796040d_1389557323166_228831_2342' name='Expedir Encomenda' visibility='public' context='_16_0_1796040d_1389557323166_42555_2344' ownerOfDiagram='_16_0_1796040d_1389557323166_42555_2344'>
+				<mdElement elementClass='DiagramPresentationElement' xmi:id='_16_0_1796040d_1389557323166_418567_2343'>
+					<elementID xmi:idref='_16_0_1796040d_1389557323166_228831_2342'/>
+					<type>Sequence Diagram</type>
+					<umlType>Sequence Diagram</umlType>
+					<zoomFactor xmi:value='1.0'/>
+					<diagramOpened xmi:value='false'/>
+					<diagramFrameInitialSizeSet xmi:value='true'/>
+					<mdOwnedViews>
+						<mdElement elementClass='DiagramFrame' xmi:id='_16_0_1796040d_1389557323169_425618_2357'>
+							<elementID xmi:idref='_16_0_1796040d_1389557323166_228831_2342'/>
+							<geometry>5, 5, 1178, 641</geometry>
+						</mdElement>
+					</mdOwnedViews>
+				</mdElement>
+			</mdElement>
 		</mdOwnedDiagrams>
 		<proxies/>
 		<privateProxies>
@@ -1329,11 +1324,11 @@
 			<tag name='Networking_Profile:PC:HDD' tagID='_12_0_8740266_1164355231000_44810_224'/>
 			<tag name='Networking_Profile:PC:OS' tagID='_12_0_8740266_1164355231000_421020_225'/>
 			<tag name='Networking_Profile:PC:SerialNumber' tagID='_12_0_8740266_1164355393265_803672_329'/>
+			<stereotype name='Networking_Profile:Application_Server' stereotypeID='_11_5_8740266_1157955887718_620497_184'/>
 			<stereotype name='MagicDraw_Profile:DiagramInfo' stereotypeID='_9_0_be00301_1108044380615_150487_0'/>
 			<tag name='MagicDraw_Profile:DiagramInfo:Creation_date' tagID='_be00301_1073306188629_537791_2'/>
 			<tag name='MagicDraw_Profile:DiagramInfo:Author' tagID='_be00301_1077726770128_871366_1'/>
 			<tag name='MagicDraw_Profile:DiagramInfo:Modification_date' tagID='_be00301_1073394345322_922552_1'/>
-			<stereotype name='Networking_Profile:Application_Server' stereotypeID='_11_5_8740266_1157955887718_620497_184'/>
 			<stereotype name='Networking_Profile:PC_' stereotypeID='_11_5_8740266_1160466129609_869566_25'/>
 			<tag name='Networking_Profile:PC_:ID' tagID='_12_0_8740266_1164355350843_162256_314'/>
 			<tag name='Networking_Profile:PC_:IP' tagID='_12_0_8740266_1164355350843_299896_315'/>
@@ -1517,7 +1512,7 @@
 						<mdElement elementClass='StringProperty'>
 							<propertyID>DIAGRAMS_LAYOUT</propertyID>
 							<propertyDescriptionID>DIAGRAMS_LAYOUT_DESCRIPTION</propertyDescriptionID>
-							<value>0 0 0 14 0 0 0 1 0 0 0 27 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 32 0 39 0 38 0 38 0 36 0 34 0 34 0 30 0 39 0 5f 0 37 0 39 0 32 0 34 0 32 0 35 0 5f 0 39 0 32 0 37 0 0 0 1 0 0 0 cc 0 0 0 e2 0 0 0 0 0 0 0 4 0 0 0 27 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 32 0 39 0 38 0 38 0 36 0 34 0 34 0 30 0 39 0 5f 0 37 0 39 0 32 0 34 0 32 0 35 0 5f 0 39 0 32 0 37 0 0 0 26 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 33 0 30 0 31 0 39 0 38 0 35 0 31 0 36 0 33 0 5f 0 34 0 34 0 36 0 34 0 31 0 5f 0 39 0 39 0 33 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 35 0 35 0 36 0 33 0 38 0 32 0 39 0 33 0 34 0 5f 0 38 0 33 0 38 0 30 0 32 0 36 0 5f 0 31 0 39 0 38 0 33 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 35 0 35 0 37 0 33 0 32 0 33 0 31 0 36 0 36 0 5f 0 32 0 32 0 38 0 38 0 33 0 31 0 5f 0 32 0 33 0 34 0 32 </value>
+							<value>0 0 0 14 0 0 0 1 0 0 0 26 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 33 0 30 0 31 0 39 0 38 0 35 0 31 0 36 0 33 0 5f 0 34 0 34 0 36 0 34 0 31 0 5f 0 39 0 39 0 33 0 0 0 1 0 0 0 cc 0 0 0 e2 0 0 0 1 0 0 0 3 0 0 0 27 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 32 0 39 0 38 0 38 0 36 0 34 0 34 0 30 0 39 0 5f 0 37 0 39 0 32 0 34 0 32 0 35 0 5f 0 39 0 32 0 37 0 0 0 26 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 33 0 30 0 31 0 39 0 38 0 35 0 31 0 36 0 33 0 5f 0 34 0 34 0 36 0 34 0 31 0 5f 0 39 0 39 0 33 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 35 0 35 0 36 0 33 0 38 0 32 0 39 0 33 0 34 0 5f 0 38 0 33 0 38 0 30 0 32 0 36 0 5f 0 31 0 39 0 38 0 33 </value>
 						</mdElement>
 						<mdElement elementClass='StringProperty'>
 							<propertyID>MT_LAST_SELECTED_TRANSFORMATION</propertyID>
@@ -1592,7 +1587,7 @@
 						<mdElement elementClass='StringProperty'>
 							<propertyID>INFO_PROPERTY</propertyID>
 							<propertyDescriptionID>INFO_PROPERTY_DESCRIPTION</propertyDescriptionID>
-							<value>40 32 2 73 73 78 7b 58 57 48 3e 57 57 42 8 e0 c7 fc 9c de b1 b7 97 32 70 dd 72 8d b1 48 8d d7 66 8b 0 9a 52 7a 28 10 7b 29 5c 40 5e 78 ce 12 97 8e 38 4c 97 50 ff cf 40 42 f9 3c 3c 4b d8 23 cb 44 16 9e 90 58 6b </value>
+							<value>40 32 2 73 73 78 7b 58 57 48 3e 57 57 42 8 e0 c7 fc 9c de b1 b7 97 32 70 dc 7f 8d b7 48 8d d7 66 8b 0 9a 52 7a 28 10 7b 29 5c 40 5e 78 ce 12 97 8e 38 4c 97 50 ff cf 40 42 f9 3c 3c 4b d8 23 cb 44 16 9e 90 58 6b </value>
 						</mdElement>
 						<mdElement elementClass='LIST_PROPERTY'>
 							<propertyID>ADDITIONAL_CONTAINMENT_TREES</propertyID>
@@ -1601,7 +1596,7 @@
 						<mdElement elementClass='StringProperty'>
 							<propertyID>LAST_DIRECTORY</propertyID>
 							<propertyDescriptionID>LAST_DIRECTORY_DESCRIPTION</propertyDescriptionID>
-							<value></value>
+							<value>D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Model\MagicDraw\ASIVeste\Image</value>
 						</mdElement>
 						<mdElement elementClass='NumberProperty'>
 							<propertyID>OutputTypeSelectionPanel.value</propertyID>
@@ -1620,7 +1615,7 @@
 						<mdElement elementClass='ChoiceProperty'>
 							<propertyID>RECENT_DIAGRAMS</propertyID>
 							<propertyDescriptionID>RECENT_DIAGRAMS_DESCRIPTION</propertyDescriptionID>
-							<choice xmi:value=''/>
+							<choice xmi:value='_16_0_1796040d_1389557323166_228831_2342'/>
 							<index xmi:value='-1'/>
 						</mdElement>
 					</mdElement>
@@ -9102,8 +9097,8 @@
 	</xmi:Extension>
 	<Networking_Profile:Connection xmi:id='_16_0_1796040d_1389300244342_27296_1358' base_Dependency='_16_0_1796040d_1389300244342_871361_1357'/>
 	<Networking_Profile:PC xmi:id='_16_0_1796040d_1389299568478_946009_1212' base_Class='_16_0_1796040d_1389299568478_167174_1211'/>
-	<Networking_Profile:Application_Server xmi:id='_16_0_1796040d_1389299376344_47479_1094' base_Class='_16_0_1796040d_1389299376344_283143_1093'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1389557323169_74659_2356' base_Diagram='_16_0_1796040d_1389557323166_228831_2342' Creation_date='1/12/14 8:08 PM' Author='Rui Miranda' Modification_date='1/12/14 8:08 PM'/>
+	<Networking_Profile:Application_Server xmi:id='_16_0_1796040d_1389299376344_47479_1094' base_Class='_16_0_1796040d_1389299376344_283143_1093'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1389298864413_659818_929' base_Diagram='_16_0_1796040d_1389298864409_792425_927' Creation_date='1/9/14 8:21 PM' Author='Rui Miranda' Modification_date='1/9/14 8:21 PM'/>
 	<Networking_Profile:PC_ xmi:id='_16_0_1796040d_1389299545945_657100_1148' base_Class='_16_0_1796040d_1389299545945_227674_1147'/>
 	<Networking_Profile:Connection xmi:id='_16_0_1796040d_1389299593633_927794_1247' base_Dependency='_16_0_1796040d_1389299593633_354004_1246'/>
@@ -9114,8 +9109,8 @@
 	<Networking_Profile:Connection xmi:id='_16_0_1796040d_1389299714760_566139_1329' base_Dependency='_16_0_1796040d_1389299714760_296718_1328'/>
 	<Networking_Profile:Connection xmi:id='_16_0_1796040d_1389299279274_165991_1075' base_Dependency='_16_0_1796040d_1389299279274_663431_1074'/>
 	<Networking_Profile:Application_Server xmi:id='_16_0_1796040d_1389299148955_365560_1046' base_Class='_16_0_1796040d_1389299148955_791980_1045'/>
-	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1389556382936_353950_1997' base_Diagram='_16_0_1796040d_1389556382934_838026_1983' Creation_date='1/12/14 7:53 PM' Author='Rui Miranda' Modification_date='1/12/14 7:53 PM'/>
 	<Networking_Profile:PC_ xmi:id='_16_0_1796040d_1389299656381_330940_1271' base_Class='_16_0_1796040d_1389299656380_427864_1270'/>
+	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1389556382936_353950_1997' base_Diagram='_16_0_1796040d_1389556382934_838026_1983' Creation_date='1/12/14 7:53 PM' Author='Rui Miranda' Modification_date='1/12/14 7:53 PM'/>
 	<Networking_Profile:PC xmi:id='_16_0_1796040d_1389300236074_530431_1335' base_Class='_16_0_1796040d_1389300236074_32075_1334'/>
 	<Networking_Profile:Application_Server xmi:id='_16_0_1796040d_1389299044730_874459_941' base_Class='_16_0_1796040d_1389299044730_300289_940'/>
 	<Networking_Profile:Connection xmi:id='_16_0_1796040d_1389300803193_496574_1380' base_Dependency='_16_0_1796040d_1389300803193_894407_1379'/>
