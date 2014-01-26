@@ -34,7 +34,7 @@ CREATE TABLE [dbo].[Produto](
     [Preco]         [DECIMAL],          // 2 casas decimais
     [StockQtd]      [INT] NOT NULL,     
     [StockMinimo]   [INT] NOT NULL, 
-    [FornecedorId]  [INT] REFERENCES Fornecedor
+    [FornecedorId]  [INT] REFERENCES Fornecedor([Id])
 )
 GO
 
@@ -48,8 +48,8 @@ GO
 
 CREATE TABLE [dbo].[VendaProdutos](
     [Id]        [INT] PRIMARY KEY,
-    [VendaId]   [INT] REFERENCES Venda,
-    [ProdutoId] [INT] REFERENCES Produto,
+    [VendaId]   [INT] REFERENCES Venda([Id]),
+    [ProdutoId] [INT] REFERENCES Produto([Id]),
     [Estado]    [INT],                  //0 - pendente, 1- espera Encomenda, 3 -entregue
     [Qtd]       [INT] NOT NULL
 )
@@ -57,16 +57,16 @@ GO
 
 CREATE TABLE [dbo].[Encomenda](
     [Id]            [INT] PRIMARY KEY,
-    [FormecedorId]  [INT] REFERENCES Fornecedor,
+    [FormecedorId]  [INT] REFERENCES Fornecedor([Id]),
     [Qtd]           [INT] NOT NULL,
-    [VendaId]       [INT] REFERENCES Venda
+    [VendaId]       [INT] REFERENCES Venda([Id])
 )
 GO
 
 CREATE TABLE [dbo].[Expedicao](
     [Id]            [INT] PRIMARY KEY,
-    [VendaId]       [INT] REFERENCES Venda,
-    [VendaProdutoId][INT] REFERENCES Produto,   // para permitir envios parciais de uma Encomenda
+    [VendaId]       [INT] REFERENCES Venda([Id]),
+    [VendaProdutoId][INT] REFERENCES Produto([Id]),   // para permitir envios parciais de uma Encomenda
     [Qtd]           [INT]
 )
 GO
