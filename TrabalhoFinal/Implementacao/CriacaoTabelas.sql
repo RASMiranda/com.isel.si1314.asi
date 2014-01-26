@@ -31,7 +31,7 @@ CREATE TABLE [dbo].[Produto](
     [Codigo]        [VARCHAR](15),      // se calhar forçar que seja unico
     [Tipo]          [INT],              // 0- Criança, 1-Senhora, 2- Homem, 3- Desportista
     [Designacao]    [VARCHAR](50),
-    [Preco]         [DECIMAL],          // 2 casas decimais
+    [Preco]         [DECIMAL](8,2),          // 2 casas decimais
     [StockQtd]      [INT] NOT NULL,     
     [StockMinimo]   [INT] NOT NULL, 
     [FornecedorId]  [INT] REFERENCES Fornecedor([Id])
@@ -87,7 +87,7 @@ CREATE TABLE [dbo].[Produto](
     [Id]            [INT] PRIMARY KEY,
     [Codigo]        [VARCHAR](15),
     [Designacao]    [VARCHAR](50),      //não é indicado mas parece relevante estar nas lojas
-    [Preco]         [DECIMAL],          //não é indicado mas parece relevante estar nas lojas
+    [Preco]         [DECIMAL](8,2),          //não é indicado mas parece relevante estar nas lojas
     [StockQtd]      [INT] NOT NULL
 )
 GO
