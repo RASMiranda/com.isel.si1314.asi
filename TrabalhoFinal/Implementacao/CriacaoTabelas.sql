@@ -67,6 +67,17 @@ CREATE TABLE [dbo].[Expedicao](
 
 
 /* TABELAS PARA CADA SERVIDOR DE REDE DE LOJAS */
+    
+    
+USE [ASIVESTE]
+GO 
+
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
 
 CREATE TABLE [dbo].[Produto](
     [Id]            [INT] PRIMARY KEY,
