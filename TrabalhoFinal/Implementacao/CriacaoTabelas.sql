@@ -18,14 +18,14 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[fornecedor](
+CREATE TABLE [dbo].[Fornecedor](
     [Id]        [INT] PRIMARY KEY,
     [Numero]    [INT] NOT NULL,         // se calhar devemos forçar que seja único
     [Nome]      [VARCHAR](50),
     [Morada]    [VARCHAR](200)
 )
    
-CREATE TABLE [dbo].[produto](
+CREATE TABLE [dbo].[Produto](
     [Id]            [INT] PRIMARY KEY,
     [Codigo]        [VARCHAR](15),      // se calhar forçar que seja unico
     [Tipo]          [INT],              // 0- Criança, 1-Senhora, 2- Homem, 3- Desportista
@@ -33,42 +33,42 @@ CREATE TABLE [dbo].[produto](
     [Preco]         [DECIMAL],          // 2 casas decimais
     [StockQtd]      [INT] NOT NULL,     
     [StockMinimo]   [INT] NOT NULL, 
-    [FornecedorId]  [INT] REFERENCES fornecedor
+    [FornecedorId]  [INT] REFERENCES Fornecedor
 )
 
-CREATE TABLE [dbo].[venda](
+CREATE TABLE [dbo].[Venda](
     [Id]            [INT] PRIMARY KEY,
     [NomeCliente]   [VARCHAR](50),
     [MoradaCliente] [VARCHAR](200),
-    [Estado]        [INT]               //0 - pendente, 1- espera encomenda, 3 -entregue
+    [Estado]        [INT]               //0 - pendente, 1- espera Encomenda, 3 -entregue
 )
 
-CREATE TABLE [dbo].[vendaProdutos](
+CREATE TABLE [dbo].[VendaProdutos](
     [Id]        [INT] PRIMARY KEY,
-    [VendaId]   [INT] RERENCES venda,
-    [ProdutoId] [INT] REFERENCES produto,
-    [Estado]    [INT],                  //0 - pendente, 1- espera encomenda, 3 -entregue
+    [VendaId]   [INT] REFERENCES Venda,
+    [ProdutoId] [INT] REFERENCES Produto,
+    [Estado]    [INT],                  //0 - pendente, 1- espera Encomenda, 3 -entregue
     [Qtd]       [INT] NOT NULL
 )
 
-CREATE TABLE [dbo].[encomenda](
+CREATE TABLE [dbo].[Encomenda](
     [Id]            [INT] PRIMARY KEY,
-    [FormecedorId]  [INT] REFERENCES fornecedor,
+    [FormecedorId]  [INT] REFERENCES Fornecedor,
     [Qtd]           [INT] NOT NULL,
-    [VendaId]       [INT] REFERENCES venda
+    [VendaId]       [INT] REFERENCES Venda
 )
 
-CREATE TABLE [dbo].[expedicao](
+CREATE TABLE [dbo].[Expedicao](
     [Id]            [INT] PRIMARY KEY,
-    [VendaId]       [INT] REFERENCES venda,
-    [VendaProdutoId][INT] REFERENCES produto,   // para permitir envios parciais de uma encomenda
+    [VendaId]       [INT] REFERENCES Venda,
+    [VendaProdutoId][INT] REFERENCES Produto,   // para permitir envios parciais de uma Encomenda
     [Qtd]           [INT]
 )
 
 
 /* TABELAS PARA CADA SERVIDOR DE REDE DE LOJAS */
 
-CREATE TABLE [dbo].[produto](
+CREATE TABLE [dbo].[Produto](
     [Id]            [INT] PRIMARY KEY,
     [Codigo]        [VARCHAR](15),
     [Designacao]    [VARCHAR](50),      //não é indicado mas parece relevante estar nas lojas
@@ -79,5 +79,5 @@ CREATE TABLE [dbo].[produto](
 /* 
 NOTAS:
     assumindo que podemos usar filas de mensagens não é necessário registar 
-    as vendas na loja, logo essa tabela não precisa de aí existir 
+    as Vendas na loja, logo essa tabela não precisa de aí existir 
 */
