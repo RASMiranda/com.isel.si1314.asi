@@ -24,6 +24,7 @@ CREATE TABLE [dbo].[Fornecedor](
     [Nome]      [VARCHAR](50),
     [Morada]    [VARCHAR](200)
 )
+GO
    
 CREATE TABLE [dbo].[Produto](
     [Id]            [INT] PRIMARY KEY,
@@ -35,6 +36,7 @@ CREATE TABLE [dbo].[Produto](
     [StockMinimo]   [INT] NOT NULL, 
     [FornecedorId]  [INT] REFERENCES Fornecedor
 )
+GO
 
 CREATE TABLE [dbo].[Venda](
     [Id]            [INT] PRIMARY KEY,
@@ -42,6 +44,7 @@ CREATE TABLE [dbo].[Venda](
     [MoradaCliente] [VARCHAR](200),
     [Estado]        [INT]               //0 - pendente, 1- espera Encomenda, 3 -entregue
 )
+GO
 
 CREATE TABLE [dbo].[VendaProdutos](
     [Id]        [INT] PRIMARY KEY,
@@ -50,6 +53,7 @@ CREATE TABLE [dbo].[VendaProdutos](
     [Estado]    [INT],                  //0 - pendente, 1- espera Encomenda, 3 -entregue
     [Qtd]       [INT] NOT NULL
 )
+GO
 
 CREATE TABLE [dbo].[Encomenda](
     [Id]            [INT] PRIMARY KEY,
@@ -57,6 +61,7 @@ CREATE TABLE [dbo].[Encomenda](
     [Qtd]           [INT] NOT NULL,
     [VendaId]       [INT] REFERENCES Venda
 )
+GO
 
 CREATE TABLE [dbo].[Expedicao](
     [Id]            [INT] PRIMARY KEY,
@@ -64,11 +69,10 @@ CREATE TABLE [dbo].[Expedicao](
     [VendaProdutoId][INT] REFERENCES Produto,   // para permitir envios parciais de uma Encomenda
     [Qtd]           [INT]
 )
+GO
 
 
-/* TABELAS PARA CADA SERVIDOR DE REDE DE LOJAS */
-    
-    
+/* TABELAS PARA CADA SERVIDOR DE REDE DE LOJAS */   
 USE [ASIVESTE]
 GO 
 
@@ -86,6 +90,7 @@ CREATE TABLE [dbo].[Produto](
     [Preco]         [DECIMAL],          //não é indicado mas parece relevante estar nas lojas
     [StockQtd]      [INT] NOT NULL
 )
+GO
 
 /* 
 NOTAS:
