@@ -1,0 +1,7 @@
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Service\bin\Service.exe.config
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Service\bin\Service.exe
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Service\bin\Service.pdb
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Service\bin\Order.dll
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Service\bin\Order.pdb
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Service\obj\Release\Service.exe
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Service\obj\Release\Service.pdb

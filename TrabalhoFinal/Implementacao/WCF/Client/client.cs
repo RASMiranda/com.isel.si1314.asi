@@ -16,45 +16,14 @@ namespace Microsoft.Samples.MSMQToWCF
             //Connect to the queue
             MessageQueue orderQueue = new MessageQueue(@"FormatName:Direct=OS:" + ConfigurationManager.AppSettings["orderQueueName"]);
 
-            // Create the purchase order
-            PurchaseOrder po = new PurchaseOrder();
-            po.customerId = "somecustomer.com";
-            po.poNumber = Guid.NewGuid().ToString();
-
-            PurchaseOrderLineItem lineItem1 = new PurchaseOrderLineItem();
-            lineItem1.productId = "Blue Widget";
-            lineItem1.quantity = 54;
-            lineItem1.unitCost = 29.99F;
-
-            PurchaseOrderLineItem lineItem2 = new PurchaseOrderLineItem();
-            lineItem2.productId = "Red Widget";
-            lineItem2.quantity = 890;
-            lineItem2.unitCost = 45.89F;
-
-            po.orderLineItems = new PurchaseOrderLineItem[2];
-            po.orderLineItems[0] = lineItem1;
-            po.orderLineItems[1] = lineItem2;
-
-            // submit the purchase order
-            Message msg = new Message();
-            msg.Body = po;
-
-            /*
-            //Create a transaction scope.
-            using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
-            {
-                orderQueue.Send(msg, MessageQueueTransactionType.Automatic);
-                // Complete the transaction.
-                scope.Complete();
-            }
-            */
-
+            // simula a criação de uma venda
             VendaOrder venda = new VendaOrder();
             venda.dadosVenda("Cliente", "Av. Conselheiro Emidio Navarro, Lisboa");
 
             venda.produto("scam1", 5, 25.4f);
             venda.produto("scam2", 1, 33.2f);
 
+            Message msg = new Message();
             msg.Body = venda;
             using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
             {

@@ -2,3 +2,8 @@ C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToW
 C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Order\bin\Order.pdb
 C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Order\obj\Debug\Order.dll
 C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Order\obj\Debug\Order.pdb
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Order\bin\Order.dll
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Order\bin\Order.pdb
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Order\obj\Debug\Order.csprojResolveAssemblyReference.cache
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Order\obj\Debug\Order.dll
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Order\obj\Debug\Order.pdb

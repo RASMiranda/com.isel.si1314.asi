@@ -1,0 +1,4 @@
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Order\bin\Release\Order.dll
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Order\bin\Release\Order.pdb
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Order\obj\Release\Order.dll
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Order\obj\Release\Order.pdb
