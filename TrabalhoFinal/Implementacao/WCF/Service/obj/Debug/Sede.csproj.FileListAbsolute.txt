@@ -1,0 +1,8 @@
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Service\bin\Service.exe.config
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Service\bin\Service.exe
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Service\bin\Service.pdb
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Service\bin\Order.dll
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Service\bin\Order.pdb
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Service\obj\Debug\Sede.csprojResolveAssemblyReference.cache
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Service\obj\Debug\Service.exe
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Service\obj\Debug\Service.pdb

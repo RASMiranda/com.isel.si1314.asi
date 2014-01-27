@@ -1,0 +1,4 @@
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Order\bin\Order.dll
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Order\bin\Order.pdb
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Order\obj\Debug\Order.dll
+C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Order\obj\Debug\Order.pdb

@@ -28,7 +28,7 @@ GO
    
 CREATE TABLE [dbo].[Produto](
     [Id]            [INT] PRIMARY KEY,
-    [Codigo]        [VARCHAR](15),      // se calhar forçar que seja unico
+    [Codigo]        [VARCHAR](15),      // Temos de Garantir que é unico
     [Tipo]          [INT],              // 0- Criança, 1-Senhora, 2- Homem, 3- Desportista
     [Designacao]    [VARCHAR](50),
     [Preco]         [DECIMAL](8,2),          // 2 casas decimais
@@ -42,7 +42,7 @@ CREATE TABLE [dbo].[Venda](
     [Id]            [INT] PRIMARY KEY,
     [NomeCliente]   [VARCHAR](50),
     [MoradaCliente] [VARCHAR](200),
-    [Estado]        [INT]               //0 - pendente, 1- espera Encomenda, 3 -entregue
+    [Estado]        [INT]               //0 - pendente, 1- (espera) encomenda, 3 -entregue
 )
 GO
 
@@ -50,7 +50,7 @@ CREATE TABLE [dbo].[VendaProdutos](
     [Id]        [INT] PRIMARY KEY,
     [VendaId]   [INT] REFERENCES Venda([Id]),
     [ProdutoId] [INT] REFERENCES Produto([Id]),
-    [Estado]    [INT],                  //0 - pendente, 1- espera Encomenda, 3 -entregue
+    [Estado]    [INT],                  //0 - pendente, 1- (espera) encomenda, 3 -entregue
     [Qtd]       [INT] NOT NULL
 )
 GO
@@ -58,7 +58,7 @@ GO
 CREATE TABLE [dbo].[Encomenda](
     [Id]            [INT] PRIMARY KEY,
     [ProdutoId]     [INT] REFERENCES Produto([Id]),
-    [Estado]        [INT],                  //0 - espera Entrega da Encomenda, 3 -entregue
+    [Estado]        [INT],                  //0 - (espera Entrega da) encomenda, 3 -entregue
     [Qtd]           [INT] NOT NULL,
     [VendaId]       [INT] REFERENCES Venda([Id])
 )
