@@ -57,7 +57,8 @@ GO
 
 CREATE TABLE [dbo].[Encomenda](
     [Id]            [INT] PRIMARY KEY,
-    [FormecedorId]  [INT] REFERENCES Fornecedor([Id]),
+    [ProdutoId]     [INT] REFERENCES Produto([Id]),
+    [Estado]        [INT],                  //0 - espera Entrega da Encomenda, 3 -entregue
     [Qtd]           [INT] NOT NULL,
     [VendaId]       [INT] REFERENCES Venda([Id])
 )
