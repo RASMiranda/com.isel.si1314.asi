@@ -1,0 +1,121 @@
+// @Loja
+CREATE TABLE [dbo].[Produto](
+    [Codigo]        [INT] PRIMARY KEY,
+    [Designacao]    [VARCHAR](50),	// não é indicado mas parece relevante estar nas lojas
+    [Preco]         [DECIMAL](8,2),	// não é indicado mas parece relevante estar nas lojas
+    [StockQtd]      [INT] NOT NULL  // replica cujo valor é decrementado via WCF nas vendas
+)
+GO
+
+CREATE TABLE [dbo].[Cliente]( // replicação assincrona
+    [Codigo] [INT] PRIMARY KEY,
+    [Nome]   [VARCHAR](50),
+    [Morada] [VARCHAR](200)
+)
+GO
+
+
+
+
+// @Sede
+CREATE TABLE [dbo].[Produto](
+    [Codigo]        [INT] PRIMARY KEY,
+    [Tipo]          [INT],				// 0- Criança, 1-Senhora, 2- Homem, 3- Desportista
+    [Designacao]    [VARCHAR](50),
+    [Preco]         [DECIMAL](8,2),		// 2 casas decimais
+    [StockQtd]      [INT] NOT NULL,     // replica cujo valor é decrementado via WCF nas vendas
+    [StockMinimo]   [INT] NOT NULL, 
+    [CodigoFornecedor]  [INT] REFERENCES Fornecedor([Codigo])
+)
+GO
+
+// Adicionar um check constrait 0 < StockQtd ? a sede recebe multiplos pedidos de multiplas lojas; faz sentido 
+
+CREATE TABLE [dbo].[Cliente](	// replicação assincrona
+    [Codigo] [INT] PRIMARY KEY,
+    [Nome]   [VARCHAR](50),
+    [Morada] [VARCHAR](200)
+)
+GO
+
+CREATE TABLE [dbo].[Venda](
+    [Codigo]		[INT] PRIMARY KEY,
+    [CodigoCliente]	[INT],		// sem FK por causa da replicacao ser Assincrona
+    [CodigoProduto]	[INT] REFERENCES Produto([Codigo]),   
+    [qtd] 			[INT]
+)
+GO
+
+CREATE TABLE [dbo].[Expedicao_Venda]( // simplificar: nao ha envios parciais de uma Encomenda
+	[Codigo]            [INT] PRIMARY KEY,
+	[CodigoVenda]       [INT] REFERENCES Venda( [Codigo] ),
+	[Expedida]          [BOOL?] DEFAULT FALSE
+)
+GO
+
+CREATE TABLE [dbo].[Encomenda_Fornecedor](
+    [Codigo]		[INT] PRIMARY KEY,
+    [CodigoProduto]	[INT] REFERENCES Produto( [Codigo] ), 
+    [Estado]        [INT],                  //0 - espera Entrega da Encomenda, 3 -entregue
+    [Qtd]           [INT] NOT NULL,
+    [CodigoVenda]   [INT] NULL // uma encomenda pode ser feita preventivamente por isso pode ser NULL
+)
+GO
+
+CREATE TABLE [dbo].[Fornecedor] (
+    [Codigo]	[INT] PRIMARY KEY,
+    [Numero]	[INT] NOT NULL,         // se calhar devemos forçar que seja único
+    [Nome]      [VARCHAR](50),
+    [Morada]    [VARCHAR](200)
+)
+GO
+
+
+1) O grafico anexado tem dois erros: 
+
+	>o StockQtd esta na loja (era assim já na AP1) 
+	nao e necessário o obtemQuantidadeStock()
+
+	>a loja não tem nada a ver com a expedição de encomendas aos clientes:
+	"Pretende-se, no entanto, que a informação das vendas seja transmitida à sede, para que esta possa expedir as encomendas para os clientes e 
+	realizar as encomendas aos fornecedores, se for o caso."
+
+2) Tendo em conta que isto é um prj academico, proponho que não se usem chaves artificiais. (Temos um ID ou temos um Codigo; ambos não.)
+
+3) Alguem tem uma sugestao sobre como propagar os incrementos de stock? (quando se recebe encomendas) A sede tem que enviar estes updates às várias 
+	lojas: não são só duas; são dois conjuntos de lojas. Eu gosto da solução de replicacao assincrona sobre a coluna Produto.StockQtd (one-way, 
+	da sede para as várias lojas)
+
+4) Proponho tb o seguinte pseudo-codigo:
+
+
+Loja.RealizarVenda(codCliente, codProduto, qtd) // NetMsmqBinding Client
+	if(qtd <= Produto.StockQtd)
+		Sede.RealizarVenda(codCliente, codProduto, qtd); // transmissao de informação feita via queue: "devendo funcionar com total autonomia"
+	else
+		throw new Exception("Stock Insuficiente!"); // para simplificar, nao sao geradas vendas pendentes »»a partir da loja««
+
+		
+Sede.RealizarVenda(codCliente, codProduto, qtd) // NetMsmqBinding Server
+	if(qtd <= Produto.StockQtd)
+		Sede.SP?ExpedirVendaCliente( new Venda(codCliente, codProduto, qtd), EXPEDICAO_IMEDIATA ); // escreve em Produto(coluna StockQtd), Venda e em Expedicao_Venda(c/ Expedida=TRUE)
+		Sede.SP?RealizarEncomendaSeNecessario( codProduto, Venda.Codigo ); // le Produto, Fornecedor e talvez escreva Encomenda_Fornecedor (se Produto.StockQtd < Produto.StockMinimo)
+	else
+		Sede.SP?RealizarEncomenda( codProduto, qtd ); // le Produto, Fornecedor e escreve Encomenda_Fornecedor (qtd <= Produto.StockQtd)
+		Sede.SP?RegistarVendaCliente( new Venda(codCliente, codProduto, qtd), EXPEDICAO_DIFERIDA ); // escreve em Venda e em Expedicao_Venda(c/ Expedida=FALSE)
+
+		
+Sede.ReceberEncomendaFornecedor(Codigo_Encomenda_Fornecedor)
+	Encomenda_Fornecedor = Sede.ActualizarStock( Codigo_Encomenda_Fornecedor ); // escreve Encomenda_Fornecedor.Estado e Produto.StockQtd
+	if(Encomenda_Fornecedor.CodigoVenda != null)
+		Sede.SP?ExpedirVendaCliente( Encomenda_Fornecedor.CodigoVenda ); // escreve venda e Produto.StockQtd
+		Sede.SP?RealizarEncomendaSeNecessario( Encomenda_Fornecedor.CodigoProduto ); // le Produto, Fornecedor e talvez escreva Encomenda_Fornecedor (se Produto.StockQtd < Produto.StockMinimo)
+		
+
+Sede.InserirProduto(...)
+	Sede.EA?newProduto(...)
+
+	
+Sede.InserirFornecedor(...)
+	Sede.EA?newFornecedor(...)
+
