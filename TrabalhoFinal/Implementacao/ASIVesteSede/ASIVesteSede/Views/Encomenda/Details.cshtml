@@ -1,0 +1,22 @@
+﻿@model ASIVesteSede.Models.Encomenda
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Encomenda</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Qtd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Qtd)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.EncomendaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

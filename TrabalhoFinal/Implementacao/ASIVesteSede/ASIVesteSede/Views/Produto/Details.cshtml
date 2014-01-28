@@ -1,0 +1,50 @@
+﻿@model ASIVesteSede.Models.Produto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Produto</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Codigo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Codigo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Designacao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Designacao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StockQtd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StockQtd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StockMinimo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StockMinimo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Preco)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Preco)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ProdutoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

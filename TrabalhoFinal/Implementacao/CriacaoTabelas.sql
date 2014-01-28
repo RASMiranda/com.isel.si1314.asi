@@ -18,20 +18,36 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
+use [ASIVESTE]
+GO
+Drop TABLE [dbo].[VendaProdutos]
+GO
+Drop TABLE [dbo].[Produto]
+GO
+Drop TABLE [dbo].[Venda]
+GO
+Drop TABLE [dbo].[Encomenda]
+GO
+
+Drop TABLE [dbo].[Fornecedor]
+GO
+
+
 CREATE TABLE [dbo].[Fornecedor](
-    [Id]        [INT] PRIMARY KEY,
-    [Numero]    [INT] NOT NULL,         // se calhar devemos forçar que seja único
+    [Id]        [INT] IDENTITY PRIMARY KEY,
+    [Numero]    [INT] NOT NULL,         /*se calhar devemos forçar que seja único*/
     [Nome]      [VARCHAR](50),
     [Morada]    [VARCHAR](200)
 )
 GO
-   
+
+
 CREATE TABLE [dbo].[Produto](
-    [Id]            [INT] PRIMARY KEY,
-    [Codigo]        [VARCHAR](15),      // Temos de Garantir que é unico
-    [Tipo]          [INT],              // 0- Criança, 1-Senhora, 2- Homem, 3- Desportista
+    [Id]            [INT] IDENTITY PRIMARY KEY,
+    [Codigo]        [VARCHAR](15),      /* Temos de Garantir que é unico*/
+    [Tipo]          [INT],              /* 0- Criança, 1-Senhora, 2- Homem, 3- Desportista */
     [Designacao]    [VARCHAR](50),
-    [Preco]         [DECIMAL](8,2),          // 2 casas decimais
+    [Preco]         [DECIMAL](8,2),     
     [StockQtd]      [INT] NOT NULL,     
     [StockMinimo]   [INT] NOT NULL, 
     [FornecedorId]  [INT] REFERENCES Fornecedor([Id])
@@ -39,15 +55,16 @@ CREATE TABLE [dbo].[Produto](
 GO
 
 CREATE TABLE [dbo].[Venda](
-    [Id]            [INT] PRIMARY KEY,
+    [Id]            [INT] IDENTITY PRIMARY KEY,
     [NomeCliente]   [VARCHAR](50),
     [MoradaCliente] [VARCHAR](200),
-    [Estado]        [INT]               //0 - pendente, 1- (espera) encomenda, 3 -entregue
+    [Estado]        [INT]               /*0 - pendente, 1- (espera) encomenda, 3 -entregue */
 )
 GO
 
+
 CREATE TABLE [dbo].[VendaProdutos](
-    [Id]        [INT] PRIMARY KEY,
+    [Id]        [INT] IDENTITY PRIMARY KEY,
     [VendaId]   [INT] REFERENCES Venda([Id]),
     [ProdutoId] [INT] REFERENCES Produto([Id]),
     [Estado]    [INT],                  //0 - pendente, 1- (espera) encomenda, 3 -entregue
@@ -56,7 +73,7 @@ CREATE TABLE [dbo].[VendaProdutos](
 GO
 
 CREATE TABLE [dbo].[Encomenda](
-    [Id]            [INT] PRIMARY KEY,
+    [Id]            [INT] IDENTITY PRIMARY KEY,
     [ProdutoId]     [INT] REFERENCES Produto([Id]),
     [Estado]        [INT],                  //0 - (espera Entrega da) encomenda, 3 -entregue
     [Qtd]           [INT] NOT NULL,

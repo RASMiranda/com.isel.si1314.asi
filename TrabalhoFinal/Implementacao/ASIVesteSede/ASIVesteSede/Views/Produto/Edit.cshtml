@@ -1,0 +1,69 @@
+﻿@model ASIVesteSede.Models.Produto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Produto</legend>
+
+        @Html.HiddenFor(model => model.ProdutoID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Codigo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Codigo)
+            @Html.ValidationMessageFor(model => model.Codigo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Designacao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Designacao)
+            @Html.ValidationMessageFor(model => model.Designacao)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StockQtd)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StockQtd)
+            @Html.ValidationMessageFor(model => model.StockQtd)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StockMinimo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StockMinimo)
+            @Html.ValidationMessageFor(model => model.StockMinimo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Preco)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Preco)
+            @Html.ValidationMessageFor(model => model.Preco)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
