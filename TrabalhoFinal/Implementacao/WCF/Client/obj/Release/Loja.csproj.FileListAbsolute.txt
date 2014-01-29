@@ -1,8 +1,0 @@
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Client\bin\Release\Client.exe.config
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Client\bin\Release\Client.exe
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Client\bin\Release\Client.pdb
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Client\bin\Release\Order.dll
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Client\bin\Release\Order.pdb
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Client\obj\Release\Loja.csprojResolveAssemblyReference.cache
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Client\obj\Release\Client.exe
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\WCF\Client\obj\Release\Client.pdb
