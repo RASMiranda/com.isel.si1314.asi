@@ -1,0 +1,29 @@
+﻿@model ASIVesteSede.Models.Venda
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Venda</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NomeCliente)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NomeCliente)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MoradaCliente)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MoradaCliente)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.VendaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

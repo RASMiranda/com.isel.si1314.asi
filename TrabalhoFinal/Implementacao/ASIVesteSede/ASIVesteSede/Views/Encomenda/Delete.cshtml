@@ -1,0 +1,25 @@
+﻿@model ASIVesteSede.Models.Encomenda
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Encomenda</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Qtd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Qtd)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
