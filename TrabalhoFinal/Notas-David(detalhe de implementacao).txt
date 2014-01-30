@@ -94,13 +94,13 @@ Loja.RealizarVenda(codCliente, codProduto, qtd) // NetMsmqBinding Client
 		throw new Exception("Stock Insuficiente!"); // para simplificar, nao sao geradas vendas pendentes »»a partir da loja««
 
 		
-Sede.RealizarVenda(codCliente, codProduto, qtd) // NetMsmqBinding Server
+Sede.RealizarVenda(nomeCliente, moradaCliente, codProduto, qtd) // NetMsmqBinding Server
 	if(qtd <= Produto.StockQtd)
-		Sede.SP?ExpedirVendaCliente( new Venda(codCliente, codProduto, qtd), EXPEDICAO_IMEDIATA ); // escreve em Produto(coluna StockQtd), Venda e em Expedicao_Venda(c/ Expedida=TRUE)
+		Sede.SP?ExpedirVendaCliente( new Venda(nomeCliente, moradaCliente, codProduto, qtd), EXPEDICAO_IMEDIATA ); // escreve em Produto(coluna StockQtd), Venda e em Expedicao_Venda(c/ Expedida=TRUE)
 		Sede.SP?RealizarEncomendaSeNecessario( codProduto, Venda.Codigo ); // le Produto, Fornecedor e talvez escreva Encomenda_Fornecedor (se Produto.StockQtd < Produto.StockMinimo)
 	else
 		Sede.SP?RealizarEncomenda( codProduto, qtd ); // le Produto, Fornecedor e escreve Encomenda_Fornecedor (qtd <= Produto.StockQtd)
-		Sede.SP?RegistarVendaCliente( new Venda(codCliente, codProduto, qtd), EXPEDICAO_DIFERIDA ); // escreve em Venda e em Expedicao_Venda(c/ Expedida=FALSE)
+		Sede.SP?RegistarVendaCliente( new Venda(nomeCliente, moradaCliente, codProduto, qtd), EXPEDICAO_DIFERIDA ); // escreve em Venda e em Expedicao_Venda(c/ Expedida=FALSE)
 
 		
 Sede.ReceberEncomendaFornecedor(Codigo_Encomenda_Fornecedor)

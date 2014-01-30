@@ -20,11 +20,11 @@ A empresa também possui uma sede q tb tem o seu próprio servidor aplicacional e 
 Aqui são realizados:
 	os procedimentos de gestão comuns aos dois conjuntos de lojas, tais como 
 		encomendas a fornecedores,
-		» proc encomendarProdutos
+		» proc sp_realizarEncomendas
 		inserção de novos produtos e 
-		» proc insereProduto
+		» proc sp_inserirProduto e sp_removerProduto
 		recepção de encomendas de fornecedores.
-		» proc receberProduto
+		» proc sp_receberEncomenda
 
 
 Um 'produto' consiste em 
@@ -85,7 +85,7 @@ Pretende-se, no entanto, que a informação das vendas seja transmitida à sede,
 	para que esta possa expedir as encomendas para os clientes e 
 	» TODO: nocao de cliente e expedicao de encomendas para o mesmo nao está implementada
 	realizar as encomendas aos fornecedores, se for o caso.
-	» proc encomendarProdutos & proc receberProduto. Acho que por "se for o caso" o Eng entende "se hover motivo para isso". A flag de estado serve precisamente para não fazer encomendas umas atrás das outras se já houver uma encomenda pendente.
+	» proc sp_realizarEncomendas & proc sp_receberEncomenda. Acho que por "se for o caso" o Eng entende "se hover motivo para isso". A flag de estado serve precisamente para não fazer encomendas umas atrás das outras se já houver uma encomenda pendente.
 
 
 Quando a sede recebe produtos dos fornecedores, deve 
@@ -98,11 +98,11 @@ A sede também realiza encomendas a fornecedores, de forma autónoma.
 
 Na sede são também 
 	inseridos novos produtos e 
-	» proc insereProduto
+	» proc sp_inserirProduto
 	inseridos novos fornecedores e 
-	» TODO: actualmente os fornecedores são adicionados via SQL Insert
+	» TODO: actualmente os fornecedores são adicionados via SQL Insert; pode criar-se um servico que adiciona novos fornecedores via EA
 	realizadas listagens do estado dos produtos (quantidade em stock).
-	» TODO: penso que uma versão modificada do proc encomendarProdutos ou da view viewProduto resolve esta questão
+	» a view vw_verificarStock serve para isto
 
 
 ============ // ============ // ============ // ============ // ============ // ============ // ============ // ============ // ============
@@ -120,13 +120,16 @@ Na sede são também
 
 2. O modelo de dados, e os esquemas de fragmentação e distribuição (incluindo replicação) para a parte obrigatória.
 	»»» vocês sabem dizer-me que informação é relevante nas 3 instancias?
+	até agora apenas a info sobre Produto aparenta ser necessaria nas 3 instancias, e mesmo essa é só a info de algumas colunas.
 
 
 3. Os 'scripts' SQL que permitem criar as bases de dados utilizadas, incluindo possíveis vistas, procedimentos armazenados e gatilhos, para a parte obrigatória.
+	TODO: Em execução...
 
 
 4. A construção da lógica aplicacional nos três servidores aplicacionais.
 	»»» aplicações .net: web services disponibilizados através de WCF presumo eu?
+	TODO: Em execução...
 
 
 5. (Opcional) As alterações necessárias para contemplar a parte opcional 1. 
@@ -138,11 +141,12 @@ Cada reclamação tem um
 	a data de inserção. 
 Esta informação deve ser passada de forma assíncrona para os restantes SGBDs. Implemente esta funcionalidade.
 	»»» acho que esta alinea é implementada com uma simples replicação assincrona
+		e adicao da tabela de cliente... :\
 
 
 6. (Opcional) As alterações necessárias para contemplar a parte opcional 2. 
 2. As vendas nas lojas de produtos para senhora e criança aumentaram muito, tendo o sistema ficado demasiado lento. Constatou-se que tal é devido ao mau desempenho do SGBD respectivo nas operações de actualização. Proponha e implemente uma solução para este problema
-	»»» suponho que aqui seja para usar sharding, no entanto 
+	»»» suponho que aqui seja para usar sharding, no entanto nao tenho certeza.
 
 
 7. Sabendo que os serviços de vendas devem funcionar com elevada disponibilidade, discuta possíveis soluções para o conseguir, incluído nessa discussão a relação custo/possibilidade de perda de informação.
