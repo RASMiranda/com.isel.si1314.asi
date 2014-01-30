@@ -315,9 +315,91 @@
 					<client xmi:idref='_16_0_1796040d_1389299568478_167174_1211'/>
 				</packagedElement>
 				<packagedElement xmi:type='uml:Package' xmi:id='_16_0_1796040d_1389299347234_124641_1089' name='Sede' visibility='public'>
-					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1389302005406_708777_1016' name='Insrir Fornecedor' visibility='public'/>
+					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1389302005406_708777_1016' name='Insrir Fornecedor' visibility='public'>
+						<ownedBehavior xmi:type='uml:Interaction' xmi:id='_16_0_1796040d_1391123482349_688002_2377' name='Insrir Fornecedor' visibility='public'>
+							<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+								<modelExtension>
+									<event xmi:idref='_16_0_1796040d_1391123511423_826998_2462'/>
+									<event xmi:idref='_16_0_1796040d_1391123682904_412980_2516'/>
+								</modelExtension>
+							</xmi:Extension>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123488351_502427_2403' visibility='private' type='_16_0_1796040d_1389302645505_745881_1292'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123493879_52373_2420' visibility='private' type='_16_0_1796040d_1391120946472_878727_1203'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123506663_19866_2447' visibility='private' type='_16_0_1796040d_1389552883998_345106_710'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123666648_944220_2486' visibility='private' type='_16_0_1796040d_1389554248438_817341_1771'/>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123488351_301461_2402' visibility='public' represents='_16_0_1796040d_1391123488351_502427_2403'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123497253_566650_2432'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123493879_267998_2419' visibility='public' represents='_16_0_1796040d_1391123493879_52373_2420'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123497253_24463_2433'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123511421_362856_2459'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123506663_548558_2446' visibility='public' represents='_16_0_1796040d_1391123506663_19866_2447'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123511422_878953_2460'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123679645_140718_2509'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123666648_816538_2485' visibility='public' represents='_16_0_1796040d_1391123666648_944220_2486'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123679645_941516_2510'/>
+							</lifeline>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391123497253_245210_2431' name='Insrir Fornecedor' visibility='public' receiveEvent='_16_0_1796040d_1391123497253_24463_2433' sendEvent='_16_0_1796040d_1391123497253_566650_2432'/>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391123511421_576077_2458' visibility='public' receiveEvent='_16_0_1796040d_1391123511422_878953_2460' sendEvent='_16_0_1796040d_1391123511421_362856_2459'>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391123598832_719074_2473' visibility='public' value='-'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391123516699_458227_2468'/>
+									</xmi:Extension>
+								</argument>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391123598832_593419_2474' visibility='public' value='-'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391123516700_739645_2469'/>
+									</xmi:Extension>
+								</argument>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391123598833_94631_2475' visibility='public' value='IdFornecedor'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391123516701_691195_2471'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391123679644_768390_2508' visibility='public' receiveEvent='_16_0_1796040d_1391123679645_941516_2510' sendEvent='_16_0_1796040d_1391123679645_140718_2509'>
+								<argument xmi:type='uml:OpaqueExpression' xmi:id='_16_0_1796040d_1391123682905_274815_2519' visibility='public' body='-'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391123636681_565456_2477'/>
+									</xmi:Extension>
+								</argument>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391123682906_409049_2520' visibility='public' value='IdFornecedor'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391123636681_726591_2478'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123497253_566650_2432' visibility='public' message='_16_0_1796040d_1391123497253_245210_2431'>
+								<covered xmi:idref='_16_0_1796040d_1391123488351_301461_2402'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123497253_24463_2433' visibility='public' message='_16_0_1796040d_1391123497253_245210_2431'>
+								<covered xmi:idref='_16_0_1796040d_1391123493879_267998_2419'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123511421_362856_2459' visibility='public' message='_16_0_1796040d_1391123511421_576077_2458'>
+								<covered xmi:idref='_16_0_1796040d_1391123493879_267998_2419'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123511422_878953_2460' visibility='public' message='_16_0_1796040d_1391123511421_576077_2458' event='_16_0_1796040d_1391123511423_826998_2462'>
+								<covered xmi:idref='_16_0_1796040d_1391123506663_548558_2446'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123679645_140718_2509' visibility='public' message='_16_0_1796040d_1391123679644_768390_2508'>
+								<covered xmi:idref='_16_0_1796040d_1391123506663_548558_2446'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123679645_941516_2510' visibility='public' message='_16_0_1796040d_1391123679644_768390_2508' event='_16_0_1796040d_1391123682904_412980_2516'>
+								<covered xmi:idref='_16_0_1796040d_1391123666648_816538_2485'/>
+							</fragment>
+						</ownedBehavior>
+					</packagedElement>
 					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1389302019715_334135_1029' name='Inserir Produto' visibility='public'>
+						<generalization xmi:type='uml:Generalization' xmi:id='_16_0_1796040d_1391123429981_718996_2360' general='_16_0_1796040d_1391123232261_899375_2253'/>
 						<ownedBehavior xmi:type='uml:Interaction' xmi:id='_16_0_1796040d_1391121674046_358335_1992' name='Inserir Produto' visibility='public'>
+							<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+								<modelExtension>
+									<event xmi:idref='_16_0_1796040d_1391123039640_783920_2216'/>
+									<event xmi:idref='_16_0_1796040d_1391123062400_812011_2232'/>
+								</modelExtension>
+							</xmi:Extension>
 							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391121714263_441062_2122' visibility='private' type='_16_0_1796040d_1389302645505_745881_1292'/>
 							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391121722519_307364_2139' visibility='private' type='_16_0_1796040d_1391120946472_878727_1203'/>
 							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391121725328_813026_2156' visibility='private' type='_16_0_1796040d_1389552883998_345106_710'/>
@@ -331,10 +413,46 @@
 							</lifeline>
 							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391121725328_961223_2155' visibility='public' represents='_16_0_1796040d_1391121725328_813026_2156'>
 								<coveredBy xmi:idref='_16_0_1796040d_1391121745278_921473_2196'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123062398_958819_2229'/>
 							</lifeline>
-							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391121727295_273748_2172' visibility='public' represents='_16_0_1796040d_1391121727295_665061_2173'/>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391121727295_273748_2172' visibility='public' represents='_16_0_1796040d_1391121727295_665061_2173'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123062398_932028_2230'/>
+							</lifeline>
 							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391121731141_92707_2184' name='Inserir Produto' visibility='public' receiveEvent='_16_0_1796040d_1391121731141_970697_2186' sendEvent='_16_0_1796040d_1391121731141_15685_2185'/>
-							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391121745277_892538_2194' visibility='public' receiveEvent='_16_0_1796040d_1391121745278_921473_2196' sendEvent='_16_0_1796040d_1391121745277_211510_2195'/>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391121745277_892538_2194' visibility='public' receiveEvent='_16_0_1796040d_1391121745278_921473_2196' sendEvent='_16_0_1796040d_1391121745277_211510_2195'>
+								<argument xmi:type='uml:OpaqueExpression' xmi:id='_16_0_1796040d_1391123174066_131118_2248' visibility='public' body=''>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391122977548_106480_2212'/>
+									</xmi:Extension>
+								</argument>
+								<argument xmi:type='uml:OpaqueExpression' xmi:id='_16_0_1796040d_1391123174066_538926_2249' visibility='public' body=''>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391122986964_429289_2213'/>
+									</xmi:Extension>
+								</argument>
+								<argument xmi:type='uml:OpaqueExpression' xmi:id='_16_0_1796040d_1391123174067_217747_2250' visibility='public' body=''>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391122997116_793046_2214'/>
+									</xmi:Extension>
+								</argument>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391123174068_173280_2252' visibility='public' value='IdProduto'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391123027412_169931_2215'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391123062397_924097_2228' visibility='public' receiveEvent='_16_0_1796040d_1391123062398_932028_2230' sendEvent='_16_0_1796040d_1391123062398_958819_2229'>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391123078880_338191_2239' visibility='public' value='-'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391123078876_622323_2238'/>
+									</xmi:Extension>
+								</argument>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391123153255_689918_2243' visibility='public' value='IdProduto'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391123153252_667238_2242'/>
+									</xmi:Extension>
+								</argument>
+							</message>
 							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391121731141_15685_2185' visibility='public' message='_16_0_1796040d_1391121731141_92707_2184'>
 								<covered xmi:idref='_16_0_1796040d_1391121714263_689815_2121'/>
 							</fragment>
@@ -344,8 +462,14 @@
 							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391121745277_211510_2195' visibility='public' message='_16_0_1796040d_1391121745277_892538_2194'>
 								<covered xmi:idref='_16_0_1796040d_1391121722518_888306_2138'/>
 							</fragment>
-							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391121745278_921473_2196' visibility='public' message='_16_0_1796040d_1391121745277_892538_2194'>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391121745278_921473_2196' visibility='public' message='_16_0_1796040d_1391121745277_892538_2194' event='_16_0_1796040d_1391123039640_783920_2216'>
 								<covered xmi:idref='_16_0_1796040d_1391121725328_961223_2155'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123062398_958819_2229' visibility='public' message='_16_0_1796040d_1391123062397_924097_2228'>
+								<covered xmi:idref='_16_0_1796040d_1391121725328_961223_2155'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123062398_932028_2230' visibility='public' message='_16_0_1796040d_1391123062397_924097_2228' event='_16_0_1796040d_1391123062400_812011_2232'>
+								<covered xmi:idref='_16_0_1796040d_1391121727295_273748_2172'/>
 							</fragment>
 						</ownedBehavior>
 					</packagedElement>
@@ -383,7 +507,99 @@
 							<extensionLocation xmi:idref='_16_0_1796040d_1389302304475_230467_1203'/>
 						</extend>
 					</packagedElement>
-					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1389302040823_489006_1055' name='Receber Encomenda Fornecedor' visibility='public'/>
+					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1389302040823_489006_1055' name='Receber Encomenda Fornecedor' visibility='public'>
+						<generalization xmi:type='uml:Generalization' xmi:id='_16_0_1796040d_1391124145029_638460_2860' general='_16_0_1796040d_1391124091500_773456_2774'/>
+						<ownedBehavior xmi:type='uml:Interaction' xmi:id='_16_0_1796040d_1391123949390_414971_2668' name='Receber Encomenda Fornecedor' visibility='public'>
+							<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+								<modelExtension>
+									<event xmi:idref='_16_0_1796040d_1391124457176_885635_2890'/>
+									<event xmi:idref='_16_0_1796040d_1391124494264_522335_2904'/>
+									<event xmi:idref='_16_0_1796040d_1391124764383_858358_2919'/>
+								</modelExtension>
+							</xmi:Extension>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123956879_699522_2694' visibility='private' type='_16_0_1796040d_1389302645505_745881_1292'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123959423_570454_2711' visibility='private' type='_16_0_1796040d_1391120946472_878727_1203'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123961215_680538_2728' visibility='private' type='_16_0_1796040d_1389552883998_345106_710'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123964672_327434_2745' visibility='private' type='_16_0_1796040d_1389554248438_817341_1771'/>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123956879_680151_2693' visibility='public' represents='_16_0_1796040d_1391123956879_699522_2694'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123972477_500482_2757'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123959422_927587_2710' visibility='public' represents='_16_0_1796040d_1391123959423_570454_2711'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123972477_428151_2758'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124033502_539425_2767'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123961215_611706_2727' visibility='public' represents='_16_0_1796040d_1391123961215_680538_2728'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124033502_749306_2768'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124475493_257188_2895'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124501565_399271_2909'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123964672_143199_2744' visibility='public' represents='_16_0_1796040d_1391123964672_327434_2745'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124475493_921252_2896'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124501565_817656_2910'/>
+							</lifeline>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391123972477_667625_2756' name='Receber Encomenda Fornecedor' visibility='public' receiveEvent='_16_0_1796040d_1391123972477_428151_2758' sendEvent='_16_0_1796040d_1391123972477_500482_2757'/>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391124033501_475556_2766' visibility='public' receiveEvent='_16_0_1796040d_1391124033502_749306_2768' sendEvent='_16_0_1796040d_1391124033502_539425_2767'>
+								<argument xmi:type='uml:OpaqueExpression' xmi:id='_16_0_1796040d_1391124457178_150794_2892' visibility='public' body='-'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391124439645_700602_2889'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391124475493_791796_2894' visibility='public' receiveEvent='_16_0_1796040d_1391124475493_921252_2896' sendEvent='_16_0_1796040d_1391124475493_257188_2895'>
+								<argument xmi:type='uml:OpaqueExpression' xmi:id='_16_0_1796040d_1391124494265_52391_2906' visibility='public' body='-'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391124488672_751327_2903'/>
+									</xmi:Extension>
+								</argument>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391124519800_236613_2916' visibility='public' value='Qtd'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391124519796_709128_2915'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391124501564_74864_2908' visibility='public' receiveEvent='_16_0_1796040d_1391124501565_817656_2910' sendEvent='_16_0_1796040d_1391124501565_399271_2909'>
+								<argument xmi:type='uml:OpaqueExpression' xmi:id='_16_0_1796040d_1391124764385_503469_2923' visibility='public' body='-'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391124652748_515148_2917'/>
+									</xmi:Extension>
+								</argument>
+								<argument xmi:type='uml:OpaqueExpression' xmi:id='_16_0_1796040d_1391124764385_989452_2924' visibility='public' body='-'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391039802823_783675_2069'/>
+									</xmi:Extension>
+								</argument>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391124764386_583007_2925' visibility='public' value='-'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391039715447_455658_2068'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123972477_500482_2757' visibility='public' message='_16_0_1796040d_1391123972477_667625_2756'>
+								<covered xmi:idref='_16_0_1796040d_1391123956879_680151_2693'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123972477_428151_2758' visibility='public' message='_16_0_1796040d_1391123972477_667625_2756'>
+								<covered xmi:idref='_16_0_1796040d_1391123959422_927587_2710'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124033502_539425_2767' visibility='public' message='_16_0_1796040d_1391124033501_475556_2766'>
+								<covered xmi:idref='_16_0_1796040d_1391123959422_927587_2710'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124033502_749306_2768' visibility='public' message='_16_0_1796040d_1391124033501_475556_2766' event='_16_0_1796040d_1391124457176_885635_2890'>
+								<covered xmi:idref='_16_0_1796040d_1391123961215_611706_2727'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124475493_257188_2895' visibility='public' message='_16_0_1796040d_1391124475493_791796_2894'>
+								<covered xmi:idref='_16_0_1796040d_1391123961215_611706_2727'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124475493_921252_2896' visibility='public' message='_16_0_1796040d_1391124475493_791796_2894' event='_16_0_1796040d_1391124494264_522335_2904'>
+								<covered xmi:idref='_16_0_1796040d_1391123964672_143199_2744'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124501565_399271_2909' visibility='public' message='_16_0_1796040d_1391124501564_74864_2908'>
+								<covered xmi:idref='_16_0_1796040d_1391123961215_611706_2727'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124501565_817656_2910' visibility='public' message='_16_0_1796040d_1391124501564_74864_2908' event='_16_0_1796040d_1391124764383_858358_2919'>
+								<covered xmi:idref='_16_0_1796040d_1391123964672_143199_2744'/>
+							</fragment>
+						</ownedBehavior>
+					</packagedElement>
 					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1389302061548_305691_1081' name='Registar Venda' visibility='public'>
 						<ownedBehavior xmi:type='uml:Interaction' xmi:id='_16_0_1796040d_1391036549432_237701_1580' name='Registar Venda' visibility='public'>
 							<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
@@ -452,7 +668,12 @@
 								</argument>
 							</message>
 							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391039675720_250288_2056' visibility='public' receiveEvent='_16_0_1796040d_1391039675720_130344_2058' sendEvent='_16_0_1796040d_1391039675720_307259_2057'>
-								<argument xmi:type='uml:OpaqueExpression' xmi:id='_16_0_1796040d_1391039843225_311618_2073' visibility='public' body='-'>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391124652752_3210_2918' visibility='public' value='venda.ProdutoId'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391124652748_515148_2917'/>
+									</xmi:Extension>
+								</argument>
+								<argument xmi:type='uml:OpaqueExpression' xmi:id='_16_0_1796040d_1391039843225_311618_2073' visibility='public' body='&quot;-venda.Qtd&quot;' language='English'>
 									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
 										<modelExtension parameter='_16_0_1796040d_1391039802823_783675_2069'/>
 									</xmi:Extension>
@@ -526,7 +747,67 @@
 							<extension xmi:idref='_16_0_1796040d_1389302302764_155327_1202'/>
 						</extensionPoint>
 					</packagedElement>
-					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1389302073549_737735_1093' name='Lista Produtos' visibility='public'/>
+					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1389302073549_737735_1093' name='Listar Produtos' visibility='public'>
+						<ownedBehavior xmi:type='uml:Interaction' xmi:id='_16_0_1796040d_1391123789342_721355_2523' name='Listar Produtos' visibility='public'>
+							<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+								<modelExtension>
+									<event xmi:idref='_16_0_1796040d_1391123881975_785002_2643'/>
+									<event xmi:idref='_16_0_1796040d_1391123914808_779869_2663'/>
+								</modelExtension>
+							</xmi:Extension>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123792951_496329_2549' visibility='private' type='_16_0_1796040d_1389302645505_745881_1292'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123814871_775417_2567' visibility='private' type='_16_0_1796040d_1389552883998_345106_710'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123821558_899395_2593' visibility='private' type='_16_0_1796040d_1391120946472_878727_1203'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123827551_532804_2610' visibility='private' type='_16_0_1796040d_1389554248438_817341_1771'/>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123792951_181709_2548' visibility='public' represents='_16_0_1796040d_1391123792951_496329_2549'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123833573_730089_2622'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123814871_957972_2566' visibility='public' represents='_16_0_1796040d_1391123814871_775417_2567'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123844597_787735_2633'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123894501_853810_2648'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123821558_615759_2592' visibility='public' represents='_16_0_1796040d_1391123821558_899395_2593'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123833573_911338_2623'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123844597_444627_2632'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123827551_156999_2609' visibility='public' represents='_16_0_1796040d_1391123827551_532804_2610'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123894502_349446_2649'/>
+							</lifeline>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391123833573_946385_2621' name='Listar Produtos' visibility='public' receiveEvent='_16_0_1796040d_1391123833573_911338_2623' sendEvent='_16_0_1796040d_1391123833573_730089_2622'/>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391123844597_368307_2631' visibility='public' receiveEvent='_16_0_1796040d_1391123844597_787735_2633' sendEvent='_16_0_1796040d_1391123844597_444627_2632'>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391123881976_846043_2645' visibility='public' value='produtos'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391123853713_124111_2640'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391123894501_698378_2647' visibility='public' receiveEvent='_16_0_1796040d_1391123894502_349446_2649' sendEvent='_16_0_1796040d_1391123894501_853810_2648'>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391123914810_440842_2665' visibility='public' value='produtos'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391123910033_995589_2660'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123833573_730089_2622' visibility='public' message='_16_0_1796040d_1391123833573_946385_2621'>
+								<covered xmi:idref='_16_0_1796040d_1391123792951_181709_2548'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123833573_911338_2623' visibility='public' message='_16_0_1796040d_1391123833573_946385_2621'>
+								<covered xmi:idref='_16_0_1796040d_1391123821558_615759_2592'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123844597_444627_2632' visibility='public' message='_16_0_1796040d_1391123844597_368307_2631'>
+								<covered xmi:idref='_16_0_1796040d_1391123821558_615759_2592'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123844597_787735_2633' visibility='public' message='_16_0_1796040d_1391123844597_368307_2631' event='_16_0_1796040d_1391123881975_785002_2643'>
+								<covered xmi:idref='_16_0_1796040d_1391123814871_957972_2566'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123894501_853810_2648' visibility='public' message='_16_0_1796040d_1391123894501_698378_2647'>
+								<covered xmi:idref='_16_0_1796040d_1391123814871_957972_2566'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123894502_349446_2649' visibility='public' message='_16_0_1796040d_1391123894501_698378_2647' event='_16_0_1796040d_1391123914808_779869_2663'>
+								<covered xmi:idref='_16_0_1796040d_1391123827551_156999_2609'/>
+							</fragment>
+						</ownedBehavior>
+					</packagedElement>
 					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1391035263520_870364_1159' name='Consultar Vendas' visibility='public'>
 						<ownedBehavior xmi:type='uml:Interaction' xmi:id='_16_0_1796040d_1391120902934_456712_1166' name='Consultar Vendas' visibility='public'>
 							<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
@@ -625,7 +906,7 @@
 							</lifeline>
 							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391121320252_39935_1903' name='Expedir Encomenda Venda' visibility='public' receiveEvent='_16_0_1796040d_1391121320253_208906_1905' sendEvent='_16_0_1796040d_1391121320253_971501_1904'/>
 							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391121352004_905172_1932' name='expedirEncomenda' visibility='public' receiveEvent='_16_0_1796040d_1391121352005_332349_1934' sendEvent='_16_0_1796040d_1391121352005_600020_1933'>
-								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391121387607_382150_1943' visibility='public'>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391121387607_382150_1943' visibility='public' value='-'>
 									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
 										<modelExtension parameter='_16_0_1796040d_1391121387604_91551_1942'/>
 									</xmi:Extension>
@@ -659,6 +940,325 @@
 						</ownedBehavior>
 					</packagedElement>
 					<packagedElement xmi:type='uml:Actor' xmi:id='_16_0_1796040d_1389302645505_745881_1292' name='Funcionario Sede' visibility='public'/>
+					<packagedElement xmi:type='uml:Interface' xmi:id='_16_0_1796040d_1389552883998_345106_710' name='SedeAppLayer' visibility='public'>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391036494325_925613_1559' name='registaVenda' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391036494325_10177_1560' name='venda' visibility='public' direction='in' type='_16_0_1796040d_1391038012164_64274_1935'/>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391121001140_192390_1262' name='obtemVendas' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391121010407_572134_1263' name='vendas' visibility='public' direction='return' type='_16_0_1796040d_1391038012164_64274_1935'>
+								<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391121022757_670653_1266' visibility='public' value='*'/>
+								<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391121022757_856574_1265' visibility='public'/>
+							</ownedParameter>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391121363556_981979_1941' name='expedirEncomendaVenda' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391121387604_91551_1942' name='CodigoVenda' visibility='public' direction='in'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391121777232_417043_2210' name='inserirProduto' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391122977548_106480_2212' name='Tipo' visibility='public' direction='in'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391122986964_429289_2213' name='StockMinimo' visibility='public' direction='in'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391122997116_793046_2214' name='FornecedorId' visibility='public' direction='in'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123027412_169931_2215' name='IdProduto' visibility='public' direction='return'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391123299190_762933_2330' name='obtemFornecedores' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123299191_678513_2331' name='fornecedores' visibility='public' direction='return' type='_16_0_1796040d_1391123317802_823249_2334'>
+								<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391123299192_246306_2333' visibility='public' value='*'/>
+								<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391123299192_996791_2332' visibility='public'/>
+							</ownedParameter>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391123516698_629497_2467' name='inserirFornecedor' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123516699_458227_2468' name='Nome' visibility='public' direction='in'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#String'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::String' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123516700_739645_2469' name='Morada' visibility='public' direction='in'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#String'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::String' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123516701_691195_2471' name='IdFornecedor' visibility='public' direction='return'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391123853712_676072_2639' name='obtemProdutos' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123853713_124111_2640' name='produtos' visibility='public' direction='return' type='_16_0_1796040d_1391039976400_523918_2079'>
+								<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391123853714_890279_2642' visibility='public' value='*'/>
+								<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391123853713_983567_2641' visibility='public'/>
+							</ownedParameter>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391124222952_584130_2875' name='obtemEncomendasFornecedor' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391124222954_697923_2876' name='produtos' visibility='public' direction='return' type='_16_0_1796040d_1391039366352_407902_2027'>
+								<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391124222954_529313_2878' visibility='public' value='*'/>
+								<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391124222954_111867_2877' visibility='public'/>
+							</ownedParameter>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391124402525_841390_2888' name='recebeEncomendaFornecedor' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391124439645_700602_2889' name='IdEncomenda' visibility='public' direction='in'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+						</ownedOperation>
+					</packagedElement>
+					<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1391038012164_64274_1935' name='Venda' visibility='public'>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391124885501_728402_2926' name='Id' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391124898164_909432_2927' name='NomeCliente' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#String'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::String' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391124928548_776456_2928' name='MoradaCliente' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#String'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::String' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391124955196_968955_2929' name='produto' visibility='private' aggregation='shared' type='_16_0_1796040d_1391039976400_523918_2079' association='_16_0_1796040d_1391125326680_545203_3107'>
+							<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391125380144_24721_3132' visibility='public' value='1'/>
+							<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391125380144_564719_3131' visibility='public' value='1'/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391124983324_516899_2930' name='Qtd' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1391039366352_407902_2027' name='Encomenda' visibility='public'>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125162144_237624_2943' name='Id' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125171493_298738_2952' name='produto' visibility='private' aggregation='shared' type='_16_0_1796040d_1391039976400_523918_2079' association='_16_0_1796040d_1391125261304_894531_3002'>
+							<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391125366904_13955_3124' visibility='public' value='1'/>
+							<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391125366903_155535_3123' visibility='public' value='1'/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125188349_4937_2953' name='Recebida' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Boolean'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Boolean' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125201885_918449_2954' name='Qtd' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125213709_544709_2955' name='venda' visibility='private' aggregation='shared' type='_16_0_1796040d_1391038012164_64274_1935' association='_16_0_1796040d_1391125321991_306998_3072'>
+							<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391125341240_328234_3120' visibility='public' value='1'/>
+							<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391125341240_482349_3119' visibility='public'/>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1391039976400_523918_2079' name='Produto' visibility='public'>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125022399_547157_2934' name='Id' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125028395_958363_2935' name='Tipo' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125037684_470533_2937' name='StockMinimo' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125051741_374800_2938' name='fornecedor' visibility='private' aggregation='shared' type='_16_0_1796040d_1391123317802_823249_2334' association='_16_0_1796040d_1391125265151_705512_3039'>
+							<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391125373310_81247_3128' visibility='public' value='1'/>
+							<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391125373310_904158_3127' visibility='public' value='1'/>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125070981_163161_2939' name='Designacao' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#String'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::String' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125087829_355979_2940' name='Preco' visibility='private'>
+							<type xmi:type='uml:DataType' href='UML_Standard_Profile.xml#eee_1045467100323_848034_66'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::MagicDraw Profile::datatypes::double' referentType='DataType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125109109_388061_2941' name='StockQtd' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type='uml:Interface' xmi:id='_16_0_1796040d_1391120946472_878727_1203' name='SedePresentationLayer' visibility='public'/>
+					<packagedElement xmi:type='uml:Association' xmi:id='_16_0_1796040d_1391121229644_599828_1340' visibility='public'>
+						<memberEnd xmi:idref='_16_0_1796040d_1391121229644_859874_1341'/>
+						<memberEnd xmi:idref='_16_0_1796040d_1391121229645_911189_1342'/>
+						<navigableOwnedEnd xmi:idref='_16_0_1796040d_1391121229644_859874_1341'/>
+						<navigableOwnedEnd xmi:idref='_16_0_1796040d_1391121229645_911189_1342'/>
+						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391121229644_859874_1341' visibility='private' type='_16_0_1796040d_1391035418023_442467_1230' association='_16_0_1796040d_1391121229644_599828_1340'/>
+						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391121229645_911189_1342' visibility='private' type='_16_0_1796040d_1389302645505_745881_1292' association='_16_0_1796040d_1391121229644_599828_1340'/>
+					</packagedElement>
+					<packagedElement xmi:type='uml:Package' xmi:id='_16_0_1796040d_1391121579525_124859_1975' name='Infraestrutura ' visibility='public'>
+						<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1389299436539_154655_1118' name='bdLHD' visibility='public'/>
+						<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1389300236074_32075_1334' name='PCSede' visibility='public'/>
+						<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1389299376344_283143_1093' name='SrvSede' visibility='public'/>
+					</packagedElement>
+					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1391123232261_899375_2253' name='Listar Fornecedores' visibility='public'>
+						<ownedBehavior xmi:type='uml:Interaction' xmi:id='_16_0_1796040d_1391123232262_192231_2254' name='Listar Fornecedores' visibility='public'>
+							<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+								<modelExtension>
+									<event xmi:idref='_16_0_1796040d_1391123232263_211813_2255'/>
+									<event xmi:idref='_16_0_1796040d_1391123232263_775365_2256'/>
+								</modelExtension>
+							</xmi:Extension>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123232264_754034_2270' visibility='private' type='_16_0_1796040d_1389302645505_745881_1292'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123232264_978118_2271' visibility='private' type='_16_0_1796040d_1391120946472_878727_1203'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123232265_288566_2272' visibility='private' type='_16_0_1796040d_1389552883998_345106_710'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123232265_597424_2273' visibility='private' type='_16_0_1796040d_1389554248438_817341_1771'/>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123232263_350408_2263' visibility='public' represents='_16_0_1796040d_1391123232264_754034_2270'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123232263_434640_2257'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123232263_823981_2264' visibility='public' represents='_16_0_1796040d_1391123232264_978118_2271'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123232263_329809_2258'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123232263_447498_2259'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123232264_150936_2265' visibility='public' represents='_16_0_1796040d_1391123232265_288566_2272'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123232263_414836_2260'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123232263_227530_2261'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391123232264_415526_2266' visibility='public' represents='_16_0_1796040d_1391123232265_597424_2273'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391123232263_322185_2262'/>
+							</lifeline>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391123232264_161316_2267' name='Listar Fornecedores' visibility='public' receiveEvent='_16_0_1796040d_1391123232263_329809_2258' sendEvent='_16_0_1796040d_1391123232263_434640_2257'/>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391123232264_744787_2268' name='obtemFornecedores' visibility='public' receiveEvent='_16_0_1796040d_1391123232263_414836_2260' sendEvent='_16_0_1796040d_1391123232263_447498_2259'>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391123292570_9656_2329' visibility='public' value='fornecedores'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391121010407_572134_1263'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391123232264_56354_2269' visibility='public' receiveEvent='_16_0_1796040d_1391123232263_322185_2262' sendEvent='_16_0_1796040d_1391123232263_227530_2261'>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391123362761_666330_2348' visibility='public' value='fornecedores'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391123355017_783858_2343'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123232263_434640_2257' visibility='public' message='_16_0_1796040d_1391123232264_161316_2267'>
+								<covered xmi:idref='_16_0_1796040d_1391123232263_350408_2263'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123232263_329809_2258' visibility='public' message='_16_0_1796040d_1391123232264_161316_2267'>
+								<covered xmi:idref='_16_0_1796040d_1391123232263_823981_2264'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123232263_447498_2259' visibility='public' message='_16_0_1796040d_1391123232264_744787_2268'>
+								<covered xmi:idref='_16_0_1796040d_1391123232263_823981_2264'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123232263_414836_2260' visibility='public' message='_16_0_1796040d_1391123232264_744787_2268' event='_16_0_1796040d_1391123232263_211813_2255'>
+								<covered xmi:idref='_16_0_1796040d_1391123232264_150936_2265'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123232263_227530_2261' visibility='public' message='_16_0_1796040d_1391123232264_56354_2269'>
+								<covered xmi:idref='_16_0_1796040d_1391123232264_150936_2265'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391123232263_322185_2262' visibility='public' message='_16_0_1796040d_1391123232264_56354_2269' event='_16_0_1796040d_1391123232263_775365_2256'>
+								<covered xmi:idref='_16_0_1796040d_1391123232264_415526_2266'/>
+							</fragment>
+						</ownedBehavior>
+					</packagedElement>
+					<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1391123317802_823249_2334' name='Fornecedor' visibility='public'>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125001178_97958_2931' name='Id' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125005427_514640_2932' name='Nome' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#String'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::String' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+						<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125012003_169326_2933' name='Morada' visibility='private'>
+							<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#String'>
+								<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+									<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::String' referentType='PrimitiveType'/>
+								</xmi:Extension>
+							</type>
+						</ownedAttribute>
+					</packagedElement>
+					<packagedElement xmi:type='uml:Association' xmi:id='_16_0_1796040d_1391123437533_10336_2365' visibility='public'>
+						<memberEnd xmi:idref='_16_0_1796040d_1391123437533_673833_2366'/>
+						<memberEnd xmi:idref='_16_0_1796040d_1391123437534_73149_2367'/>
+						<navigableOwnedEnd xmi:idref='_16_0_1796040d_1391123437533_673833_2366'/>
+						<navigableOwnedEnd xmi:idref='_16_0_1796040d_1391123437534_73149_2367'/>
+						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123437533_673833_2366' visibility='private' type='_16_0_1796040d_1391123232261_899375_2253' association='_16_0_1796040d_1391123437533_10336_2365'/>
+						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391123437534_73149_2367' visibility='private' type='_16_0_1796040d_1389302645505_745881_1292' association='_16_0_1796040d_1391123437533_10336_2365'/>
+					</packagedElement>
 					<packagedElement xmi:type='uml:Interface' xmi:id='_16_0_1796040d_1389554248438_817341_1771' name='SedeDataLayer' visibility='public'>
 						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391036784964_857378_1687' name='registaVenda' visibility='public'>
 							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391036784964_608096_1688' name='venda' visibility='public' direction='in' type='_16_0_1796040d_1391038012164_64274_1935'/>
@@ -673,8 +1273,15 @@
 						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391037747532_770286_1923' name='registaEncomenda' visibility='public'>
 							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391037747533_849975_1926' name='encomenda' visibility='public' direction='in' type='_16_0_1796040d_1391039366352_407902_2027'/>
 						</ownedOperation>
-						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391039706095_140222_2067' name='actualizaQtd' visibility='public'>
-							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391039802823_783675_2069' name='QtdVenda' visibility='public' direction='in'>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391039706095_140222_2067' name='actualizaQtdProduto' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391124652748_515148_2917' name='ProdutoId' visibility='public' direction='in'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391039802823_783675_2069' name='Qtd' visibility='public' direction='in'>
 								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
 									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
 										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
@@ -698,19 +1305,9 @@
 								</type>
 							</ownedParameter>
 						</ownedOperation>
-					</packagedElement>
-					<packagedElement xmi:type='uml:Interface' xmi:id='_16_0_1796040d_1389552883998_345106_710' name='SedeAppLayer' visibility='public'>
-						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391036494325_925613_1559' name='registaVenda' visibility='public'>
-							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391036494325_10177_1560' name='venda' visibility='public' direction='in' type='_16_0_1796040d_1391038012164_64274_1935'/>
-						</ownedOperation>
-						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391121001140_192390_1262' name='obtemVendas' visibility='public'>
-							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391121010407_572134_1263' name='vendas' visibility='public' direction='return' type='_16_0_1796040d_1391038012164_64274_1935'>
-								<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391121022757_670653_1266' visibility='public' value='*'/>
-								<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391121022757_856574_1265' visibility='public'/>
-							</ownedParameter>
-						</ownedOperation>
-						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391121363556_981979_1941' name='expedirEncomendaVenda' visibility='public'>
-							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391121387604_91551_1942' name='CodigoVenda' visibility='public' direction='in'>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391123068004_288226_2237' name='inserirProduto' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123078876_622323_2238' name='produto' visibility='public' direction='in' type='_16_0_1796040d_1391039976400_523918_2079'/>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123153252_667238_2242' name='IdProduto' visibility='public' direction='return'>
 								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
 									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
 										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
@@ -718,39 +1315,163 @@
 								</type>
 							</ownedParameter>
 						</ownedOperation>
-						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391121757620_57857_2205' name='unnamed1' visibility='public'/>
-						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391121758212_557831_2206' name='unnamed2' visibility='public'/>
-						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391121758981_962065_2207' name='unnamed3' visibility='public'/>
-						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391121760373_76213_2208' name='unnamed4' visibility='public'/>
-						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391121766876_283986_2209' name='unnamed5' visibility='public'/>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391123355016_771951_2342' name='obtemFornecedores' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123355017_783858_2343' name='fornecedores' visibility='public' direction='return' type='_16_0_1796040d_1391123317802_823249_2334'>
+								<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391123355018_404947_2345' visibility='public' value='*'/>
+								<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391123355017_786424_2344' visibility='public'/>
+							</ownedParameter>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391123636680_990724_2476' name='inserirFornecedor' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123636681_565456_2477' name='fornecedor' visibility='public' direction='in' type='_16_0_1796040d_1391123317802_823249_2334'/>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123636681_726591_2478' name='IdFornecedor' visibility='public' direction='return'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391123910032_985596_2659' name='obtemProdutos' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391123910033_995589_2660' name='produtos' visibility='public' direction='return' type='_16_0_1796040d_1391039976400_523918_2079'>
+								<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391123910033_976279_2662' visibility='public' value='*'/>
+								<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391123910033_423565_2661' visibility='public'/>
+							</ownedParameter>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391124291310_617284_2882' name='obtemEncomendasFornecedor' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391124291311_271344_2883' name='produtos' visibility='public' direction='return' type='_16_0_1796040d_1391039366352_407902_2027'>
+								<upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:id='_16_0_1796040d_1391124291312_692893_2885' visibility='public' value='*'/>
+								<lowerValue xmi:type='uml:LiteralInteger' xmi:id='_16_0_1796040d_1391124291312_33492_2884' visibility='public'/>
+							</ownedParameter>
+						</ownedOperation>
+						<ownedOperation xmi:type='uml:Operation' xmi:id='_16_0_1796040d_1391124488672_808353_2902' name='recebeEncomendaFornecedor' visibility='public'>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391124488672_751327_2903' name='IdEncomenda' visibility='public' direction='in'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+							<ownedParameter xmi:type='uml:Parameter' xmi:id='_16_0_1796040d_1391124519796_709128_2915' name='Qtd' visibility='public' direction='return'>
+								<type xmi:type='uml:PrimitiveType' href='http://schema.omg.org/spec/UML/2.2/uml.xml#Integer'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<referenceExtension referentPath='UML Standard Profile::UML2 Metamodel::AuxiliaryConstructs::PrimitiveTypes::Integer' referentType='PrimitiveType'/>
+									</xmi:Extension>
+								</type>
+							</ownedParameter>
+						</ownedOperation>
 					</packagedElement>
-					<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1391038012164_64274_1935' name='Venda' visibility='public'/>
-					<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1391039366352_407902_2027' name='Encomenda_Fornecedor' visibility='public'/>
-					<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1391039976400_523918_2079' name='Produto' visibility='public'/>
-					<packagedElement xmi:type='uml:Interface' xmi:id='_16_0_1796040d_1391120946472_878727_1203' name='SedePresentationLayer' visibility='public'/>
-					<packagedElement xmi:type='uml:Association' xmi:id='_16_0_1796040d_1391121229644_599828_1340' visibility='public'>
-						<memberEnd xmi:idref='_16_0_1796040d_1391121229644_859874_1341'/>
-						<memberEnd xmi:idref='_16_0_1796040d_1391121229645_911189_1342'/>
-						<navigableOwnedEnd xmi:idref='_16_0_1796040d_1391121229644_859874_1341'/>
-						<navigableOwnedEnd xmi:idref='_16_0_1796040d_1391121229645_911189_1342'/>
-						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391121229644_859874_1341' visibility='private' type='_16_0_1796040d_1391035418023_442467_1230' association='_16_0_1796040d_1391121229644_599828_1340'/>
-						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391121229645_911189_1342' visibility='private' type='_16_0_1796040d_1389302645505_745881_1292' association='_16_0_1796040d_1391121229644_599828_1340'/>
+					<packagedElement xmi:type='uml:UseCase' xmi:id='_16_0_1796040d_1391124091500_773456_2774' name='Listar Encomendas Fornecedor' visibility='public'>
+						<ownedBehavior xmi:type='uml:Interaction' xmi:id='_16_0_1796040d_1391124091501_550776_2775' name='Listar Encomendas Fornecedor' visibility='public'>
+							<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+								<modelExtension>
+									<event xmi:idref='_16_0_1796040d_1391124091502_565600_2776'/>
+									<event xmi:idref='_16_0_1796040d_1391124091502_19151_2777'/>
+								</modelExtension>
+							</xmi:Extension>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391124091503_427467_2791' visibility='private' type='_16_0_1796040d_1389302645505_745881_1292'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391124091503_195648_2792' visibility='private' type='_16_0_1796040d_1389552883998_345106_710'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391124091504_856627_2793' visibility='private' type='_16_0_1796040d_1391120946472_878727_1203'/>
+							<ownedAttribute xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391124091504_466945_2794' visibility='private' type='_16_0_1796040d_1389554248438_817341_1771'/>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391124091502_284327_2784' visibility='public' represents='_16_0_1796040d_1391124091503_427467_2791'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124091502_556033_2778'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391124091502_136460_2785' visibility='public' represents='_16_0_1796040d_1391124091503_195648_2792'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124091502_730381_2781'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124091502_834877_2782'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391124091502_828172_2786' visibility='public' represents='_16_0_1796040d_1391124091504_856627_2793'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124091502_468590_2779'/>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124091502_499077_2780'/>
+							</lifeline>
+							<lifeline xmi:type='uml:Lifeline' xmi:id='_16_0_1796040d_1391124091503_203133_2787' visibility='public' represents='_16_0_1796040d_1391124091504_466945_2794'>
+								<coveredBy xmi:idref='_16_0_1796040d_1391124091502_5847_2783'/>
+							</lifeline>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391124091503_128789_2788' name='Listar Encomendas Fornecedor' visibility='public' receiveEvent='_16_0_1796040d_1391124091502_468590_2779' sendEvent='_16_0_1796040d_1391124091502_556033_2778'/>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391124091503_815368_2789' visibility='public' receiveEvent='_16_0_1796040d_1391124091502_730381_2781' sendEvent='_16_0_1796040d_1391124091502_499077_2780'>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391124266713_93965_2881' visibility='public' value='encomendas'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391124222954_697923_2876'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<message xmi:type='uml:Message' xmi:id='_16_0_1796040d_1391124091503_164931_2790' visibility='public' receiveEvent='_16_0_1796040d_1391124091502_5847_2783' sendEvent='_16_0_1796040d_1391124091502_834877_2782'>
+								<argument xmi:type='uml:LiteralString' xmi:id='_16_0_1796040d_1391124298738_411824_2887' visibility='public' value='encomendas'>
+									<xmi:Extension extender='MagicDraw UML 16.0' extenderID='MagicDraw UML 16.0'>
+										<modelExtension parameter='_16_0_1796040d_1391124291311_271344_2883'/>
+									</xmi:Extension>
+								</argument>
+							</message>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124091502_556033_2778' visibility='public' message='_16_0_1796040d_1391124091503_128789_2788'>
+								<covered xmi:idref='_16_0_1796040d_1391124091502_284327_2784'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124091502_468590_2779' visibility='public' message='_16_0_1796040d_1391124091503_128789_2788'>
+								<covered xmi:idref='_16_0_1796040d_1391124091502_828172_2786'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124091502_499077_2780' visibility='public' message='_16_0_1796040d_1391124091503_815368_2789'>
+								<covered xmi:idref='_16_0_1796040d_1391124091502_828172_2786'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124091502_730381_2781' visibility='public' message='_16_0_1796040d_1391124091503_815368_2789' event='_16_0_1796040d_1391124091502_565600_2776'>
+								<covered xmi:idref='_16_0_1796040d_1391124091502_136460_2785'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124091502_834877_2782' visibility='public' message='_16_0_1796040d_1391124091503_164931_2790'>
+								<covered xmi:idref='_16_0_1796040d_1391124091502_136460_2785'/>
+							</fragment>
+							<fragment xmi:type='uml:MessageOccurrenceSpecification' xmi:id='_16_0_1796040d_1391124091502_5847_2783' visibility='public' message='_16_0_1796040d_1391124091503_164931_2790' event='_16_0_1796040d_1391124091502_19151_2777'>
+								<covered xmi:idref='_16_0_1796040d_1391124091503_203133_2787'/>
+							</fragment>
+						</ownedBehavior>
 					</packagedElement>
-					<packagedElement xmi:type='uml:Package' xmi:id='_16_0_1796040d_1391121579525_124859_1975' name='Infraestrutura ' visibility='public'>
-						<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1389299436539_154655_1118' name='bdLHD' visibility='public'/>
-						<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1389300236074_32075_1334' name='PCSede' visibility='public'/>
-						<packagedElement xmi:type='uml:Class' xmi:id='_16_0_1796040d_1389299376344_283143_1093' name='SrvSede' visibility='public'/>
+					<packagedElement xmi:type='uml:Association' xmi:id='_16_0_1796040d_1391124184380_439833_2865' visibility='public'>
+						<memberEnd xmi:idref='_16_0_1796040d_1391124184381_545446_2866'/>
+						<memberEnd xmi:idref='_16_0_1796040d_1391124184381_127700_2867'/>
+						<navigableOwnedEnd xmi:idref='_16_0_1796040d_1391124184381_545446_2866'/>
+						<navigableOwnedEnd xmi:idref='_16_0_1796040d_1391124184381_127700_2867'/>
+						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391124184381_545446_2866' visibility='private' type='_16_0_1796040d_1391124091500_773456_2774' association='_16_0_1796040d_1391124184380_439833_2865'/>
+						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391124184381_127700_2867' visibility='private' type='_16_0_1796040d_1389302645505_745881_1292' association='_16_0_1796040d_1391124184380_439833_2865'/>
 					</packagedElement>
+					<packagedElement xmi:type='uml:Association' xmi:id='_16_0_1796040d_1391125261304_894531_3002' visibility='public'>
+						<memberEnd xmi:idref='_16_0_1796040d_1391125261304_450912_3003'/>
+						<memberEnd xmi:idref='_16_0_1796040d_1391125171493_298738_2952'/>
+						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125261304_450912_3003' visibility='private' type='_16_0_1796040d_1391039366352_407902_2027' association='_16_0_1796040d_1391125261304_894531_3002'/>
+					</packagedElement>
+					<packagedElement xmi:type='uml:Association' xmi:id='_16_0_1796040d_1391125265151_705512_3039' visibility='public'>
+						<memberEnd xmi:idref='_16_0_1796040d_1391125265152_818898_3040'/>
+						<memberEnd xmi:idref='_16_0_1796040d_1391125051741_374800_2938'/>
+						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125265152_818898_3040' visibility='private' type='_16_0_1796040d_1391039976400_523918_2079' association='_16_0_1796040d_1391125265151_705512_3039'/>
+					</packagedElement>
+					<packagedElement xmi:type='uml:Association' xmi:id='_16_0_1796040d_1391125321991_306998_3072' visibility='public'>
+						<memberEnd xmi:idref='_16_0_1796040d_1391125321991_350866_3073'/>
+						<memberEnd xmi:idref='_16_0_1796040d_1391125213709_544709_2955'/>
+						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125321991_350866_3073' visibility='private' type='_16_0_1796040d_1391039366352_407902_2027' association='_16_0_1796040d_1391125321991_306998_3072'/>
+					</packagedElement>
+					<packagedElement xmi:type='uml:Association' xmi:id='_16_0_1796040d_1391125326680_545203_3107' visibility='public'>
+						<memberEnd xmi:idref='_16_0_1796040d_1391125326680_494357_3108'/>
+						<memberEnd xmi:idref='_16_0_1796040d_1391124955196_968955_2929'/>
+						<ownedEnd xmi:type='uml:Property' xmi:id='_16_0_1796040d_1391125326680_494357_3108' visibility='private' type='_16_0_1796040d_1391038012164_64274_1935' association='_16_0_1796040d_1391125326680_545203_3107'/>
+					</packagedElement>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391123511423_826998_2462' visibility='public' operation='_16_0_1796040d_1391123516698_629497_2467'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391123682904_412980_2516' visibility='public' operation='_16_0_1796040d_1391123636680_990724_2476'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391123039640_783920_2216' visibility='public' operation='_16_0_1796040d_1391121777232_417043_2210'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391123062400_812011_2232' visibility='public' operation='_16_0_1796040d_1391123068004_288226_2237'/>
 					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391040024395_589555_2093' visibility='public' operation='_16_0_1796040d_1391037747532_770286_1923'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391124457176_885635_2890' visibility='public' operation='_16_0_1796040d_1391124402525_841390_2888'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391124494264_522335_2904' visibility='public' operation='_16_0_1796040d_1391124488672_808353_2902'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391124764383_858358_2919' visibility='public' operation='_16_0_1796040d_1391039706095_140222_2067'/>
 					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391036617833_301340_1668' visibility='public' operation='_16_0_1796040d_1391037300992_837191_1825'/>
 					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391036808906_457073_1716' visibility='public' operation='_16_0_1796040d_1391036784964_857378_1687'/>
 					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391037348802_620596_1860' visibility='public' operation='_16_0_1796040d_1391036494325_925613_1559'/>
 					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391039843224_481313_2070' visibility='public' operation='_16_0_1796040d_1391039706095_140222_2067'/>
 					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391120581606_861559_1017' visibility='public' operation='_16_0_1796040d_1391036494325_925613_1559'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391123881975_785002_2643' visibility='public' operation='_16_0_1796040d_1391123853712_676072_2639'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391123914808_779869_2663' visibility='public' operation='_16_0_1796040d_1391123910032_985596_2659'/>
 					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391120987958_293500_1257' visibility='public' operation='_16_0_1796040d_1391121001140_192390_1262'/>
 					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391121104728_692038_1300' visibility='public' operation='_16_0_1796040d_1391121096190_842456_1296'/>
 					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391121352007_338793_1936' visibility='public' operation='_16_0_1796040d_1391121363556_981979_1941'/>
 					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391121543247_971994_1972' visibility='public' operation='_16_0_1796040d_1391121535276_922874_1961'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391123232263_211813_2255' visibility='public' operation='_16_0_1796040d_1391121001140_192390_1262'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391123232263_775365_2256' visibility='public' operation='_16_0_1796040d_1391123355016_771951_2342'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391124091502_565600_2776' visibility='public' operation='_16_0_1796040d_1391124222952_584130_2875'/>
+					<packagedElement xmi:type='uml:CallEvent' xmi:id='_16_0_1796040d_1391124091502_19151_2777' visibility='public' operation='_16_0_1796040d_1391124291310_617284_2882'/>
 				</packagedElement>
 				<packagedElement xmi:type='uml:Association' xmi:id='_16_0_1796040d_1389302622927_737559_1266' visibility='public'>
 					<memberEnd xmi:idref='_16_0_1796040d_1389302622927_358926_1267'/>
@@ -814,7 +1535,7 @@
 					<umlType>Implementation Diagram</umlType>
 					<zoomFactor xmi:value='0.7'/>
 					<diagramOpened xmi:value='true'/>
-					<diagramWindowBounds>2, 24, 1022, 651</diagramWindowBounds>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
 					<diagramScrollPositionY xmi:value='0'/>
 					<maximized xmi:value='false'/>
@@ -987,18 +1708,18 @@
 					<elementID xmi:idref='_16_0_1796040d_1389301985163_44641_993'/>
 					<type>Use Case Diagram</type>
 					<umlType>Use Case Diagram</umlType>
-					<zoomFactor xmi:value='0.7601182'/>
+					<zoomFactor xmi:value='1.0601182'/>
 					<diagramOpened xmi:value='true'/>
 					<diagramFrameInitialSizeSet xmi:value='true'/>
-					<diagramWindowBounds>2, 24, 1022, 651</diagramWindowBounds>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
-					<diagramScrollPositionY xmi:value='0'/>
+					<diagramScrollPositionY xmi:value='90'/>
 					<maximized xmi:value='false'/>
 					<active xmi:value='false'/>
 					<mdOwnedViews>
 						<mdElement elementClass='DiagramFrame' xmi:id='_16_0_1796040d_1389301985165_564899_1006'>
 							<elementID xmi:idref='_16_0_1796040d_1389301985163_44641_993'/>
-							<geometry>5, 5, 635, 507</geometry>
+							<geometry>5, 5, 635, 597</geometry>
 						</mdElement>
 						<mdElement elementClass='Package' xmi:id='_16_0_1796040d_1389302483311_815796_1215'>
 							<elementID xmi:idref='_16_0_1796040d_1389302483310_399023_1213'/>
@@ -1009,7 +1730,7 @@
 									<value xmi:value='true'/>
 								</mdElement>
 							</properties>
-							<geometry>108, 35, 408, 457</geometry>
+							<geometry>108, 35, 397, 547</geometry>
 							<mdOwnedViews>
 								<mdElement elementClass='Package' xmi:id='_16_0_1796040d_1389302116151_414573_1150'>
 									<elementID xmi:idref='_16_0_1796040d_1389299347234_124641_1089'/>
@@ -1020,15 +1741,15 @@
 											<value xmi:value='true'/>
 										</mdElement>
 									</properties>
-									<geometry>280, 60, 232, 428</geometry>
+									<geometry>269, 63, 232, 515</geometry>
 									<mdOwnedViews>
 										<mdElement elementClass='UseCase' xmi:id='_16_0_1796040d_1389302005406_20628_1017'>
 											<elementID xmi:idref='_16_0_1796040d_1389302005406_708777_1016'/>
-											<geometry>326, 384, 140, 28</geometry>
+											<geometry>315, 432, 140, 28</geometry>
 										</mdElement>
 										<mdElement elementClass='UseCase' xmi:id='_16_0_1796040d_1389302019716_190383_1030'>
 											<elementID xmi:idref='_16_0_1796040d_1389302019715_334135_1029'/>
-											<geometry>326, 347, 140, 28</geometry>
+											<geometry>315, 395, 140, 28</geometry>
 										</mdElement>
 										<mdElement elementClass='UseCase' xmi:id='_16_0_1796040d_1389302030260_277946_1043'>
 											<elementID xmi:idref='_16_0_1796040d_1389302030259_585826_1042'/>
@@ -1039,7 +1760,7 @@
 													<value xmi:value='true'/>
 												</mdElement>
 											</properties>
-											<geometry>287, 214, 216, 26</geometry>
+											<geometry>277, 217, 216, 26</geometry>
 										</mdElement>
 										<mdElement elementClass='UseCase' xmi:id='_16_0_1796040d_1389302040824_887885_1056'>
 											<elementID xmi:idref='_16_0_1796040d_1389302040823_489006_1055'/>
@@ -1050,15 +1771,15 @@
 													<value xmi:value='true'/>
 												</mdElement>
 											</properties>
-											<geometry>284, 458, 224, 26</geometry>
+											<geometry>273, 548, 224, 26</geometry>
 										</mdElement>
 										<mdElement elementClass='UseCase' xmi:id='_16_0_1796040d_1389302073549_55032_1094'>
 											<elementID xmi:idref='_16_0_1796040d_1389302073549_737735_1093'/>
-											<geometry>326, 421, 140, 28</geometry>
+											<geometry>315, 469, 140, 28</geometry>
 										</mdElement>
 										<mdElement elementClass='UseCase' xmi:id='_16_0_1796040d_1391035263521_541466_1160'>
 											<elementID xmi:idref='_16_0_1796040d_1391035263520_870364_1159'/>
-											<geometry>325, 249, 140, 28</geometry>
+											<geometry>315, 252, 140, 28</geometry>
 										</mdElement>
 										<mdElement elementClass='UseCase' xmi:id='_16_0_1796040d_1391035418028_794071_1231'>
 											<elementID xmi:idref='_16_0_1796040d_1391035418023_442467_1230'/>
@@ -1069,21 +1790,21 @@
 													<value xmi:value='true'/>
 												</mdElement>
 											</properties>
-											<geometry>304, 312, 184, 26</geometry>
+											<geometry>293, 315, 184, 26</geometry>
 										</mdElement>
 										<mdElement elementClass='Extend' xmi:id='_16_0_1796040d_1389302304476_743357_1204'>
 											<elementID xmi:idref='_16_0_1796040d_1389302302764_155327_1202'/>
 											<linkFirstEndID xmi:idref='_16_0_1796040d_1389302061548_365478_1082'/>
 											<linkSecondEndID xmi:idref='_16_0_1796040d_1389302030260_277946_1043'/>
-											<geometry>395, 169; 395, 214; </geometry>
+											<geometry>385, 172; 385, 217; </geometry>
 											<nameVisible xmi:value='true'/>
 											<mdOwnedViews>
 												<mdElement elementClass='TextBoxWithIcon' xmi:id='_16_0_1796040d_1389302304478_511070_1205'>
-													<geometry>362, 175, 65, 13</geometry>
+													<geometry>353, 178, 65, 13</geometry>
 													<text>&lt;&lt;extend&gt;&gt;</text>
 												</mdElement>
 												<mdElement elementClass='TextBox' xmi:id='_16_0_1796040d_1389302304480_248676_1208'>
-													<geometry>330, 194, 129, 13</geometry>
+													<geometry>321, 197, 129, 13</geometry>
 													<text>(Stock Minimo atingido)</text>
 												</mdElement>
 											</mdOwnedViews>
@@ -1099,13 +1820,42 @@
 													<value xmi:value='true'/>
 												</mdElement>
 											</properties>
-											<geometry>305, 109, 180, 60</geometry>
+											<geometry>295, 112, 180, 60</geometry>
 										</mdElement>
 										<mdElement elementClass='Generalization' xmi:id='_16_0_1796040d_1391121263263_465332_1371'>
 											<elementID xmi:idref='_16_0_1796040d_1391121263260_870067_1370'/>
 											<linkFirstEndID xmi:idref='_16_0_1796040d_1391035263521_541466_1160'/>
 											<linkSecondEndID xmi:idref='_16_0_1796040d_1391035418028_794071_1231'/>
-											<geometry>395, 277; 395, 312; </geometry>
+											<geometry>385, 280; 385, 315; </geometry>
+											<nameVisible xmi:value='false'/>
+										</mdElement>
+										<mdElement elementClass='UseCase' xmi:id='_16_0_1796040d_1391123403604_534628_2349'>
+											<elementID xmi:idref='_16_0_1796040d_1391123232261_899375_2253'/>
+											<properties>
+												<mdElement elementClass='BooleanProperty'>
+													<propertyID>AUTOSIZE</propertyID>
+													<propertyDescriptionID>AUTOSIZE_DESCRIPTION</propertyDescriptionID>
+													<value xmi:value='true'/>
+												</mdElement>
+											</properties>
+											<geometry>313, 353, 144, 26</geometry>
+										</mdElement>
+										<mdElement elementClass='Generalization' xmi:id='_16_0_1796040d_1391123429984_606048_2361'>
+											<elementID xmi:idref='_16_0_1796040d_1391123429981_718996_2360'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123403604_534628_2349'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1389302019716_190383_1030'/>
+											<geometry>385, 379; 385, 395; </geometry>
+											<nameVisible xmi:value='false'/>
+										</mdElement>
+										<mdElement elementClass='UseCase' xmi:id='_16_0_1796040d_1391124111521_387688_2849'>
+											<elementID xmi:idref='_16_0_1796040d_1391124091500_773456_2774'/>
+											<geometry>273, 504, 217, 28</geometry>
+										</mdElement>
+										<mdElement elementClass='Generalization' xmi:id='_16_0_1796040d_1391124145032_15255_2861'>
+											<elementID xmi:idref='_16_0_1796040d_1391124145029_638460_2860'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391124111521_387688_2849'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1389302040824_887885_1056'/>
+											<geometry>384, 532; 384, 548; </geometry>
 											<nameVisible xmi:value='false'/>
 										</mdElement>
 									</mdOwnedViews>
@@ -1136,11 +1886,11 @@
 											<elementID xmi:idref='_16_0_1796040d_1389302281135_193665_1196'/>
 											<linkFirstEndID xmi:idref='_16_0_1796040d_1389302061548_365478_1082'/>
 											<linkSecondEndID xmi:idref='_16_0_1796040d_1389302049586_811621_1069'/>
-											<geometry>305, 140; 224, 141; </geometry>
+											<geometry>295, 141; 224, 141; </geometry>
 											<nameVisible xmi:value='true'/>
 											<mdOwnedViews>
 												<mdElement elementClass='TextBoxWithIcon' xmi:id='_16_0_1796040d_1389302281138_18706_1198'>
-													<geometry>230, 124, 69, 13</geometry>
+													<geometry>225, 125, 69, 13</geometry>
 													<text>&lt;&lt;include&gt;&gt;</text>
 												</mdElement>
 											</mdOwnedViews>
@@ -1177,16 +1927,16 @@
 							<elementID xmi:idref='_16_0_1796040d_1389302679633_449827_1407'/>
 							<linkFirstEndID xmi:idref='_16_0_1796040d_1389302040824_887885_1056'/>
 							<linkSecondEndID xmi:idref='_16_0_1796040d_1389302645506_477209_1293'/>
-							<geometry>425, 458; 520, 417; </geometry>
+							<geometry>399, 548; 546, 417; </geometry>
 							<nameVisible xmi:value='true'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1389302679634_334328_1411'>
 									<elementID xmi:idref='_16_0_1796040d_1389302679633_148086_1408'/>
-									<geometry>420, 448, 10, 10</geometry>
+									<geometry>394, 538, 10, 10</geometry>
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1389302679634_732221_1410'>
 									<elementID xmi:idref='_16_0_1796040d_1389302679634_708348_1409'/>
-									<geometry>515, 417, 10, 10</geometry>
+									<geometry>541, 417, 10, 10</geometry>
 								</mdElement>
 							</mdOwnedViews>
 							<associationFirstEndID xmi:idref='_16_0_1796040d_1389302679634_334328_1411'/>
@@ -1196,16 +1946,16 @@
 							<elementID xmi:idref='_16_0_1796040d_1389302673856_37313_1381'/>
 							<linkFirstEndID xmi:idref='_16_0_1796040d_1389302005406_20628_1017'/>
 							<linkSecondEndID xmi:idref='_16_0_1796040d_1389302645506_477209_1293'/>
-							<geometry>466, 397; 555, 396; </geometry>
+							<geometry>427, 434; 518, 410; </geometry>
 							<nameVisible xmi:value='true'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1389302673857_516404_1385'>
 									<elementID xmi:idref='_16_0_1796040d_1389302673856_410387_1382'/>
-									<geometry>466, 392, 10, 10</geometry>
+									<geometry>422, 434, 10, 10</geometry>
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1389302673856_768045_1384'>
 									<elementID xmi:idref='_16_0_1796040d_1389302673856_914065_1383'/>
-									<geometry>550, 396, 10, 10</geometry>
+									<geometry>508, 405, 10, 10</geometry>
 								</mdElement>
 							</mdOwnedViews>
 							<associationFirstEndID xmi:idref='_16_0_1796040d_1389302673857_516404_1385'/>
@@ -1215,16 +1965,16 @@
 							<elementID xmi:idref='_16_0_1796040d_1389302676693_445888_1394'/>
 							<linkFirstEndID xmi:idref='_16_0_1796040d_1389302073549_55032_1094'/>
 							<linkSecondEndID xmi:idref='_16_0_1796040d_1389302645506_477209_1293'/>
-							<geometry>442, 424; 518, 407; </geometry>
+							<geometry>412, 470; 524, 417; </geometry>
 							<nameVisible xmi:value='true'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1389302676694_196555_1398'>
 									<elementID xmi:idref='_16_0_1796040d_1389302676693_979722_1395'/>
-									<geometry>437, 424, 10, 10</geometry>
+									<geometry>407, 470, 10, 10</geometry>
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1389302676694_144785_1397'>
 									<elementID xmi:idref='_16_0_1796040d_1389302676693_956636_1396'/>
-									<geometry>508, 402, 10, 10</geometry>
+									<geometry>519, 417, 10, 10</geometry>
 								</mdElement>
 							</mdOwnedViews>
 							<associationFirstEndID xmi:idref='_16_0_1796040d_1389302676694_196555_1398'/>
@@ -1234,16 +1984,16 @@
 							<elementID xmi:idref='_16_0_1796040d_1389302671030_641628_1368'/>
 							<linkFirstEndID xmi:idref='_16_0_1796040d_1389302019716_190383_1030'/>
 							<linkSecondEndID xmi:idref='_16_0_1796040d_1389302645506_477209_1293'/>
-							<geometry>445, 370; 555, 393; </geometry>
+							<geometry>451, 404; 555, 397; </geometry>
 							<nameVisible xmi:value='true'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1389302671031_721921_1372'>
 									<elementID xmi:idref='_16_0_1796040d_1389302671030_798894_1369'/>
-									<geometry>440, 370, 10, 10</geometry>
+									<geometry>446, 404, 10, 10</geometry>
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1389302671031_142151_1371'>
 									<elementID xmi:idref='_16_0_1796040d_1389302671031_101077_1370'/>
-									<geometry>550, 393, 10, 10</geometry>
+									<geometry>550, 397, 10, 10</geometry>
 								</mdElement>
 							</mdOwnedViews>
 							<associationFirstEndID xmi:idref='_16_0_1796040d_1389302671031_721921_1372'/>
@@ -1253,16 +2003,16 @@
 							<elementID xmi:idref='_16_0_1796040d_1391035334416_358055_1219'/>
 							<linkFirstEndID xmi:idref='_16_0_1796040d_1391035263521_541466_1160'/>
 							<linkSecondEndID xmi:idref='_16_0_1796040d_1389302645506_477209_1293'/>
-							<geometry>413, 276; 555, 385; </geometry>
+							<geometry>404, 279; 555, 386; </geometry>
 							<nameVisible xmi:value='true'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391035334417_615903_1223'>
 									<elementID xmi:idref='_16_0_1796040d_1391035334416_787161_1220'/>
-									<geometry>408, 276, 10, 10</geometry>
+									<geometry>399, 279, 10, 10</geometry>
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391035334417_665702_1222'>
 									<elementID xmi:idref='_16_0_1796040d_1391035334416_481684_1221'/>
-									<geometry>550, 385, 10, 10</geometry>
+									<geometry>550, 386, 10, 10</geometry>
 								</mdElement>
 							</mdOwnedViews>
 							<associationFirstEndID xmi:idref='_16_0_1796040d_1391035334417_615903_1223'/>
@@ -1276,20 +2026,58 @@
 							<elementID xmi:idref='_16_0_1796040d_1391121229644_599828_1340'/>
 							<linkFirstEndID xmi:idref='_16_0_1796040d_1391035418028_794071_1231'/>
 							<linkSecondEndID xmi:idref='_16_0_1796040d_1389302645506_477209_1293'/>
-							<geometry>426, 337; 555, 390; </geometry>
+							<geometry>418, 340; 555, 391; </geometry>
 							<nameVisible xmi:value='true'/>
 							<mdOwnedViews>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391121229645_22807_1344'>
 									<elementID xmi:idref='_16_0_1796040d_1391121229644_859874_1341'/>
-									<geometry>421, 337, 10, 10</geometry>
+									<geometry>413, 340, 10, 10</geometry>
 								</mdElement>
 								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391121229645_728115_1343'>
 									<elementID xmi:idref='_16_0_1796040d_1391121229645_911189_1342'/>
-									<geometry>550, 390, 10, 10</geometry>
+									<geometry>550, 391, 10, 10</geometry>
 								</mdElement>
 							</mdOwnedViews>
 							<associationFirstEndID xmi:idref='_16_0_1796040d_1391121229645_22807_1344'/>
 							<associationSecondEndID xmi:idref='_16_0_1796040d_1391121229645_728115_1343'/>
+						</mdElement>
+						<mdElement elementClass='Association' xmi:id='_16_0_1796040d_1391123437538_30593_2370'>
+							<elementID xmi:idref='_16_0_1796040d_1391123437533_10336_2365'/>
+							<linkFirstEndID xmi:idref='_16_0_1796040d_1391123403604_534628_2349'/>
+							<linkSecondEndID xmi:idref='_16_0_1796040d_1389302645506_477209_1293'/>
+							<geometry>438, 374; 555, 394; </geometry>
+							<nameVisible xmi:value='true'/>
+							<mdOwnedViews>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391123437534_441412_2369'>
+									<elementID xmi:idref='_16_0_1796040d_1391123437533_673833_2366'/>
+									<geometry>433, 374, 10, 10</geometry>
+								</mdElement>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391123437534_878027_2368'>
+									<elementID xmi:idref='_16_0_1796040d_1391123437534_73149_2367'/>
+									<geometry>550, 394, 10, 10</geometry>
+								</mdElement>
+							</mdOwnedViews>
+							<associationFirstEndID xmi:idref='_16_0_1796040d_1391123437534_441412_2369'/>
+							<associationSecondEndID xmi:idref='_16_0_1796040d_1391123437534_878027_2368'/>
+						</mdElement>
+						<mdElement elementClass='Association' xmi:id='_16_0_1796040d_1391124184385_87905_2870'>
+							<elementID xmi:idref='_16_0_1796040d_1391124184380_439833_2865'/>
+							<linkFirstEndID xmi:idref='_16_0_1796040d_1391124111521_387688_2849'/>
+							<linkSecondEndID xmi:idref='_16_0_1796040d_1389302645506_477209_1293'/>
+							<geometry>402, 504; 537, 417; </geometry>
+							<nameVisible xmi:value='true'/>
+							<mdOwnedViews>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391124184381_328114_2869'>
+									<elementID xmi:idref='_16_0_1796040d_1391124184381_545446_2866'/>
+									<geometry>397, 494, 10, 10</geometry>
+								</mdElement>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391124184381_701827_2868'>
+									<elementID xmi:idref='_16_0_1796040d_1391124184381_127700_2867'/>
+									<geometry>532, 417, 10, 10</geometry>
+								</mdElement>
+							</mdOwnedViews>
+							<associationFirstEndID xmi:idref='_16_0_1796040d_1391124184381_328114_2869'/>
+							<associationSecondEndID xmi:idref='_16_0_1796040d_1391124184381_701827_2868'/>
 						</mdElement>
 					</mdOwnedViews>
 				</mdElement>
@@ -1302,7 +2090,7 @@
 					<zoomFactor xmi:value='1.0'/>
 					<diagramOpened xmi:value='true'/>
 					<diagramFrameInitialSizeSet xmi:value='true'/>
-					<diagramWindowBounds>2, 24, 1022, 651</diagramWindowBounds>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
 					<diagramScrollPositionY xmi:value='5'/>
 					<maximized xmi:value='false'/>
@@ -1539,7 +2327,7 @@
 					<zoomFactor xmi:value='1.0'/>
 					<diagramOpened xmi:value='true'/>
 					<diagramFrameInitialSizeSet xmi:value='true'/>
-					<diagramWindowBounds>2, 24, 1022, 651</diagramWindowBounds>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
 					<diagramScrollPositionY xmi:value='0'/>
 					<maximized xmi:value='false'/>
@@ -1557,9 +2345,6 @@
 									<elementID xmi:idref='_16_0_1796040d_1391037636146_703289_1874'/>
 									<geometry>101, 96, 0, 202</geometry>
 									<mdOwnedViews>
-										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391040016604_959611_2089'>
-											<geometry>96, 128, 10, 70</geometry>
-										</mdElement>
 										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391040016600_117457_2087'>
 											<elementID xmi:idref='_16_0_1796040d_1391040016599_864072_2084'/>
 											<linkFirstEndID xmi:idref='_16_0_1796040d_1391040016604_934100_2088'/>
@@ -1573,6 +2358,9 @@
 													<text>registaEncomenda(encomenda=)</text>
 												</mdElement>
 											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391040016604_959611_2089'>
+											<geometry>96, 128, 10, 70</geometry>
 										</mdElement>
 									</mdOwnedViews>
 									<lifeLineDestroyedWithMark xmi:value='false'/>
@@ -1606,7 +2394,7 @@
 					<zoomFactor xmi:value='1.0'/>
 					<diagramOpened xmi:value='true'/>
 					<diagramFrameInitialSizeSet xmi:value='true'/>
-					<diagramWindowBounds>2, 24, 1022, 651</diagramWindowBounds>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
 					<diagramScrollPositionY xmi:value='0'/>
 					<maximized xmi:value='false'/>
@@ -1647,8 +2435,8 @@
 											<nameVisible xmi:value='true'/>
 											<mdOwnedViews>
 												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391039675727_572347_2060'>
-													<geometry>184, 164, 185, 12</geometry>
-													<text>actualizaQtd(QtdVenda=):&quot;produto&quot;</text>
+													<geometry>79, 164, 395, 12</geometry>
+													<text>actualizaQtdProduto(ProdutoId=&quot;venda.ProdutoId&quot;, Qtd=&quot;-venda.Qtd&quot;):&quot;produto&quot;</text>
 												</mdElement>
 											</mdOwnedViews>
 										</mdElement>
@@ -1720,9 +2508,6 @@
 									<elementID xmi:idref='_16_0_1796040d_1391120523305_243759_994'/>
 									<geometry>72, 96, 0, 387</geometry>
 									<mdOwnedViews>
-										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391120536446_834474_1012'>
-											<geometry>67, 122, 10, 160</geometry>
-										</mdElement>
 										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391120536402_253557_1010'>
 											<elementID xmi:idref='_16_0_1796040d_1391120536398_746223_1007'/>
 											<linkFirstEndID xmi:idref='_16_0_1796040d_1391120557444_179375_1016'/>
@@ -1736,6 +2521,9 @@
 													<text>registaVenda(venda=)</text>
 												</mdElement>
 											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391120536446_834474_1012'>
+											<geometry>67, 122, 10, 160</geometry>
 										</mdElement>
 									</mdOwnedViews>
 									<lifeLineDestroyedWithMark xmi:value='false'/>
@@ -1753,7 +2541,7 @@
 					<zoomFactor xmi:value='1.0'/>
 					<diagramOpened xmi:value='true'/>
 					<diagramFrameInitialSizeSet xmi:value='true'/>
-					<diagramWindowBounds>2, 24, 1022, 651</diagramWindowBounds>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
 					<diagramScrollPositionY xmi:value='0'/>
 					<maximized xmi:value='false'/>
@@ -1880,7 +2668,7 @@
 					<zoomFactor xmi:value='1.0'/>
 					<diagramOpened xmi:value='true'/>
 					<diagramFrameInitialSizeSet xmi:value='true'/>
-					<diagramWindowBounds>2, 24, 1022, 651</diagramWindowBounds>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
 					<diagramScrollPositionY xmi:value='0'/>
 					<maximized xmi:value='false'/>
@@ -1898,9 +2686,6 @@
 									<elementID xmi:idref='_16_0_1796040d_1391121270359_531889_1378'/>
 									<geometry>87, 96, 0, 289</geometry>
 									<mdOwnedViews>
-										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391121320257_223135_1908'>
-											<geometry>82, 124, 10, 161</geometry>
-										</mdElement>
 										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391121320253_678128_1906'>
 											<elementID xmi:idref='_16_0_1796040d_1391121320252_39935_1903'/>
 											<linkFirstEndID xmi:idref='_16_0_1796040d_1391121320257_813036_1907'/>
@@ -1915,6 +2700,9 @@
 												</mdElement>
 											</mdOwnedViews>
 										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391121320257_223135_1908'>
+											<geometry>82, 124, 10, 161</geometry>
+										</mdElement>
 									</mdOwnedViews>
 									<lifeLineDestroyedWithMark xmi:value='false'/>
 								</mdElement>
@@ -1928,9 +2716,6 @@
 									<elementID xmi:idref='_16_0_1796040d_1391121313503_474781_1891'/>
 									<geometry>258, 96, 0, 289</geometry>
 									<mdOwnedViews>
-										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391121320257_813036_1907'>
-											<geometry>253, 124, 10, 141</geometry>
-										</mdElement>
 										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391121352005_733649_1935'>
 											<elementID xmi:idref='_16_0_1796040d_1391121352004_905172_1932'/>
 											<linkFirstEndID xmi:idref='_16_0_1796040d_1391121352010_208578_1937'/>
@@ -1940,10 +2725,13 @@
 											<nameVisible xmi:value='true'/>
 											<mdOwnedViews>
 												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391121352010_24875_1938'>
-													<geometry>228, 137, 225, 12</geometry>
-													<text>expedirEncomendaVenda(CodigoVenda=&quot;&quot;)</text>
+													<geometry>232, 137, 217, 12</geometry>
+													<text>expedirEncomendaVenda(CodigoVenda=)</text>
 												</mdElement>
 											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391121320257_813036_1907'>
+											<geometry>253, 124, 10, 141</geometry>
 										</mdElement>
 									</mdOwnedViews>
 									<lifeLineDestroyedWithMark xmi:value='false'/>
@@ -1958,9 +2746,6 @@
 									<elementID xmi:idref='_16_0_1796040d_1391121347455_158340_1919'/>
 									<geometry>423, 96, 0, 289</geometry>
 									<mdOwnedViews>
-										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391121352010_208578_1937'>
-											<geometry>418, 152, 10, 93</geometry>
-										</mdElement>
 										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391121539742_543260_1967'>
 											<elementID xmi:idref='_16_0_1796040d_1391121539740_646278_1964'/>
 											<linkFirstEndID xmi:idref='_16_0_1796040d_1391121539745_811764_1968'/>
@@ -1974,6 +2759,9 @@
 													<text>expedirEncomendaVenda(CodigoVenda=)</text>
 												</mdElement>
 											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391121352010_208578_1937'>
+											<geometry>418, 152, 10, 93</geometry>
 										</mdElement>
 									</mdOwnedViews>
 									<lifeLineDestroyedWithMark xmi:value='false'/>
@@ -2004,18 +2792,18 @@
 					<elementID xmi:idref='_16_0_1796040d_1391121674045_954371_1990'/>
 					<type>Sequence Diagram</type>
 					<umlType>Sequence Diagram</umlType>
-					<zoomFactor xmi:value='1.0'/>
+					<zoomFactor xmi:value='0.7'/>
 					<diagramOpened xmi:value='true'/>
 					<diagramFrameInitialSizeSet xmi:value='true'/>
-					<diagramWindowBounds>2, 24, 1022, 651</diagramWindowBounds>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
 					<diagramScrollPositionX xmi:value='0'/>
 					<diagramScrollPositionY xmi:value='0'/>
 					<maximized xmi:value='false'/>
-					<active xmi:value='true'/>
+					<active xmi:value='false'/>
 					<mdOwnedViews>
 						<mdElement elementClass='DiagramFrame' xmi:id='_16_0_1796040d_1391121674048_735509_2004'>
 							<elementID xmi:idref='_16_0_1796040d_1391121674045_954371_1990'/>
-							<geometry>5, 5, 868, 577</geometry>
+							<geometry>5, 5, 652, 396</geometry>
 						</mdElement>
 						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391121714269_162258_2123'>
 							<elementID xmi:idref='_16_0_1796040d_1391121714263_689815_2121'/>
@@ -2023,11 +2811,8 @@
 							<mdOwnedViews>
 								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391121714269_772571_2131'>
 									<elementID xmi:idref='_16_0_1796040d_1391121714263_689815_2121'/>
-									<geometry>101, 96, 0, 235</geometry>
+									<geometry>101, 96, 0, 285</geometry>
 									<mdOwnedViews>
-										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391121731146_334956_2189'>
-											<geometry>96, 124, 10, 107</geometry>
-										</mdElement>
 										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391121731142_430987_2187'>
 											<elementID xmi:idref='_16_0_1796040d_1391121731141_92707_2184'/>
 											<linkFirstEndID xmi:idref='_16_0_1796040d_1391121731146_920989_2188'/>
@@ -2042,6 +2827,9 @@
 												</mdElement>
 											</mdOwnedViews>
 										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391121731146_334956_2189'>
+											<geometry>96, 124, 10, 157</geometry>
+										</mdElement>
 									</mdOwnedViews>
 									<lifeLineDestroyedWithMark xmi:value='false'/>
 								</mdElement>
@@ -2053,11 +2841,8 @@
 							<mdOwnedViews>
 								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391121722524_222585_2148'>
 									<elementID xmi:idref='_16_0_1796040d_1391121722518_888306_2138'/>
-									<geometry>272, 96, 0, 235</geometry>
+									<geometry>272, 96, 0, 285</geometry>
 									<mdOwnedViews>
-										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391121731146_920989_2188'>
-											<geometry>267, 124, 10, 87</geometry>
-										</mdElement>
 										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391121745278_528858_2197'>
 											<elementID xmi:idref='_16_0_1796040d_1391121745277_892538_2194'/>
 											<linkFirstEndID xmi:idref='_16_0_1796040d_1391121745282_508501_2198'/>
@@ -2067,9 +2852,13 @@
 											<nameVisible xmi:value='true'/>
 											<mdOwnedViews>
 												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391121745284_386497_2199'>
-													<geometry>330, 126, 48, 12</geometry>
+													<geometry>195, 126, 318, 12</geometry>
+													<text>inserirProduto(Tipo=, StockMinimo=, FornecedorId=):&quot;IdProduto&quot;</text>
 												</mdElement>
 											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391121731146_920989_2188'>
+											<geometry>267, 124, 10, 137</geometry>
 										</mdElement>
 									</mdOwnedViews>
 									<lifeLineDestroyedWithMark xmi:value='false'/>
@@ -2082,10 +2871,24 @@
 							<mdOwnedViews>
 								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391121725333_74221_2165'>
 									<elementID xmi:idref='_16_0_1796040d_1391121725328_961223_2155'/>
-									<geometry>437, 96, 0, 235</geometry>
+									<geometry>437, 96, 0, 285</geometry>
 									<mdOwnedViews>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391123062398_987703_2231'>
+											<elementID xmi:idref='_16_0_1796040d_1391123062397_924097_2228'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123062403_601623_2233'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391121745282_508501_2198'/>
+											<geometry>572, 171; 442, 171; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391123062403_328535_2234'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391123062403_328535_2234'>
+													<geometry>413, 156, 188, 12</geometry>
+													<text>inserirProduto(produto=):&quot;IdProduto&quot;</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
 										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391121745282_508501_2198'>
-											<geometry>432, 141, 10, 50</geometry>
+											<geometry>432, 141, 10, 100</geometry>
 										</mdElement>
 									</mdOwnedViews>
 									<lifeLineDestroyedWithMark xmi:value='false'/>
@@ -2098,10 +2901,825 @@
 							<mdOwnedViews>
 								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391121727301_346783_2182'>
 									<elementID xmi:idref='_16_0_1796040d_1391121727295_273748_2172'/>
-									<geometry>577, 96, 0, 235</geometry>
+									<geometry>577, 96, 0, 285</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123062403_601623_2233'>
+											<geometry>572, 171, 10, 50</geometry>
+										</mdElement>
+									</mdOwnedViews>
 									<lifeLineDestroyedWithMark xmi:value='false'/>
 								</mdElement>
 							</mdOwnedViews>
+						</mdElement>
+					</mdOwnedViews>
+				</mdElement>
+			</mdElement>
+			<mdElement elementClass='Diagram' xmi:id='_16_0_1796040d_1391123232265_57586_2274' name='Listar Fornecedores' visibility='public' context='_16_0_1796040d_1391123232262_192231_2254' ownerOfDiagram='_16_0_1796040d_1391123232262_192231_2254'>
+				<mdElement elementClass='DiagramPresentationElement' xmi:id='_16_0_1796040d_1391123232265_108672_2275'>
+					<elementID xmi:idref='_16_0_1796040d_1391123232265_57586_2274'/>
+					<type>Sequence Diagram</type>
+					<umlType>Sequence Diagram</umlType>
+					<zoomFactor xmi:value='1.0'/>
+					<diagramOpened xmi:value='true'/>
+					<diagramFrameInitialSizeSet xmi:value='true'/>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
+					<diagramScrollPositionX xmi:value='0'/>
+					<diagramScrollPositionY xmi:value='0'/>
+					<maximized xmi:value='false'/>
+					<active xmi:value='false'/>
+					<mdOwnedViews>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123232282_116480_2304'>
+							<elementID xmi:idref='_16_0_1796040d_1391123232263_350408_2263'/>
+							<geometry>21, 75, 132, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123232282_631642_2305'>
+									<elementID xmi:idref='_16_0_1796040d_1391123232263_350408_2263'/>
+									<geometry>87, 96, 0, 283</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391123232282_692738_2306'>
+											<elementID xmi:idref='_16_0_1796040d_1391123232264_161316_2267'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123232282_346677_2313'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391123232282_937117_2308'/>
+											<geometry>253, 130; 92, 130; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391123232282_803211_2307'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391123232282_803211_2307'>
+													<geometry>116, 115, 112, 12</geometry>
+													<text>Listar Fornecedores</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123232282_937117_2308'>
+											<geometry>82, 130, 10, 149</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123232282_272226_2309'>
+							<elementID xmi:idref='_16_0_1796040d_1391123232263_823981_2264'/>
+							<geometry>175, 75, 167, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123232282_784591_2310'>
+									<elementID xmi:idref='_16_0_1796040d_1391123232263_823981_2264'/>
+									<geometry>258, 96, 0, 283</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391123232282_742303_2311'>
+											<elementID xmi:idref='_16_0_1796040d_1391123232264_744787_2268'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123232282_697704_2318'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391123232282_346677_2313'/>
+											<geometry>418, 146; 263, 146; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391123232282_509284_2312'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391123232282_509284_2312'>
+													<geometry>257, 131, 166, 12</geometry>
+													<text>obtemVendas():&quot;fornecedores&quot;</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123232282_346677_2313'>
+											<geometry>253, 130, 10, 129</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123232282_154499_2314'>
+							<elementID xmi:idref='_16_0_1796040d_1391123232264_150936_2265'/>
+							<geometry>364, 75, 118, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123232282_334889_2315'>
+									<elementID xmi:idref='_16_0_1796040d_1391123232264_150936_2265'/>
+									<geometry>423, 96, 0, 283</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391123232282_263254_2316'>
+											<elementID xmi:idref='_16_0_1796040d_1391123232264_56354_2269'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123232282_591622_2321'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391123232282_697704_2318'/>
+											<geometry>572, 169; 428, 169; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391123232282_579130_2317'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391123232282_579130_2317'>
+													<geometry>402, 154, 196, 12</geometry>
+													<text>obtemFornecedores():&quot;fornecedores&quot;</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123232282_697704_2318'>
+											<geometry>418, 146, 10, 93</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123232282_425062_2319'>
+							<elementID xmi:idref='_16_0_1796040d_1391123232264_415526_2266'/>
+							<geometry>518, 75, 119, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123232282_717133_2320'>
+									<elementID xmi:idref='_16_0_1796040d_1391123232264_415526_2266'/>
+									<geometry>577, 96, 0, 283</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123232282_591622_2321'>
+											<geometry>572, 169, 10, 50</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='DiagramFrame' xmi:id='_16_0_1796040d_1391123232267_523171_2287'>
+							<elementID xmi:idref='_16_0_1796040d_1391123232265_57586_2274'/>
+							<geometry>5, 5, 652, 394</geometry>
+						</mdElement>
+					</mdOwnedViews>
+				</mdElement>
+			</mdElement>
+			<mdElement elementClass='Diagram' xmi:id='_16_0_1796040d_1391123482349_45959_2375' name='Insrir Fornecedor' visibility='public' context='_16_0_1796040d_1391123482349_688002_2377' ownerOfDiagram='_16_0_1796040d_1391123482349_688002_2377'>
+				<mdElement elementClass='DiagramPresentationElement' xmi:id='_16_0_1796040d_1391123482349_643529_2376'>
+					<elementID xmi:idref='_16_0_1796040d_1391123482349_45959_2375'/>
+					<type>Sequence Diagram</type>
+					<umlType>Sequence Diagram</umlType>
+					<zoomFactor xmi:value='0.7'/>
+					<diagramOpened xmi:value='true'/>
+					<diagramFrameInitialSizeSet xmi:value='true'/>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
+					<diagramScrollPositionX xmi:value='0'/>
+					<diagramScrollPositionY xmi:value='0'/>
+					<maximized xmi:value='false'/>
+					<active xmi:value='false'/>
+					<mdOwnedViews>
+						<mdElement elementClass='DiagramFrame' xmi:id='_16_0_1796040d_1391123482352_138385_2389'>
+							<elementID xmi:idref='_16_0_1796040d_1391123482349_45959_2375'/>
+							<geometry>5, 5, 673, 403</geometry>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123488357_252258_2404'>
+							<elementID xmi:idref='_16_0_1796040d_1391123488351_301461_2402'/>
+							<geometry>21, 75, 132, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123488357_480923_2412'>
+									<elementID xmi:idref='_16_0_1796040d_1391123488351_301461_2402'/>
+									<geometry>87, 96, 0, 292</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391123497254_166356_2434'>
+											<elementID xmi:idref='_16_0_1796040d_1391123497253_245210_2431'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123497258_131724_2435'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391123497258_368097_2436'/>
+											<geometry>274, 130; 92, 130; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391123497260_574569_2437'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391123497260_574569_2437'>
+													<geometry>135, 115, 97, 12</geometry>
+													<text>Insrir Fornecedor</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123497258_368097_2436'>
+											<geometry>82, 130, 10, 158</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123493885_300596_2421'>
+							<elementID xmi:idref='_16_0_1796040d_1391123493879_267998_2419'/>
+							<geometry>196, 75, 167, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123493885_155513_2429'>
+									<elementID xmi:idref='_16_0_1796040d_1391123493879_267998_2419'/>
+									<geometry>279, 96, 0, 292</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391123511422_800670_2461'>
+											<elementID xmi:idref='_16_0_1796040d_1391123511421_576077_2458'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123511426_85981_2463'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391123497258_131724_2435'/>
+											<geometry>446, 156; 284, 156; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391123511427_477903_2464'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391123511427_477903_2464'>
+													<geometry>233, 141, 264, 12</geometry>
+													<text>inserirFornecedor(Nome=, Morada=):&quot;IdFornecedor&quot;</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123497258_131724_2435'>
+											<geometry>274, 130, 10, 138</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123506668_547367_2448'>
+							<elementID xmi:idref='_16_0_1796040d_1391123506663_548558_2446'/>
+							<geometry>392, 75, 118, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123506668_632809_2456'>
+									<elementID xmi:idref='_16_0_1796040d_1391123506663_548558_2446'/>
+									<geometry>451, 96, 0, 292</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391123679645_691965_2511'>
+											<elementID xmi:idref='_16_0_1796040d_1391123679644_768390_2508'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123679649_235046_2512'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391123511426_85981_2463'/>
+											<geometry>593, 178; 456, 178; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391123679651_694849_2513'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391123679651_694849_2513'>
+													<geometry>403, 163, 243, 12</geometry>
+													<text>inserirFornecedor(fornecedor=):&quot;IdFornecedor&quot;</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123511426_85981_2463'>
+											<geometry>446, 156, 10, 92</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123666654_77649_2487'>
+							<elementID xmi:idref='_16_0_1796040d_1391123666648_816538_2485'/>
+							<geometry>539, 75, 119, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123666654_286678_2495'>
+									<elementID xmi:idref='_16_0_1796040d_1391123666648_816538_2485'/>
+									<geometry>598, 96, 0, 292</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123679649_235046_2512'>
+											<geometry>593, 178, 10, 50</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+					</mdOwnedViews>
+				</mdElement>
+			</mdElement>
+			<mdElement elementClass='Diagram' xmi:id='_16_0_1796040d_1391123789341_402053_2521' name='Listar Produtos' visibility='public' context='_16_0_1796040d_1391123789342_721355_2523' ownerOfDiagram='_16_0_1796040d_1391123789342_721355_2523'>
+				<mdElement elementClass='DiagramPresentationElement' xmi:id='_16_0_1796040d_1391123789342_39824_2522'>
+					<elementID xmi:idref='_16_0_1796040d_1391123789341_402053_2521'/>
+					<type>Sequence Diagram</type>
+					<umlType>Sequence Diagram</umlType>
+					<zoomFactor xmi:value='0.39999998'/>
+					<diagramOpened xmi:value='true'/>
+					<diagramFrameInitialSizeSet xmi:value='true'/>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
+					<diagramScrollPositionX xmi:value='0'/>
+					<diagramScrollPositionY xmi:value='0'/>
+					<maximized xmi:value='false'/>
+					<active xmi:value='false'/>
+					<mdOwnedViews>
+						<mdElement elementClass='DiagramFrame' xmi:id='_16_0_1796040d_1391123789344_238804_2535'>
+							<elementID xmi:idref='_16_0_1796040d_1391123789341_402053_2521'/>
+							<geometry>5, 5, 645, 396</geometry>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123792957_509755_2550'>
+							<elementID xmi:idref='_16_0_1796040d_1391123792951_181709_2548'/>
+							<geometry>28, 75, 132, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123792957_761735_2558'>
+									<elementID xmi:idref='_16_0_1796040d_1391123792951_181709_2548'/>
+									<geometry>94, 96, 0, 285</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123833578_82531_2626'>
+											<geometry>89, 133, 10, 148</geometry>
+										</mdElement>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391123833574_929166_2624'>
+											<elementID xmi:idref='_16_0_1796040d_1391123833573_946385_2621'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123833578_535338_2625'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391123833578_82531_2626'/>
+											<geometry>260, 133; 99, 133; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391123833580_764682_2627'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391123833580_764682_2627'>
+													<geometry>136, 118, 87, 12</geometry>
+													<text>Listar Produtos</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123814876_331587_2568'>
+							<elementID xmi:idref='_16_0_1796040d_1391123814871_957972_2566'/>
+							<geometry>371, 75, 118, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123814876_217503_2576'>
+									<elementID xmi:idref='_16_0_1796040d_1391123814871_957972_2566'/>
+									<geometry>430, 96, 0, 285</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123844602_741382_2635'>
+											<geometry>425, 154, 10, 87</geometry>
+										</mdElement>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391123894502_995965_2650'>
+											<elementID xmi:idref='_16_0_1796040d_1391123894501_698378_2647'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123894506_833274_2651'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391123844602_741382_2635'/>
+											<geometry>565, 171; 435, 171; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391123894508_628218_2652'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391123894508_628218_2652'>
+													<geometry>426, 156, 148, 12</geometry>
+													<text>obtemProdutos():&quot;produtos&quot;</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123821564_122529_2594'>
+							<elementID xmi:idref='_16_0_1796040d_1391123821558_615759_2592'/>
+							<geometry>182, 75, 167, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123821564_674197_2602'>
+									<elementID xmi:idref='_16_0_1796040d_1391123821558_615759_2592'/>
+									<geometry>265, 96, 0, 285</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123833578_535338_2625'>
+											<geometry>260, 133, 10, 128</geometry>
+										</mdElement>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391123844598_309377_2634'>
+											<elementID xmi:idref='_16_0_1796040d_1391123844597_368307_2631'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123844602_741382_2635'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391123833578_535338_2625'/>
+											<geometry>425, 154; 270, 154; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391123844604_580574_2636'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391123844604_580574_2636'>
+													<geometry>273, 139, 148, 12</geometry>
+													<text>obtemProdutos():&quot;produtos&quot;</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123827557_935609_2611'>
+							<elementID xmi:idref='_16_0_1796040d_1391123827551_156999_2609'/>
+							<geometry>511, 75, 119, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123827557_691977_2619'>
+									<elementID xmi:idref='_16_0_1796040d_1391123827551_156999_2609'/>
+									<geometry>570, 96, 0, 285</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123894506_833274_2651'>
+											<geometry>565, 171, 10, 50</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+					</mdOwnedViews>
+				</mdElement>
+			</mdElement>
+			<mdElement elementClass='Diagram' xmi:id='_16_0_1796040d_1391123949389_290844_2666' name='Receber Encomenda Fornecedor' visibility='public' context='_16_0_1796040d_1391123949390_414971_2668' ownerOfDiagram='_16_0_1796040d_1391123949390_414971_2668'>
+				<mdElement elementClass='DiagramPresentationElement' xmi:id='_16_0_1796040d_1391123949390_971747_2667'>
+					<elementID xmi:idref='_16_0_1796040d_1391123949389_290844_2666'/>
+					<type>Sequence Diagram</type>
+					<umlType>Sequence Diagram</umlType>
+					<zoomFactor xmi:value='1.0'/>
+					<diagramOpened xmi:value='true'/>
+					<diagramFrameInitialSizeSet xmi:value='true'/>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
+					<diagramScrollPositionX xmi:value='0'/>
+					<diagramScrollPositionY xmi:value='0'/>
+					<maximized xmi:value='false'/>
+					<active xmi:value='false'/>
+					<mdOwnedViews>
+						<mdElement elementClass='DiagramFrame' xmi:id='_16_0_1796040d_1391123949392_643648_2680'>
+							<elementID xmi:idref='_16_0_1796040d_1391123949389_290844_2666'/>
+							<geometry>5, 5, 655, 433</geometry>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123956884_800200_2695'>
+							<elementID xmi:idref='_16_0_1796040d_1391123956879_680151_2693'/>
+							<geometry>28, 75, 132, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123956884_166197_2703'>
+									<elementID xmi:idref='_16_0_1796040d_1391123956879_680151_2693'/>
+									<geometry>94, 96, 0, 322</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123972482_666290_2761'>
+											<geometry>89, 132, 10, 186</geometry>
+										</mdElement>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391123972478_823111_2759'>
+											<elementID xmi:idref='_16_0_1796040d_1391123972477_667625_2756'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391123972482_872500_2760'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391123972482_666290_2761'/>
+											<geometry>267, 132; 99, 132; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391123972484_107176_2762'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391123972484_107176_2762'>
+													<geometry>97, 117, 173, 12</geometry>
+													<text>Receber Encomenda Fornecedor</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123959428_42933_2712'>
+							<elementID xmi:idref='_16_0_1796040d_1391123959422_927587_2710'/>
+							<geometry>189, 75, 167, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123959428_633433_2720'>
+									<elementID xmi:idref='_16_0_1796040d_1391123959422_927587_2710'/>
+									<geometry>272, 96, 0, 322</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391123972482_872500_2760'>
+											<geometry>267, 132, 10, 166</geometry>
+										</mdElement>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391124033502_276654_2769'>
+											<elementID xmi:idref='_16_0_1796040d_1391124033501_475556_2766'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391124033507_716881_2770'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391123972482_872500_2760'/>
+											<geometry>432, 155; 277, 155; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391124033509_946646_2771'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391124033509_946646_2771'>
+													<geometry>235, 140, 238, 12</geometry>
+													<text>recebeEncomendaFornecedor(IdEncomenda=)</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123961221_547256_2729'>
+							<elementID xmi:idref='_16_0_1796040d_1391123961215_611706_2727'/>
+							<geometry>378, 75, 118, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123961221_845998_2737'>
+									<elementID xmi:idref='_16_0_1796040d_1391123961215_611706_2727'/>
+									<geometry>437, 96, 0, 322</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391124033507_716881_2770'>
+											<geometry>432, 155, 10, 123</geometry>
+										</mdElement>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391124475494_877230_2897'>
+											<elementID xmi:idref='_16_0_1796040d_1391124475493_791796_2894'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391124475498_766902_2898'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391124033507_716881_2770'/>
+											<geometry>572, 177; 442, 177; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391124475500_704757_2899'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391124475500_704757_2899'>
+													<geometry>374, 162, 266, 12</geometry>
+													<text>recebeEncomendaFornecedor(IdEncomenda=):&quot;Qtd&quot;</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391124501565_250714_2911'>
+											<elementID xmi:idref='_16_0_1796040d_1391124501564_74864_2908'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391124475498_766902_2898'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391124033507_716881_2770'/>
+											<geometry>572, 208; 442, 208; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391124501572_867029_2912'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391124501572_867029_2912'>
+													<geometry>408, 193, 199, 12</geometry>
+													<text>actualizaQtdProduto(ProdutoId=, Qtd=)</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391123964677_75055_2746'>
+							<elementID xmi:idref='_16_0_1796040d_1391123964672_143199_2744'/>
+							<geometry>518, 75, 119, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391123964677_224051_2754'>
+									<elementID xmi:idref='_16_0_1796040d_1391123964672_143199_2744'/>
+									<geometry>577, 96, 0, 322</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391124475498_766902_2898'>
+											<geometry>572, 177, 10, 81</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+					</mdOwnedViews>
+				</mdElement>
+			</mdElement>
+			<mdElement elementClass='Diagram' xmi:id='_16_0_1796040d_1391124091504_701726_2795' name='Listar Encomendas Fornecedor' visibility='public' context='_16_0_1796040d_1391124091501_550776_2775' ownerOfDiagram='_16_0_1796040d_1391124091501_550776_2775'>
+				<mdElement elementClass='DiagramPresentationElement' xmi:id='_16_0_1796040d_1391124091504_469154_2796'>
+					<elementID xmi:idref='_16_0_1796040d_1391124091504_701726_2795'/>
+					<type>Sequence Diagram</type>
+					<umlType>Sequence Diagram</umlType>
+					<zoomFactor xmi:value='1.0'/>
+					<diagramOpened xmi:value='true'/>
+					<diagramFrameInitialSizeSet xmi:value='true'/>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
+					<diagramScrollPositionX xmi:value='0'/>
+					<diagramScrollPositionY xmi:value='0'/>
+					<maximized xmi:value='false'/>
+					<active xmi:value='false'/>
+					<mdOwnedViews>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391124091521_130730_2825'>
+							<elementID xmi:idref='_16_0_1796040d_1391124091502_284327_2784'/>
+							<geometry>28, 75, 132, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391124091521_897332_2826'>
+									<elementID xmi:idref='_16_0_1796040d_1391124091502_284327_2784'/>
+									<geometry>94, 96, 0, 292</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391124091521_814035_2828'>
+											<elementID xmi:idref='_16_0_1796040d_1391124091503_128789_2788'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391124091521_154517_2837'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391124091521_368175_2827'/>
+											<geometry>260, 133; 99, 133; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391124091521_636743_2829'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391124091521_636743_2829'>
+													<geometry>97, 118, 165, 12</geometry>
+													<text>Listar Encomendas Fornecedor</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391124091521_368175_2827'>
+											<geometry>89, 133, 10, 155</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391124091521_334037_2830'>
+							<elementID xmi:idref='_16_0_1796040d_1391124091502_136460_2785'/>
+							<geometry>371, 75, 118, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391124091521_17659_2831'>
+									<elementID xmi:idref='_16_0_1796040d_1391124091502_136460_2785'/>
+									<geometry>430, 96, 0, 292</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391124091521_339743_2833'>
+											<elementID xmi:idref='_16_0_1796040d_1391124091503_164931_2790'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391124091521_859327_2842'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391124091521_967423_2832'/>
+											<geometry>565, 178; 435, 178; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391124091521_12600_2834'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391124091521_12600_2834'>
+													<geometry>379, 163, 242, 12</geometry>
+													<text>obtemEncomendasFornecedor():&quot;encomendas&quot;</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391124091521_967423_2832'>
+											<geometry>425, 154, 10, 94</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391124091521_365181_2835'>
+							<elementID xmi:idref='_16_0_1796040d_1391124091502_828172_2786'/>
+							<geometry>182, 75, 167, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391124091521_225287_2836'>
+									<elementID xmi:idref='_16_0_1796040d_1391124091502_828172_2786'/>
+									<geometry>265, 96, 0, 292</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='SeqMessage' xmi:id='_16_0_1796040d_1391124091521_811452_2838'>
+											<elementID xmi:idref='_16_0_1796040d_1391124091503_815368_2789'/>
+											<linkFirstEndID xmi:idref='_16_0_1796040d_1391124091521_967423_2832'/>
+											<linkSecondEndID xmi:idref='_16_0_1796040d_1391124091521_154517_2837'/>
+											<geometry>425, 154; 270, 154; </geometry>
+											<linkNameID xmi:idref='_16_0_1796040d_1391124091521_207783_2839'/>
+											<nameVisible xmi:value='true'/>
+											<mdOwnedViews>
+												<mdElement elementClass='MessageSignature' xmi:id='_16_0_1796040d_1391124091521_207783_2839'>
+													<geometry>226, 139, 242, 12</geometry>
+													<text>obtemEncomendasFornecedor():&quot;encomendas&quot;</text>
+												</mdElement>
+											</mdOwnedViews>
+										</mdElement>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391124091521_154517_2837'>
+											<geometry>260, 133, 10, 135</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='SequenceLifeline' xmi:id='_16_0_1796040d_1391124091521_54455_2840'>
+							<elementID xmi:idref='_16_0_1796040d_1391124091503_203133_2787'/>
+							<geometry>511, 75, 119, 21</geometry>
+							<mdOwnedViews>
+								<mdElement elementClass='LifeLineLine' xmi:id='_16_0_1796040d_1391124091521_729908_2841'>
+									<elementID xmi:idref='_16_0_1796040d_1391124091503_203133_2787'/>
+									<geometry>570, 96, 0, 292</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='Activation' xmi:id='_16_0_1796040d_1391124091521_859327_2842'>
+											<geometry>565, 178, 10, 50</geometry>
+										</mdElement>
+									</mdOwnedViews>
+									<lifeLineDestroyedWithMark xmi:value='false'/>
+								</mdElement>
+							</mdOwnedViews>
+						</mdElement>
+						<mdElement elementClass='DiagramFrame' xmi:id='_16_0_1796040d_1391124091506_176732_2808'>
+							<elementID xmi:idref='_16_0_1796040d_1391124091504_701726_2795'/>
+							<geometry>5, 5, 645, 403</geometry>
+						</mdElement>
+					</mdOwnedViews>
+				</mdElement>
+			</mdElement>
+			<mdElement elementClass='Diagram' xmi:id='_16_0_1796040d_1391125245237_894129_2956' name='Diagrama Classes' visibility='public' ownerOfDiagram='_16_0_1796040d_1389299347234_124641_1089'>
+				<mdElement elementClass='DiagramPresentationElement' xmi:id='_16_0_1796040d_1391125245239_433114_2957'>
+					<elementID xmi:idref='_16_0_1796040d_1391125245237_894129_2956'/>
+					<type>Class Diagram</type>
+					<umlType>Class Diagram</umlType>
+					<zoomFactor xmi:value='0.39999998'/>
+					<diagramOpened xmi:value='true'/>
+					<diagramFrameInitialSizeSet xmi:value='true'/>
+					<diagramWindowBounds>2, 24, 675, 651</diagramWindowBounds>
+					<diagramScrollPositionX xmi:value='0'/>
+					<diagramScrollPositionY xmi:value='0'/>
+					<maximized xmi:value='false'/>
+					<active xmi:value='true'/>
+					<mdOwnedViews>
+						<mdElement elementClass='DiagramFrame' xmi:id='_16_0_1796040d_1391125245240_885643_2969'>
+							<elementID xmi:idref='_16_0_1796040d_1391125245237_894129_2956'/>
+							<geometry>5, 5, 467, 374</geometry>
+						</mdElement>
+						<mdElement elementClass='Class' xmi:id='_16_0_1796040d_1391125260064_924007_2984'>
+							<elementID xmi:idref='_16_0_1796040d_1391039366352_407902_2027'/>
+							<geometry>28, 130, 103, 96</geometry>
+						</mdElement>
+						<mdElement elementClass='Class' xmi:id='_16_0_1796040d_1391125261341_606323_3007'>
+							<elementID xmi:idref='_16_0_1796040d_1391039976400_523918_2079'/>
+							<geometry>203, 42, 129, 120</geometry>
+						</mdElement>
+						<mdElement elementClass='Association' xmi:id='_16_0_1796040d_1391125261342_475397_3032'>
+							<elementID xmi:idref='_16_0_1796040d_1391125261304_894531_3002'/>
+							<linkFirstEndID xmi:idref='_16_0_1796040d_1391125260064_924007_2984'/>
+							<linkSecondEndID xmi:idref='_16_0_1796040d_1391125261341_606323_3007'/>
+							<geometry>131, 147; 203, 147; </geometry>
+							<nameVisible xmi:value='true'/>
+							<mdOwnedViews>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391125261343_769353_3033'>
+									<elementID xmi:idref='_16_0_1796040d_1391125261304_450912_3003'/>
+									<geometry>131, 142, 10, 10</geometry>
+								</mdElement>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391125261343_947061_3036'>
+									<elementID xmi:idref='_16_0_1796040d_1391125171493_298738_2952'/>
+									<geometry>193, 142, 10, 10</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='TextBox' xmi:id='_16_0_1796040d_1391125261334_640574_3005'>
+											<geometry>158, 132, 42, 12</geometry>
+											<text>-produto</text>
+										</mdElement>
+										<mdElement elementClass='TextBox' xmi:id='_16_0_1796040d_1391125366909_871753_3125'>
+											<geometry>176, 150, 24, 12</geometry>
+											<text>1</text>
+										</mdElement>
+									</mdOwnedViews>
+									<roleNameID xmi:idref='_16_0_1796040d_1391125261334_640574_3005'/>
+									<roleMultiplicityID xmi:idref='_16_0_1796040d_1391125366909_871753_3125'/>
+								</mdElement>
+							</mdOwnedViews>
+							<associationFirstEndID xmi:idref='_16_0_1796040d_1391125261343_769353_3033'/>
+							<associationSecondEndID xmi:idref='_16_0_1796040d_1391125261343_947061_3036'/>
+						</mdElement>
+						<mdElement elementClass='Class' xmi:id='_16_0_1796040d_1391125265183_961413_3044'>
+							<elementID xmi:idref='_16_0_1796040d_1391123317802_823249_2334'/>
+							<geometry>369, 194, 83, 72</geometry>
+						</mdElement>
+						<mdElement elementClass='Association' xmi:id='_16_0_1796040d_1391125265185_440266_3065'>
+							<elementID xmi:idref='_16_0_1796040d_1391125265151_705512_3039'/>
+							<linkFirstEndID xmi:idref='_16_0_1796040d_1391125261341_606323_3007'/>
+							<linkSecondEndID xmi:idref='_16_0_1796040d_1391125265183_961413_3044'/>
+							<geometry>332, 105; 413, 105; 413, 194; </geometry>
+							<nameVisible xmi:value='true'/>
+							<mdOwnedViews>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391125265185_283051_3066'>
+									<elementID xmi:idref='_16_0_1796040d_1391125265152_818898_3040'/>
+									<geometry>332, 100, 10, 10</geometry>
+								</mdElement>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391125265185_110806_3069'>
+									<elementID xmi:idref='_16_0_1796040d_1391125051741_374800_2938'/>
+									<geometry>408, 184, 10, 10</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='TextBox' xmi:id='_16_0_1796040d_1391125265177_908843_3042'>
+											<geometry>351, 179, 59, 12</geometry>
+											<text>-fornecedor</text>
+										</mdElement>
+										<mdElement elementClass='TextBox' xmi:id='_16_0_1796040d_1391125373315_554352_3129'>
+											<geometry>416, 179, 24, 12</geometry>
+											<text>1</text>
+										</mdElement>
+									</mdOwnedViews>
+									<roleNameID xmi:idref='_16_0_1796040d_1391125265177_908843_3042'/>
+									<roleMultiplicityID xmi:idref='_16_0_1796040d_1391125373315_554352_3129'/>
+								</mdElement>
+							</mdOwnedViews>
+							<associationFirstEndID xmi:idref='_16_0_1796040d_1391125265185_283051_3066'/>
+							<associationSecondEndID xmi:idref='_16_0_1796040d_1391125265185_110806_3069'/>
+						</mdElement>
+						<mdElement elementClass='Class' xmi:id='_16_0_1796040d_1391125322025_791631_3077'>
+							<elementID xmi:idref='_16_0_1796040d_1391038012164_64274_1935'/>
+							<geometry>162, 263, 115, 96</geometry>
+						</mdElement>
+						<mdElement elementClass='Association' xmi:id='_16_0_1796040d_1391125322026_395517_3100'>
+							<elementID xmi:idref='_16_0_1796040d_1391125321991_306998_3072'/>
+							<linkFirstEndID xmi:idref='_16_0_1796040d_1391125260064_924007_2984'/>
+							<linkSecondEndID xmi:idref='_16_0_1796040d_1391125322025_791631_3077'/>
+							<geometry>77, 226; 77, 308; 162, 308; </geometry>
+							<nameVisible xmi:value='true'/>
+							<mdOwnedViews>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391125322026_454680_3101'>
+									<elementID xmi:idref='_16_0_1796040d_1391125321991_350866_3073'/>
+									<geometry>72, 226, 10, 10</geometry>
+								</mdElement>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391125322026_526142_3104'>
+									<elementID xmi:idref='_16_0_1796040d_1391125213709_544709_2955'/>
+									<geometry>152, 303, 10, 10</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='TextBox' xmi:id='_16_0_1796040d_1391125322018_197695_3075'>
+											<geometry>124, 293, 35, 12</geometry>
+											<text>-venda</text>
+										</mdElement>
+										<mdElement elementClass='TextBox' xmi:id='_16_0_1796040d_1391125341245_627948_3121'>
+											<geometry>135, 311, 24, 12</geometry>
+											<text>0..1</text>
+										</mdElement>
+									</mdOwnedViews>
+									<roleNameID xmi:idref='_16_0_1796040d_1391125322018_197695_3075'/>
+									<roleMultiplicityID xmi:idref='_16_0_1796040d_1391125341245_627948_3121'/>
+								</mdElement>
+							</mdOwnedViews>
+							<associationFirstEndID xmi:idref='_16_0_1796040d_1391125322026_454680_3101'/>
+							<associationSecondEndID xmi:idref='_16_0_1796040d_1391125322026_526142_3104'/>
+						</mdElement>
+						<mdElement elementClass='Association' xmi:id='_16_0_1796040d_1391125326691_439919_3112'>
+							<elementID xmi:idref='_16_0_1796040d_1391125326680_545203_3107'/>
+							<linkFirstEndID xmi:idref='_16_0_1796040d_1391125322025_791631_3077'/>
+							<linkSecondEndID xmi:idref='_16_0_1796040d_1391125261341_606323_3007'/>
+							<geometry>266, 263; 266, 162; </geometry>
+							<nameVisible xmi:value='true'/>
+							<mdOwnedViews>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391125326691_898266_3113'>
+									<elementID xmi:idref='_16_0_1796040d_1391125326680_494357_3108'/>
+									<geometry>261, 253, 10, 10</geometry>
+								</mdElement>
+								<mdElement elementClass='Role' xmi:id='_16_0_1796040d_1391125326691_696109_3116'>
+									<elementID xmi:idref='_16_0_1796040d_1391124955196_968955_2929'/>
+									<geometry>261, 162, 10, 10</geometry>
+									<mdOwnedViews>
+										<mdElement elementClass='TextBox' xmi:id='_16_0_1796040d_1391125326683_462348_3110'>
+											<geometry>221, 165, 42, 12</geometry>
+											<text>-produto</text>
+										</mdElement>
+										<mdElement elementClass='TextBox' xmi:id='_16_0_1796040d_1391125380149_223267_3133'>
+											<geometry>269, 165, 24, 12</geometry>
+											<text>1</text>
+										</mdElement>
+									</mdOwnedViews>
+									<roleNameID xmi:idref='_16_0_1796040d_1391125326683_462348_3110'/>
+									<roleMultiplicityID xmi:idref='_16_0_1796040d_1391125380149_223267_3133'/>
+								</mdElement>
+							</mdOwnedViews>
+							<associationFirstEndID xmi:idref='_16_0_1796040d_1391125326691_898266_3113'/>
+							<associationSecondEndID xmi:idref='_16_0_1796040d_1391125326691_696109_3116'/>
 						</mdElement>
 					</mdOwnedViews>
 				</mdElement>
@@ -2121,6 +3739,7 @@
 						<packagedElement xmi:type='uml:Package' xmi:id='_12_0EAPbeta_be00301_1157529392394_202602_1' name='PrimitiveTypes' visibility='public'>
 							<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_9_0_2_91a0295_1110274713995_297054_0' name='String' visibility='public'/>
 							<packagedElement xmi:type='uml:PrimitiveType' xmi:id='donce_1051693917650_319078_0' name='Integer' visibility='public'/>
+							<packagedElement xmi:type='uml:PrimitiveType' xmi:id='_12_0EAPbeta_be00301_1157529792739_987548_11' name='Boolean' visibility='public'/>
 						</packagedElement>
 					</packagedElement>
 					<packagedElement xmi:type='uml:Package' xmi:id='_9_0_62a020a_1105705064233_676383_11042' name='Classes' visibility='public'>
@@ -2150,6 +3769,9 @@
 					</packagedElement>
 				</packagedElement>
 				<packagedElement xmi:type='uml:Profile' xmi:id='_be00301_1073394351331_445580_2' name='MagicDraw Profile' visibility='public'>
+					<packagedElement xmi:type='uml:Package' xmi:id='_9_0_2_be00301_1111670217596_336168_627' name='datatypes' visibility='public'>
+						<packagedElement xmi:type='uml:DataType' xmi:id='eee_1045467100323_848034_66' name='double' visibility='public'/>
+					</packagedElement>
 					<packagedElement xmi:type='uml:Extension' xmi:id='_10_0EAPbeta_be00301_1123081772498_531863_355' visibility='public'>
 						<memberEnd xmi:idref='_10_0EAPbeta_be00301_1123081772498_435993_357'/>
 						<memberEnd xmi:idref='_10_0EAPbeta_be00301_1123081772498_901864_356'/>
@@ -2281,6 +3903,10 @@
 		<stereotypesIDS>
 			<stereotype name='Networking_Profile:Connection' stereotypeID='_12_0_8740266_1164353135312_780709_116'/>
 			<tag name='Networking_Profile:Connection:Description' tagID='_12_0_8740266_1164362098250_884349_695'/>
+			<stereotype name='MagicDraw_Profile:DiagramInfo' stereotypeID='_9_0_be00301_1108044380615_150487_0'/>
+			<tag name='MagicDraw_Profile:DiagramInfo:Creation_date' tagID='_be00301_1073306188629_537791_2'/>
+			<tag name='MagicDraw_Profile:DiagramInfo:Author' tagID='_be00301_1077726770128_871366_1'/>
+			<tag name='MagicDraw_Profile:DiagramInfo:Modification_date' tagID='_be00301_1073394345322_922552_1'/>
 			<stereotype name='Networking_Profile:PC_' stereotypeID='_11_5_8740266_1160466129609_869566_25'/>
 			<tag name='Networking_Profile:PC_:ID' tagID='_12_0_8740266_1164355350843_162256_314'/>
 			<tag name='Networking_Profile:PC_:IP' tagID='_12_0_8740266_1164355350843_299896_315'/>
@@ -2290,10 +3916,6 @@
 			<tag name='Networking_Profile:PC_:OS' tagID='_12_0_8740266_1164355350843_181683_319'/>
 			<tag name='Networking_Profile:PC_:HDD' tagID='_12_0_8740266_1164355350843_203846_320'/>
 			<tag name='Networking_Profile:PC_:SerialNumber' tagID='_12_0_8740266_1164355402046_134114_400'/>
-			<stereotype name='MagicDraw_Profile:DiagramInfo' stereotypeID='_9_0_be00301_1108044380615_150487_0'/>
-			<tag name='MagicDraw_Profile:DiagramInfo:Creation_date' tagID='_be00301_1073306188629_537791_2'/>
-			<tag name='MagicDraw_Profile:DiagramInfo:Author' tagID='_be00301_1077726770128_871366_1'/>
-			<tag name='MagicDraw_Profile:DiagramInfo:Modification_date' tagID='_be00301_1073394345322_922552_1'/>
 			<stereotype name='Networking_Profile:DB_Server' stereotypeID='_11_5_8740266_1157955789062_227358_109'/>
 			<stereotype name='Networking_Profile:PC' stereotypeID='_11_5_8740266_1157971827343_736447_1655'/>
 			<tag name='Networking_Profile:PC:ID' tagID='_12_0_8740266_1164355231000_438653_219'/>
@@ -2304,8 +3926,8 @@
 			<tag name='Networking_Profile:PC:HDD' tagID='_12_0_8740266_1164355231000_44810_224'/>
 			<tag name='Networking_Profile:PC:OS' tagID='_12_0_8740266_1164355231000_421020_225'/>
 			<tag name='Networking_Profile:PC:SerialNumber' tagID='_12_0_8740266_1164355393265_803672_329'/>
-			<stereotype name='Networking_Profile:Application_Server' stereotypeID='_11_5_8740266_1157955887718_620497_184'/>
 			<stereotype name='MagicDraw_Profile:useCaseModel' stereotypeID='magicdraw_1046861421226_625103_15'/>
+			<stereotype name='Networking_Profile:Application_Server' stereotypeID='_11_5_8740266_1157955887718_620497_184'/>
 			<stereotype name='MagicDraw_Profile:auxiliaryResource' stereotypeID='_12_1_8f90291_1173963323875_662612_98'/>
 			<stereotype name='UML_Standard_Profile:metamodel' stereotypeID='magicdraw_1046861421236_601240_36'/>
 		</stereotypesIDS>
@@ -2465,7 +4087,7 @@
 						<mdElement elementClass='StringProperty'>
 							<propertyID>BROWSER_LAYOUT</propertyID>
 							<propertyDescriptionID>BROWSER_LAYOUT_DESCRIPTION</propertyDescriptionID>
-							<value>0 14 0 0 0 0 0 0 0 0 0 0 4 0 0 0 3 0 0 0 0 0 0 0 0 8 0 0 0 f 0 4d 0 45 0 53 0 53 0 41 0 47 0 45 0 53 0 5f 0 57 0 49 0 4e 0 44 0 4f 0 57 0 0 88 7e 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 f 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 c8 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 1 0 0 0 4 0 0 88 7e 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 2 0 0 0 0 0 0 dd 7 0 0 0 1 0 0 88 7e 0 0 0 2 0 0 2f 1b 0 0 dd 7 0 0 0 1 0 0 0 2 0 0 11 47 0 0 dd 7 0 0 9c 9c 0 0 2f 1b 0 0 0 0 0 0 0 2 0 0 bd e4 0 0 2f 1b 0 0 0 1 0 0 0 0 0 0 88 7e 0 0 0 0 0 0 0 3c 0 0 0 3c 0 0 0 c8 0 0 0 c8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 f 0 45 0 58 0 54 0 45 0 4e 0 53 0 49 0 4f 0 4e 0 53 0 5f 0 54 0 52 0 45 0 45 0 0 d 4a 0 0 0 8 0 0 0 0 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 4 0 0 0 8 0 0 1 4b 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 0 0 0 0 1 0 0 0 4 0 0 d 4a 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 4 0 0 d 4a 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 d 0 44 0 49 0 41 0 47 0 52 0 41 0 4d 0 53 0 5f 0 54 0 52 0 45 0 45 0 0 19 88 0 0 0 8 0 0 0 0 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 4 0 0 0 8 0 0 1 4b 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 0 0 0 0 1 0 0 0 4 0 0 19 88 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 4 0 0 19 88 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 a 0 50 0 52 0 4f 0 50 0 45 0 52 0 54 0 49 0 45 0 53 0 0 8f 36 0 0 0 8 0 0 0 1 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 0 0 0 0 8 0 0 1 99 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 1 0 0 0 4 0 0 8f 36 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 1d 71 0 0 0 1 0 0 8f 36 0 0 0 3 0 0 e8 13 0 0 1d 71 0 0 0 0 0 0 0 2 0 0 3e d3 0 0 1d 71 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 2 0 0 bd e4 0 0 2f 1b 0 0 0 1 0 0 0 0 0 0 8f 36 0 0 0 0 0 0 0 3c 0 0 0 3c 0 0 0 c8 0 0 0 c8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 d 0 44 0 4f 0 43 0 55 0 4d 0 45 0 4e 0 54 0 41 0 54 0 49 0 4f 0 4e 0 0 5e de 0 0 0 8 0 0 0 1 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 0 0 0 0 8 0 0 1 99 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 1 0 0 0 4 0 0 5e de 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 1d 71 0 0 0 2 0 0 5e de 0 0 8f 36 0 0 0 3 0 0 e8 13 0 0 1d 71 0 0 0 0 0 0 0 2 0 0 3e d3 0 0 1d 71 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 2 0 0 bd e4 0 0 2f 1b 0 0 0 1 0 0 0 0 0 0 5e de 0 0 0 0 0 0 0 3c 0 0 0 3c 0 0 0 c8 0 0 0 c8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 c 0 5a 0 4f 0 4f 0 4d 0 5f 0 43 0 4f 0 4e 0 54 0 52 0 4f 0 4c 0 0 7c e3 0 0 0 8 0 0 0 1 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 0 0 0 0 8 0 0 1 99 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 1 0 0 0 4 0 0 7c e3 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 1d 71 0 0 0 3 0 0 7c e3 0 0 5e de 0 0 8f 36 0 0 0 3 0 0 e8 13 0 0 1d 71 0 0 0 0 0 0 0 2 0 0 3e d3 0 0 1d 71 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 2 0 0 bd e4 0 0 2f 1b 0 0 0 1 0 0 0 0 0 0 7c e3 0 0 0 0 0 0 0 3c 0 0 0 3c 0 0 0 c8 0 0 0 c8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10 0 43 0 4f 0 4e 0 54 0 41 0 49 0 4e 0 4d 0 45 0 4e 0 54 0 5f 0 54 0 52 0 45 0 45 0 0 a4 22 0 0 0 8 0 0 0 0 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 4 0 0 0 8 0 0 1 4b 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 0 0 0 0 1 0 0 0 4 0 0 a4 22 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 4 0 0 a4 22 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 10 0 49 0 4e 0 48 0 45 0 52 0 49 0 54 0 41 0 4e 0 43 0 45 0 5f 0 54 0 52 0 45 0 45 0 0 ab 78 0 0 0 8 0 0 0 0 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 4 0 0 0 8 0 0 1 4b 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 0 0 0 0 1 0 0 0 4 0 0 ab 78 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 4 0 0 ab 78 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 4 63 0 0 0 0 0 0 9c 9c 0 0 0 0 1 0 0 4 63 0 0 0 1 0 0 bd e4 0 0 0 0 2 0 0 4 63 0 0 0 0 0 0 e8 13 0 0 0 0 1 0 0 4 64 0 0 3e d3 0 0 0 4 0 0 4 65 0 0 0 10 0 43 0 4f 0 4e 0 54 0 41 0 49 0 4e 0 4d 0 45 0 4e 0 54 0 5f 0 54 0 52 0 45 0 45 0 0 4 65 0 0 0 10 0 49 0 4e 0 48 0 45 0 52 0 49 0 54 0 41 0 4e 0 43 0 45 0 5f 0 54 0 52 0 45 0 45 0 0 4 65 0 0 0 d 0 44 0 49 0 41 0 47 0 52 0 41 0 4d 0 53 0 5f 0 54 0 52 0 45 0 45 0 0 4 65 0 0 0 f 0 45 0 58 0 54 0 45 0 4e 0 53 0 49 0 4f 0 4e 0 53 0 5f 0 54 0 52 0 45 0 45 0 0 1 4b 0 0 0 e0 0 0 0 0 0 0 1 4b 0 0 0 e0 0 0 4 63 0 0 0 0 0 0 f8 71 0 0 0 0 1 0 0 4 66 0 0 0 d0 0 0 0 e6 0 0 0 0 0 0 4 6 0 0 0 e6 0 0 1 9b 0 0 1 c3 0 0 1 9b 0 0 1 c3 0 0 0 3 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 4 0 0 0 f 0 4d 0 45 0 53 0 53 0 41 0 47 0 45 0 53 0 5f 0 57 0 49 0 4e 0 44 0 4f 0 57 0 0 0 a 0 50 0 52 0 4f 0 50 0 45 0 52 0 54 0 49 0 45 0 53 0 0 0 d 0 44 0 4f 0 43 0 55 0 4d 0 45 0 4e 0 54 0 41 0 54 0 49 0 4f 0 4e 0 0 0 c 0 5a 0 4f 0 4f 0 4d 0 5f 0 43 0 4f 0 4e 0 54 0 52 0 4f 0 4c </value>
+							<value>0 14 0 0 0 0 0 0 0 0 0 0 4 0 0 0 3 0 0 0 0 0 0 0 0 8 0 0 0 f 0 4d 0 45 0 53 0 53 0 41 0 47 0 45 0 53 0 5f 0 57 0 49 0 4e 0 44 0 4f 0 57 0 0 88 7e 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 f 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 c8 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 1 0 0 0 4 0 0 88 7e 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 2 0 0 0 0 0 0 dd 7 0 0 0 1 0 0 88 7e 0 0 0 2 0 0 2f 1b 0 0 dd 7 0 0 0 1 0 0 0 2 0 0 59 a7 0 0 dd 7 0 0 9c 9c 0 0 2f 1b 0 0 0 0 0 0 0 2 0 0 bd e4 0 0 2f 1b 0 0 0 1 0 0 0 0 0 0 88 7e 0 0 0 0 0 0 0 3c 0 0 0 3c 0 0 0 c8 0 0 0 c8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 f 0 45 0 58 0 54 0 45 0 4e 0 53 0 49 0 4f 0 4e 0 53 0 5f 0 54 0 52 0 45 0 45 0 0 d 4a 0 0 0 8 0 0 0 0 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 4 0 0 0 8 0 0 2 a6 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 0 0 0 0 1 0 0 0 4 0 0 d 4a 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 4 0 0 d 4a 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 d 0 44 0 49 0 41 0 47 0 52 0 41 0 4d 0 53 0 5f 0 54 0 52 0 45 0 45 0 0 19 88 0 0 0 8 0 0 0 0 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 4 0 0 0 8 0 0 2 a6 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 0 0 0 0 1 0 0 0 4 0 0 19 88 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 4 0 0 19 88 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 a 0 50 0 52 0 4f 0 50 0 45 0 52 0 54 0 49 0 45 0 53 0 0 8f 36 0 0 0 8 0 0 0 1 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 0 0 0 0 8 0 0 1 99 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 1 0 0 0 4 0 0 8f 36 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 1d 71 0 0 0 1 0 0 8f 36 0 0 0 3 0 0 e8 13 0 0 1d 71 0 0 0 0 0 0 0 2 0 0 3e d3 0 0 1d 71 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 2 0 0 bd e4 0 0 2f 1b 0 0 0 1 0 0 0 0 0 0 8f 36 0 0 0 0 0 0 0 3c 0 0 0 3c 0 0 0 c8 0 0 0 c8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 d 0 44 0 4f 0 43 0 55 0 4d 0 45 0 4e 0 54 0 41 0 54 0 49 0 4f 0 4e 0 0 5e de 0 0 0 8 0 0 0 1 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 0 0 0 0 8 0 0 1 99 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 1 0 0 0 4 0 0 5e de 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 1d 71 0 0 0 2 0 0 5e de 0 0 8f 36 0 0 0 3 0 0 e8 13 0 0 1d 71 0 0 0 0 0 0 0 2 0 0 3e d3 0 0 1d 71 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 2 0 0 bd e4 0 0 2f 1b 0 0 0 1 0 0 0 0 0 0 5e de 0 0 0 0 0 0 0 3c 0 0 0 3c 0 0 0 c8 0 0 0 c8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 c 0 5a 0 4f 0 4f 0 4d 0 5f 0 43 0 4f 0 4e 0 54 0 52 0 4f 0 4c 0 0 7c e3 0 0 0 8 0 0 0 1 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 0 0 0 0 8 0 0 1 99 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 1 0 0 0 4 0 0 7c e3 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 1d 71 0 0 0 3 0 0 7c e3 0 0 5e de 0 0 8f 36 0 0 0 3 0 0 e8 13 0 0 1d 71 0 0 0 0 0 0 0 2 0 0 3e d3 0 0 1d 71 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 2 0 0 bd e4 0 0 2f 1b 0 0 0 1 0 0 0 0 0 0 7c e3 0 0 0 0 0 0 0 3c 0 0 0 3c 0 0 0 c8 0 0 0 c8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10 0 43 0 4f 0 4e 0 54 0 41 0 49 0 4e 0 4d 0 45 0 4e 0 54 0 5f 0 54 0 52 0 45 0 45 0 0 a4 22 0 0 0 8 0 0 0 0 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 4 0 0 0 8 0 0 2 a6 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 0 0 0 0 1 0 0 0 4 0 0 a4 22 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 4 0 0 a4 22 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 10 0 49 0 4e 0 48 0 45 0 52 0 49 0 54 0 41 0 4e 0 43 0 45 0 5f 0 54 0 52 0 45 0 45 0 0 ab 78 0 0 0 8 0 0 0 0 0 0 0 1 0 0 0 f 0 0 0 4 0 0 0 4 0 0 0 8 0 0 2 a6 0 0 0 c8 0 0 0 c8 0 0 0 c8 ff ff ff ff ff ff ff ff 0 0 1 2c 0 0 0 c8 0 0 0 0 0 0 0 1 0 0 0 4 0 0 ab 78 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 4 0 0 ab 78 0 0 0 2 0 0 0 0 0 0 0 0 0 0 5 54 0 0 2 a9 0 0 0 8 0 0 0 0 0 0 3e d3 0 0 0 4 0 0 a4 22 0 0 ab 78 0 0 19 88 0 0 d 4a 0 0 0 3 0 0 e8 13 0 0 3e d3 0 0 0 0 0 0 0 1 0 0 3e d3 0 0 bd e4 0 0 e8 13 0 0 0 1 0 0 0 2 0 0 e8 13 0 0 f8 71 0 0 9c 9c 0 0 bd e4 0 0 0 0 0 0 0 1 0 0 bd e4 0 0 4 63 0 0 0 0 0 0 9c 9c 0 0 0 0 1 0 0 4 63 0 0 0 1 0 0 bd e4 0 0 0 0 2 0 0 4 63 0 0 0 0 0 0 e8 13 0 0 0 0 1 0 0 4 64 0 0 3e d3 0 0 0 4 0 0 4 65 0 0 0 10 0 43 0 4f 0 4e 0 54 0 41 0 49 0 4e 0 4d 0 45 0 4e 0 54 0 5f 0 54 0 52 0 45 0 45 0 0 4 65 0 0 0 10 0 49 0 4e 0 48 0 45 0 52 0 49 0 54 0 41 0 4e 0 43 0 45 0 5f 0 54 0 52 0 45 0 45 0 0 4 65 0 0 0 d 0 44 0 49 0 41 0 47 0 52 0 41 0 4d 0 53 0 5f 0 54 0 52 0 45 0 45 0 0 4 65 0 0 0 f 0 45 0 58 0 54 0 45 0 4e 0 53 0 49 0 4f 0 4e 0 53 0 5f 0 54 0 52 0 45 0 45 0 0 2 a6 0 0 0 e0 0 0 0 0 0 0 2 a6 0 0 0 e0 0 0 4 63 0 0 0 0 0 0 f8 71 0 0 0 0 1 0 0 4 66 0 0 0 d0 0 0 0 e6 0 0 0 0 0 0 2 ab 0 0 0 e6 0 0 1 9b 0 0 1 c3 0 0 1 9b 0 0 1 c3 0 0 0 3 0 0 0 0 0 0 0 7 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 5 0 0 0 a 0 50 0 52 0 4f 0 50 0 45 0 52 0 54 0 49 0 45 0 53 0 0 0 d 0 44 0 4f 0 43 0 55 0 4d 0 45 0 4e 0 54 0 41 0 54 0 49 0 4f 0 4e 0 0 0 c 0 5a 0 4f 0 4f 0 4d 0 5f 0 43 0 4f 0 4e 0 54 0 52 0 4f 0 4c 0 0 0 f 0 4d 0 45 0 53 0 53 0 41 0 47 0 45 0 53 0 5f 0 57 0 49 0 4e 0 44 0 4f 0 57 0 0 0 2e 0 63 0 6f 0 6d 0 2e 0 6e 0 6f 0 6d 0 61 0 67 0 69 0 63 0 2e 0 6d 0 61 0 67 0 69 0 63 0 64 0 72 0 61 0 77 0 2e 0 55 0 73 0 61 0 67 0 65 0 73 0 44 0 65 0 70 0 65 0 6e 0 64 0 65 0 6e 0 63 0 69 0 65 0 73 0 44 0 69 0 61 0 6c 0 6f 0 67 </value>
 						</mdElement>
 						<mdElement elementClass='StringProperty'>
 							<propertyID>LAYOUT_BEFORE_FULL_SCREEN</propertyID>
@@ -2479,7 +4101,7 @@
 						<mdElement elementClass='StringProperty'>
 							<propertyID>DIAGRAMS_LAYOUT</propertyID>
 							<propertyDescriptionID>DIAGRAMS_LAYOUT_DESCRIPTION</propertyDescriptionID>
-							<value>0 0 0 14 0 0 0 1 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 31 0 36 0 37 0 34 0 30 0 34 0 35 0 5f 0 39 0 35 0 34 0 33 0 37 0 31 0 5f 0 31 0 39 0 39 0 30 0 0 0 1 0 0 0 cc 0 0 0 e2 0 0 0 7 0 0 0 8 0 0 0 27 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 32 0 39 0 38 0 38 0 36 0 34 0 34 0 30 0 39 0 5f 0 37 0 39 0 32 0 34 0 32 0 35 0 5f 0 39 0 32 0 37 0 0 0 26 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 33 0 30 0 31 0 39 0 38 0 35 0 31 0 36 0 33 0 5f 0 34 0 34 0 36 0 34 0 31 0 5f 0 39 0 39 0 33 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 35 0 35 0 36 0 33 0 38 0 32 0 39 0 33 0 34 0 5f 0 38 0 33 0 38 0 30 0 32 0 36 0 5f 0 31 0 39 0 38 0 33 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 30 0 33 0 36 0 35 0 34 0 39 0 34 0 33 0 32 0 5f 0 34 0 30 0 36 0 30 0 30 0 37 0 5f 0 31 0 35 0 37 0 38 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 30 0 33 0 37 0 32 0 32 0 30 0 38 0 39 0 36 0 5f 0 35 0 30 0 30 0 34 0 37 0 37 0 5f 0 31 0 37 0 39 0 39 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 30 0 39 0 30 0 32 0 39 0 33 0 33 0 5f 0 35 0 35 0 37 0 31 0 34 0 35 0 5f 0 31 0 31 0 36 0 34 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 31 0 31 0 39 0 33 0 33 0 32 0 35 0 5f 0 37 0 33 0 32 0 32 0 34 0 30 0 5f 0 31 0 33 0 31 0 36 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 31 0 36 0 37 0 34 0 30 0 34 0 35 0 5f 0 39 0 35 0 34 0 33 0 37 0 31 0 5f 0 31 0 39 0 39 0 30 </value>
+							<value>0 0 0 14 0 0 0 1 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 35 0 32 0 34 0 35 0 32 0 33 0 37 0 5f 0 38 0 39 0 34 0 31 0 32 0 39 0 5f 0 32 0 39 0 35 0 36 0 0 0 1 0 0 0 cc 0 0 0 e2 0 0 0 d 0 0 0 e 0 0 0 27 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 32 0 39 0 38 0 38 0 36 0 34 0 34 0 30 0 39 0 5f 0 37 0 39 0 32 0 34 0 32 0 35 0 5f 0 39 0 32 0 37 0 0 0 26 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 33 0 30 0 31 0 39 0 38 0 35 0 31 0 36 0 33 0 5f 0 34 0 34 0 36 0 34 0 31 0 5f 0 39 0 39 0 33 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 38 0 39 0 35 0 35 0 36 0 33 0 38 0 32 0 39 0 33 0 34 0 5f 0 38 0 33 0 38 0 30 0 32 0 36 0 5f 0 31 0 39 0 38 0 33 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 30 0 33 0 36 0 35 0 34 0 39 0 34 0 33 0 32 0 5f 0 34 0 30 0 36 0 30 0 30 0 37 0 5f 0 31 0 35 0 37 0 38 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 30 0 33 0 37 0 32 0 32 0 30 0 38 0 39 0 36 0 5f 0 35 0 30 0 30 0 34 0 37 0 37 0 5f 0 31 0 37 0 39 0 39 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 30 0 39 0 30 0 32 0 39 0 33 0 33 0 5f 0 35 0 35 0 37 0 31 0 34 0 35 0 5f 0 31 0 31 0 36 0 34 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 31 0 31 0 39 0 33 0 33 0 32 0 35 0 5f 0 37 0 33 0 32 0 32 0 34 0 30 0 5f 0 31 0 33 0 31 0 36 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 31 0 36 0 37 0 34 0 30 0 34 0 35 0 5f 0 39 0 35 0 34 0 33 0 37 0 31 0 5f 0 31 0 39 0 39 0 30 0 0 0 27 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 33 0 32 0 33 0 32 0 32 0 36 0 35 0 5f 0 35 0 37 0 35 0 38 0 36 0 5f 0 32 0 32 0 37 0 34 0 0 0 27 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 33 0 34 0 38 0 32 0 33 0 34 0 39 0 5f 0 34 0 35 0 39 0 35 0 39 0 5f 0 32 0 33 0 37 0 35 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 33 0 37 0 38 0 39 0 33 0 34 0 31 0 5f 0 34 0 30 0 32 0 30 0 35 0 33 0 5f 0 32 0 35 0 32 0 31 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 33 0 39 0 34 0 39 0 33 0 38 0 39 0 5f 0 32 0 39 0 30 0 38 0 34 0 34 0 5f 0 32 0 36 0 36 0 36 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 34 0 30 0 39 0 31 0 35 0 30 0 34 0 5f 0 37 0 30 0 31 0 37 0 32 0 36 0 5f 0 32 0 37 0 39 0 35 0 0 0 28 0 5f 0 31 0 36 0 5f 0 30 0 5f 0 31 0 37 0 39 0 36 0 30 0 34 0 30 0 64 0 5f 0 31 0 33 0 39 0 31 0 31 0 32 0 35 0 32 0 34 0 35 0 32 0 33 0 37 0 5f 0 38 0 39 0 34 0 31 0 32 0 39 0 5f 0 32 0 39 0 35 0 36 </value>
 						</mdElement>
 						<mdElement elementClass='StringProperty'>
 							<propertyID>MT_LAST_SELECTED_TRANSFORMATION</propertyID>
@@ -2554,7 +4176,7 @@
 						<mdElement elementClass='StringProperty'>
 							<propertyID>INFO_PROPERTY</propertyID>
 							<propertyDescriptionID>INFO_PROPERTY_DESCRIPTION</propertyDescriptionID>
-							<value>77 6b 66 b 78 6c 1b 44 78 14 24 fb 49 1c c1 e1 68 e1 c5 4f ae 4f 84 62 ac 7e 68 c3 b3 66 e9 2f f0 9c 91 69 66 75 e3 75 f3 ea 5a d7 6f d3 94 e5 1b 98 db 5e 7 df 26 ea a1 81 e9 b9 ca 10 7 aa 17 73 66 ac 1e 69 33 </value>
+							<value>77 6b 66 b 78 6c 1b 44 78 14 24 fb 49 1c c1 e1 68 e1 c5 4f ae 4f 84 63 ac 7e 69 c3 b4 66 e9 2f f0 9c 91 69 66 75 e3 75 f3 ea 5a d7 6f d3 94 e5 1b 98 db 5e 7 df 26 ea a1 81 e9 b9 ca 10 7 aa 17 73 66 ac 1e 69 33 </value>
 						</mdElement>
 						<mdElement elementClass='LIST_PROPERTY'>
 							<propertyID>ADDITIONAL_CONTAINMENT_TREES</propertyID>
@@ -2584,6 +4206,11 @@
 							<propertyDescriptionID>RECENT_DIAGRAMS_DESCRIPTION</propertyDescriptionID>
 							<choice xmi:value=''/>
 							<index xmi:value='-1'/>
+						</mdElement>
+						<mdElement elementClass='StringProperty'>
+							<propertyID>LAST_SELECTED_ELEMENT</propertyID>
+							<propertyDescriptionID>LAST_SELECTED_ELEMENT_DESCRIPTION</propertyDescriptionID>
+							<value>_16_0_1796040d_1391123317802_823249_2334</value>
 						</mdElement>
 					</mdElement>
 				</mdElement>
@@ -10063,22 +11690,28 @@
 		</mdElement>
 	</xmi:Extension>
 	<Networking_Profile:Connection xmi:id='_16_0_1796040d_1389300800376_505532_1374' base_Dependency='_16_0_1796040d_1389300800376_161505_1373'/>
+	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1391125245240_429336_2968' base_Diagram='_16_0_1796040d_1391125245237_894129_2956' Author='Rui Miranda' Creation_date='1/30/14 11:40 PM' Modification_date='1/30/14 11:40 PM'/>
 	<Networking_Profile:PC_ xmi:id='_16_0_1796040d_1389299656381_330940_1271' base_Class='_16_0_1796040d_1389299656380_427864_1270'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1391120902937_70461_1177' base_Diagram='_16_0_1796040d_1391120902933_557145_1164' Author='Rui Miranda' Creation_date='1/30/14 10:28 PM' Modification_date='1/30/14 10:28 PM'/>
 	<Networking_Profile:Connection xmi:id='_16_0_1796040d_1389300803193_496574_1380' base_Dependency='_16_0_1796040d_1389300803193_894407_1379'/>
 	<Networking_Profile:Connection xmi:id='_16_0_1796040d_1389299578661_249181_1235' base_Dependency='_16_0_1796040d_1389299578661_558092_1234'/>
+	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1391123482352_316769_2388' base_Diagram='_16_0_1796040d_1391123482349_45959_2375' Author='Rui Miranda' Creation_date='1/30/14 11:11 PM' Modification_date='1/30/14 11:11 PM'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1389298864413_659818_929' base_Diagram='_16_0_1796040d_1389298864409_792425_927' Author='Rui Miranda' Creation_date='1/9/14 8:21 PM' Modification_date='1/9/14 8:21 PM'/>
+	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1391124091517_314098_2818' base_Diagram='_16_0_1796040d_1391124091504_701726_2795' Author='Rui Miranda' Creation_date='1/30/14 11:21 PM' Modification_date='1/30/14 11:21 PM'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1391037220899_542812_1813' base_Diagram='_16_0_1796040d_1391037220896_500477_1799' Author='Rui Miranda' Creation_date='1/29/14 11:13 PM' Modification_date='1/29/14 11:13 PM'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1389301985165_90088_1005' base_Diagram='_16_0_1796040d_1389301985163_44641_993' Author='Rui Miranda' Creation_date='1/9/14 9:13 PM' Modification_date='1/9/14 9:13 PM'/>
 	<Networking_Profile:Connection xmi:id='_16_0_1796040d_1389299455866_561555_1142' base_Dependency='_16_0_1796040d_1389299455866_425100_1141'/>
 	<Networking_Profile:DB_Server xmi:id='_16_0_1796040d_1389299101017_227612_982' base_Class='_16_0_1796040d_1389299101017_559010_981'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1391121674048_137468_2003' base_Diagram='_16_0_1796040d_1391121674045_954371_1990' Author='Rui Miranda' Creation_date='1/30/14 10:41 PM' Modification_date='1/30/14 10:41 PM'/>
+	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1391123232277_5044_2297' base_Diagram='_16_0_1796040d_1391123232265_57586_2274' Author='Rui Miranda' Creation_date='1/30/14 11:07 PM' Modification_date='1/30/14 11:07 PM'/>
+	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1391123789344_817920_2534' base_Diagram='_16_0_1796040d_1391123789341_402053_2521' Author='Rui Miranda' Creation_date='1/30/14 11:16 PM' Modification_date='1/30/14 11:16 PM'/>
 	<Networking_Profile:PC xmi:id='_16_0_1796040d_1389300236074_530431_1335' base_Class='_16_0_1796040d_1389300236074_32075_1334'/>
 	<Networking_Profile:Connection xmi:id='_16_0_1796040d_1389299664901_713789_1294' base_Dependency='_16_0_1796040d_1389299664901_775181_1293'/>
 	<Networking_Profile:DB_Server xmi:id='_16_0_1796040d_1389299436539_409930_1119' base_Class='_16_0_1796040d_1389299436539_154655_1118'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1391121193327_898536_1329' base_Diagram='_16_0_1796040d_1391121193325_732240_1316' Author='Rui Miranda' Creation_date='1/30/14 10:33 PM' Modification_date='1/30/14 10:33 PM'/>
 	<Networking_Profile:Connection xmi:id='_16_0_1796040d_1389299714760_566139_1329' base_Dependency='_16_0_1796040d_1389299714760_296718_1328'/>
 	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1389556382936_353950_1997' base_Diagram='_16_0_1796040d_1389556382934_838026_1983' Author='Rui Miranda' Creation_date='1/12/14 7:53 PM' Modification_date='1/12/14 7:53 PM'/>
+	<MagicDraw_Profile:DiagramInfo xmi:id='_16_0_1796040d_1391123949392_360239_2679' base_Diagram='_16_0_1796040d_1391123949389_290844_2666' Author='Rui Miranda' Creation_date='1/30/14 11:19 PM' Modification_date='1/30/14 11:19 PM'/>
 	<Networking_Profile:Application_Server xmi:id='_16_0_1796040d_1389299044730_874459_941' base_Class='_16_0_1796040d_1389299044730_300289_940'/>
 	<Networking_Profile:PC_ xmi:id='_16_0_1796040d_1389299545945_657100_1148' base_Class='_16_0_1796040d_1389299545945_227674_1147'/>
 	<MagicDraw_Profile:useCaseModel xmi:id='_16_0_1796040d_1389302483310_431368_1214' base_Model='_16_0_1796040d_1389302483310_399023_1213'/>
