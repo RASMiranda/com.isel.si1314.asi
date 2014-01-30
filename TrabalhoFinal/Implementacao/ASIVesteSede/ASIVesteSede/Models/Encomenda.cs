@@ -16,8 +16,8 @@ namespace ASIVesteSede.Models
         public int EncomendaID { get; set; }
         public int Qtd { get; set; }
         public EstadoEncomenda? Estado { get; set; }
+        public virtual Produto Produto { get; set; }
 
-        public virtual ICollection<Produto> Produtos { get; set; }
         public virtual VendaProdutos VendaProduto { get; set; }
 
     }

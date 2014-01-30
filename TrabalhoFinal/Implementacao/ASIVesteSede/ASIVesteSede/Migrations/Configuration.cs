@@ -11,7 +11,8 @@ namespace ASIVesteSede.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true; //depois colocar a false
+            AutomaticMigrationDataLossAllowed = true;
         }
         
         protected override void Seed(ASIVesteSede.DAL.ASIVesteContext context)
@@ -39,11 +40,11 @@ namespace ASIVesteSede.Migrations
 
             var produtos = new List<Produto>
                 {
-                    new Produto  { Codigo="SC001", Tipo=TipoProduto.Senhora, ProdutoID=fornecedores.Single(s => s.Numero == 1).FornecedorID, 
+                    new Produto  { Codigo="SC001", Tipo=TipoProduto.Senhora, Fornecedor=fornecedores.Single(s => s.Numero == 1), 
                         Designacao="Camisa Elite XS", StockMinimo=5,StockQtd=10, Preco= 45.9F },
-                    new Produto  { Codigo="SC002", Tipo=TipoProduto.Senhora,  ProdutoID=fornecedores.Single(s => s.Numero == 1).FornecedorID, 
+                    new Produto  { Codigo="SC002", Tipo=TipoProduto.Senhora,  Fornecedor=fornecedores.Single(s => s.Numero == 1), 
                          Designacao="Camisa Elite M", StockMinimo=3,StockQtd=3, Preco= 45.9F },
-                    new Produto  { Codigo="SC003", Tipo=TipoProduto.Senhora,  ProdutoID=fornecedores.Single(s => s.Numero == 1).FornecedorID, 
+                    new Produto  { Codigo="SC003", Tipo=TipoProduto.Senhora,  Fornecedor=fornecedores.Single(s => s.Numero == 1), 
                         Designacao="Camisa Elite L",  StockMinimo=2,StockQtd=5, Preco= 45.9F }
                 };
             produtos.ForEach(s => context.Produtos.AddOrUpdate(p => p.Codigo, s));

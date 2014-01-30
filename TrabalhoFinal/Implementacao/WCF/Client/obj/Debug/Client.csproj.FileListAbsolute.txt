@@ -1,1 +1,0 @@
-C:\Users\Frederico\work\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf\CS\Client\bin\Client.exe.config

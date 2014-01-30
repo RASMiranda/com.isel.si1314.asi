@@ -1,0 +1,5 @@
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteLoja\bin\ASIVesteLoja.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteLoja\bin\ASIVesteLoja.pdb
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteLoja\obj\Debug\ASIVesteLoja.csprojResolveAssemblyReference.cache
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteLoja\obj\Debug\ASIVesteLoja.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteLoja\obj\Debug\ASIVesteLoja.pdb

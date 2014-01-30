@@ -1,0 +1,7 @@
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\VendasService\bin\VendasService.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\VendasService\bin\VendasService.pdb
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\VendasService\bin\Order.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\VendasService\bin\Order.pdb
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\VendasService\obj\Debug\VendasService.csprojResolveAssemblyReference.cache
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\VendasService\obj\Debug\VendasService.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\VendasService\obj\Debug\VendasService.pdb

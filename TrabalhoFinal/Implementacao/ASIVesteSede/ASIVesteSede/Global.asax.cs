@@ -6,6 +6,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using ASIVesteSede.DAL;
 
 namespace ASIVesteSede
 {
@@ -16,6 +18,15 @@ namespace ASIVesteSede
     {
         protected void Application_Start()
         {
+
+            /*
+            Database.SetInitializer<ASIVesteContext>(null);
+            using (var ctx = new ASIVesteContext())
+            {
+                ctx.Database.Initialize(true);
+            }
+             */
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
@@ -23,6 +34,9 @@ namespace ASIVesteSede
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+            QueuesConfig.Register(); //activa o listner para as queues de vendas
+            
+            
         }
     }
 }

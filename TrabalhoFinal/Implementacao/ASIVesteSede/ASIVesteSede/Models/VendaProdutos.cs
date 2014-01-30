@@ -8,7 +8,7 @@ namespace ASIVesteSede.Models
     public class VendaProdutos
     {
         public int VendaProdutosID { get; set; }
-        public string NomeCliente { get; set; }
+        public string Codigo { get; set; }
         public int Qtd { get; set; }
         public EstadoVenda? Estado { get; set; }
 
