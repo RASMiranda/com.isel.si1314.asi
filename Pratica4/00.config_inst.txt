@@ -1,3 +1,0 @@
-PrincipalDBA=MIRANDA-LAPTOP\SQL2012DEINST1
-PrincipalUSR=meic1314si
-PrincipalPWD=t5U3qdNyS

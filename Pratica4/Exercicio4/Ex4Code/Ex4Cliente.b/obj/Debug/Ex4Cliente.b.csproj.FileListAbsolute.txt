@@ -1,5 +1,0 @@
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio4-Rui\Ex4Code\Ex4Cliente.b\bin\Debug\Ex4Cliente.b.exe.config
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio4-Rui\Ex4Code\Ex4Cliente.b\bin\Debug\Ex4Cliente.b.exe
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio4-Rui\Ex4Code\Ex4Cliente.b\bin\Debug\Ex4Cliente.b.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio4-Rui\Ex4Code\Ex4Cliente.b\obj\Debug\Ex4Cliente.b.exe
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio4-Rui\Ex4Code\Ex4Cliente.b\obj\Debug\Ex4Cliente.b.pdb

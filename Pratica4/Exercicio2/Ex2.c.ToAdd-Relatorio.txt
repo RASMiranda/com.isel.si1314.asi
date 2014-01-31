@@ -1,4 +1,0 @@
-c) Apresente três soluções diferentes para que a transacção produza os efeitos devidos.
-R1: Na operação Ex2.Servico.Transferir colocar o TransactionAutoComplete a True, fazendo assim a votação implicita para a conclusão da transacção.
-R2: Na operação Ex2.Servico.Transferir retirar o atributo TransactionAutoComplete, tendo assim o valor por defeito (True) e assim a votação implicita para a conclusão da transacção.
-R3: Antes de terminar a execução da operação incluir a instrunção OperationContext.Current.SetTransactionComplete(); fazendo assim uma votação explicita para a conlcusão da transacção.

@@ -1,7 +1,0 @@
-2. Considere o serviço implementado no projecto Ex2. Altere o cliente do ponto anterior de
-forma a realizar apenas uma transferência de 500 euros da conta 1 para a conta 2. Volte a
-colocar os saldos das duas contas com o valor 1000.
-a) Execute passo-a-passo o cliente e verifique com um select realizado no management studio
-que após a transferência e enquanto não se fechar o proxy, a transacção continua a existir.
-Justifique este comportamento.
-R: Isto sucede porque o WCF está a espera da votação da respectiva transacção, alocando assim todos os recursos para a mesma, até que receba votação para conclusão ou aborte.

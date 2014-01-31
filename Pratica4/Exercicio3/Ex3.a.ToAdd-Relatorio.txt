@@ -1,6 +1,0 @@
-a) Execute o código da aplicação cliente passo-a-passo e vá verificando o estado da fila.
-Confirme que na fila só aparecem mensagens depois de terminado o bloco using.
-Verifique que existem duas mensagens. Lance a aplicação hospedeira do serviço e
-verifique que uma das operações produz efeito sobre a base de dados e outra não.
-Justifique a razão deste comportamento
-R: A 2ª operacao não produz efeito porque está tentar alterar a conta 1111, conta que nao existe na tabela, por essa razão é lançada e apanhada a excpeção do servico.

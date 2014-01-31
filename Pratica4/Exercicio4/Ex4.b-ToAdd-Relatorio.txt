@@ -1,3 +1,0 @@
-b) Execute o código marcado com “alínea b)” e compare o resultado com o que observou
-na alínea anterior.
-R: Ao efectuar as transaccoes em modo session less observa-se que os efeitos das mesmas são automaticamente reprocrotidos na base de dados, o que é esperado já que a operacao do servico está com TransactionAutoComplete a True, o que faz com que o WCF termine a transacção assim que a operação termina. O mesmo não acontecia na alinea anterior, já que a operacao session full está com TransactionAutoComplete a Falso, seria necessário o cliente chamar o metodo finalizar (TransactionAutoComplete a True) para que WCF terminasse com sucesso a transacção, o mesmo não acontece porque o servico entra em deadlock.

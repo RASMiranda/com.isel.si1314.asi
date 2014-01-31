@@ -1,1 +1,0 @@
-start comexp.msc /c

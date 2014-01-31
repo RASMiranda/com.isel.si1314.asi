@@ -1,1 +1,0 @@
-﻿update t1 set c2 = null where c1 = 3

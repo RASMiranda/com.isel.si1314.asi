@@ -1,6 +1,0 @@
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio3-Rui\Ex3Code\Ex3.b.0\bin\Debug\Ex3.b.0.exe.config
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio3-Rui\Ex3Code\Ex3.b.0\bin\Debug\Ex3.b.0.exe
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio3-Rui\Ex3Code\Ex3.b.0\bin\Debug\Ex3.b.0.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio3-Rui\Ex3Code\Ex3.b.0\obj\Debug\Ex3.b.0.exe
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio3-Rui\Ex3Code\Ex3.b.0\obj\Debug\Ex3.b.0.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio3-Rui\Ex3Code\Ex3.b.0\obj\Debug\Ex3.b.0.csprojResolveAssemblyReference.cache

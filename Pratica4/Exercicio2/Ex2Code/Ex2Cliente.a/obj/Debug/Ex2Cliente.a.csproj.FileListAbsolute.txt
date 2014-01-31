@@ -1,5 +1,0 @@
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio2-Rui\Ex2Code\Ex2Cliente.a\bin\Debug\Ex2Cliente.a.exe.config
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio2-Rui\Ex2Code\Ex2Cliente.a\bin\Debug\Ex2Cliente.a.exe
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio2-Rui\Ex2Code\Ex2Cliente.a\bin\Debug\Ex2Cliente.a.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio2-Rui\Ex2Code\Ex2Cliente.a\obj\Debug\Ex2Cliente.a.exe
-D:\Documents\GitHub\com.isel.si1314.asi\Pratica4\Exercicio2-Rui\Ex2Code\Ex2Cliente.a\obj\Debug\Ex2Cliente.a.pdb
