@@ -1,0 +1,4 @@
+b) Altere serviço e cliente de forma a que ou ambas as operações produzam efeito, ou
+nenhuma produza. Volte a realizar os testes da alínea anterior e compare os resultados e
+comportamentos verificados com os da alínea anterior.
+R: Foi alterado o servico para que no caso de ocorrer a expcao provocada pela nao existencia do registo, e chamado o metodo Servico.inserirConta, verificando assim que para além de ser alterada a conta 1, tambem é inserida a conta 1111

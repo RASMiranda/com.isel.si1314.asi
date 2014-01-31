@@ -1,0 +1,12 @@
+
+No nó inicial seleccionar a BD BDMIRROR e escolher ALL Tasks->Mirror. Seguir o wizard de forma a que o
+mirroring inicialmente tenha ONE como principal, TWO como mirror e THREE como witness. No final arrancar o Mirroring.
+
+Executar os passos descritos de
+
+1.11-ConfgMirror-Mirror-A.png
+
+até
+
+1.21-ConfgMirror-Mirror-A.png
+

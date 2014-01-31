@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ASIModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ASIModelStoreContainer">
+          <EntitySet Name="Alunos" EntityType="ASIModel.Store.Alunos" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AlunosAssEst" EntityType="ASIModel.Store.AlunosAssEst" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__AlunosAss__NumAl__1273C1CD" Association="ASIModel.Store.FK__AlunosAss__NumAl__1273C1CD">
+            <End Role="Alunos" EntitySet="Alunos" />
+            <End Role="AlunosAssEst" EntitySet="AlunosAssEst" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Alunos">
+          <Key>
+            <PropertyRef Name="NumAl" />
+          </Key>
+          <Property Name="NumAl" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="AlunosAssEst">
+          <Key>
+            <PropertyRef Name="NumAl" />
+            <PropertyRef Name="nSeq" />
+          </Key>
+          <Property Name="NumAl" Type="int" Nullable="false" />
+          <Property Name="nSeq" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Interesse" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <Association Name="FK__AlunosAss__NumAl__1273C1CD">
+          <End Role="Alunos" Type="ASIModel.Store.Alunos" Multiplicity="1" />
+          <End Role="AlunosAssEst" Type="ASIModel.Store.AlunosAssEst" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alunos">
+              <PropertyRef Name="NumAl" />
+            </Principal>
+            <Dependent Role="AlunosAssEst">
+              <PropertyRef Name="NumAl" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ASIModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ASIEntities7" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Alunos" EntityType="ASIModel.Aluno" />
+          <EntitySet Name="AlunosAssEsts" EntityType="ASIModel.AlunosAssEst" />
+          <AssociationSet Name="FK__AlunosAss__NumAl__1273C1CD" Association="ASIModel.FK__AlunosAss__NumAl__1273C1CD">
+            <End Role="Alunos" EntitySet="Alunos" />
+            <End Role="AlunosAssEst" EntitySet="AlunosAssEsts" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Aluno">
+          <Key>
+            <PropertyRef Name="NumAl" />
+          </Key>
+          <Property Name="NumAl" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="60" Unicode="false" FixedLength="false" ConcurrencyMode="Fixed" />
+          <NavigationProperty Name="AlunosAssEsts" Relationship="ASIModel.FK__AlunosAss__NumAl__1273C1CD" FromRole="Alunos" ToRole="AlunosAssEst" />
+        </EntityType>
+        <EntityType Name="AlunosAssEst">
+          <Key>
+            <PropertyRef Name="NumAl" />
+            <PropertyRef Name="nSeq" />
+          </Key>
+          <Property Name="NumAl" Type="Int32" Nullable="false" />
+          <Property Name="nSeq" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Interesse" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Aluno" Relationship="ASIModel.FK__AlunosAss__NumAl__1273C1CD" FromRole="AlunosAssEst" ToRole="Alunos" />
+        </EntityType>
+        <Association Name="FK__AlunosAss__NumAl__1273C1CD">
+          <End Role="Alunos" Type="ASIModel.Aluno" Multiplicity="1" />
+          <End Role="AlunosAssEst" Type="ASIModel.AlunosAssEst" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Alunos">
+              <PropertyRef Name="NumAl" />
+            </Principal>
+            <Dependent Role="AlunosAssEst">
+              <PropertyRef Name="NumAl" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ASIModelStoreContainer" CdmEntityContainer="ASIEntities7">
+          <EntitySetMapping Name="Alunos">
+            <EntityTypeMapping TypeName="ASIModel.Aluno">
+              <MappingFragment StoreEntitySet="Alunos">
+                <ScalarProperty Name="NumAl" ColumnName="NumAl" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AlunosAssEsts">
+            <EntityTypeMapping TypeName="ASIModel.AlunosAssEst">
+              <MappingFragment StoreEntitySet="AlunosAssEst">
+                <ScalarProperty Name="NumAl" ColumnName="NumAl" />
+                <ScalarProperty Name="nSeq" ColumnName="nSeq" />
+                <ScalarProperty Name="Interesse" ColumnName="Interesse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

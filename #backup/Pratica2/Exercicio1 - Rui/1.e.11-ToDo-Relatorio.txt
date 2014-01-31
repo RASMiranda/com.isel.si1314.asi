@@ -1,0 +1,19 @@
+Arranque C e teste o mecanismo do ADO.NET para reencaminhamento de
+conexões na presença de mirroring. Indique como realizou o teste e que conclusões
+tirou.
+
+Teste 1 - A(principal); B(mirror); C(witness)
+	Verificou-se (1.e.4-TestMiror-Principal-A.png), como esperado, que a aplicação consegue aceder através de ADO.NET a A.
+	
+Teste 2 - A(off); B(principal); C(witness)
+	Como se parou A, deu-se failover automatico ficando B como principal, verifica-se (1.e.6-TestMiror-Principal-B.png) que a aplicacao consegue aceder através de ADO.NET a B, como epserado, devido à propriedade "Failover Partener" (1.e.3-ADO.NET-ConnStr.png) que aponta para B.
+	
+Teste 3 - A(off); B(off); C(witness)
+	Como A e B se encontram paradas, não é possivel aceder a qualquer BD (1.e.8-TestMiror.png), como esperado.
+	
+Teste 4 - A(off); B(mirror); C(witness)
+	Para este teste, voltou-se ao estado inicial [A(principal); B(mirror); C(witness)], parou-se A e B respectivamente, e activou-se B.
+	Como esperado, verifica-se (1.e.10-B-Mirror-Disconnected-TestMirror.png) que a aplicação não consegue aceder a nenhuma  BD, já que como B está apeans configurado como mirror, e A está parado	
+
+Conclui-se que é possivel transpor todo o comportamento de acesso a um sistema de mirroring/failover SQL Server, para a camada de acesso a dados, através de ADO.NET, mais especificamente da propriedade "Failover Partener" da connection string.
+	

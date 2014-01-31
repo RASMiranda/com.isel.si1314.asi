@@ -1,0 +1,153 @@
+
+
+Loja CVVC
+    tabela: [dbo].Produto
+        codProd     int
+        preco       money
+        qtStock     int
+        qtMinStock  int
+        
+        "constraint tipo ='c'"
+      
+Loja CVVD
+    tabela: [dbo].Produto
+        codProd     int PK
+        preco       money not null
+        qtStock     int not null
+        qtMinStock  int not null
+        
+        "constraint tipo ='d'"
+      
+SEDE
+    tabela: [dbo].Fornecedor
+        codForn     int PK
+        nome        varchar(20) not null
+        morada      varchar(60) not null
+    
+    tabela: [dbo].Produto
+        codProd     int PK
+        codForn     int FK para Fornecedor
+        qtEncomenda int not null
+        estado      bit not null
+        tipo        char(1) not null
+
+    tabela: [dbo].ProdutosEncomendados
+        codEncomenda    identity PK
+        codProd         FK produto
+        codForn         FK fornecedor 
+        diaHora         datetime default current_timestamp
+        estado          bit not null
+        qtEncomenda     int not null
+        
+    vista: [dbo].Produto
+        codProd     int PK
+        codForn     int FK para Fornecedor
+        qtEncomenda int not null
+        estado      bit not null
+        tipo        char(1) not null
+        preco       money
+        qtStock     int
+        qtMinStock  int
+
+        trigger: trgUpd_ViewProduto
+        depende de:
+            Produto
+            ProdutoCrianca
+            ProdutoDesporto
+        
+    sinonimo: [dbo].ProdutoCrianca
+        FOR $(serverCVVC).[ASI].[dbo].[Produto]    
+       
+    sinonimo: [dbo].ProdutoDesporto
+        FOR $(serverCVVD).[ASI].[dbo].[Produto]    
+    
+    procedimento: [dbo].insereProduto
+        parameters: codProd, codForn, atEncomenda, estado, tipo, preco, qtStock, qtMinStock
+        returns: integer
+        dependencias:
+            <sede>Produto
+            produtoCrianca
+            produtoDesporto
+        
+    procedimento: [dbo].deleteProduto
+        parameters: codProd
+        returns: integer
+        dependencias:
+            <sede>Produto
+            produtoCrianca
+            produtoDesporto
+        
+    procedimento: [dbo].encomendarProduto
+        returns: integer
+        dependencias:
+            viewProduto
+            produtosEncomendados
+     
+    procedimento: [dbo].receberProduto
+        parameters: codProd, qtEncomenda
+        returns: integer
+        dependencias:
+            viewProduto
+            produtosEncomendados
+
+    procedimento: [dbo].produtoAlteraTipo
+        parameters: codProd, tipo
+        returns: integer
+        depedencias:
+            <sede>produto
+            produtoCrianca
+            produtoDesporto
+            
+
+Vendas de Desporto na Loja Criancas
+    H1: temporariamente
+        * incluir tipo na tabela de CVVC
+        * inserir registos a partir da tabela de produtos de CVVD
+        * alterar o sinonimo ProdutoDesporto
+        Vantagens:
+            nao altera codigo existente
+            actualizacao feita apenas uma vez
+        
+        Desvantagens:
+            acessos duplicados ao mesmo server remoto (para criancas e para desportistas)
+            poderia ser necessario rever os programas no local para passarem a incluir tipo 
+    
+    H2: lojas com ligação permanente:
+        * criar uma view no CVVC para fazer a uniao entre as duas tabelas de produtos.
+        * implementar sobre essa view um trigger de Update, para fazer a seleção da tabela a usar
+        * alterar os progrmas do CVVC para passarem a usar a view
+        Vantagens:
+            vendas em simultaneo nas duas lojas
+            alteracoes minimas apaneas no CVVC
+            sem migracoes ou replicacoes de dados
+        Desvantagens:
+            necessidade de ter ligacao permanente entre as duas lojas
+            necessidade de alterar os programas locais para substituir a tabela de produtos pela view
+                (alternativa renomear a tabela local, criar a view como seu nome, 
+                    mudar no central o link produtoCrianca
+    H3: lojas sem ligacao permanente
+        Necessita de replicação Master - Master assincrona e selectiva (de criancas so replica artigos de desporto)
+        * incluir coluna tipo em produtos criança
+        * colocar o CVVD como publisher e CVVC como subscriber definir o artigo a publicar a tabela Produto
+        Implementação:
+            A Merge Replication não funciona, pois embora seja possível colocar a funcionar e com:
+                * definiçao da fragmentaçao horizontal a publicar
+                * tempo de sincronismo 1 min
+                * bidireccional
+                * mas a mais recente esmaga a anterior, pelo que mecanismos como movimento de stocks (x = x -1)
+                    não funcionam quanto temos alterações nos dois lados em simultaneo (i.e. entre execuções do merge)
+        Ver patterns http://msdn.microsoft.com/en-us/library/ff649591.aspx
+        
+        Solution: Master - Master http://msdn.microsoft.com/en-us/library/ff649910.aspx
+        Row level Synchroniztion - http://msdn.microsoft.com/en-us/library/ff650702.aspx
+          
+        Também é possível implementar com replicação Transacional cruzada, mas
+            * as tabelas precisam de ter a mesma estrutura
+            * uma das actualizacoes pode esmagar a outra feitas ao mesmo tempo!
+            Ou seja o esquema x -1  de uma venda para a usar como constante a alteraçao só com uma tabela de operções 
+            que pudesse ser aplicada com o movimento da venda.
+        
+        
+        
+                    
+    

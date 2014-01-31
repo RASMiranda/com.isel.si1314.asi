@@ -1,0 +1,5 @@
+Pare a instância A e espere que B assuma o papel de principal. Execute em B
+insert into t values(3) e verifique que a operação sucede. Pare B. Active A e
+verifique se ela toma o papel de principal. Justifique o que observa.
+
+Ao activar A ela não toma o papel principal, mantem o papel que tinha anteriormente, mirror. Isto porque, na altura em que paramos B (principal) a A também estava parada, como apenas estava C (witness) activa, não foi possivel realizar o failover automtico. Como não foi feito failover, A ao activar continua com o papel que tinha anteriormente, mirror.

@@ -1,0 +1,31 @@
+Cndições oferecidas:
+
+
+Windows Azure:
+2 small compute instances
+70 GB of storage
+50,000,000 storage transactions
+
+
+Azure Sql Database:
+Two 1GB Web Edition databases
+
+
+AppFabric:
+500,000 Service Bus Messages 
+1500 Service Bus Relay Hours
+
+Data transfers (per region):
+12 GB in
+12 GB out
+
+
+1 hosted service:
+10 Shared Web Sites
+10 Shared Mobile Services
+
+
+Registo:
+http://www.WindowsAzurePass.com/azureu
+(usar o código fornecido pelo docente)
+

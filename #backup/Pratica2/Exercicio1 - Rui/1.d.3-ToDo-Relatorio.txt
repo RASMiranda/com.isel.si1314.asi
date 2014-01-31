@@ -1,0 +1,5 @@
+Pare A e arranque B e espere que B assuma o papel de principal. Arranque A e
+espere que A e B se sincronizem. Pare C. Pare B. Verifique que não há failover
+automático. Justifique.
+
+A instância A (mirror) não assume o papel de principal, ou seja, não há failover automatico, porque no momento que B (principal) fica indiponivel, C (witness) também se encontra indpisponivel, é obrigatorio que a witness esteja disponivel para em conjunto com o mirror executem o failover automatico.

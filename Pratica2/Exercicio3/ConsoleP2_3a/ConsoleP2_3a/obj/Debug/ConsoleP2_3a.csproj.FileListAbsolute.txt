@@ -1,0 +1,6 @@
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\Pratica2\Exercicio3\ConsoleP2_3a\ConsoleP2_3a\bin\Debug\ConsoleP2_3a.exe.config
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\Pratica2\Exercicio3\ConsoleP2_3a\ConsoleP2_3a\obj\Debug\ConsoleP2_3a.csprojResolveAssemblyReference.cache
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\Pratica2\Exercicio3\ConsoleP2_3a\ConsoleP2_3a\bin\Debug\ConsoleP2_3a.exe
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\Pratica2\Exercicio3\ConsoleP2_3a\ConsoleP2_3a\bin\Debug\ConsoleP2_3a.pdb
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\Pratica2\Exercicio3\ConsoleP2_3a\ConsoleP2_3a\obj\Debug\ConsoleP2_3a.exe
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\Pratica2\Exercicio3\ConsoleP2_3a\ConsoleP2_3a\obj\Debug\ConsoleP2_3a.pdb
