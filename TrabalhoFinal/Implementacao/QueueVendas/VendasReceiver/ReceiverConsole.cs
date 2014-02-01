@@ -15,12 +15,12 @@ namespace VendasReceiver
         {
             using ( ServiceHost receiver= new ServiceHost( typeof( VendaServico )))
             {
-                //string queueLSC = ".\\private$\\queueLSC";
-                ////string queueLSC = ".\\queueLSC";
-                //if ( ! MessageQueue.Exists( queueLSC ))
-                //{
-                //    MessageQueue.Create( queueLSC,false);
-                //}
+                string queueLSC = ".\\private$\\queueLSC";
+                //string queueLSC = ".\\queueLSC";
+                if (!MessageQueue.Exists(queueLSC))
+                {
+                    MessageQueue.Create(queueLSC, false);
+                }
                 receiver.Open();
                 Console.WriteLine( "Esta pronto para receber ordems de venda");
                 Console.WriteLine("Carregue em return para terminar");
