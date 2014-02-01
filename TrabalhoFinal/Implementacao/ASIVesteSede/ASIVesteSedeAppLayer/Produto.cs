@@ -7,6 +7,7 @@ using System.Web;
 namespace ASIVesteSedeAppLayer
 {
     [DataContract]
+    [Serializable]
     public class Produto
     {
         Int32 id;
