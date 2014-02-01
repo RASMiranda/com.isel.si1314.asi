@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Messaging;
 using System.Transactions;
-using QueueVendas;
 using VendasPublisher.ServicoVendas;
 
 namespace VendasPublisher
@@ -14,22 +13,17 @@ namespace VendasPublisher
     {
         static void Main(string[] args)
         {
-
-            
-
-            VendaOrdem venda = new VendaOrdem();
-            venda.dadosVenda("Cliente", "Av. Conselheiro Emidio Navarro, Lisboa");
-
-            venda.acrescentaProduto(1, 5, 25.4f);
-            venda.acrescentaProduto(2, 1, 33.2f);
-
-            
-
             // submit the purchase order
             //Message msg = new Message();
 
             //msg.Body = venda;
             ServicoVendas.VendaServicoClient ordem = new VendaServicoClient();
+
+            Venda venda = new Venda();
+            venda.IdProduto = 1;
+            venda.MoradaCliente = "Av. Conselheiro Emidio Navarro, Lisboa";
+            venda.NomeCliente = "Cliente";
+            venda.Qtd = 2;
 
             using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
             {

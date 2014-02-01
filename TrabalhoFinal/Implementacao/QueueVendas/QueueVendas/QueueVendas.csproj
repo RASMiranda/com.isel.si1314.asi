@@ -75,8 +75,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="VendaOrdem.cs" />
-    <Compile Include="VendaOrdemItem.cs" />
     <Compile Include="VendaServico.svc.cs">
       <DependentUpon>VendaServico.svc</DependentUpon>
     </Compile>
@@ -124,7 +122,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>61444</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:32737/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

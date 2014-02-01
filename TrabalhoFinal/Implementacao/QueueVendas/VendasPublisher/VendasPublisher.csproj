@@ -55,22 +55,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\ServicoVendas\item.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServicoVendas\item1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServicoVendas\item2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\ServicoVendas\VendaServico.wsdl" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\QueueVendas\QueueVendas.csproj">
-      <Project>{f9585bef-766f-4253-8335-12b2e71f7cc5}</Project>
-      <Name>QueueVendas</Name>
-    </ProjectReference>
+    <None Include="Service References\ServicoVendas\VendaServico.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicoVendas\VendaServico1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicoVendas\VendaServico2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -79,7 +73,7 @@
     <WCFMetadataStorage Include="Service References\ServicoVendas\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServicoVendas\item.disco" />
+    <None Include="Service References\ServicoVendas\VendaServico.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServicoVendas\configuration91.svcinfo" />

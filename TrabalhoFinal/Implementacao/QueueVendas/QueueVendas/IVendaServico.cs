@@ -14,8 +14,8 @@ namespace QueueVendas
     {
 
         [OperationContract(IsOneWay= true)]
-        void enviaVenda( VendaOrdem ordem);
-
+        void enviaVenda(SedeVendaServicoReference.Venda venda);
+        
      }
 
 }

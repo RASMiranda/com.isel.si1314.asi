@@ -10,25 +10,13 @@ namespace QueueVendas
 {
     public class VendaServico : IVendaServico
     {
-        public void enviaVenda(VendaOrdem ordem)
+        public void enviaVenda(SedeVendaServicoReference.Venda venda)
         {
-            Console.Write("You entered: {0}", ordem);//TODO: DELETE AFTER TESTES?
+            Console.Write("You entered: {0}", venda);//TODO: DELETE AFTER TESTES?
 
             SedeVendaServicoReference.SedeVendaServicoClient cl = new SedeVendaServicoReference.SedeVendaServicoClient();
-            
-            //TODO: tratar as vendas nas lojas como na sede, contendo um produto cada uma?
-            foreach (var item in ordem.vendaItems)
-	        {
-                if (item != null)//TODO: FIX THIS, ordem.vendaItems vem com elementos vazios, limpar no cliente antes de enviar...
-                {
-                    SedeVendaServicoReference.Venda venda = new SedeVendaServicoReference.Venda();
-                    venda.IdProduto = item.id;
-                    venda.Qtd = item.quantidade;
-                    venda.MoradaCliente = ordem.moradaCliente;
-                    venda.NomeCliente = ordem.nomeCliente;
-                    cl.registaVenda(venda);//TODO: Neste cenario com varios produtos numa venda fara sentido colocar este ciclo dentro de uma transacção?
-                }
-	        }
+
+            cl.registaVenda(venda);
         }
     }
 }

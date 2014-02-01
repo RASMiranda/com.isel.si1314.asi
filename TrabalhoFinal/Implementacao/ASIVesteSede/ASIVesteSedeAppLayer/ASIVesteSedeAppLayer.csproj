@@ -71,12 +71,12 @@
     <Compile Include="Fornecedor.cs" />
     <Compile Include="ISedeServico.cs" />
     <Compile Include="Produto.cs" />
-    <Compile Include="Venda.cs" />
     <Compile Include="SedeVendaServico.svc.cs">
       <DependentUpon>SedeVendaServico.svc</DependentUpon>
     </Compile>
     <Compile Include="ISedeVendaServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Venda.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
