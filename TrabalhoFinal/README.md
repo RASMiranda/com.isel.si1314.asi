@@ -16,7 +16,20 @@ ToDo
 			Particao Horizontal:
 				ProdutoLojas1=SELECAO{tipo='CS'}(ProdutoLojas)
 				ProdutoLojas2=SELECAO{tipo='HD'}(ProdutoLojas)
-
+	
+	Separar projectos em solucoes adequadas!!!!
+				
+   ASIVesteSedeDataLayer: Camada de acesso (Class Library) a dados a partir do EF_SPs_View, 
+   ASIVesteSedeAppLayer.SedeServico.svc: adicionar codigo de negocio/acesso a dados(ASIVesteSedeDataLayer) às funções
+   ASIVesteSede: Camada de apresentação, completar?, e chamar servico/operações de ASIVesteSedeAppLayer
+   ?ASIVesteLojaAppLayer: Camada Aplicacional da Loja, referencia ASIVesteLojaDataLayer
+      LojaServico.svc/ILojaServico.svc
+         {efectuaVenda; obtemProdutos} - chamam ASIVesteLojaDataLayer
+   ?ASIVesteLojaDataLayer: Camada de acesso a dados da Loja
+   ?ASIVesteLoja: Camada de apresentação da Loja
+   ?Base de dados Loja
+   ?Replicacao base de dados Sede->Loja				
+				
 	QueueVendas.VendaServico.enviaVenda
 		Console.Write("You entered: {0}", venda);//TODO: DELETE AFTER TESTES?
 	ASIVesteSedeAppLayer.ISedeServico
