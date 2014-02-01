@@ -20,8 +20,8 @@ namespace VendasPublisher
             VendaOrdem venda = new VendaOrdem();
             venda.dadosVenda("Cliente", "Av. Conselheiro Emidio Navarro, Lisboa");
 
-            venda.acrescentaProduto("scam1", 5, 25.4f);
-            venda.acrescentaProduto("scam2", 1, 33.2f);
+            venda.acrescentaProduto(1, 5, 25.4f);
+            venda.acrescentaProduto(2, 1, 33.2f);
 
             
 

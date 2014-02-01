@@ -12,7 +12,7 @@ namespace ASIVesteSedeAppLayer
     public interface ISedeVendaServico
     {
         /// <summary>
-        /// TODO
+        /// TODO: Comentarios
         /// </summary>
         /// <param name="venda"></param>
         [OperationContract]

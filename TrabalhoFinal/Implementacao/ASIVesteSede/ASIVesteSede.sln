@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASIVesteSede", "ASIVesteSede\ASIVesteSede.csproj", "{A33500C3-EE26-4D3A-9663-7923BB3072B7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueVendas", "..\QueueVendas\QueueVendas\QueueVendas.csproj", "{F9585BEF-766F-4253-8335-12B2E71F7CC5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F18DBDB3-8A6E-45BD-ACD9-79E1D497CE85} = {F18DBDB3-8A6E-45BD-ACD9-79E1D497CE85}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendasPublisher", "..\QueueVendas\VendasPublisher\VendasPublisher.csproj", "{3221CC25-BD29-4CC7-8F86-E3D28EC33D7F}"
 EndProject

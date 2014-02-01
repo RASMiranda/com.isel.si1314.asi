@@ -15,4 +15,14 @@ ToDo
 		Particao Horizontal:
 			ProdutoLojas1=SELECAO{tipo='CS'}(ProdutoLojas)
 			ProdutoLojas2=SELECAO{tipo='HD'}(ProdutoLojas)
+			
+	ASIVesteSedeAppLayer.SedeServico
+        //TODO: LOGICA DE NEGOCIO/ACESSO A DADOS
+	QueueVendas.VendaServico
+		//TODO: tratar as vendas nas lojas como na sede, contendo um produto cada uma?
+		foreach (var item in ordem.vendaItems)
+		{
+            if (item != null)//TODO: FIX THIS, ordem.vendaItems vem com elementos vazios, limpar no cliente antes de enviar...		
+		//...
+			cl.registaVenda(venda);//TODO: Neste cenario com varios produtos numa venda fara sentido colocar este ciclo dentro de uma transacção?
 ===================

@@ -12,14 +12,14 @@ namespace ASIVesteSedeAppLayer
     public interface ISedeServico
     {
         /// <summary>
-        /// TODO
+        /// TODO: Comentarios
         /// </summary>
         /// <param name="venda"></param>
         [OperationContract]
         List<Venda> obtemVendas();
 
         /// <summary>
-        /// TODO
+        /// TODO: Comentarios
         /// </summary>
         /// <param name="CodigoVenda"></param>
         /// <returns></returns>
@@ -27,7 +27,7 @@ namespace ASIVesteSedeAppLayer
         bool expedirEncomendaVenda(Int32 codigoVenda);
 
         /// <summary>
-        /// TODO
+        /// TODO: Comentarios
         /// </summary>
         /// <param name="produto"></param>
         /// <returns></returns>
@@ -35,35 +35,35 @@ namespace ASIVesteSedeAppLayer
         Int32 inserirProduto(Produto produto);
 
         /// <summary>
-        /// TODO
+        /// TODO: Comentarios
         /// </summary>
         /// <returns></returns>
         [OperationContract]
         List<Produto> obtemProdutos();
 
         /// <summary>
-        /// 
+        /// TODO: Comentarios
         /// </summary>
         /// <param name="fornecedor"></param>
         [OperationContract]
         bool inserirFornecedores(Fornecedor fornecedor);
 
         /// <summary>
-        /// TODO
+        /// TODO: Comentarios
         /// </summary>
         /// <returns></returns>
         [OperationContract]
         List<Fornecedor> obtemFornecedores();
 
         /// <summary>
-        /// 
+        /// TODO: Comentarios
         /// </summary>
         /// <returns></returns>
         [OperationContract]
         List<Encomenda> obtemEncomendasFornecedor();
 
         /// <summary>
-        /// 
+        /// TODO: Comentarios
         /// </summary>
         /// <param name="IdEncomenda"></param>
         /// <returns></returns>

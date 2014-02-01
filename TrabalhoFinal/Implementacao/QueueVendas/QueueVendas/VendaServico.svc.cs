@@ -8,13 +8,27 @@ using System.Text;
 
 namespace QueueVendas
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class VendaServico : IVendaServico
     {
-        public void enviaVenda( VendaOrdem ordem)
+        public void enviaVenda(VendaOrdem ordem)
         {
-            Console.Write( "You entered: {0}", ordem);
+            Console.Write("You entered: {0}", ordem);//TODO: DELETE AFTER TESTES?
+
+            SedeVendaServicoReference.SedeVendaServicoClient cl = new SedeVendaServicoReference.SedeVendaServicoClient();
+            
+            //TODO: tratar as vendas nas lojas como na sede, contendo um produto cada uma?
+            foreach (var item in ordem.vendaItems)
+	        {
+                if (item != null)//TODO: FIX THIS, ordem.vendaItems vem com elementos vazios, limpar no cliente antes de enviar...
+                {
+                    SedeVendaServicoReference.Venda venda = new SedeVendaServicoReference.Venda();
+                    venda.IdProduto = item.id;
+                    venda.Qtd = item.quantidade;
+                    venda.MoradaCliente = ordem.moradaCliente;
+                    venda.NomeCliente = ordem.nomeCliente;
+                    cl.registaVenda(venda);//TODO: Neste cenario com varios produtos numa venda fara sentido colocar este ciclo dentro de uma transacção?
+                }
+	        }
         }
     }
 }
