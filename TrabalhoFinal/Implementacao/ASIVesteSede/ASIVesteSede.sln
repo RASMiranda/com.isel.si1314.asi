@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendasPublisher", "..\Queue
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendasReceiver", "..\QueueVendas\VendasReceiver\VendasReceiver.csproj", "{0F7860E1-E38F-455F-AED0-131F44DCD56A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASIVesteSedeAppLayer", "ASIVesteSedeAppLayer\ASIVesteSedeAppLayer.csproj", "{F18DBDB3-8A6E-45BD-ACD9-79E1D497CE85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{0F7860E1-E38F-455F-AED0-131F44DCD56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F7860E1-E38F-455F-AED0-131F44DCD56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F7860E1-E38F-455F-AED0-131F44DCD56A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F18DBDB3-8A6E-45BD-ACD9-79E1D497CE85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F18DBDB3-8A6E-45BD-ACD9-79E1D497CE85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F18DBDB3-8A6E-45BD-ACD9-79E1D497CE85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F18DBDB3-8A6E-45BD-ACD9-79E1D497CE85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

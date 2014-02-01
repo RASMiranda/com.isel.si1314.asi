@@ -3,3 +3,8 @@ c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas
 c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\obj\Debug\QueueVendas.csprojResolveAssemblyReference.cache
 c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\obj\Debug\QueueVendas.dll
 c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\obj\Debug\QueueVendas.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\QueueVendas\bin\QueueVendas.dll
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\QueueVendas\bin\QueueVendas.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\QueueVendas\obj\Debug\QueueVendas.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\QueueVendas\obj\Debug\QueueVendas.dll
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\QueueVendas\obj\Debug\QueueVendas.pdb

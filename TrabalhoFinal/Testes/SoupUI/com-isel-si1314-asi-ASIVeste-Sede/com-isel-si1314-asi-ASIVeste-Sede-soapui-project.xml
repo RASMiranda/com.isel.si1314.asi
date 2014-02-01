@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="com.isel.si1314.asi.ASIVeste.Sede" resourceRoot="" soapui-version="4.6.3" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_ISedeServico" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ISedeServico" soapVersion="1_1" anonymous="optional" definition="http://localhost:55357/SedeServico.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:55357/SedeServico.svc?wsdl"><con:part><con:url>http://localhost:55357/SedeServico.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SedeServico" targetNamespace="http://asiveste/services/sede" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://asiveste/services/sede" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://tempuri.org/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost:55357/SedeServico.svc?wsdl=wsdl0"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://asiveste/services/sede/Imports">
+      <xsd:import schemaLocation="http://localhost:55357/SedeServico.svc?xsd=xsd0" namespace="http://asiveste/services/sede"/>
+      <xsd:import schemaLocation="http://localhost:55357/SedeServico.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:55357/SedeServico.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISedeServico_obtemVendas_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtemVendas"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_obtemVendas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtemVendasResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_expedirEncomendaVenda_InputMessage">
+    <wsdl:part name="parameters" element="tns:expedirEncomendaVenda"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_expedirEncomendaVenda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:expedirEncomendaVendaResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_inserirProduto_InputMessage">
+    <wsdl:part name="parameters" element="tns:inserirProduto"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_inserirProduto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inserirProdutoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_obtemProdutos_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtemProdutos"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_obtemProdutos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtemProdutosResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_inserirFornecedores_InputMessage">
+    <wsdl:part name="parameters" element="tns:inserirFornecedores"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_inserirFornecedores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:inserirFornecedoresResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_obtemFornecedores_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtemFornecedores"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_obtemFornecedores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtemFornecedoresResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_obtemEncomendasFornecedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtemEncomendasFornecedor"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_obtemEncomendasFornecedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtemEncomendasFornecedorResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_recebeEncomendaFornecedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:recebeEncomendaFornecedor"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeServico_recebeEncomendaFornecedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recebeEncomendaFornecedorResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ISedeServico">
+    <wsdl:operation name="obtemVendas">
+      <wsdl:input wsaw:Action="http://asiveste/services/sede/ISedeServico/obtemVendas" message="tns:ISedeServico_obtemVendas_InputMessage"/>
+      <wsdl:output wsaw:Action="http://asiveste/services/sede/ISedeServico/obtemVendasResponse" message="tns:ISedeServico_obtemVendas_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="expedirEncomendaVenda">
+      <wsdl:input wsaw:Action="http://asiveste/services/sede/ISedeServico/expedirEncomendaVenda" message="tns:ISedeServico_expedirEncomendaVenda_InputMessage"/>
+      <wsdl:output wsaw:Action="http://asiveste/services/sede/ISedeServico/expedirEncomendaVendaResponse" message="tns:ISedeServico_expedirEncomendaVenda_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="inserirProduto">
+      <wsdl:input wsaw:Action="http://asiveste/services/sede/ISedeServico/inserirProduto" message="tns:ISedeServico_inserirProduto_InputMessage"/>
+      <wsdl:output wsaw:Action="http://asiveste/services/sede/ISedeServico/inserirProdutoResponse" message="tns:ISedeServico_inserirProduto_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="obtemProdutos">
+      <wsdl:input wsaw:Action="http://asiveste/services/sede/ISedeServico/obtemProdutos" message="tns:ISedeServico_obtemProdutos_InputMessage"/>
+      <wsdl:output wsaw:Action="http://asiveste/services/sede/ISedeServico/obtemProdutosResponse" message="tns:ISedeServico_obtemProdutos_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="inserirFornecedores">
+      <wsdl:input wsaw:Action="http://asiveste/services/sede/ISedeServico/inserirFornecedores" message="tns:ISedeServico_inserirFornecedores_InputMessage"/>
+      <wsdl:output wsaw:Action="http://asiveste/services/sede/ISedeServico/inserirFornecedoresResponse" message="tns:ISedeServico_inserirFornecedores_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="obtemFornecedores">
+      <wsdl:input wsaw:Action="http://asiveste/services/sede/ISedeServico/obtemFornecedores" message="tns:ISedeServico_obtemFornecedores_InputMessage"/>
+      <wsdl:output wsaw:Action="http://asiveste/services/sede/ISedeServico/obtemFornecedoresResponse" message="tns:ISedeServico_obtemFornecedores_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="obtemEncomendasFornecedor">
+      <wsdl:input wsaw:Action="http://asiveste/services/sede/ISedeServico/obtemEncomendasFornecedor" message="tns:ISedeServico_obtemEncomendasFornecedor_InputMessage"/>
+      <wsdl:output wsaw:Action="http://asiveste/services/sede/ISedeServico/obtemEncomendasFornecedorResponse" message="tns:ISedeServico_obtemEncomendasFornecedor_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="recebeEncomendaFornecedor">
+      <wsdl:input wsaw:Action="http://asiveste/services/sede/ISedeServico/recebeEncomendaFornecedor" message="tns:ISedeServico_recebeEncomendaFornecedor_InputMessage"/>
+      <wsdl:output wsaw:Action="http://asiveste/services/sede/ISedeServico/recebeEncomendaFornecedorResponse" message="tns:ISedeServico_recebeEncomendaFornecedor_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="SedeServico">
+    <wsdl:port name="BasicHttpBinding_ISedeServico" binding="i0:BasicHttpBinding_ISedeServico">
+      <soap:address location="http://localhost:55357/SedeServico.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:55357/SedeServico.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://asiveste/services/sede" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:import namespace="http://asiveste/services/sede" location="http://localhost:55357/SedeServico.svc?wsdl"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_ISedeServico" type="i0:ISedeServico">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="obtemVendas">
+      <soap:operation soapAction="http://asiveste/services/sede/ISedeServico/obtemVendas" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="expedirEncomendaVenda">
+      <soap:operation soapAction="http://asiveste/services/sede/ISedeServico/expedirEncomendaVenda" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirProduto">
+      <soap:operation soapAction="http://asiveste/services/sede/ISedeServico/inserirProduto" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtemProdutos">
+      <soap:operation soapAction="http://asiveste/services/sede/ISedeServico/obtemProdutos" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserirFornecedores">
+      <soap:operation soapAction="http://asiveste/services/sede/ISedeServico/inserirFornecedores" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtemFornecedores">
+      <soap:operation soapAction="http://asiveste/services/sede/ISedeServico/obtemFornecedores" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtemEncomendasFornecedor">
+      <soap:operation soapAction="http://asiveste/services/sede/ISedeServico/obtemEncomendasFornecedor" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recebeEncomendaFornecedor">
+      <soap:operation soapAction="http://asiveste/services/sede/ISedeServico/recebeEncomendaFornecedor" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:55357/SedeServico.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://asiveste/services/sede" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://asiveste/services/sede">
+  <xs:import schemaLocation="http://localhost:55357/SedeServico.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer"/>
+  <xs:element name="obtemVendas">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtemVendasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="obtemVendasResult" nillable="true" type="q1:ArrayOfVenda" xmlns:q1="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="expedirEncomendaVenda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoVenda" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="expedirEncomendaVendaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="expedirEncomendaVendaResult" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirProduto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="produto" nillable="true" type="q2:Produto" xmlns:q2="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirProdutoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inserirProdutoResult" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtemProdutos">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtemProdutosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="obtemProdutosResult" nillable="true" type="q3:ArrayOfProduto" xmlns:q3="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirFornecedores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fornecedor" nillable="true" type="q4:Fornecedor" xmlns:q4="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="inserirFornecedoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inserirFornecedoresResult" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtemFornecedores">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtemFornecedoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="obtemFornecedoresResult" nillable="true" type="q5:ArrayOfFornecedor" xmlns:q5="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtemEncomendasFornecedor">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtemEncomendasFornecedorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="obtemEncomendasFornecedorResult" nillable="true" type="q6:ArrayOfEncomenda" xmlns:q6="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recebeEncomendaFornecedor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdEncomenda" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="recebeEncomendaFornecedorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="recebeEncomendaFornecedorResult" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:55357/SedeServico.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer">
+  <xs:complexType name="ArrayOfVenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Venda" nillable="true" type="tns:Venda"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVenda" nillable="true" type="tns:ArrayOfVenda"/>
+  <xs:complexType name="Venda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="IdProduto" type="xs:int"/>
+      <xs:element minOccurs="0" name="MoradaCliente" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NomeCliente" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Qtd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Venda" nillable="true" type="tns:Venda"/>
+  <xs:complexType name="Produto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Designacao" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="IdFornecedor" type="xs:int"/>
+      <xs:element minOccurs="0" name="Preco" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="StockMinimo" type="xs:int"/>
+      <xs:element minOccurs="0" name="StockQtd" type="xs:int"/>
+      <xs:element minOccurs="0" name="Tipo" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Produto" nillable="true" type="tns:Produto"/>
+  <xs:complexType name="ArrayOfProduto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Produto" nillable="true" type="tns:Produto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProduto" nillable="true" type="tns:ArrayOfProduto"/>
+  <xs:complexType name="Fornecedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="Morada" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Fornecedor" nillable="true" type="tns:Fornecedor"/>
+  <xs:complexType name="ArrayOfFornecedor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Fornecedor" nillable="true" type="tns:Fornecedor"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFornecedor" nillable="true" type="tns:ArrayOfFornecedor"/>
+  <xs:complexType name="ArrayOfEncomenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Encomenda" nillable="true" type="tns:Encomenda"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEncomenda" nillable="true" type="tns:ArrayOfEncomenda"/>
+  <xs:complexType name="Encomenda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="IdProduto" type="xs:int"/>
+      <xs:element minOccurs="0" name="IdVenda" type="xs:int"/>
+      <xs:element minOccurs="0" name="Qtd" type="xs:int"/>
+      <xs:element minOccurs="0" name="Recebida" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Encomenda" nillable="true" type="tns:Encomenda"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:55357/SedeServico.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:55357/SedeServico.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://asiveste/services/sede/ISedeServico/expedirEncomendaVenda" name="expedirEncomendaVenda" bindingOperationName="expedirEncomendaVenda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:55357/SedeServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sede="http://asiveste/services/sede">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sede:expedirEncomendaVenda>
+         <!--Optional:-->
+         <sede:codigoVenda>?</sede:codigoVenda>
+      </sede:expedirEncomendaVenda>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://asiveste/services/sede/ISedeServico/expedirEncomendaVenda"/></con:call></con:operation><con:operation isOneWay="false" action="http://asiveste/services/sede/ISedeServico/inserirFornecedores" name="inserirFornecedores" bindingOperationName="inserirFornecedores" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:55357/SedeServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sede="http://asiveste/services/sede" xmlns:asiv="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sede:inserirFornecedores>
+         <!--Optional:-->
+         <sede:fornecedor>
+            <!--Optional:-->
+            <asiv:Id>?</asiv:Id>
+            <!--Optional:-->
+            <asiv:Morada>?</asiv:Morada>
+            <!--Optional:-->
+            <asiv:Nome>?</asiv:Nome>
+         </sede:fornecedor>
+      </sede:inserirFornecedores>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://asiveste/services/sede/ISedeServico/inserirFornecedores"/></con:call></con:operation><con:operation isOneWay="false" action="http://asiveste/services/sede/ISedeServico/inserirProduto" name="inserirProduto" bindingOperationName="inserirProduto" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:55357/SedeServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sede="http://asiveste/services/sede" xmlns:asiv="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sede:inserirProduto>
+         <!--Optional:-->
+         <sede:produto>
+            <!--Optional:-->
+            <asiv:Designacao>?</asiv:Designacao>
+            <!--Optional:-->
+            <asiv:Id>?</asiv:Id>
+            <!--Optional:-->
+            <asiv:IdFornecedor>?</asiv:IdFornecedor>
+            <!--Optional:-->
+            <asiv:Preco>?</asiv:Preco>
+            <!--Optional:-->
+            <asiv:StockMinimo>?</asiv:StockMinimo>
+            <!--Optional:-->
+            <asiv:StockQtd>?</asiv:StockQtd>
+            <!--Optional:-->
+            <asiv:Tipo>?</asiv:Tipo>
+         </sede:produto>
+      </sede:inserirProduto>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://asiveste/services/sede/ISedeServico/inserirProduto"/></con:call></con:operation><con:operation isOneWay="false" action="http://asiveste/services/sede/ISedeServico/obtemEncomendasFornecedor" name="obtemEncomendasFornecedor" bindingOperationName="obtemEncomendasFornecedor" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:55357/SedeServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sede="http://asiveste/services/sede">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sede:obtemEncomendasFornecedor/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://asiveste/services/sede/ISedeServico/obtemEncomendasFornecedor"/></con:call></con:operation><con:operation isOneWay="false" action="http://asiveste/services/sede/ISedeServico/obtemFornecedores" name="obtemFornecedores" bindingOperationName="obtemFornecedores" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:55357/SedeServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sede="http://asiveste/services/sede">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sede:obtemFornecedores/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://asiveste/services/sede/ISedeServico/obtemFornecedores"/></con:call></con:operation><con:operation isOneWay="false" action="http://asiveste/services/sede/ISedeServico/obtemProdutos" name="obtemProdutos" bindingOperationName="obtemProdutos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:55357/SedeServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sede="http://asiveste/services/sede">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sede:obtemProdutos/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://asiveste/services/sede/ISedeServico/obtemProdutos"/></con:call></con:operation><con:operation isOneWay="false" action="http://asiveste/services/sede/ISedeServico/obtemVendas" name="obtemVendas" bindingOperationName="obtemVendas" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:55357/SedeServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sede="http://asiveste/services/sede">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sede:obtemVendas/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://asiveste/services/sede/ISedeServico/obtemVendas"/></con:call></con:operation><con:operation isOneWay="false" action="http://asiveste/services/sede/ISedeServico/recebeEncomendaFornecedor" name="recebeEncomendaFornecedor" bindingOperationName="recebeEncomendaFornecedor" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:55357/SedeServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sede="http://asiveste/services/sede">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sede:recebeEncomendaFornecedor>
+         <!--Optional:-->
+         <sede:IdEncomenda>?</sede:IdEncomenda>
+      </sede:recebeEncomendaFornecedor>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://asiveste/services/sede/ISedeServico/recebeEncomendaFornecedor"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_ISedeVendaServico" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ISedeVendaServico" soapVersion="1_1" anonymous="optional" definition="http://localhost:55357/SedeVendaServico.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:55357/SedeVendaServico.svc?wsdl"><con:part><con:url>http://localhost:55357/SedeVendaServico.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SedeVendaServico" targetNamespace="http://asiveste/services/sede/venda" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://asiveste/services/sede/venda" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://tempuri.org/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost:55357/SedeVendaServico.svc?wsdl=wsdl0"/>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://asiveste/services/sede/venda/Imports">
+      <xsd:import schemaLocation="http://localhost:55357/SedeVendaServico.svc?xsd=xsd0" namespace="http://asiveste/services/sede/venda"/>
+      <xsd:import schemaLocation="http://localhost:55357/SedeVendaServico.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:55357/SedeVendaServico.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISedeVendaServico_registaVenda_InputMessage">
+    <wsdl:part name="parameters" element="tns:registaVenda"/>
+  </wsdl:message>
+  <wsdl:message name="ISedeVendaServico_registaVenda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registaVendaResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ISedeVendaServico">
+    <wsdl:operation name="registaVenda">
+      <wsdl:input wsaw:Action="http://asiveste/services/sede/venda/ISedeVendaServico/registaVenda" message="tns:ISedeVendaServico_registaVenda_InputMessage"/>
+      <wsdl:output wsaw:Action="http://asiveste/services/sede/venda/ISedeVendaServico/registaVendaResponse" message="tns:ISedeVendaServico_registaVenda_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="SedeVendaServico">
+    <wsdl:port name="BasicHttpBinding_ISedeVendaServico" binding="i0:BasicHttpBinding_ISedeVendaServico">
+      <soap:address location="http://localhost:55357/SedeVendaServico.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:55357/SedeVendaServico.svc?wsdl=wsdl0</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://asiveste/services/sede/venda" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:import namespace="http://asiveste/services/sede/venda" location="http://localhost:55357/SedeVendaServico.svc?wsdl"/>
+  <wsdl:types/>
+  <wsdl:binding name="BasicHttpBinding_ISedeVendaServico" type="i0:ISedeVendaServico">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="registaVenda">
+      <soap:operation soapAction="http://asiveste/services/sede/venda/ISedeVendaServico/registaVenda" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:55357/SedeVendaServico.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://asiveste/services/sede/venda" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://asiveste/services/sede/venda">
+  <xs:import schemaLocation="http://localhost:55357/SedeVendaServico.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer"/>
+  <xs:element name="registaVenda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="venda" nillable="true" type="q1:Venda" xmlns:q1="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registaVendaResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:55357/SedeVendaServico.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer">
+  <xs:complexType name="Venda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int"/>
+      <xs:element minOccurs="0" name="IdProduto" type="xs:int"/>
+      <xs:element minOccurs="0" name="MoradaCliente" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NomeCliente" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Qtd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Venda" nillable="true" type="tns:Venda"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:55357/SedeVendaServico.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:55357/SedeVendaServico.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://asiveste/services/sede/venda/ISedeVendaServico/registaVenda" name="registaVenda" bindingOperationName="registaVenda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:55357/SedeVendaServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ven="http://asiveste/services/sede/venda" xmlns:asiv="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ven:registaVenda>
+         <!--Optional:-->
+         <ven:venda>
+            <!--Optional:-->
+            <asiv:Id>?</asiv:Id>
+            <!--Optional:-->
+            <asiv:IdProduto>?</asiv:IdProduto>
+            <!--Optional:-->
+            <asiv:MoradaCliente>?</asiv:MoradaCliente>
+            <!--Optional:-->
+            <asiv:NomeCliente>?</asiv:NomeCliente>
+            <!--Optional:-->
+            <asiv:Qtd>?</asiv:Qtd>
+         </ven:venda>
+      </ven:registaVenda>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://asiveste/services/sede/venda/ISedeVendaServico/registaVenda"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

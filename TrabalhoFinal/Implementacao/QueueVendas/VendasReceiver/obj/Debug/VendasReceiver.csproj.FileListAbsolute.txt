@@ -6,3 +6,11 @@ c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasRecei
 c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.csprojResolveAssemblyReference.cache
 c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.exe
 c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.exe.config
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.exe
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.exe
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\QueueVendas.dll
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\QueueVendas.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.csprojResolveAssemblyReference.cache
