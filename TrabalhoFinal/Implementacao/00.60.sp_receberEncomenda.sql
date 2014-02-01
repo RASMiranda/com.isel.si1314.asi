@@ -24,7 +24,10 @@ begin
 	BEGIN TRANSACTION T_sp_receberEncomenda
 
 	print 'Obter a VendaId e o ProdutoId para esta EncomendaId.'
-	SELECT @ProdutoId = [ProdutoId], @QtdEncomendada = [Qtd], @VendaId = [VendaId]
+	SELECT
+		@ProdutoId = [ProdutoId], 
+		@QtdEncomendada = [Qtd], 
+		@VendaId = [VendaId]
 	FROM [dbo].[Encomenda]
 	WHERE [Id] = @EncomendaId;
 
@@ -34,9 +37,9 @@ begin
 	WHERE [Id] = @EncomendaId;
 
 	print 'A expedir a venda que esta à espera desta encomenda. Se @VendaId is null o update n faz nada.'
-	UPDATE [dbo].[Expedicao]
+	UPDATE [dbo].[Venda]
 	SET Expedida = @VENDA_EXPEDIDA
-	WHERE [VendaId] = @VendaId;
+	WHERE [Id] = @VendaId;
 
 	print ' @QtdEncomendada='+cast(@QtdEncomendada as varchar)
 
@@ -45,7 +48,7 @@ begin
 	FROM [dbo].[Venda]
 	WHERE [Id] = @VendaId;
 
-	print ' @QtdEncomendada='+cast(@QtdEncomendada as varchar) + ' @ProdutoId='+cast(@ProdutoId as varchar)
+	print ' @QtdEncomendada=' + cast(@QtdEncomendada as varchar) + ' @ProdutoId='+cast(@ProdutoId as varchar)
 
 	print 'A actualizar o StockQtd. So uma das tabelas sera efectivamente escrita.'
 	UPDATE [dbo].[ProdutoCS]

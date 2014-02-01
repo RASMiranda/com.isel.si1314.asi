@@ -5,7 +5,7 @@ begin
 	begin transaction;
 	delete from [dbo].[ProdutoCS];
 	delete from [dbo].[ProdutoHD];
-	delete from [dbo].[Expedicao];
+	-- delete from [dbo].[Expedicao];
 	delete from [dbo].[Venda];
 	delete from [dbo].[Encomenda];
 	delete from [dbo].[Produto];
