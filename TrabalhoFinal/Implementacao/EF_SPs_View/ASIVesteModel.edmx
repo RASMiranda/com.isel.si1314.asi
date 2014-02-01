@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ASIVesteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Encomenda">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProdutoId" Type="int" />
+          <Property Name="Recebida" Type="bit" />
+          <Property Name="Qtd" Type="int" Nullable="false" />
+          <Property Name="VendaId" Type="int" />
+        </EntityType>
+        <EntityType Name="Fornecedor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" />
+          <Property Name="Morada" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Venda">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NomeCliente" Type="varchar" MaxLength="30" />
+          <Property Name="MoradaCliente" Type="varchar" MaxLength="30" />
+          <Property Name="ProdutoId" Type="int" Nullable="false" />
+          <Property Name="Qtd" Type="int" />
+          <Property Name="Expedida" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ASIVeste.dbo.vw_verificarStock' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_verificarStock">
+          <Key>
+            <PropertyRef Name="Pid" />
+            <PropertyRef Name="Fid" />
+            <PropertyRef Name="StockQtd" />
+            <PropertyRef Name="StockMinimo" />
+          </Key>
+          <Property Name="Pid" Type="int" Nullable="false" />
+          <Property Name="Fid" Type="int" Nullable="false" />
+          <Property Name="Designacao" Type="varchar" MaxLength="50" />
+          <Property Name="StockQtd" Type="int" Nullable="false" />
+          <Property Name="StockMinimo" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ASIVeste.dbo.vw_vProduto' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_vProduto">
+          <Key>
+            <PropertyRef Name="Id" />
+            
+            
+            
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Tipo" Type="int" />
+          <Property Name="Designacao" Type="varchar" MaxLength="50" />
+          <Property Name="Preco" Type="decimal" Precision="8" Scale="2" />
+          <Property Name="StockQtd" Type="int" Nullable="false" />
+          <Property Name="StockMinimo" Type="int" Nullable="false" />
+          <Property Name="FornecedorId" Type="int" Nullable="false" />
+        </EntityType>
+        <Function Name="sp_alterarProduto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="Tipo" Type="int" Mode="In" />
+          <Parameter Name="Designacao" Type="varchar" Mode="In" />
+          <Parameter Name="Preco" Type="decimal" Mode="In" />
+          <Parameter Name="StockQtd" Type="int" Mode="In" />
+          <Parameter Name="StockMinimo" Type="int" Mode="In" />
+          <Parameter Name="FornecedorId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_inserirProduto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Tipo" Type="int" Mode="In" />
+          <Parameter Name="Designacao" Type="varchar" Mode="In" />
+          <Parameter Name="Preco" Type="decimal" Mode="In" />
+          <Parameter Name="StockQtd" Type="int" Mode="In" />
+          <Parameter Name="StockMinimo" Type="int" Mode="In" />
+          <Parameter Name="FornecedorId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_realizarEncomenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProdutoId" Type="int" Mode="In" />
+          <Parameter Name="EncomendaRecebida" Type="int" Mode="In" />
+          <Parameter Name="QtdEncomendada" Type="int" Mode="In" />
+          <Parameter Name="VendaId" Type="int" Mode="In" />
+          <Parameter Name="EncomendaId" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="sp_realizarVenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NomeCliente" Type="varchar" Mode="In" />
+          <Parameter Name="MoradaCliente" Type="varchar" Mode="In" />
+          <Parameter Name="ProdutoId" Type="int" Mode="In" />
+          <Parameter Name="Qtd" Type="int" Mode="In" />
+          <Parameter Name="VendaId" Type="int" Mode="InOut" />
+          <Parameter Name="VendaExpedida" Type="bit" Mode="InOut" />
+          <Parameter Name="EncomendaId" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="sp_receberEncomenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EncomendaId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_removerProduto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="ASIVesteModelStoreContainer">
+          <EntitySet Name="Encomenda" EntityType="Self.Encomenda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Fornecedor" EntityType="Self.Fornecedor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Venda" EntityType="Self.Venda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_verificarStock" EntityType="Self.vw_verificarStock" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_verificarStock].[Pid] AS [Pid], 
+    [vw_verificarStock].[Fid] AS [Fid], 
+    [vw_verificarStock].[Designacao] AS [Designacao], 
+    [vw_verificarStock].[StockQtd] AS [StockQtd], 
+    [vw_verificarStock].[StockMinimo] AS [StockMinimo]
+    FROM [dbo].[vw_verificarStock] AS [vw_verificarStock]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_vProduto" EntityType="Self.vw_vProduto" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_vProduto].[Id] AS [Id], 
+    [vw_vProduto].[Tipo] AS [Tipo], 
+    [vw_vProduto].[Designacao] AS [Designacao], 
+    [vw_vProduto].[Preco] AS [Preco], 
+    [vw_vProduto].[StockQtd] AS [StockQtd], 
+    [vw_vProduto].[StockMinimo] AS [StockMinimo], 
+    [vw_vProduto].[FornecedorId] AS [FornecedorId]
+    FROM [dbo].[vw_vProduto] AS [vw_vProduto]</DefiningQuery>
+          </EntitySet>
+          </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ASIVesteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Encomenda">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProdutoId" Type="Int32" />
+          <Property Name="Recebida" Type="Boolean" />
+          <Property Name="Qtd" Type="Int32" Nullable="false" />
+          <Property Name="VendaId" Type="Int32" />
+          <NavigationProperty Name="vProduto" Relationship="ASIVesteModel.vw_vProdutoEncomenda" FromRole="Encomenda" ToRole="vw_vProduto" />
+        </EntityType>
+        <EntityType Name="Fornecedor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Morada" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="vProdutos" Relationship="ASIVesteModel.Fornecedorvw_vProduto" FromRole="Fornecedor" ToRole="vw_vProduto" />
+        </EntityType>
+        <EntityType Name="Venda">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomeCliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="MoradaCliente" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ProdutoId" Type="Int32" Nullable="false" />
+          <Property Name="Qtd" Type="Int32" />
+          <Property Name="Expedida" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="vProduto" Relationship="ASIVesteModel.vw_vProdutoVenda" FromRole="Venda" ToRole="vw_vProduto" />
+        </EntityType>
+        <EntityType Name="vw_verificarStock">
+          <Key>
+            <PropertyRef Name="Pid" />
+            <PropertyRef Name="Fid" />
+            <PropertyRef Name="StockQtd" />
+            <PropertyRef Name="StockMinimo" />
+          </Key>
+          <Property Name="Pid" Type="Int32" Nullable="false" />
+          <Property Name="Fid" Type="Int32" Nullable="false" />
+          <Property Name="Designacao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StockQtd" Type="Int32" Nullable="false" />
+          <Property Name="StockMinimo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ASIVesteEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Encomendas" EntityType="Self.Encomenda" />
+          <EntitySet Name="Fornecedores" EntityType="Self.Fornecedor" />
+          <EntitySet Name="Vendas" EntityType="Self.Venda" />
+          <EntitySet Name="vw_verificarStock" EntityType="Self.vw_verificarStock" />
+          <FunctionImport Name="sp_inserirProduto">
+            <Parameter Name="Tipo" Mode="In" Type="Int32" />
+            <Parameter Name="Designacao" Mode="In" Type="String" />
+            <Parameter Name="Preco" Mode="In" Type="Decimal" />
+            <Parameter Name="StockQtd" Mode="In" Type="Int32" />
+            <Parameter Name="StockMinimo" Mode="In" Type="Int32" />
+            <Parameter Name="FornecedorId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_realizarEncomenda">
+            <Parameter Name="ProdutoId" Mode="In" Type="Int32" />
+            <Parameter Name="EncomendaRecebida" Mode="In" Type="Int32" />
+            <Parameter Name="QtdEncomendada" Mode="In" Type="Int32" />
+            <Parameter Name="VendaId" Mode="In" Type="Int32" />
+            <Parameter Name="EncomendaId" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_realizarVenda">
+            <Parameter Name="NomeCliente" Mode="In" Type="String" />
+            <Parameter Name="MoradaCliente" Mode="In" Type="String" />
+            <Parameter Name="ProdutoId" Mode="In" Type="Int32" />
+            <Parameter Name="Qtd" Mode="In" Type="Int32" />
+            <Parameter Name="VendaId" Mode="InOut" Type="Int32" />
+            <Parameter Name="VendaExpedida" Mode="InOut" Type="Boolean" />
+            <Parameter Name="EncomendaId" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_receberEncomenda">
+          <Parameter Name="EncomendaId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_removerProduto">
+          <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="vProdutos" EntityType="ASIVesteModel.vProduto" />
+          <FunctionImport Name="sp_alterarProduto">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="Tipo" Mode="In" Type="Int32" />
+            <Parameter Name="Designacao" Mode="In" Type="String" />
+            <Parameter Name="Preco" Mode="In" Type="Decimal" />
+            <Parameter Name="StockQtd" Mode="In" Type="Int32" />
+            <Parameter Name="StockMinimo" Mode="In" Type="Int32" />
+            <Parameter Name="FornecedorId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <AssociationSet Name="vw_vProdutoEncomenda" Association="ASIVesteModel.vw_vProdutoEncomenda">
+            <End Role="vw_vProduto" EntitySet="vProdutos" />
+            <End Role="Encomenda" EntitySet="Encomendas" />
+          </AssociationSet>
+          <AssociationSet Name="Fornecedorvw_vProduto" Association="ASIVesteModel.Fornecedorvw_vProduto">
+            <End Role="Fornecedor" EntitySet="Fornecedores" />
+            <End Role="vw_vProduto" EntitySet="vProdutos" />
+          </AssociationSet>
+          <AssociationSet Name="vw_vProdutoVenda" Association="ASIVesteModel.vw_vProdutoVenda">
+            <End Role="vw_vProduto" EntitySet="vProdutos" />
+            <End Role="Venda" EntitySet="Vendas" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="vProduto">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Tipo" Type="Int32" />
+          <Property Name="Designacao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Preco" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="StockQtd" Type="Int32" Nullable="false" />
+          <Property Name="StockMinimo" Type="Int32" Nullable="false" />
+          <Property Name="FornecedorId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Encomendas" Relationship="ASIVesteModel.vw_vProdutoEncomenda" FromRole="vw_vProduto" ToRole="Encomenda" />
+          <NavigationProperty Name="Fornecedor" Relationship="ASIVesteModel.Fornecedorvw_vProduto" FromRole="vw_vProduto" ToRole="Fornecedor" />
+          <NavigationProperty Name="Vendas" Relationship="ASIVesteModel.vw_vProdutoVenda" FromRole="vw_vProduto" ToRole="Venda" />
+        </EntityType>
+        <Association Name="vw_vProdutoEncomenda">
+          <End Type="ASIVesteModel.vProduto" Role="vw_vProduto" Multiplicity="0..1" />
+          <End Type="ASIVesteModel.Encomenda" Role="Encomenda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vw_vProduto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Encomenda">
+              <PropertyRef Name="ProdutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fornecedorvw_vProduto">
+          <End Type="ASIVesteModel.Fornecedor" Role="Fornecedor" Multiplicity="1" />
+          <End Type="ASIVesteModel.vProduto" Role="vw_vProduto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fornecedor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="vw_vProduto">
+              <PropertyRef Name="FornecedorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="vw_vProdutoVenda">
+          <End Type="ASIVesteModel.vProduto" Role="vw_vProduto" Multiplicity="1" />
+          <End Type="ASIVesteModel.Venda" Role="Venda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vw_vProduto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Venda">
+              <PropertyRef Name="ProdutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ASIVesteModelStoreContainer" CdmEntityContainer="ASIVesteEntities">
+          <EntitySetMapping Name="Encomendas">
+            <EntityTypeMapping TypeName="ASIVesteModel.Encomenda">
+              <MappingFragment StoreEntitySet="Encomenda">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ProdutoId" ColumnName="ProdutoId" />
+                <ScalarProperty Name="Recebida" ColumnName="Recebida" />
+                <ScalarProperty Name="Qtd" ColumnName="Qtd" />
+                <ScalarProperty Name="VendaId" ColumnName="VendaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fornecedores">
+            <EntityTypeMapping TypeName="ASIVesteModel.Fornecedor">
+              <MappingFragment StoreEntitySet="Fornecedor">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Morada" ColumnName="Morada" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendas">
+            <EntityTypeMapping TypeName="ASIVesteModel.Venda">
+              <MappingFragment StoreEntitySet="Venda">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NomeCliente" ColumnName="NomeCliente" />
+                <ScalarProperty Name="MoradaCliente" ColumnName="MoradaCliente" />
+                <ScalarProperty Name="ProdutoId" ColumnName="ProdutoId" />
+                <ScalarProperty Name="Qtd" ColumnName="Qtd" />
+                <ScalarProperty Name="Expedida" ColumnName="Expedida" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_verificarStock">
+            <EntityTypeMapping TypeName="ASIVesteModel.vw_verificarStock">
+              <MappingFragment StoreEntitySet="vw_verificarStock">
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+                <ScalarProperty Name="Fid" ColumnName="Fid" />
+                <ScalarProperty Name="Designacao" ColumnName="Designacao" />
+                <ScalarProperty Name="StockQtd" ColumnName="StockQtd" />
+                <ScalarProperty Name="StockMinimo" ColumnName="StockMinimo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_inserirProduto" FunctionName="ASIVesteModel.Store.sp_inserirProduto" />
+          <FunctionImportMapping FunctionImportName="sp_realizarEncomenda" FunctionName="ASIVesteModel.Store.sp_realizarEncomenda" />
+          <FunctionImportMapping FunctionImportName="sp_realizarVenda" FunctionName="ASIVesteModel.Store.sp_realizarVenda" />
+          <FunctionImportMapping FunctionImportName="sp_receberEncomenda" FunctionName="ASIVesteModel.Store.sp_receberEncomenda" />
+          <FunctionImportMapping FunctionImportName="sp_removerProduto" FunctionName="ASIVesteModel.Store.sp_removerProduto" />
+          <EntitySetMapping Name="vProdutos">
+            <EntityTypeMapping TypeName="ASIVesteModel.vProduto">
+              <MappingFragment StoreEntitySet="vw_vProduto">
+                <ScalarProperty Name="FornecedorId" ColumnName="FornecedorId" />
+                <ScalarProperty Name="StockMinimo" ColumnName="StockMinimo" />
+                <ScalarProperty Name="StockQtd" ColumnName="StockQtd" />
+                <ScalarProperty Name="Preco" ColumnName="Preco" />
+                <ScalarProperty Name="Designacao" ColumnName="Designacao" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="ASIVesteModel.vProduto">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="ASIVesteModel.Store.sp_inserirProduto">
+                  <ScalarProperty Name="FornecedorId" ParameterName="FornecedorId" />
+                  <ScalarProperty Name="StockMinimo" ParameterName="StockMinimo" />
+                  <ScalarProperty Name="StockQtd" ParameterName="StockQtd" />
+                  <ScalarProperty Name="Preco" ParameterName="Preco" />
+                  <ScalarProperty Name="Designacao" ParameterName="Designacao" />
+                  <ScalarProperty Name="Tipo" ParameterName="Tipo" />
+                  <ResultBinding Name="Id" ColumnName="Id" />
+                </InsertFunction>
+                <UpdateFunction FunctionName="ASIVesteModel.Store.sp_alterarProduto">
+                  <ScalarProperty Name="FornecedorId" ParameterName="FornecedorId" Version="Current" />
+                  <ScalarProperty Name="StockMinimo" ParameterName="StockMinimo" Version="Current" />
+                  <ScalarProperty Name="StockQtd" ParameterName="StockQtd" Version="Current" />
+                  <ScalarProperty Name="Preco" ParameterName="Preco" Version="Current" />
+                  <ScalarProperty Name="Designacao" ParameterName="Designacao" Version="Current" />
+                  <ScalarProperty Name="Tipo" ParameterName="Tipo" Version="Current" />
+                  <ScalarProperty Name="Id" ParameterName="Id" Version="Current" />
+                </UpdateFunction>
+                <DeleteFunction FunctionName="ASIVesteModel.Store.sp_removerProduto">
+                  <ScalarProperty Name="Id" ParameterName="Id" />
+                </DeleteFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterarProduto" FunctionName="ASIVesteModel.Store.sp_alterarProduto" />
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

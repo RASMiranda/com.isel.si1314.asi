@@ -13,7 +13,7 @@ create procedure [dbo].[sp_realizarVenda]
 
     @VendaId		[INT] OUTPUT,
     @VendaExpedida	[BIT] OUTPUT,
-    @ExpedicaoId	[INT] OUTPUT,
+    -- @ExpedicaoId	[INT] OUTPUT,
     @EncomendaId	[INT] OUTPUT
 as
 declare
@@ -23,23 +23,14 @@ declare
 	@StockMinimo	[INT],
 	@StockQtd		[INT],
 	@QtdAEncomendar [INT],
-	@ENCOMENDA_AGUARDA_RECEPCAO int = 0,
-	@ENCOMENDA_RECEBIDA int = 1,
-	@VENDA_AGUARDA_EXPEDICAO int = 0,
-	@VENDA_EXPEDIDA int = 1
+	@ENCOMENDA_AGUARDA_RECEPCAO int = 0,	@ENCOMENDA_RECEBIDA int = 1,
+	@VENDA_AGUARDA_EXPEDICAO int = 0,		@VENDA_EXPEDIDA int = 1
 begin
 
 	-- http://stackoverflow.com/questions/4630689/how-do-i-unset-reset-a-transaction-isolation-level-for-sql-server
 	-- SET XACT_ABORT ON -- a trans nao é distribuida
 	SET TRANSACTION ISOLATION LEVEL REPEATABLE READ
 	BEGIN TRANSACTION T_sp_realizarVenda
-
-	print 'Registar a venda.'
-	INSERT INTO [dbo].[Venda]
-		([NomeCliente], [MoradaCliente], [ProdutoId], [Qtd])
-	VALUES
-		(@nomeCliente, @moradaCliente, @produtoId, @Qtd);
-	SELECT @VendaId = SCOPE_IDENTITY(); -- get id gerado pelo insert
 
 	print 'Verificar se ha stock para satisfazer @Qtd; se não fica tudo a null.'
 	select 
@@ -56,17 +47,26 @@ begin
 		where p.id = @ProdutoId
 	) x;
 	-- print ' :' + cast( as varchar) + 
-	print ' @Tipo:' + cast( @Tipo as varchar) + ' @StockMinimo:' + cast( @StockMinimo as varchar) + ' @StockQtd:' + cast( @StockQtd as varchar)
+	-- print ' @Tipo:' + cast( @Tipo as varchar) + ' @StockMinimo:' + cast( @StockMinimo as varchar) + ' @StockQtd:' + cast( @StockQtd as varchar)
 
 	print 'Registar a expedicao da encomenda: 1 significa que foi expedida.'
-	SELECT @VendaExpedida = CASE WHEN @Qtd <= @StockQtd THEN 1 ELSE 0 END;
+	SELECT @VendaExpedida = CASE WHEN @Qtd <= @StockQtd THEN @VENDA_EXPEDIDA ELSE @VENDA_AGUARDA_EXPEDICAO END;
 
+	print 'Registar a venda.'
+	INSERT INTO [dbo].[Venda]
+		([NomeCliente], [MoradaCliente], [ProdutoId], [Qtd], [Expedida])
+	VALUES
+		(@nomeCliente, @moradaCliente, @produtoId, @Qtd, @VendaExpedida);
+	SELECT @VendaId = SCOPE_IDENTITY(); -- get id gerado pelo insert
+
+	/*
 	INSERT INTO [dbo].[Expedicao]
 		([VendaId] ,[Expedida])
 	VALUES
 		(@VendaId, @VendaExpedida);
 	SELECT @ExpedicaoId = SCOPE_IDENTITY();
-
+	*/
+	
 	print 'Se @Qtd <= StockQtd pode-se vender e expedir ja.'
 	if @Qtd <= @StockQtd
 	begin

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b206b62fa8dd4073ba7b52c460a09363" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="ASIVesteModel.Encomenda" Width="1.5" PointX="0.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASIVesteModel.Fornecedor" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASIVesteModel.Venda" Width="1.5" PointX="5.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASIVesteModel.vw_verificarStock" Width="1.5" PointX="8.125" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASIVesteModel.vProduto" Width="1.5" PointX="3.25" PointY="1.25" />
+        <AssociationConnector Association="ASIVesteModel.vw_vProdutoEncomenda" />
+        <AssociationConnector Association="ASIVesteModel.Fornecedorvw_vProduto" />
+        <AssociationConnector Association="ASIVesteModel.vw_vProdutoVenda" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

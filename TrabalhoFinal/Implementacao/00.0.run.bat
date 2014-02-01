@@ -24,12 +24,16 @@ echo Running 00.25.vw_verificarStock.sql na Sede.
 sqlcmd -b -H localhost -S "%SEDE%" -i 00.25.vw_verificarStock.sql
 if not %errorlevel% == 0 goto end
 
+echo Running 00.26.vw_vProduto.sql na Sede.
+sqlcmd -b -H localhost -S "%SEDE%" -i 00.26.vw_vProduto.sql
+if not %errorlevel% == 0 goto end
+
 echo Running 00.30.sp_realizarEncomenda.sql na Sede.
 sqlcmd -b -H localhost -S "%SEDE%" -i 00.30.sp_realizarEncomenda.sql
 if not %errorlevel% == 0 goto end
 
-echo Running 00.40.sp_inserirProduto_sp_removerProduto.sql na Sede.
-sqlcmd -b -H localhost -S "%SEDE%" -i 00.40.sp_inserirProduto_sp_removerProduto.sql
+echo Running 00.40.sps_CrUDProduto.sql na Sede.
+sqlcmd -b -H localhost -S "%SEDE%" -i 00.40.sps_CrUDProduto.sql
 if not %errorlevel% == 0 goto end
 
 echo Running 00.50.sp_realizarVenda.sql na Sede.
@@ -48,6 +52,8 @@ sqlcmd -b -H localhost -S "%SEDE%" -i 00.930.InsercaoDadosTeste_DB_Sede.sql
 if not %errorlevel% == 0 goto end
 
 
+rem o resto é feito via replicacao
+goto end
 
 echo Running 00.964.InsercaoDadosTeste_DB_Loja.sql para lojas de produtos de crianca e senhora.
 sqlcmd -b -H localhost -S "%LSC%" -i 00.964.InsercaoDadosTeste_DB_Loja.sql
