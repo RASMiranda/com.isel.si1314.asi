@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="com.isel.si1314.asi.ASIVeste.Loja" resourceRoot="" soapui-version="4.6.4" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_IVendaServico" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IVendaServico" soapVersion="1_1" anonymous="optional" definition="http://localhost:32737/VendaServico.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:32737/VendaServico.svc?wsdl"><con:part><con:url>http://localhost:32737/VendaServico.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="VendaServico" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:32737/VendaServico.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://localhost:32737/VendaServico.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://localhost:32737/VendaServico.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/QueueVendas"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVendaServico_enviaVenda_InputMessage">
+    <wsdl:part name="parameters" element="tns:enviaVenda"/>
+  </wsdl:message>
+  <wsdl:portType name="IVendaServico">
+    <wsdl:operation name="enviaVenda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVendaServico/enviaVenda" message="tns:IVendaServico_enviaVenda_InputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IVendaServico" type="tns:IVendaServico">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="enviaVenda">
+      <soap:operation soapAction="http://tempuri.org/IVendaServico/enviaVenda" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VendaServico">
+    <wsdl:port name="BasicHttpBinding_IVendaServico" binding="tns:BasicHttpBinding_IVendaServico">
+      <soap:address location="http://localhost:32737/VendaServico.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:32737/VendaServico.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://localhost:32737/VendaServico.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/QueueVendas"/>
+  <xs:element name="enviaVenda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordem" nillable="true" type="q1:VendaOrdem" xmlns:q1="http://schemas.datacontract.org/2004/07/QueueVendas"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:32737/VendaServico.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/QueueVendas" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/QueueVendas">
+  <xs:complexType name="VendaOrdem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="moradaCliente" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="nomeCliente" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="numItems" type="xs:int"/>
+      <xs:element minOccurs="0" name="vendaEstado" type="tns:VendaEstados"/>
+      <xs:element minOccurs="0" name="vendaItems" nillable="true" type="tns:ArrayOfVendaOrdemItem"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VendaOrdem" nillable="true" type="tns:VendaOrdem"/>
+  <xs:simpleType name="VendaEstados">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pendente"/>
+      <xs:enumeration value="encomenda"/>
+      <xs:enumeration value="entregue"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="VendaEstados" nillable="true" type="tns:VendaEstados"/>
+  <xs:complexType name="ArrayOfVendaOrdemItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VendaOrdemItem" nillable="true" type="tns:VendaOrdemItem"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVendaOrdemItem" nillable="true" type="tns:ArrayOfVendaOrdemItem"/>
+  <xs:complexType name="VendaOrdemItem">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:element name="VendaOrdemItem" nillable="true" type="tns:VendaOrdemItem"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://localhost:32737/VendaServico.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:32737/VendaServico.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://tempuri.org/IVendaServico/enviaVenda" name="enviaVenda" bindingOperationName="enviaVenda" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:32737/VendaServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:que="http://schemas.datacontract.org/2004/07/QueueVendas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:enviaVenda>
+         <!--Optional:-->
+         <tem:ordem>
+            <!--Optional:-->
+            <que:moradaCliente>?</que:moradaCliente>
+            <!--Optional:-->
+            <que:nomeCliente>?</que:nomeCliente>
+            <!--Optional:-->
+            <que:numItems>0</que:numItems>
+            <!--Optional:-->
+            <que:vendaEstado>0</que:vendaEstado>
+            <!--Optional:-->
+            <que:vendaItems>
+               <!--Zero or more repetitions:-->
+               <que:VendaOrdemItem/>
+            </que:vendaItems>
+         </tem:ordem>
+      </tem:enviaVenda>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IVendaServico/enviaVenda"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

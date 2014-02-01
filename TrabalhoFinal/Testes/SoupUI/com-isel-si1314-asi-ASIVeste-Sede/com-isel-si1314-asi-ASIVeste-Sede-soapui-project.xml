@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="com.isel.si1314.asi.ASIVeste.Sede" resourceRoot="" soapui-version="4.6.3" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_ISedeServico" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ISedeServico" soapVersion="1_1" anonymous="optional" definition="http://localhost:55357/SedeServico.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:55357/SedeServico.svc?wsdl"><con:part><con:url>http://localhost:55357/SedeServico.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SedeServico" targetNamespace="http://asiveste/services/sede" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://asiveste/services/sede" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://tempuri.org/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+<con:soapui-project activeEnvironment="Default" name="com.isel.si1314.asi.ASIVeste.Sede" resourceRoot="" soapui-version="4.6.4" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_ISedeServico" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_ISedeServico" soapVersion="1_1" anonymous="optional" definition="http://localhost:55357/SedeServico.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:55357/SedeServico.svc?wsdl"><con:part><con:url>http://localhost:55357/SedeServico.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SedeServico" targetNamespace="http://asiveste/services/sede" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://asiveste/services/sede" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:i0="http://tempuri.org/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
   <wsdl:import namespace="http://tempuri.org/" location="http://localhost:55357/SedeServico.svc?wsdl=wsdl0"/>
   <wsdl:types>
     <xsd:schema targetNamespace="http://asiveste/services/sede/Imports">
@@ -564,23 +564,23 @@
   <xs:attribute name="FactoryType" type="xs:QName"/>
   <xs:attribute name="Id" type="xs:ID"/>
   <xs:attribute name="Ref" type="xs:IDREF"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:55357/SedeVendaServico.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://asiveste/services/sede/venda/ISedeVendaServico/registaVenda" name="registaVenda" bindingOperationName="registaVenda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:55357/SedeVendaServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ven="http://asiveste/services/sede/venda" xmlns:asiv="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:55357/SedeVendaServico.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://asiveste/services/sede/venda/ISedeVendaServico/registaVenda" name="registaVenda" bindingOperationName="registaVenda" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:55357/SedeVendaServico.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ven="http://asiveste/services/sede/venda" xmlns:asiv="http://schemas.datacontract.org/2004/07/ASIVesteSedeAppLayer">
    <soapenv:Header/>
    <soapenv:Body>
       <ven:registaVenda>
          <!--Optional:-->
          <ven:venda>
             <!--Optional:-->
-            <asiv:Id>?</asiv:Id>
+            <asiv:Id>0</asiv:Id>
             <!--Optional:-->
-            <asiv:IdProduto>?</asiv:IdProduto>
+            <asiv:IdProduto>0</asiv:IdProduto>
             <!--Optional:-->
             <asiv:MoradaCliente>?</asiv:MoradaCliente>
             <!--Optional:-->
             <asiv:NomeCliente>?</asiv:NomeCliente>
             <!--Optional:-->
-            <asiv:Qtd>?</asiv:Qtd>
+            <asiv:Qtd>0</asiv:Qtd>
          </ven:venda>
       </ven:registaVenda>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://asiveste/services/sede/venda/ISedeVendaServico/registaVenda"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://asiveste/services/sede/venda/ISedeVendaServico/registaVenda"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>
