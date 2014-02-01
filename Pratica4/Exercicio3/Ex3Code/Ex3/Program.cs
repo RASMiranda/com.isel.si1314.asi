@@ -137,11 +137,11 @@ namespace Ex3
     {
         static void Main(string[] args)
         {
-            if (!MessageQueue.Exists(@".\private$\filaWCF"))
-                MessageQueue.Create(@".\private$\filaWCF", true);  //ATENÇÃO: por omissão, a fila tem de ser transaccional
+            //if (!MessageQueue.Exists(@".\private$\filaWCF"))
+            //    MessageQueue.Create(@".\private$\filaWCF", true);  //ATENÇÃO: por omissão, a fila tem de ser transaccional
 
-            NetMsmqBinding b = new NetMsmqBinding();
-            b.ReceiveErrorHandling = ReceiveErrorHandling.Drop;
+            //NetMsmqBinding b = new NetMsmqBinding();
+            //b.ReceiveErrorHandling = ReceiveErrorHandling.Drop;
 
             ServiceHost host =
                     new ServiceHost(typeof(Servico));
