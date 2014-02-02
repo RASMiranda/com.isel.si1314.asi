@@ -34,10 +34,7 @@ namespace ASIVesteSede
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
-<<<<<<< HEAD
                       
-=======
->>>>>>> db3664ca1f0faf82683e13ac848c6ef09285eaf6
             
         }
     }

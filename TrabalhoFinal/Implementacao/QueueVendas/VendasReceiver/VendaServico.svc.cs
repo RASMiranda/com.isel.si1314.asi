@@ -24,13 +24,17 @@ namespace VendasReceiver
             using (var db = new Entities())
             {
                
-
-               
                 var venda = new Venda(){ Estado= 0,
                     MoradaCliente= ordem.moradaCliente,
                     NomeCliente= ordem.nomeCliente };
 
                 db.Vendas.Add(venda);
+
+                /*
+                int i= 0;
+                while ( i < ordem.numItems){
+                    var produto = new Produto
+                */
 
                 // invoca inserirVenda
                 db.SaveChanges();

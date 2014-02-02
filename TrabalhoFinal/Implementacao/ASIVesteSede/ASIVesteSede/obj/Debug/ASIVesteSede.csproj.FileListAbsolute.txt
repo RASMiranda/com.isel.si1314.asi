@@ -1,108 +1,51 @@
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\ASIVesteSede.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\ASIVesteSede.pdb
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Antlr3.Runtime.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.AspNet.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.Core.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.Consumer.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\EntityFramework.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Microsoft.Web.WebPages.OAuth.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Newtonsoft.Json.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Net.Http.Formatting.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Helpers.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.WebHost.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Mvc.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Optimization.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Razor.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Razor.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\WebGrease.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\WebMatrix.Data.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\WebMatrix.WebData.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\EntityFramework.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Newtonsoft.Json.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Net.Http.Formatting.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Helpers.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.WebHost.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Mvc.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Razor.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Razor.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\WebMatrix.Data.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Microsoft.Web.WebPages.OAuth.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\WebMatrix.WebData.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.AspNet.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.Core.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.Consumer.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csprojResolveAssemblyReference.cache
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.Migrations.v0.resources
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csproj.GenerateResource.Cache
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.pdb
-<<<<<<< HEAD
-=======
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csprojResolveAssemblyReference.cache
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\QueueVendas.dll
-C:\Users\Frederico\Documents\Visual Studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\QueueVendas.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\ASIVesteSede.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\ASIVesteSede.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\Antlr3.Runtime.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.AspNet.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.Core.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.Consumer.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\EntityFramework.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\Microsoft.Web.Infrastructure.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\Microsoft.Web.WebPages.OAuth.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\Newtonsoft.Json.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Net.Http.Formatting.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.Helpers.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.WebHost.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.Mvc.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.Optimization.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.Razor.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Deployment.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Razor.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\WebGrease.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\WebMatrix.Data.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\WebMatrix.WebData.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\EntityFramework.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\Newtonsoft.Json.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Net.Http.Formatting.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.Helpers.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.WebHost.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.Mvc.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.Razor.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Deployment.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Razor.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\WebMatrix.Data.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\Microsoft.Web.WebPages.OAuth.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\WebMatrix.WebData.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.AspNet.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.Core.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.Consumer.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csprojResolveAssemblyReference.cache
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.Migrations.v0.resources
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csproj.GenerateResource.Cache
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.pdb
->>>>>>> db3664ca1f0faf82683e13ac848c6ef09285eaf6
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\ASIVesteSede.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\ASIVesteSede.pdb
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Antlr3.Runtime.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.Core.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\EntityFramework.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Newtonsoft.Json.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Net.Http.Formatting.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Helpers.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.WebHost.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Mvc.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Optimization.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Razor.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Razor.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\WebGrease.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\WebMatrix.Data.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\WebMatrix.WebData.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\EntityFramework.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Newtonsoft.Json.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Net.Http.Formatting.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Helpers.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Http.WebHost.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Mvc.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.Razor.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\System.Web.WebPages.Razor.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\WebMatrix.Data.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\WebMatrix.WebData.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.Core.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csprojResolveAssemblyReference.cache
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.Migrations.v0.resources
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csproj.GenerateResource.Cache
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.pdb
