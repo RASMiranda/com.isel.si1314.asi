@@ -34,8 +34,6 @@ namespace ASIVesteSede
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
-            QueuesConfig.Register(); //activa o listner para as queues de vendas
-            
             
         }
     }
