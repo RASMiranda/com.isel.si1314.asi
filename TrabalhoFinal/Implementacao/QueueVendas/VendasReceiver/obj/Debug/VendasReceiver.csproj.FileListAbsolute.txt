@@ -1,11 +1,10 @@
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.exe.config
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.exe
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.pdb
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\QueueVendas.dll
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\QueueVendas.pdb
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.csprojResolveAssemblyReference.cache
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.exe
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.exe.config
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.exe
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.pdb
+C:\Users\Frederico\Documents\Visual Studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.exe.config
+C:\Users\Frederico\Documents\Visual Studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.exe
+C:\Users\Frederico\Documents\Visual Studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.pdb
+C:\Users\Frederico\Documents\Visual Studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\EntityFramework.dll
+C:\Users\Frederico\Documents\Visual Studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\QueueVendas.dll
+C:\Users\Frederico\Documents\Visual Studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\QueueVendas.pdb
+C:\Users\Frederico\Documents\Visual Studio 2012\Projects\QueueVendas\VendasReceiver\bin\Debug\EntityFramework.xml
+C:\Users\Frederico\Documents\Visual Studio 2012\Projects\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.csprojResolveAssemblyReference.cache
+C:\Users\Frederico\Documents\Visual Studio 2012\Projects\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.exe
+C:\Users\Frederico\Documents\Visual Studio 2012\Projects\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.pdb
