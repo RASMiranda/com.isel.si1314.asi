@@ -19,6 +19,7 @@ namespace ASIVesteLoja.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.sucesso = TempData["sucesso"]; 
             return View(db.Vendas.ToList());
         }
 
@@ -52,9 +53,13 @@ namespace ASIVesteLoja.Controllers
         {
             if (ModelState.IsValid)
             {
-                //TODO: VALIDAR STOCK PRODUTO
-                //TODO: SUBTRAIR STOCK PRODUTO
-                VendaHelper.enviaVendaParaSede(venda);
+                String erro;
+                if (!VendaHelper.efectuaVenda(venda, out erro))
+                {
+                    ViewBag.erro = erro;
+                    return View();
+                }
+                TempData["sucesso"] = "Venda Efectuada!";
                 return RedirectToAction("Index");
             }
 

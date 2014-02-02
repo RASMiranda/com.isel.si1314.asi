@@ -1,13 +1,17 @@
 ﻿@model IEnumerable<ASIVesteLoja.Models.Venda>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Vendas";
 }
 
-<h2>Venda</h2>
+<h2>Vendas</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Efectuar Venda", "Create")
+</p>
+<br />
+<p class="message-success">
+    @ViewBag.sucesso 
 </p>
 @*<table>
     <tr>

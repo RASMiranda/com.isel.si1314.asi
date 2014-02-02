@@ -94,3 +94,4 @@ D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteLoja
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteLoja\ASIVesteLoja\bin\QueueVendas.pdb
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteLoja\ASIVesteLoja\obj\Debug\ASIVesteLoja.Migrations.V12.resources
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteLoja\ASIVesteLoja\obj\Debug\ASIVesteLoja.Migrations.V5.resources
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteLoja\ASIVesteLoja\obj\Debug\ASIVesteLoja.Migrations.V6.resources

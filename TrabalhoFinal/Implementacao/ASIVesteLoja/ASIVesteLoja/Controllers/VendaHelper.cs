@@ -8,12 +8,13 @@ using System.ServiceModel;
 using QueueVendas;
 using System.Transactions;
 using ASIVesteLoja.Models;
+using ASIVesteLoja.DAL;
 
 namespace ASIVesteLoja.Controllers
 {
     public static class VendaHelper
     {
-        internal static void enviaVendaParaSede(Venda venda)
+        private static void enviaVendaParaSede(Venda venda, float preco)
         {
             var queue = ConfigurationManager.AppSettings["queue"];
             if (!MessageQueue.Exists(queue))
@@ -27,9 +28,7 @@ namespace ASIVesteLoja.Controllers
             VendaOrdem vendaOrdem = new VendaOrdem();
             vendaOrdem.dadosVenda(venda.nomeCliente, venda.moradaCliente);
 
-            float precoUnitario = getProdutoPreco(venda.codigoProduto);
-
-            vendaOrdem.acrescentaProduto(venda.codigoProduto, venda.quantidade, precoUnitario);
+            vendaOrdem.acrescentaProduto(venda.codigoProduto, venda.quantidade, preco);
             try
             {
 
@@ -50,10 +49,37 @@ namespace ASIVesteLoja.Controllers
 
         }
 
-        private static float getProdutoPreco(string p)
+        internal static bool efectuaVenda(Venda venda, out String erro)
         {
-            //TODO: getProdutoPreco
-            return 0;
+            using (var context = new ASIVesteContext())
+            {
+                var produto = context.Produtos
+                                    .Where(b => b.Codigo == venda.codigoProduto)
+                                    .FirstOrDefault();
+
+                if (produto == null)
+                {
+                    erro = "Produto inexistente";
+                    return false;
+                }
+
+                //TODO: Assumindo que se aceita stock = 0, correcto?
+                if (produto.StockQtd - venda.quantidade < 0)
+                {
+                    erro = "Stock indisponível";
+                    return false;
+                }
+                
+                enviaVendaParaSede(venda, produto.Preco);
+
+                produto.StockQtd = produto.StockQtd - venda.quantidade;
+
+                //TODO: Validar iconsistencia? (se entretanto o produto da base de dados já foi actualizado por outra venda)
+
+                context.SaveChanges();
+            }
+            erro = "";
+            return true;
         }
     }
 }
