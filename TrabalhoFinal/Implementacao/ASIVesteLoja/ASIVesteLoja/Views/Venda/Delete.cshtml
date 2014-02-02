@@ -1,0 +1,40 @@
+﻿@model ASIVesteLoja.Models.Venda
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Venda</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nomeCliente)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nomeCliente)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.moradaCliente)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.moradaCliente)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.numItems)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.numItems)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

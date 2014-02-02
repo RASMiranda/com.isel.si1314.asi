@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ASIVesteLoja.Models.Venda>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Venda</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@*<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.moradaCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numItems)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomeCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.moradaCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numItems)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VendaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VendaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VendaID })
+        </td>
+    </tr>
+}
+
+</table>*@
