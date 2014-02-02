@@ -163,6 +163,7 @@
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\QueuesConfig.cs" />
     <Compile Include="Migrations\201401292027317_v0.cs" />
     <Compile Include="Migrations\201401292027317_v0.Designer.cs">
       <DependentUpon>201401292027317_v0.cs</DependentUpon>
@@ -345,6 +346,12 @@
     <EmbeddedResource Include="Migrations\201401292027317_v0.resx">
       <DependentUpon>201401292027317_v0.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\QueueVendas\QueueVendas\QueueVendas.csproj">
+      <Project>{f9585bef-766f-4253-8335-12b2e71f7cc5}</Project>
+      <Name>QueueVendas</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
