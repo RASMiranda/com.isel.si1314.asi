@@ -40,6 +40,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -59,22 +60,10 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SedeVendaServicoReference\SedeVendaServico.disco" />
-    <None Include="Service References\SedeVendaServicoReference\configuration91.svcinfo" />
-    <None Include="Service References\SedeVendaServicoReference\configuration.svcinfo" />
-    <None Include="Service References\SedeVendaServicoReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="VendaServico.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service References\SedeVendaServicoReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="VendaServico.svc.cs">
       <DependentUpon>VendaServico.svc</DependentUpon>
     </Compile>
@@ -85,29 +74,12 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\SedeVendaServicoReference\SedeVendaServico.wsdl" />
-    <None Include="Service References\SedeVendaServicoReference\SedeVendaServico.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SedeVendaServicoReference\SedeVendaServico1.wsdl" />
-    <None Include="Service References\SedeVendaServicoReference\SedeVendaServico1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\SedeVendaServicoReference\SedeVendaServico2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\SedeVendaServicoReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -122,7 +94,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>61444</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:32737/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

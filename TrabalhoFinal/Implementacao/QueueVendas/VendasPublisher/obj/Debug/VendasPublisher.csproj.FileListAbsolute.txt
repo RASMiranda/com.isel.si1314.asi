@@ -6,9 +6,3 @@ c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPubli
 c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPublisher\obj\Debug\VendasPublisher.csprojResolveAssemblyReference.cache
 c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPublisher\obj\Debug\VendasPublisher.exe
 c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPublisher\obj\Debug\VendasPublisher.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\bin\Debug\VendasPublisher.exe.config
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\obj\Debug\VendasPublisher.exe
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\obj\Debug\VendasPublisher.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\bin\Debug\VendasPublisher.exe
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\bin\Debug\VendasPublisher.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\obj\Debug\VendasPublisher.csprojResolveAssemblyReference.cache

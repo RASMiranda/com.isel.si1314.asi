@@ -1,4 +1,0 @@
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSedeAppLayer\bin\ASIVesteSedeAppLayer.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSedeAppLayer\bin\ASIVesteSedeAppLayer.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSedeAppLayer\obj\Debug\ASIVesteSedeAppLayer.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSedeAppLayer\obj\Debug\ASIVesteSedeAppLayer.pdb
