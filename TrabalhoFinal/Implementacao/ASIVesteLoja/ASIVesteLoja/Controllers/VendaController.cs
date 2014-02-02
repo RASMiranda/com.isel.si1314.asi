@@ -14,29 +14,29 @@ namespace ASIVesteLoja.Controllers
     {
         private ASIVesteContext db = new ASIVesteContext();
 
-        ////
-        //// GET: /Venda/
+        //
+        // GET: /Venda/
 
-        //public ActionResult Index()
-        //{
-        //    return View(db.Vendas.ToList());
-        //}
+        public ActionResult Index()
+        {
+            return View(db.Vendas.ToList());
+        }
 
-        ////
-        //// GET: /Venda/Details/5
+        //
+        // GET: /Venda/Details/5
 
-        //public ActionResult Details(int id = 0)
-        //{
-        //    Venda venda = db.Vendas.Find(id);
-        //    if (venda == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(venda);
-        //}
+        public ActionResult Details(int id = 0)
+        {
+            Venda venda = db.Vendas.Find(id);
+            if (venda == null)
+            {
+                return HttpNotFound();
+            }
+            return View(venda);
+        }
 
-        ////
-        //// GET: /Venda/Create
+        //
+        // GET: /Venda/Create
 
         public ActionResult Create()
         {
@@ -54,67 +54,67 @@ namespace ASIVesteLoja.Controllers
             {
                 //TODO: VALIDAR STOCK PRODUTO
                 //TODO: SUBTRAIR STOCK PRODUTO
-                VendaHelper.enviaVendaParaSede();
+                VendaHelper.enviaVendaParaSede(venda);
                 return RedirectToAction("Index");
             }
 
             return View(venda);
         }
 
-        ////
-        //// GET: /Venda/Edit/5
+        //
+        // GET: /Venda/Edit/5
 
-        //public ActionResult Edit(int id = 0)
-        //{
-        //    Venda venda = db.Vendas.Find(id);
-        //    if (venda == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(venda);
-        //}
+        public ActionResult Edit(int id = 0)
+        {
+            Venda venda = db.Vendas.Find(id);
+            if (venda == null)
+            {
+                return HttpNotFound();
+            }
+            return View(venda);
+        }
 
-        ////
-        //// POST: /Venda/Edit/5
+        //
+        // POST: /Venda/Edit/5
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Edit(Venda venda)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        db.Entry(venda).State = EntityState.Modified;
-        //        db.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
-        //    return View(venda);
-        //}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Venda venda)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(venda).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(venda);
+        }
 
-        ////
-        //// GET: /Venda/Delete/5
+        //
+        // GET: /Venda/Delete/5
 
-        //public ActionResult Delete(int id = 0)
-        //{
-        //    Venda venda = db.Vendas.Find(id);
-        //    if (venda == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(venda);
-        //}
+        public ActionResult Delete(int id = 0)
+        {
+            Venda venda = db.Vendas.Find(id);
+            if (venda == null)
+            {
+                return HttpNotFound();
+            }
+            return View(venda);
+        }
 
-        ////
-        //// POST: /Venda/Delete/5
+        //
+        // POST: /Venda/Delete/5
 
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult DeleteConfirmed(int id)
-        //{
-        //    Venda venda = db.Vendas.Find(id);
-        //    db.Vendas.Remove(venda);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Venda venda = db.Vendas.Find(id);
+            db.Vendas.Remove(venda);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
         protected override void Dispose(bool disposing)
         {

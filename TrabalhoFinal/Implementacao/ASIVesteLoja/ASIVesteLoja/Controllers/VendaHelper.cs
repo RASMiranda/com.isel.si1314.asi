@@ -4,12 +4,16 @@ using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Messaging;
+using System.ServiceModel;
+using QueueVendas;
+using System.Transactions;
+using ASIVesteLoja.Models;
 
 namespace ASIVesteLoja.Controllers
 {
     public static class VendaHelper
     {
-        internal static void enviaVendaParaSede()
+        internal static void enviaVendaParaSede(Venda venda)
         {
             var queue = ConfigurationManager.AppSettings["queue"];
             if (!MessageQueue.Exists(queue))
@@ -17,45 +21,39 @@ namespace ASIVesteLoja.Controllers
                 MessageQueue.Create(queue, true);
             }
 
+            ChannelFactory<IVendaServico> servico = new ChannelFactory<IVendaServico>("qLSC");
+            IVendaServico endpt = servico.CreateChannel();
 
-            ////msg.Body = venda;
-            //Boolean terminar = new Boolean();
-            //string comando;
+            VendaOrdem vendaOrdem = new VendaOrdem();
+            vendaOrdem.dadosVenda(venda.nomeCliente, venda.moradaCliente);
 
-            //terminar = false;
-            //ServicoVendas.VendaServicoClient ordem = new VendaServicoClient();
+            float precoUnitario = getProdutoPreco(venda.codigoProduto);
 
-            //while (!terminar)
-            //{
-            //    VendaOrdem venda = new VendaOrdem();
-            //    venda.dadosVenda("Cliente", "Av. Conselheiro Emidio Navarro, Lisboa");
+            vendaOrdem.acrescentaProduto(venda.codigoProduto, venda.quantidade, precoUnitario);
+            try
+            {
 
-            //    venda.acrescentaProduto("scam1", 5, 25.4f);
-            //    venda.acrescentaProduto("scam2", 1, 33.2f);
-            //    try
-            //    {
+                using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
+                {
 
-            //        using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
-            //        {
-
-            //            ordem.enviaVenda(venda);
-            //            //orderQueue.Send(msg, MessageQueueTransactionType.Automatic);
-            //            // Complete the transaction.
-            //            scope.Complete();
-            //        }
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        Console.Write("erro {0}", e);
-            //    }
+                    endpt.enviaVenda(vendaOrdem);
+                    //orderQueue.Send(msg, MessageQueueTransactionType.Automatic);
+                    // Complete the transaction.
+                    scope.Complete();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.Write("erro {0}", e);
+            }
 
 
-            //    Console.WriteLine("Ordem colocada na queue:{0}", venda);
-            //    Console.WriteLine("Use 'q' para terminar ou <ENTER> criar mais uma mensgem na queue.");
-            //    comando = Console.ReadLine();
-            //    terminar = comando.Contains('q');
-            //}
-            //ordem.Close();
+        }
+
+        private static float getProdutoPreco(string p)
+        {
+            //TODO: getProdutoPreco
+            return 0;
         }
     }
 }

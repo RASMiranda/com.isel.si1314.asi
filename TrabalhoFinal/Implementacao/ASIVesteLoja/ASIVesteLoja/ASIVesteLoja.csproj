@@ -40,11 +40,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="QueueVendas">
+      <HintPath>..\..\QueueVendas\QueueVendas\bin\QueueVendas.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -216,6 +221,14 @@
     <Compile Include="Migrations\201402021809324_V4.Designer.cs">
       <DependentUpon>201402021809324_V4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201402021951433_V12.cs" />
+    <Compile Include="Migrations\201402021951433_V12.Designer.cs">
+      <DependentUpon>201402021951433_V12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402021959430_V5.cs" />
+    <Compile Include="Migrations\201402021959430_V5.Designer.cs">
+      <DependentUpon>201402021959430_V5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Produto.cs" />
@@ -294,7 +307,9 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -368,6 +383,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201402021809324_V4.resx">
       <DependentUpon>201402021809324_V4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402021951433_V12.resx">
+      <DependentUpon>201402021951433_V12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402021959430_V5.resx">
+      <DependentUpon>201402021959430_V5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

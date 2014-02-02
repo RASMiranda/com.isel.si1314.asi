@@ -9,7 +9,8 @@ namespace ASIVesteLoja.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true; //depois colocar a false
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(ASIVesteLoja.DAL.ASIVesteContext context)
