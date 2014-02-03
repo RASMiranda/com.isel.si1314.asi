@@ -1,0 +1,9 @@
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\bin\Debug\ASIVesteSede-20140129.mdf
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\bin\Debug\ASIVesteSede-20140129_log.ldf
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\bin\Debug\EntityFramework.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\bin\Debug\EntityFramework.xml
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

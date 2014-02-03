@@ -1,0 +1,8 @@
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPublisher\bin\Release\VendasPublisher.exe.config
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPublisher\bin\Release\VendasPublisher.exe
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPublisher\bin\Release\VendasPublisher.pdb
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPublisher\obj\Release\VendasPublisher.csprojResolveAssemblyReference.cache
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPublisher\obj\Release\VendasPublisher.exe
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPublisher\obj\Release\VendasPublisher.pdb
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPublisher\bin\Release\QueueVendas.dll
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasPublisher\bin\Release\QueueVendas.pdb
