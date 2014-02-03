@@ -18,27 +18,29 @@ namespace VendasReceiver
         [OperationBehavior(TransactionScopeRequired = true )]
         public void enviaVenda( VendaOrdem ordem)
         {
-            //Transaction tx = Transaction.Current;
+            Console.WriteLine("A processar uma ordem: {0}", ordem);
 
-            Console.Write( "You entered: {0}", ordem);
-            using (var db = new Entities())
+            if (ordem.numItems != 1)
+                throw new Exception(String.Format("É suportado apenas um item por Venda. Itens na Venda:{0}", ordem.numItems));
+            
+            // ordem.vendaItems.Length == ordem.numItems
+            // inserir Vendas e items de venda
+            // receber Encomenda (stk qtd sincrono nas 3 db)
+
+            using (var transaction = new TransactionScope(Transaction.Current))
             {
-               
-                var venda = new Venda(){ Estado= 0,
-                    MoradaCliente= ordem.moradaCliente,
-                    NomeCliente= ordem.nomeCliente };
+                using (var db = new ASIVesteEntities())
+                {
+                    db.sp_realizarVenda(ordem.nomeCliente,
+                                        ordem.moradaCliente,
+                                        ordem.vendaItems[0].codigo,
+                                        ordem.vendaItems[0].quantidade);
 
-                db.Vendas.Add(venda);
+                    db.SaveChanges();
+                }
 
-                /*
-                int i= 0;
-                while ( i < ordem.numItems){
-                    var produto = new Produto
-                */
-
-                // invoca inserirVenda
-                db.SaveChanges();
-            } 
+                transaction.Complete();
+            }
     
         }
     }

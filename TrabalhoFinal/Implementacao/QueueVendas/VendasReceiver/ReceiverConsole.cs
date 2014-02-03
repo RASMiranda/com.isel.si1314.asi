@@ -18,9 +18,8 @@ namespace VendasReceiver
                 string queueLSC = ".\\private$\\queueLSC";
                 //string queueLSC = ".\\queueLSC";
                 if ( ! MessageQueue.Exists( queueLSC ))
-                {
                     MessageQueue.Create( queueLSC,true);
-                }
+
                 receiver.Open();
                 Console.WriteLine( "Esta pronto para receber ordems de venda");
                 Console.WriteLine("Carregue em return para terminar");

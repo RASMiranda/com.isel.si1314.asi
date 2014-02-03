@@ -85,12 +85,14 @@ Pretende-se, no entanto, que a informação das vendas seja transmitida à sede,
 	para que esta possa expedir as encomendas para os clientes e 
 	» TODO: nocao de cliente e expedicao de encomendas para o mesmo nao está implementada
 	realizar as encomendas aos fornecedores, se for o caso.
-	» proc sp_realizarEncomendas & proc sp_receberEncomenda. Acho que por "se for o caso" o Eng entende "se hover motivo para isso". A flag de estado serve precisamente para não fazer encomendas umas atrás das outras se já houver uma encomenda pendente.
+	» proc sp_realizarEncomendas & proc sp_receberEncomenda. Acho que por "se for o caso" o Eng entende "se houver 	
+		motivo para isso". A flag de estado serve precisamente para não fazer encomendas umas atrás das outras se já houver uma encomenda pendente.
 
 
 Quando a sede recebe produtos dos fornecedores, deve 
 	actualizar os stocks no SGBD do conjunto de lojas adequado, de forma síncrona.
-	» o proc receberProduto actualiza uma view sobre db links. Penso que esta actualização é realizada síncrona entre as várias DB's.
+	» o proc receberProduto actualiza uma view sobre db links. Penso que esta actualização é realizada síncrona entre 
+		as várias DB's.
 
 A sede também realiza encomendas a fornecedores, de forma autónoma. 
 	» OK, o conceito de fornecedor é exclusivo à sede
