@@ -16,7 +16,7 @@ namespace VendasReceiver
     {
         public Fornecedor()
         {
-            this.Produtoes = new HashSet<Produto>();
+            this.Produtos = new HashSet<Produto>();
         }
     
         public int FornecedorID { get; set; }
@@ -24,6 +24,6 @@ namespace VendasReceiver
         public string Nome { get; set; }
         public string Morada { get; set; }
     
-        public virtual ICollection<Produto> Produtoes { get; set; }
+        public virtual ICollection<Produto> Produtos { get; set; }
     }
 }

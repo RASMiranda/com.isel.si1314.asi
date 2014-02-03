@@ -4,39 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="ModelStoreContainer">
-          <EntitySet Name="Encomenda" EntityType="Model.Store.Encomenda" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Fornecedor" EntityType="Model.Store.Fornecedor" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Produto" EntityType="Model.Store.Produto" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Venda" EntityType="Model.Store.Venda" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="VendaProdutos" EntityType="Model.Store.VendaProdutos" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID" Association="Model.Store.FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID">
-            <End Role="Produto" EntitySet="Produto" />
-            <End Role="Encomenda" EntitySet="Encomenda" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID" Association="Model.Store.FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID">
-            <End Role="VendaProdutos" EntitySet="VendaProdutos" />
-            <End Role="Encomenda" EntitySet="Encomenda" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID" Association="Model.Store.FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID">
-            <End Role="Fornecedor" EntitySet="Fornecedor" />
-            <End Role="Produto" EntitySet="Produto" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID" Association="Model.Store.FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID">
-            <End Role="Produto" EntitySet="Produto" />
-            <End Role="VendaProdutos" EntitySet="VendaProdutos" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID" Association="Model.Store.FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID">
-            <End Role="Venda" EntitySet="Venda" />
-            <End Role="VendaProdutos" EntitySet="VendaProdutos" />
-          </AssociationSet>
-        </EntityContainer>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Encomenda">
           <Key>
             <PropertyRef Name="EncomendaID" />
           </Key>
-          <Property Name="EncomendaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EncomendaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Qtd" Type="int" Nullable="false" />
           <Property Name="Estado" Type="int" />
           <Property Name="Produto_ProdutoID" Type="int" />
@@ -46,7 +19,7 @@
           <Key>
             <PropertyRef Name="FornecedorID" />
           </Key>
-          <Property Name="FornecedorID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FornecedorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Numero" Type="int" Nullable="false" />
           <Property Name="Nome" Type="nvarchar(max)" />
           <Property Name="Morada" Type="nvarchar(max)" />
@@ -55,7 +28,7 @@
           <Key>
             <PropertyRef Name="ProdutoID" />
           </Key>
-          <Property Name="ProdutoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProdutoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Tipo" Type="int" />
           <Property Name="Codigo" Type="nvarchar(max)" />
           <Property Name="Designacao" Type="nvarchar(max)" />
@@ -68,7 +41,7 @@
           <Key>
             <PropertyRef Name="VendaID" />
           </Key>
-          <Property Name="VendaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VendaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NomeCliente" Type="nvarchar(max)" />
           <Property Name="MoradaCliente" Type="nvarchar(max)" />
           <Property Name="Estado" Type="int" />
@@ -77,7 +50,7 @@
           <Key>
             <PropertyRef Name="VendaProdutosID" />
           </Key>
-          <Property Name="VendaProdutosID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="VendaProdutosID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Codigo" Type="nvarchar(max)" />
           <Property Name="Qtd" Type="int" Nullable="false" />
           <Property Name="Estado" Type="int" />
@@ -85,8 +58,8 @@
           <Property Name="Produto_ProdutoID" Type="int" />
         </EntityType>
         <Association Name="FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID">
-          <End Role="Produto" Type="Model.Store.Produto" Multiplicity="0..1" />
-          <End Role="Encomenda" Type="Model.Store.Encomenda" Multiplicity="*" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="0..1" />
+          <End Role="Encomenda" Type="Self.Encomenda" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Produto">
               <PropertyRef Name="ProdutoID" />
@@ -97,8 +70,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID">
-          <End Role="VendaProdutos" Type="Model.Store.VendaProdutos" Multiplicity="0..1" />
-          <End Role="Encomenda" Type="Model.Store.Encomenda" Multiplicity="*" />
+          <End Role="VendaProdutos" Type="Self.VendaProdutos" Multiplicity="0..1" />
+          <End Role="Encomenda" Type="Self.Encomenda" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VendaProdutos">
               <PropertyRef Name="VendaProdutosID" />
@@ -109,8 +82,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID">
-          <End Role="Fornecedor" Type="Model.Store.Fornecedor" Multiplicity="0..1" />
-          <End Role="Produto" Type="Model.Store.Produto" Multiplicity="*" />
+          <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Fornecedor">
               <PropertyRef Name="FornecedorID" />
@@ -121,8 +94,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID">
-          <End Role="Produto" Type="Model.Store.Produto" Multiplicity="0..1" />
-          <End Role="VendaProdutos" Type="Model.Store.VendaProdutos" Multiplicity="*" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="0..1" />
+          <End Role="VendaProdutos" Type="Self.VendaProdutos" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Produto">
               <PropertyRef Name="ProdutoID" />
@@ -133,8 +106,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID">
-          <End Role="Venda" Type="Model.Store.Venda" Multiplicity="0..1" />
-          <End Role="VendaProdutos" Type="Model.Store.VendaProdutos" Multiplicity="*" />
+          <End Role="Venda" Type="Self.Venda" Multiplicity="0..1" />
+          <End Role="VendaProdutos" Type="Self.VendaProdutos" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Venda">
               <PropertyRef Name="VendaID" />
@@ -144,103 +117,118 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
-    <!-- CSDL content -->
-    <edmx:ConceptualModels>
-      <Schema Namespace="Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
-          <EntitySet Name="Encomendas" EntityType="Model.Encomenda" />
-          <EntitySet Name="Fornecedors" EntityType="Model.Fornecedor" />
-          <EntitySet Name="Produtoes" EntityType="Model.Produto" />
-          <EntitySet Name="Vendas" EntityType="Model.Venda" />
-          <EntitySet Name="VendaProdutos" EntityType="Model.VendaProduto" />
-          <AssociationSet Name="FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID" Association="Model.FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID">
-            <End Role="Produto" EntitySet="Produtoes" />
-            <End Role="Encomenda" EntitySet="Encomendas" />
+        <Function Name="sp_realizarEncomenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodigoProduto" Type="varchar" Mode="In" />
+          <Parameter Name="EncomendaRecebida" Type="int" Mode="In" />
+          <Parameter Name="QtdEncomendada" Type="int" Mode="In" />
+          <Parameter Name="VendaId" Type="int" Mode="In" />
+          <Parameter Name="EncomendaId" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="sp_realizarVenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NomeCliente" Type="varchar" Mode="In" />
+          <Parameter Name="MoradaCliente" Type="varchar" Mode="In" />
+          <Parameter Name="CodigoProduto" Type="varchar" Mode="In" />
+          <Parameter Name="Qtd" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_receberEncomenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="EncomendaId" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Encomenda" EntityType="Self.Encomenda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Fornecedor" EntityType="Self.Fornecedor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Venda" EntityType="Self.Venda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VendaProdutos" EntityType="Self.VendaProdutos" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID" Association="Self.FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID">
+            <End Role="Produto" EntitySet="Produto" />
+            <End Role="Encomenda" EntitySet="Encomenda" />
           </AssociationSet>
-          <AssociationSet Name="FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID" Association="Model.FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID">
+          <AssociationSet Name="FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID" Association="Self.FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID">
             <End Role="VendaProdutos" EntitySet="VendaProdutos" />
-            <End Role="Encomenda" EntitySet="Encomendas" />
+            <End Role="Encomenda" EntitySet="Encomenda" />
           </AssociationSet>
-          <AssociationSet Name="FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID" Association="Model.FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID">
-            <End Role="Fornecedor" EntitySet="Fornecedors" />
-            <End Role="Produto" EntitySet="Produtoes" />
+          <AssociationSet Name="FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID" Association="Self.FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID">
+            <End Role="Fornecedor" EntitySet="Fornecedor" />
+            <End Role="Produto" EntitySet="Produto" />
           </AssociationSet>
-          <AssociationSet Name="FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID" Association="Model.FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID">
-            <End Role="Produto" EntitySet="Produtoes" />
+          <AssociationSet Name="FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID" Association="Self.FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID">
+            <End Role="Produto" EntitySet="Produto" />
             <End Role="VendaProdutos" EntitySet="VendaProdutos" />
           </AssociationSet>
-          <AssociationSet Name="FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID" Association="Model.FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID">
-            <End Role="Venda" EntitySet="Vendas" />
+          <AssociationSet Name="FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID" Association="Self.FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID">
+            <End Role="Venda" EntitySet="Venda" />
             <End Role="VendaProdutos" EntitySet="VendaProdutos" />
           </AssociationSet>
         </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Encomenda">
           <Key>
             <PropertyRef Name="EncomendaID" />
           </Key>
-          <Property Name="EncomendaID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="EncomendaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Qtd" Type="Int32" Nullable="false" />
           <Property Name="Estado" Type="Int32" />
           <Property Name="Produto_ProdutoID" Type="Int32" />
           <Property Name="VendaProduto_VendaProdutosID" Type="Int32" />
-          <NavigationProperty Name="Produto" Relationship="Model.FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID" FromRole="Encomenda" ToRole="Produto" />
-          <NavigationProperty Name="VendaProduto" Relationship="Model.FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID" FromRole="Encomenda" ToRole="VendaProdutos" />
+          <NavigationProperty Name="Produto" Relationship="Self.FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID" FromRole="Encomenda" ToRole="Produto" />
+          <NavigationProperty Name="VendaProduto" Relationship="Self.FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID" FromRole="Encomenda" ToRole="VendaProdutos" />
         </EntityType>
         <EntityType Name="Fornecedor">
           <Key>
             <PropertyRef Name="FornecedorID" />
           </Key>
-          <Property Name="FornecedorID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FornecedorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Numero" Type="Int32" Nullable="false" />
-          <Property Name="Nome" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Morada" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Produtoes" Relationship="Model.FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID" FromRole="Fornecedor" ToRole="Produto" />
+          <Property Name="Nome" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Morada" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Produtos" Relationship="Self.FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID" FromRole="Fornecedor" ToRole="Produto" />
         </EntityType>
         <EntityType Name="Produto">
           <Key>
             <PropertyRef Name="ProdutoID" />
           </Key>
-          <Property Name="ProdutoID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProdutoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Tipo" Type="Int32" />
-          <Property Name="Codigo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Designacao" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Codigo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Designacao" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="StockQtd" Type="Int32" Nullable="false" />
           <Property Name="StockMinimo" Type="Int32" Nullable="false" />
           <Property Name="Preco" Type="Single" Nullable="false" />
           <Property Name="Fornecedor_FornecedorID" Type="Int32" />
-          <NavigationProperty Name="Encomendas" Relationship="Model.FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID" FromRole="Produto" ToRole="Encomenda" />
-          <NavigationProperty Name="Fornecedor" Relationship="Model.FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID" FromRole="Produto" ToRole="Fornecedor" />
-          <NavigationProperty Name="VendaProdutos" Relationship="Model.FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID" FromRole="Produto" ToRole="VendaProdutos" />
+          <NavigationProperty Name="Encomendas" Relationship="Self.FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID" FromRole="Produto" ToRole="Encomenda" />
+          <NavigationProperty Name="Fornecedor" Relationship="Self.FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID" FromRole="Produto" ToRole="Fornecedor" />
+          <NavigationProperty Name="VendaProdutos" Relationship="Self.FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID" FromRole="Produto" ToRole="VendaProdutos" />
         </EntityType>
         <EntityType Name="Venda">
           <Key>
             <PropertyRef Name="VendaID" />
           </Key>
-          <Property Name="VendaID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="NomeCliente" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="MoradaCliente" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="VendaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NomeCliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MoradaCliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Estado" Type="Int32" />
-          <NavigationProperty Name="VendaProdutos" Relationship="Model.FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID" FromRole="Venda" ToRole="VendaProdutos" />
+          <NavigationProperty Name="VendaProdutos" Relationship="Self.FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID" FromRole="Venda" ToRole="VendaProdutos" />
         </EntityType>
         <EntityType Name="VendaProduto">
           <Key>
             <PropertyRef Name="VendaProdutosID" />
           </Key>
-          <Property Name="VendaProdutosID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Codigo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="VendaProdutosID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Qtd" Type="Int32" Nullable="false" />
           <Property Name="Estado" Type="Int32" />
           <Property Name="Venda_VendaID" Type="Int32" />
           <Property Name="Produto_ProdutoID" Type="Int32" />
-          <NavigationProperty Name="Encomendas" Relationship="Model.FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID" FromRole="VendaProdutos" ToRole="Encomenda" />
-          <NavigationProperty Name="Produto" Relationship="Model.FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID" FromRole="VendaProdutos" ToRole="Produto" />
-          <NavigationProperty Name="Venda" Relationship="Model.FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID" FromRole="VendaProdutos" ToRole="Venda" />
+          <NavigationProperty Name="Encomendas" Relationship="Self.FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID" FromRole="VendaProdutos" ToRole="Encomenda" />
+          <NavigationProperty Name="Produto" Relationship="Self.FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID" FromRole="VendaProdutos" ToRole="Produto" />
+          <NavigationProperty Name="Venda" Relationship="Self.FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID" FromRole="VendaProdutos" ToRole="Venda" />
         </EntityType>
         <Association Name="FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID">
-          <End Role="Produto" Type="Model.Produto" Multiplicity="0..1" />
-          <End Role="Encomenda" Type="Model.Encomenda" Multiplicity="*" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="0..1" />
+          <End Role="Encomenda" Type="Self.Encomenda" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Produto">
               <PropertyRef Name="ProdutoID" />
@@ -251,8 +239,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID">
-          <End Role="VendaProdutos" Type="Model.VendaProduto" Multiplicity="0..1" />
-          <End Role="Encomenda" Type="Model.Encomenda" Multiplicity="*" />
+          <End Role="VendaProdutos" Type="Self.VendaProduto" Multiplicity="0..1" />
+          <End Role="Encomenda" Type="Self.Encomenda" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="VendaProdutos">
               <PropertyRef Name="VendaProdutosID" />
@@ -263,8 +251,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID">
-          <End Role="Fornecedor" Type="Model.Fornecedor" Multiplicity="0..1" />
-          <End Role="Produto" Type="Model.Produto" Multiplicity="*" />
+          <End Role="Fornecedor" Type="Self.Fornecedor" Multiplicity="0..1" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Fornecedor">
               <PropertyRef Name="FornecedorID" />
@@ -275,8 +263,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID">
-          <End Role="Produto" Type="Model.Produto" Multiplicity="0..1" />
-          <End Role="VendaProdutos" Type="Model.VendaProduto" Multiplicity="*" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="0..1" />
+          <End Role="VendaProdutos" Type="Self.VendaProduto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Produto">
               <PropertyRef Name="ProdutoID" />
@@ -287,8 +275,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID">
-          <End Role="Venda" Type="Model.Venda" Multiplicity="0..1" />
-          <End Role="VendaProdutos" Type="Model.VendaProduto" Multiplicity="*" />
+          <End Role="Venda" Type="Self.Venda" Multiplicity="0..1" />
+          <End Role="VendaProdutos" Type="Self.VendaProduto" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Venda">
               <PropertyRef Name="VendaID" />
@@ -298,12 +286,55 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityContainer Name="ASIVesteEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Encomendas" EntityType="Self.Encomenda" />
+          <EntitySet Name="Fornecedors" EntityType="Self.Fornecedor" />
+          <EntitySet Name="Produtos" EntityType="Self.Produto" />
+          <EntitySet Name="Vendas" EntityType="Self.Venda" />
+          <EntitySet Name="VendaProdutos" EntityType="Self.VendaProduto" />
+          <AssociationSet Name="FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID" Association="Self.FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID">
+            <End Role="Produto" EntitySet="Produtos" />
+            <End Role="Encomenda" EntitySet="Encomendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID" Association="Self.FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID">
+            <End Role="VendaProdutos" EntitySet="VendaProdutos" />
+            <End Role="Encomenda" EntitySet="Encomendas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID" Association="Self.FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID">
+            <End Role="Fornecedor" EntitySet="Fornecedors" />
+            <End Role="Produto" EntitySet="Produtos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID" Association="Self.FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID">
+            <End Role="Produto" EntitySet="Produtos" />
+            <End Role="VendaProdutos" EntitySet="VendaProdutos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID" Association="Self.FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID">
+            <End Role="Venda" EntitySet="Vendas" />
+            <End Role="VendaProdutos" EntitySet="VendaProdutos" />
+          </AssociationSet>
+          <FunctionImport Name="sp_realizarEncomenda">
+            <Parameter Name="CodigoProduto" Mode="In" Type="String" />
+            <Parameter Name="EncomendaRecebida" Mode="In" Type="Int32" />
+            <Parameter Name="QtdEncomendada" Mode="In" Type="Int32" />
+            <Parameter Name="VendaId" Mode="In" Type="Int32" />
+            <Parameter Name="EncomendaId" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_realizarVenda">
+            <Parameter Name="NomeCliente" Mode="In" Type="String" />
+            <Parameter Name="MoradaCliente" Mode="In" Type="String" />
+            <Parameter Name="CodigoProduto" Mode="In" Type="String" />
+            <Parameter Name="Qtd" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_receberEncomenda">
+            <Parameter Name="EncomendaId" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ASIVesteEntities">
           <EntitySetMapping Name="Encomendas">
             <EntityTypeMapping TypeName="Model.Encomenda">
               <MappingFragment StoreEntitySet="Encomenda">
@@ -325,7 +356,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Produtoes">
+          <EntitySetMapping Name="Produtos">
             <EntityTypeMapping TypeName="Model.Produto">
               <MappingFragment StoreEntitySet="Produto">
                 <ScalarProperty Name="ProdutoID" ColumnName="ProdutoID" />
@@ -361,6 +392,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_realizarEncomenda" FunctionName="Model.Store.sp_realizarEncomenda" />
+          <FunctionImportMapping FunctionImportName="sp_realizarVenda" FunctionName="Model.Store.sp_realizarVenda" />
+          <FunctionImportMapping FunctionImportName="sp_receberEncomenda" FunctionName="Model.Store.sp_receberEncomenda" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -375,8 +409,10 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
