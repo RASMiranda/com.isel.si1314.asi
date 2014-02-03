@@ -20,8 +20,8 @@
     <add key="UnobtrusiveJavaScriptEnabled" value="true" />
     <add key="pageSize" value="2" />
     <!-- TODO: ALTERAR NUMERO DE LINHAS POR PAGINA pageSize-->
-    <add key="queuePath" value=".\private$\queueLSC" />
-    <add key="endpointConfigurationNameQueue" value="qLSC" />
+    <add key="queuePath" value=".\private$\queueLHD" />
+    <add key="endpointConfigurationNameQueue" value="qLHD" />
   </appSettings>
   <system.web>
     <compilation debug="true" targetFramework="4.5" />
@@ -89,7 +89,7 @@
   </entityFramework>
   <system.serviceModel>
     <client>
-      <endpoint name="queueService" address="net.msmq://localhost/private/queueLSC" binding="netMsmqBinding" bindingConfiguration="queueServiceBinding" contract="QueueVendas.IVendaServico" />
+      <endpoint name="queueService" address="net.msmq://localhost/private/queueLHD" binding="netMsmqBinding" bindingConfiguration="queueServiceBinding" contract="QueueVendas.IVendaServico" />
     </client>
     <bindings>
       <netMsmqBinding>

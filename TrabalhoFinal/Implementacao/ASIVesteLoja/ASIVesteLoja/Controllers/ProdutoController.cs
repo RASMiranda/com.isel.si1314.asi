@@ -22,7 +22,9 @@ namespace ASIVesteLoja.Controllers
 
         public ViewResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
-            //TODO?: Permitir sorting dentro do filtro
+            //TODO?: Try Catch->Pretty message?
+            //TODO?: Permitir sorting dentro do filtro?
+            //TODO?: Filtro numerico de intervalos Preco/StockQtd?
 
             ViewBag.CurrentSort = sortOrder;
             ViewBag.CodigoSortParm = String.IsNullOrEmpty(sortOrder) ? "Codigo_desc" : "";

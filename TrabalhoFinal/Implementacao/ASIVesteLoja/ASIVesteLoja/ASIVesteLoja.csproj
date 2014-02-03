@@ -300,6 +300,24 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <None Include="Web.config.Debug.LHD">
+      <DependentUpon>Web.config.LHD</DependentUpon>
+    </None>
+    <None Include="Web.config.LHD">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.config.Release.LHD">
+      <DependentUpon>Web.config.LHD</DependentUpon>
+    </None>
+    <None Include="Web.config.LSC">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.config.Debug.LSC">
+      <DependentUpon>Web.config.LSC</DependentUpon>
+    </None>
+    <None Include="Web.config.Release.LSC">
+      <DependentUpon>Web.config.LSC</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="PM\add-migration.txt" />
     <Content Include="PM\Install-Package PagedList.txt" />
