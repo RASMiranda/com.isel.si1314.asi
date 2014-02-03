@@ -9,10 +9,16 @@
 @*<p>
     @Html.ActionLink("Create New", "Create")
 </p>*@
+@using (Html.BeginForm())
+{
+    <p>
+        Pesquisa por Código/Designação: @Html.TextBox("SearchString")  
+        <input type="submit" value="Search" /></p>
+}
 <table>
     <tr>
         <th><u>
-            @Html.ActionLink("Codigo", "Index", new { sortOrder = ViewBag.CodigoSortParm })
+            @Html.ActionLink("Código", "Index", new { sortOrder = ViewBag.CodigoSortParm })
         </u></th>
         <th><u>
             @Html.ActionLink("Designação", "Index", new { sortOrder = ViewBag.DesignacaoSortParm })

@@ -17,14 +17,21 @@ namespace ASIVesteLoja.Controllers
         //
         // GET: /Produto/
 
-        public ActionResult Index(string sortOrder)
+        public ViewResult Index(string sortOrder, string searchString)
         {
+            //TODO?: Permitir sorting dentro do filtro
+
             ViewBag.CodigoSortParm = String.IsNullOrEmpty(sortOrder) ? "Codigo_desc" : "";
             ViewBag.DesignacaoSortParm = sortOrder == "Designacao" ? "Designacao_desc" : "Designacao";
             ViewBag.StockQtdSortParm = sortOrder == "StockQtd" ? "StockQtd_desc" : "StockQtd";
             ViewBag.PrecoSortParm = sortOrder == "Preco" ? "Preco_desc" : "Preco";
             var produtos = from s in db.Produtos
                            select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                produtos = produtos.Where(s => s.Codigo.ToUpper().Contains(searchString.ToUpper())
+                                       || s.Designacao.ToUpper().Contains(searchString.ToUpper()));
+            }
             switch (sortOrder)
             {
                 case "Codigo_desc":
