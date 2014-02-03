@@ -1,4 +1,6 @@
-﻿@model IEnumerable<ASIVesteLoja.Models.Produto>
+﻿@model PagedList.IPagedList<ASIVesteLoja.Models.Produto>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Produtos";
@@ -9,28 +11,30 @@
 @*<p>
     @Html.ActionLink("Create New", "Create")
 </p>*@
-@using (Html.BeginForm())
+@using (Html.BeginForm("Index", "Produto", FormMethod.Get))
 {
     <p>
-        Pesquisa por Código/Designação: @Html.TextBox("SearchString")  
-        <input type="submit" value="Search" /></p>
+        Pesquisa por Código/Designação: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
 }
-<table>
+<table class="table">
     <tr>
         <th><u>
-            @Html.ActionLink("Código", "Index", new { sortOrder = ViewBag.CodigoSortParm })
+            @Html.ActionLink("Código", "Index", new { sortOrder = ViewBag.CodigoSortParm, currentFilter=ViewBag.CurrentFilter })
         </u></th>
         <th><u>
-            @Html.ActionLink("Designação", "Index", new { sortOrder = ViewBag.DesignacaoSortParm })
+            @Html.ActionLink("Designação", "Index", new { sortOrder = ViewBag.DesignacaoSortParm, currentFilter=ViewBag.CurrentFilter })
         </u></th>
         <th><u>
-            @Html.ActionLink("Stock", "Index", new { sortOrder = ViewBag.StockQtdSortParm })
+            @Html.ActionLink("Stock", "Index", new { sortOrder = ViewBag.StockQtdSortParm, currentFilter=ViewBag.CurrentFilter })
         </u></th>
         <th><u>
-            @Html.ActionLink("Preço", "Index", new { sortOrder = ViewBag.PrecoSortParm })
+            @Html.ActionLink("Preço", "Index", new { sortOrder = ViewBag.PrecoSortParm, currentFilter=ViewBag.CurrentFilter })
         </u></th>
         <th></th>
     </tr>
+
 
 @foreach (var item in Model) {
     <tr>
@@ -57,3 +61,8 @@
 }
 
 </table>
+<br />
+Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index", 
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

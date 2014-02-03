@@ -8,6 +8,9 @@ using System.Web.Mvc;
 using ASIVesteLoja.Models;
 using ASIVesteLoja.DAL;
 
+using PagedList;
+using System.Configuration;
+
 namespace ASIVesteLoja.Controllers
 {
     public class ProdutoController : Controller
@@ -17,14 +20,28 @@ namespace ASIVesteLoja.Controllers
         //
         // GET: /Produto/
 
-        public ViewResult Index(string sortOrder, string searchString)
+        public ViewResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
             //TODO?: Permitir sorting dentro do filtro
 
+            ViewBag.CurrentSort = sortOrder;
             ViewBag.CodigoSortParm = String.IsNullOrEmpty(sortOrder) ? "Codigo_desc" : "";
             ViewBag.DesignacaoSortParm = sortOrder == "Designacao" ? "Designacao_desc" : "Designacao";
             ViewBag.StockQtdSortParm = sortOrder == "StockQtd" ? "StockQtd_desc" : "StockQtd";
             ViewBag.PrecoSortParm = sortOrder == "Preco" ? "Preco_desc" : "Preco";
+
+
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
+
             var produtos = from s in db.Produtos
                            select s;
             if (!String.IsNullOrEmpty(searchString))
@@ -59,7 +76,9 @@ namespace ASIVesteLoja.Controllers
                     produtos = produtos.OrderBy(s => s.Codigo);
                     break;
             }
-            return View(produtos.ToList());
+            int pageSize = Convert.ToInt32(ConfigurationManager.AppSettings["pageSize"]);
+            int pageNumber = (page ?? 1);
+            return View(produtos.ToPagedList(pageNumber, pageSize));
         }
 
         //
