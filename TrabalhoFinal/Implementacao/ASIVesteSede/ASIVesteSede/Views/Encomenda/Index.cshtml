@@ -23,6 +23,10 @@
             @Html.DisplayFor(modelItem => item.Qtd)
         </td>
         <td>
+             @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+
+        <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EncomendaID }) |
             @Html.ActionLink("Details", "Details", new { id=item.EncomendaID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.EncomendaID })

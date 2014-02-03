@@ -46,6 +46,7 @@ C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSe
 C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
 C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csprojResolveAssemblyReference.cache
 C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.Migrations.v0.resources
+C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.Migrations.V1.resources
 C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csproj.GenerateResource.Cache
 C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.dll
 C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.pdb

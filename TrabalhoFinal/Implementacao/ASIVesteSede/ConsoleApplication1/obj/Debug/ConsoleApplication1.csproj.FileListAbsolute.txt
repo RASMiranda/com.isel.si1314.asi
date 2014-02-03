@@ -5,6 +5,5 @@ C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApp
 C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\bin\Debug\EntityFramework.dll
 C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\bin\Debug\EntityFramework.xml
-C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
 C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\Frederico\documents\visual studio 2012\Projects\ASIVesteSede\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

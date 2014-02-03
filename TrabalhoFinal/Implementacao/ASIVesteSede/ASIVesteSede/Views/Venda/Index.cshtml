@@ -17,6 +17,7 @@
         <th>
             @Html.DisplayNameFor(model => model.MoradaCliente)
         </th>
+        <th>Estado</th>
         <th></th>
     </tr>
 
@@ -28,6 +29,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.MoradaCliente)
         </td>
+        <td>
+             @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.VendaID }) |
             @Html.ActionLink("Details", "Details", new { id=item.VendaID }) |

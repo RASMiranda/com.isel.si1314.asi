@@ -1,0 +1,4 @@
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\bin\QueueVendas.dll
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\bin\QueueVendas.pdb
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\obj\Release\QueueVendas.dll
+c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\obj\Release\QueueVendas.pdb

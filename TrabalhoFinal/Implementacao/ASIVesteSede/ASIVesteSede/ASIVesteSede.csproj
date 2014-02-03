@@ -163,6 +163,7 @@
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="Controllers\ExpedicaoController.cs" />
     <Compile Include="Migrations\201401292027317_v0.cs" />
     <Compile Include="Migrations\201401292027317_v0.Designer.cs">
       <DependentUpon>201401292027317_v0.cs</DependentUpon>
@@ -179,6 +180,10 @@
     <Compile Include="Images\Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201402031603571_V1.cs" />
+    <Compile Include="Migrations\201402031603571_V1.Designer.cs">
+      <DependentUpon>201402031603571_V1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -334,6 +339,11 @@
     <Content Include="Views\Encomenda\Create.cshtml" />
     <Content Include="Views\Encomenda\Edit.cshtml" />
     <Content Include="Views\Encomenda\Delete.cshtml" />
+    <Content Include="Views\Expedicao\Index.cshtml" />
+    <Content Include="Views\Expedicao\Details.cshtml" />
+    <Content Include="Views\Expedicao\Create.cshtml" />
+    <Content Include="Views\Expedicao\Edit.cshtml" />
+    <Content Include="Views\Expedicao\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -344,6 +354,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201401292027317_v0.resx">
       <DependentUpon>201401292027317_v0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402031603571_V1.resx">
+      <DependentUpon>201402031603571_V1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

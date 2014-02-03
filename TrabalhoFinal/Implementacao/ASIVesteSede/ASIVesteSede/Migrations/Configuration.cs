@@ -50,6 +50,40 @@ namespace ASIVesteSede.Migrations
             produtos.ForEach(s => context.Produtos.AddOrUpdate(p => p.Codigo, s));
 
             context.SaveChanges();
+
+            var vendas = new List<Venda>
+            {
+                new Venda { Estado = EstadoVenda.Pendente, MoradaCliente="Rua da Alegria,23, Porto", NomeCliente="Ramalho Ortigão", 
+                    Produtos = new List< VendaProdutos> {
+                        new VendaProdutos { Codigo="SC001", Qtd=2, Estado= EstadoVenda.Pendente, 
+                                            Produto= produtos.Single( s => s.Codigo == "SC001")  },
+                        new VendaProdutos { Codigo="SC002", Qtd = 1, Estado = EstadoVenda.Pendente, 
+                                            Produto= produtos.Single( s => s.Codigo == "SC002")}
+                    }
+                },
+                new Venda { Estado = EstadoVenda.Expedida, MoradaCliente="Rua da Alegria,23, Porto", NomeCliente="João Expedido", 
+                    Produtos = new List< VendaProdutos> {
+                        new VendaProdutos { Codigo="SC001", Qtd=1, Estado= EstadoVenda.Expedida, 
+                                            Produto= produtos.Single( s => s.Codigo == "SC001")},
+                        new VendaProdutos { Codigo="SC002", Qtd = 1, Estado = EstadoVenda.Expedida, 
+                                            Produto= produtos.Single( s => s.Codigo == "SC002")}
+                    }
+                }
+            };
+            vendas.ForEach(s => context.Vendas.Add(s));
+
+            context.SaveChanges();
+
+            var encomendas = new List<Encomenda>
+            {
+                new Encomenda { Estado = EstadoEncomenda.Pendente, Qtd=5, Produto= produtos.Single( s => s.Codigo == "SC001") },
+                new Encomenda { Estado = EstadoEncomenda.Pendente, Qtd=2, Produto= produtos.Single( s => s.Codigo == "SC002") },
+                new Encomenda { Estado = EstadoEncomenda.Recebida, Qtd=5, Produto= produtos.Single( s => s.Codigo == "SC001") },
+                new Encomenda { Estado = EstadoEncomenda.Recebida, Qtd=1, Produto= produtos.Single( s => s.Codigo == "SC002") }
+             };
+            encomendas.ForEach(s => context.Encomendas.Add(s));
+
+            context.SaveChanges();
         }
     }
 }

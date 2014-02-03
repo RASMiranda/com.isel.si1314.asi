@@ -1,0 +1,5 @@
+C:\Users\Frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\bin\QueueVendas.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\bin\QueueVendas.pdb
+C:\Users\Frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\obj\Debug\QueueVendas.csprojResolveAssemblyReference.cache
+C:\Users\Frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\obj\Debug\QueueVendas.dll
+C:\Users\Frederico\documents\visual studio 2012\Projects\QueueVendas\QueueVendas\obj\Debug\QueueVendas.pdb
