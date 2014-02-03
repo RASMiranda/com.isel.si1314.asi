@@ -1,0 +1,11 @@
+git pull
+
+git add . -a
+
+git checkout .
+
+git commit -m "couves"
+
+git mergetool
+
+git rm ./*/bin/* ./*/obj/*
