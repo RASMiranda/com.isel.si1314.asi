@@ -1,8 +1,0 @@
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\bin\Release\VendasReceiver.exe.config
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\bin\Release\VendasReceiver.exe
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\bin\Release\VendasReceiver.pdb
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\bin\Release\QueueVendas.dll
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\bin\Release\QueueVendas.pdb
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\obj\Release\VendasReceiver.csprojResolveAssemblyReference.cache
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\obj\Release\VendasReceiver.exe
-c:\users\frederico\documents\visual studio 2012\Projects\QueueVendas\VendasReceiver\obj\Release\VendasReceiver.pdb
