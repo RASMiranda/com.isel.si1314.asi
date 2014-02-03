@@ -11,18 +11,18 @@
 </p>*@
 <table>
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Codigo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Designacao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StockQtd)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Preco)
-        </th>
+        <th><u>
+            @Html.ActionLink("Codigo", "Index", new { sortOrder = ViewBag.CodigoSortParm })
+        </u></th>
+        <th><u>
+            @Html.ActionLink("Designação", "Index", new { sortOrder = ViewBag.DesignacaoSortParm })
+        </u></th>
+        <th><u>
+            @Html.ActionLink("Stock", "Index", new { sortOrder = ViewBag.StockQtdSortParm })
+        </u></th>
+        <th><u>
+            @Html.ActionLink("Preço", "Index", new { sortOrder = ViewBag.PrecoSortParm })
+        </u></th>
         <th></th>
     </tr>
 

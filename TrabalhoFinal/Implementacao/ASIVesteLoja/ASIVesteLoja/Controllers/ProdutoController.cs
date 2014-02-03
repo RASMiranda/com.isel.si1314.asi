@@ -17,9 +17,42 @@ namespace ASIVesteLoja.Controllers
         //
         // GET: /Produto/
 
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder)
         {
-            return View(db.Produtos.ToList());
+            ViewBag.CodigoSortParm = String.IsNullOrEmpty(sortOrder) ? "Codigo_desc" : "";
+            ViewBag.DesignacaoSortParm = sortOrder == "Designacao" ? "Designacao_desc" : "Designacao";
+            ViewBag.StockQtdSortParm = sortOrder == "StockQtd" ? "StockQtd_desc" : "StockQtd";
+            ViewBag.PrecoSortParm = sortOrder == "Preco" ? "Preco_desc" : "Preco";
+            var produtos = from s in db.Produtos
+                           select s;
+            switch (sortOrder)
+            {
+                case "Codigo_desc":
+                    produtos = produtos.OrderByDescending(s => s.Codigo);
+                    break;
+                case "Designacao":
+                    produtos = produtos.OrderBy(s => s.Designacao);
+                    break;
+                case "Designacao_desc":
+                    produtos = produtos.OrderByDescending(s => s.Designacao);
+                    break;
+                case "StockQtd":
+                    produtos = produtos.OrderBy(s => s.StockQtd);
+                    break;
+                case "StockQtd_desc":
+                    produtos = produtos.OrderByDescending(s => s.StockQtd);
+                    break;
+                case "Preco":
+                    produtos = produtos.OrderBy(s => s.Preco);
+                    break;
+                case "Preco_desc":
+                    produtos = produtos.OrderByDescending(s => s.Preco);
+                    break;
+                default:
+                    produtos = produtos.OrderBy(s => s.Codigo);
+                    break;
+            }
+            return View(produtos.ToList());
         }
 
         //
