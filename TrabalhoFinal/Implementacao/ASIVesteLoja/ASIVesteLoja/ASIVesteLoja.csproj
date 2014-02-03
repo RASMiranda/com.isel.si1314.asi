@@ -40,9 +40,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="QueueVendas">
-      <HintPath>..\..\QueueVendas\QueueVendas\bin\QueueVendas.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -397,6 +394,12 @@
     <EmbeddedResource Include="Migrations\201402022236078_V6.resx">
       <DependentUpon>201402022236078_V6.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\QueueVendas\QueueVendas\QueueVendas.csproj">
+      <Project>{f9585bef-766f-4253-8335-12b2e71f7cc5}</Project>
+      <Name>QueueVendas</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
