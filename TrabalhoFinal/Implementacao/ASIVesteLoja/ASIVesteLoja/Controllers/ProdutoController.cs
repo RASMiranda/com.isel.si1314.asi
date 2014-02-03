@@ -8,6 +8,9 @@ using System.Web.Mvc;
 using ASIVesteLoja.Models;
 using ASIVesteLoja.DAL;
 
+using PagedList;
+using System.Configuration;
+
 namespace ASIVesteLoja.Controllers
 {
     public class ProdutoController : Controller
@@ -17,9 +20,65 @@ namespace ASIVesteLoja.Controllers
         //
         // GET: /Produto/
 
-        public ActionResult Index()
+        public ViewResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
-            return View(db.Produtos.ToList());
+            //TODO?: Permitir sorting dentro do filtro
+
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.CodigoSortParm = String.IsNullOrEmpty(sortOrder) ? "Codigo_desc" : "";
+            ViewBag.DesignacaoSortParm = sortOrder == "Designacao" ? "Designacao_desc" : "Designacao";
+            ViewBag.StockQtdSortParm = sortOrder == "StockQtd" ? "StockQtd_desc" : "StockQtd";
+            ViewBag.PrecoSortParm = sortOrder == "Preco" ? "Preco_desc" : "Preco";
+
+
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
+
+            var produtos = from s in db.Produtos
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                produtos = produtos.Where(s => s.Codigo.ToUpper().Contains(searchString.ToUpper())
+                                       || s.Designacao.ToUpper().Contains(searchString.ToUpper()));
+            }
+            switch (sortOrder)
+            {
+                case "Codigo_desc":
+                    produtos = produtos.OrderByDescending(s => s.Codigo);
+                    break;
+                case "Designacao":
+                    produtos = produtos.OrderBy(s => s.Designacao);
+                    break;
+                case "Designacao_desc":
+                    produtos = produtos.OrderByDescending(s => s.Designacao);
+                    break;
+                case "StockQtd":
+                    produtos = produtos.OrderBy(s => s.StockQtd);
+                    break;
+                case "StockQtd_desc":
+                    produtos = produtos.OrderByDescending(s => s.StockQtd);
+                    break;
+                case "Preco":
+                    produtos = produtos.OrderBy(s => s.Preco);
+                    break;
+                case "Preco_desc":
+                    produtos = produtos.OrderByDescending(s => s.Preco);
+                    break;
+                default:
+                    produtos = produtos.OrderBy(s => s.Codigo);
+                    break;
+            }
+            int pageSize = Convert.ToInt32(ConfigurationManager.AppSettings["pageSize"]);
+            int pageNumber = (page ?? 1);
+            return View(produtos.ToPagedList(pageNumber, pageSize));
         }
 
         //
