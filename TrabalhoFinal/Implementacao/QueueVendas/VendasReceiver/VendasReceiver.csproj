@@ -108,6 +108,12 @@
       <DependentUpon>ASIVesteModel.edmx</DependentUpon>
       <LastGenOutput>ASIVesteModel.cs</LastGenOutput>
     </None>
+    <None Include="App.config.DAVID">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.config.RUI">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QueueVendas\QueueVendas.csproj">
