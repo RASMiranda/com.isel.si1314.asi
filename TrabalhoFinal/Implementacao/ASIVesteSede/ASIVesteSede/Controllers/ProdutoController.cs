@@ -58,10 +58,28 @@ namespace ASIVesteSede.Controllers
         [HttpPost]
         public ActionResult Create(Produto produto)
         {
+            int tipoProd = -1;
+
+            switch(produto.Tipo)
+            {
+                case TipoProduto.Senhora:  tipoProd = 0; break;
+                case TipoProduto.Crianca:  tipoProd = 1; break;
+                case TipoProduto.Homem:  tipoProd = 2; break;
+                case TipoProduto.Desportista:  tipoProd = 3; break;
+            };
+
             if (ModelState.IsValid)
             {
+                db.sp_inserirProduto(
+                    tipoProd,               produto.Codigo,
+                    produto.Designacao,     produto.StockQtd,
+                    produto.StockMinimo,    produto.Preco,
+                    produto.Fornecedor.FornecedorID
+                );
+
                 db.Produtos.Add(produto);
-                db.SaveChanges();
+                db.Entry<Produto>(produto).State = EntityState.Unchanged;
+                //db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -87,10 +105,32 @@ namespace ASIVesteSede.Controllers
         [HttpPost]
         public ActionResult Edit(Produto produto)
         {
+            int tipoProd = -1;
+
+            switch (produto.Tipo)
+            {
+                case TipoProduto.Senhora: tipoProd = 0; break;
+                case TipoProduto.Crianca: tipoProd = 1; break;
+                case TipoProduto.Homem: tipoProd = 2; break;
+                case TipoProduto.Desportista: tipoProd = 3; break;
+            };
+
+            string codigoOriginal = db.Entry<Produto>(produto).OriginalValues.GetValue<string>("Codigo");
+
             if (ModelState.IsValid)
             {
-                db.Entry(produto).State = EntityState.Modified;
-                db.SaveChanges();
+                db.sp_actualizarProduto(
+                    produto.ProdutoID, tipoProd, 
+                    codigoOriginal,
+                    produto.Designacao, produto.StockQtd,
+                    produto.StockMinimo, produto.Preco,
+                    produto.Fornecedor.FornecedorID,
+                    produto.Codigo // se null o SP usa o codigoOriginal
+                );
+
+                db.Produtos.Add(produto);
+                db.Entry<Produto>(produto).State = EntityState.Unchanged;
+                //db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(produto);
@@ -116,8 +156,11 @@ namespace ASIVesteSede.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Produto produto = db.Produtos.Find(id);
+            db.sp_removerProduto( produto.ProdutoID, produto.Codigo );
             db.Produtos.Remove(produto);
-            db.SaveChanges();
+            //db.SaveChanges();
+            db.Entry<Produto>(produto).State = EntityState.Deleted;
+
             return RedirectToAction("Index");
         }
 

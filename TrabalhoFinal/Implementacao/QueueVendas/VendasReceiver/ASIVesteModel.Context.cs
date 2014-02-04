@@ -34,15 +34,11 @@ namespace VendasReceiver
         public DbSet<Venda> Vendas { get; set; }
         public DbSet<VendaProduto> VendaProdutos { get; set; }
     
-        public virtual int sp_realizarEncomenda(string codigoProduto, Nullable<int> encomendaRecebida, Nullable<int> qtdEncomendada, Nullable<int> vendaId, ObjectParameter encomendaId)
+        public virtual int sp_realizarEncomenda(string codigoProduto, Nullable<int> qtdEncomendada, Nullable<int> vendaId)
         {
             var codigoProdutoParameter = codigoProduto != null ?
                 new ObjectParameter("CodigoProduto", codigoProduto) :
                 new ObjectParameter("CodigoProduto", typeof(string));
-    
-            var encomendaRecebidaParameter = encomendaRecebida.HasValue ?
-                new ObjectParameter("EncomendaRecebida", encomendaRecebida) :
-                new ObjectParameter("EncomendaRecebida", typeof(int));
     
             var qtdEncomendadaParameter = qtdEncomendada.HasValue ?
                 new ObjectParameter("QtdEncomendada", qtdEncomendada) :
@@ -52,7 +48,7 @@ namespace VendasReceiver
                 new ObjectParameter("VendaId", vendaId) :
                 new ObjectParameter("VendaId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_realizarEncomenda", codigoProdutoParameter, encomendaRecebidaParameter, qtdEncomendadaParameter, vendaIdParameter, encomendaId);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_realizarEncomenda", codigoProdutoParameter, qtdEncomendadaParameter, vendaIdParameter);
         }
     
         public virtual int sp_realizarVenda(string nomeCliente, string moradaCliente, string codigoProduto, Nullable<int> qtd)
@@ -83,6 +79,93 @@ namespace VendasReceiver
                 new ObjectParameter("EncomendaId", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_receberEncomenda", encomendaIdParameter);
+        }
+    
+        public virtual int sp_actualizarProduto(Nullable<int> produtoId, Nullable<int> tipo, string codigo, string designacao, Nullable<int> stockQtd, Nullable<int> stockMinimo, Nullable<float> preco, Nullable<int> fornecedorId, string novoCodigo)
+        {
+            var produtoIdParameter = produtoId.HasValue ?
+                new ObjectParameter("ProdutoId", produtoId) :
+                new ObjectParameter("ProdutoId", typeof(int));
+    
+            var tipoParameter = tipo.HasValue ?
+                new ObjectParameter("Tipo", tipo) :
+                new ObjectParameter("Tipo", typeof(int));
+    
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("Codigo", codigo) :
+                new ObjectParameter("Codigo", typeof(string));
+    
+            var designacaoParameter = designacao != null ?
+                new ObjectParameter("Designacao", designacao) :
+                new ObjectParameter("Designacao", typeof(string));
+    
+            var stockQtdParameter = stockQtd.HasValue ?
+                new ObjectParameter("StockQtd", stockQtd) :
+                new ObjectParameter("StockQtd", typeof(int));
+    
+            var stockMinimoParameter = stockMinimo.HasValue ?
+                new ObjectParameter("StockMinimo", stockMinimo) :
+                new ObjectParameter("StockMinimo", typeof(int));
+    
+            var precoParameter = preco.HasValue ?
+                new ObjectParameter("Preco", preco) :
+                new ObjectParameter("Preco", typeof(float));
+    
+            var fornecedorIdParameter = fornecedorId.HasValue ?
+                new ObjectParameter("FornecedorId", fornecedorId) :
+                new ObjectParameter("FornecedorId", typeof(int));
+    
+            var novoCodigoParameter = novoCodigo != null ?
+                new ObjectParameter("novoCodigo", novoCodigo) :
+                new ObjectParameter("novoCodigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_actualizarProduto", produtoIdParameter, tipoParameter, codigoParameter, designacaoParameter, stockQtdParameter, stockMinimoParameter, precoParameter, fornecedorIdParameter, novoCodigoParameter);
+        }
+    
+        public virtual int sp_inserirProduto(Nullable<int> tipo, string codigo, string designacao, Nullable<int> stockQtd, Nullable<int> stockMinimo, Nullable<float> preco, Nullable<int> fornecedorId)
+        {
+            var tipoParameter = tipo.HasValue ?
+                new ObjectParameter("Tipo", tipo) :
+                new ObjectParameter("Tipo", typeof(int));
+    
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("Codigo", codigo) :
+                new ObjectParameter("Codigo", typeof(string));
+    
+            var designacaoParameter = designacao != null ?
+                new ObjectParameter("Designacao", designacao) :
+                new ObjectParameter("Designacao", typeof(string));
+    
+            var stockQtdParameter = stockQtd.HasValue ?
+                new ObjectParameter("StockQtd", stockQtd) :
+                new ObjectParameter("StockQtd", typeof(int));
+    
+            var stockMinimoParameter = stockMinimo.HasValue ?
+                new ObjectParameter("StockMinimo", stockMinimo) :
+                new ObjectParameter("StockMinimo", typeof(int));
+    
+            var precoParameter = preco.HasValue ?
+                new ObjectParameter("Preco", preco) :
+                new ObjectParameter("Preco", typeof(float));
+    
+            var fornecedorIdParameter = fornecedorId.HasValue ?
+                new ObjectParameter("FornecedorId", fornecedorId) :
+                new ObjectParameter("FornecedorId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_inserirProduto", tipoParameter, codigoParameter, designacaoParameter, stockQtdParameter, stockMinimoParameter, precoParameter, fornecedorIdParameter);
+        }
+    
+        public virtual int sp_removerProduto(Nullable<int> produtoId, string codigo)
+        {
+            var produtoIdParameter = produtoId.HasValue ?
+                new ObjectParameter("ProdutoId", produtoId) :
+                new ObjectParameter("ProdutoId", typeof(int));
+    
+            var codigoParameter = codigo != null ?
+                new ObjectParameter("Codigo", codigo) :
+                new ObjectParameter("Codigo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_removerProduto", produtoIdParameter, codigoParameter);
         }
     }
 }

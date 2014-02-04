@@ -84,6 +84,37 @@ namespace ASIVesteSede.Controllers
             return View(encomenda);
         }
 
+        [HttpPost]
+        public ActionResult RealizarEncomenda(Encomenda encomenda)
+        {
+            Nullable<int> idDaVenda = null;
+
+            if (encomenda != null &&
+                 encomenda.VendaProduto != null &&
+                 encomenda.VendaProduto.Venda != null)
+            {
+                idDaVenda = encomenda.VendaProduto.Venda.VendaID;
+            }
+            else
+                throw new Exception("Uma encomenda precisa de ter associada uma VendaProduto e uma Venda.");
+
+            db.sp_realizarEncomenda(
+                    encomenda.Produto.Codigo,
+                    encomenda.Qtd,
+                    idDaVenda
+            );
+
+            return View(encomenda);
+        }
+
+        [HttpPost]
+        public ActionResult ReceberEncomenda(Encomenda encomenda)
+        {
+            db.sp_receberEncomenda(encomenda.EncomendaID);
+
+            return View(encomenda);
+        }
+
         //
         // GET: /Encomenda/Edit/5
 

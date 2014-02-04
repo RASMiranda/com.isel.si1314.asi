@@ -35,6 +35,6 @@
   </system.serviceModel>
   <connectionStrings>
     <!--add name="ASIVesteEntities" connectionString="metadata=res://*/ASIVesteModel.csdl|res://*/ASIVesteModel.ssdl|res://*/ASIVesteModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(localdb)\V11.0;initial catalog=ASIVesteSede-20140129;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" /-->
-    <add name="ASIVesteEntities" connectionString="metadata=res://*/ASIVesteModel.csdl|res://*/ASIVesteModel.ssdl|res://*/ASIVesteModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=LOCALHOST\ONE;initial catalog=ASIVesteSede;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+    <add name="ASIVesteEntities" connectionString="metadata=res://*/ASIVesteModel.csdl|res://*/ASIVesteModel.ssdl|res://*/ASIVesteModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=ALUNO_SIAD-PC\ONE;initial catalog=ASIVesteSede;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
   </connectionStrings>
 </configuration>

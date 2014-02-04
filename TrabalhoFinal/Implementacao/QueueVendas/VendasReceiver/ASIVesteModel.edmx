@@ -117,12 +117,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="sp_actualizarProduto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProdutoId" Type="int" Mode="In" />
+          <Parameter Name="Tipo" Type="int" Mode="In" />
+          <Parameter Name="Codigo" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Designacao" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="StockQtd" Type="int" Mode="In" />
+          <Parameter Name="StockMinimo" Type="int" Mode="In" />
+          <Parameter Name="Preco" Type="real" Mode="In" />
+          <Parameter Name="FornecedorId" Type="int" Mode="In" />
+          <Parameter Name="novoCodigo" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_inserirProduto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Tipo" Type="int" Mode="In" />
+          <Parameter Name="Codigo" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Designacao" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="StockQtd" Type="int" Mode="In" />
+          <Parameter Name="StockMinimo" Type="int" Mode="In" />
+          <Parameter Name="Preco" Type="real" Mode="In" />
+          <Parameter Name="FornecedorId" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_realizarEncomenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="CodigoProduto" Type="varchar" Mode="In" />
-          <Parameter Name="EncomendaRecebida" Type="int" Mode="In" />
           <Parameter Name="QtdEncomendada" Type="int" Mode="In" />
           <Parameter Name="VendaId" Type="int" Mode="In" />
-          <Parameter Name="EncomendaId" Type="int" Mode="InOut" />
         </Function>
         <Function Name="sp_realizarVenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="NomeCliente" Type="varchar" Mode="In" />
@@ -132,6 +150,10 @@
         </Function>
         <Function Name="sp_receberEncomenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="EncomendaId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_removerProduto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProdutoId" Type="int" Mode="In" />
+          <Parameter Name="Codigo" Type="nvarchar(max)" Mode="In" />
         </Function>
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Encomenda" EntityType="Self.Encomenda" Schema="dbo" store:Type="Tables" />
@@ -314,10 +336,8 @@
           </AssociationSet>
           <FunctionImport Name="sp_realizarEncomenda">
             <Parameter Name="CodigoProduto" Mode="In" Type="String" />
-            <Parameter Name="EncomendaRecebida" Mode="In" Type="Int32" />
             <Parameter Name="QtdEncomendada" Mode="In" Type="Int32" />
             <Parameter Name="VendaId" Mode="In" Type="Int32" />
-            <Parameter Name="EncomendaId" Mode="InOut" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_realizarVenda">
             <Parameter Name="NomeCliente" Mode="In" Type="String" />
@@ -326,7 +346,31 @@
             <Parameter Name="Qtd" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_receberEncomenda">
-            <Parameter Name="EncomendaId" Mode="In" Type="Int32" />
+          <Parameter Name="EncomendaId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_actualizarProduto">
+            <Parameter Name="ProdutoId" Mode="In" Type="Int32" />
+            <Parameter Name="Tipo" Mode="In" Type="Int32" />
+            <Parameter Name="Codigo" Mode="In" Type="String" />
+            <Parameter Name="Designacao" Mode="In" Type="String" />
+            <Parameter Name="StockQtd" Mode="In" Type="Int32" />
+            <Parameter Name="StockMinimo" Mode="In" Type="Int32" />
+            <Parameter Name="Preco" Mode="In" Type="Single" />
+            <Parameter Name="FornecedorId" Mode="In" Type="Int32" />
+            <Parameter Name="novoCodigo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_inserirProduto">
+            <Parameter Name="Tipo" Mode="In" Type="Int32" />
+            <Parameter Name="Codigo" Mode="In" Type="String" />
+            <Parameter Name="Designacao" Mode="In" Type="String" />
+            <Parameter Name="StockQtd" Mode="In" Type="Int32" />
+            <Parameter Name="StockMinimo" Mode="In" Type="Int32" />
+            <Parameter Name="Preco" Mode="In" Type="Single" />
+            <Parameter Name="FornecedorId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_removerProduto">
+            <Parameter Name="ProdutoId" Mode="In" Type="Int32" />
+            <Parameter Name="Codigo" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
       </Schema>
@@ -369,6 +413,46 @@
                 <ScalarProperty Name="Fornecedor_FornecedorID" ColumnName="Fornecedor_FornecedorID" />
               </MappingFragment>
             </EntityTypeMapping>
+            <EntityTypeMapping TypeName="Model.Produto">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="Model.Store.sp_inserirProduto">
+                  <ScalarProperty Name="Fornecedor_FornecedorID" ParameterName="FornecedorId" />
+                  <!--
+                  <AssociationEnd AssociationSet="FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID" From="Produto" To="Fornecedor">
+                    <ScalarProperty Name="FornecedorID" ParameterName="FornecedorId" />
+                  </AssociationEnd>
+                  -->
+                  <ScalarProperty Name="Preco" ParameterName="Preco" />
+                  <ScalarProperty Name="StockMinimo" ParameterName="StockMinimo" />
+                  <ScalarProperty Name="StockQtd" ParameterName="StockQtd" />
+                  <ScalarProperty Name="Designacao" ParameterName="Designacao" />
+                  <ScalarProperty Name="Codigo" ParameterName="Codigo" />
+                  <ScalarProperty Name="Tipo" ParameterName="Tipo" />
+                  <ResultBinding Name="ProdutoID" ColumnName="ProdutoId" />
+                </InsertFunction>
+                <UpdateFunction FunctionName="Model.Store.sp_actualizarProduto">
+                  <ScalarProperty Name="Codigo" ParameterName="novoCodigo" Version="Current" />
+                  <ScalarProperty Name="Fornecedor_FornecedorID" ParameterName="FornecedorId" Version="Current" />
+                  <ScalarProperty Name="ProdutoID" ParameterName="ProdutoId" Version="Original" />
+                  <ScalarProperty Name="Preco" ParameterName="Preco" Version="Current" />
+                  <ScalarProperty Name="StockMinimo" ParameterName="StockMinimo" Version="Current" />
+                  <ScalarProperty Name="StockQtd" ParameterName="StockQtd" Version="Current" />
+                  <ScalarProperty Name="Designacao" ParameterName="Designacao" Version="Current" />
+                  <ScalarProperty Name="Codigo" ParameterName="Codigo" Version="Original" />
+                  <ScalarProperty Name="Tipo" ParameterName="Tipo" Version="Current" />
+                </UpdateFunction>
+                <DeleteFunction FunctionName="Model.Store.sp_removerProduto">
+                  <ScalarProperty Name="ProdutoID" ParameterName="ProdutoId" />
+                  <ScalarProperty Name="Codigo" ParameterName="Codigo" />
+                </DeleteFunction>
+                <!--
+                <DeleteFunction FunctionName="Model.Store.sp_removerProduto">
+                  <ScalarProperty Name="Codigo" ParameterName="Codigo" />
+                  <ScalarProperty Name="ProdutoId" ParameterName="ProdutoId" />
+                </DeleteFunction>
+                -->
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Vendas">
             <EntityTypeMapping TypeName="Model.Venda">
@@ -395,6 +479,9 @@
           <FunctionImportMapping FunctionImportName="sp_realizarEncomenda" FunctionName="Model.Store.sp_realizarEncomenda" />
           <FunctionImportMapping FunctionImportName="sp_realizarVenda" FunctionName="Model.Store.sp_realizarVenda" />
           <FunctionImportMapping FunctionImportName="sp_receberEncomenda" FunctionName="Model.Store.sp_receberEncomenda" />
+          <FunctionImportMapping FunctionImportName="sp_actualizarProduto" FunctionName="Model.Store.sp_actualizarProduto" />
+          <FunctionImportMapping FunctionImportName="sp_inserirProduto" FunctionName="Model.Store.sp_inserirProduto" />
+          <FunctionImportMapping FunctionImportName="sp_removerProduto" FunctionName="Model.Store.sp_removerProduto" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
