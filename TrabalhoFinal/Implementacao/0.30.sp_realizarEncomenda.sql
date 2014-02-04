@@ -7,17 +7,20 @@ GO
 
 CREATE PROCEDURE sp_realizarEncomenda
     @CodigoProduto		[VARCHAR](30),
-    @EncomendaRecebida	[INT],
 	@QtdEncomendada		[INT],
-	@VendaId			[INT],
-    @EncomendaId		[INT] OUTPUT
+	@VendaId			[INT]
 AS
+DECLARE
+	@EncomendaId 		[INT],
+	@ENCOMENDA_AGUARDA_RECEPCAO int = 0,	@ENCOMENDA_RECEBIDA int = 1
 BEGIN
 	INSERT INTO [dbo].[Encomenda]
 			   ([Qtd], [Estado], [Produto_ProdutoID], [VendaProduto_VendaProdutosID])
-	select @QtdEncomendada, @EncomendaRecebida, ProdutoId, @VendaId
+	select @QtdEncomendada, @ENCOMENDA_AGUARDA_RECEPCAO, ProdutoId, @VendaId
 	from Produto where Codigo = @CodigoProduto;
 	
 	SELECT @EncomendaId = SCOPE_IDENTITY();
+
+	SELECT @EncomendaId EncomendaId;
 END
 GO

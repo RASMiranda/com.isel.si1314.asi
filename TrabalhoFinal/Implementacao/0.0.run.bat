@@ -31,6 +31,10 @@ sqlcmd -b -H localhost -S "%SEDE%" -i 0.04.InserirDadosTeste.sql -v LSC="%LSC%" 
 if not %errorlevel% == 0 goto end
 
 
+echo Running 0.25.sp_CrUD_Produto.sql na Sede.
+sqlcmd -b -H localhost -S "%SEDE%" -i 0.25.sp_CrUD_Produto.sql
+if not %errorlevel% == 0 goto end
+
 echo Running 0.30.sp_realizarEncomenda.sql na Sede.
 sqlcmd -b -H localhost -S "%SEDE%" -i 0.30.sp_realizarEncomenda.sql
 if not %errorlevel% == 0 goto end

@@ -114,6 +114,9 @@ begin
 	end
 
 	COMMIT TRANSACTION T_sp_realizarVenda
+
+	SELECT @VendaId VendaId; -- para actualizar o EF
+
 	RETURN
 end
 GO

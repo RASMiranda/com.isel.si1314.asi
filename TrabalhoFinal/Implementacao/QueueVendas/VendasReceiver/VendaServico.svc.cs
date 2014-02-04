@@ -35,8 +35,6 @@ namespace VendasReceiver
                                         ordem.moradaCliente,
                                         ordem.vendaItems[0].codigo,
                                         ordem.vendaItems[0].quantidade);
-
-                    db.SaveChanges();
                 }
 
                 transaction.Complete();

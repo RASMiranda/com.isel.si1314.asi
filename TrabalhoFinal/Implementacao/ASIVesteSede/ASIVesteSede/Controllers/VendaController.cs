@@ -54,10 +54,22 @@ namespace ASIVesteSede.Controllers
         [HttpPost]
         public ActionResult Create(Venda venda)
         {
+            if( venda.Produtos.Count < 1 || 1 < venda.Produtos.Count)
+                throw new Exception("Apenas a venda de um produto é suportada.");
+
             if (ModelState.IsValid)
             {
+                db.sp_realizarVenda(
+                    venda.NomeCliente, 
+                    venda.MoradaCliente, 
+                    venda.Produtos.First().Codigo,
+                    venda.Produtos.First().Qtd
+                );
+
                 db.Vendas.Add(venda);
-                db.SaveChanges();
+                db.Entry<Venda>(venda).State = EntityState.Unchanged;
+                //db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 
