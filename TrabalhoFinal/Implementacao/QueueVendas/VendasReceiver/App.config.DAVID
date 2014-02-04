@@ -7,6 +7,7 @@
     <services>
       <service name="VendasReceiver.VendaServico" behaviorConfiguration="queueVendasBehavior">
         <endpoint name="qLSC" address="queueLSC" binding="netMsmqBinding" bindingConfiguration="queueVendasBinding" contract="QueueVendas.IVendaServico" />
+        <endpoint name="qLHD" address="queueLHD" binding="netMsmqBinding" bindingConfiguration="queueVendasBinding" contract="QueueVendas.IVendaServico" />
         <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
         <host>
           <baseAddresses>
