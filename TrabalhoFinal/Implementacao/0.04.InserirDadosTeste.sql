@@ -48,7 +48,7 @@ INSERT INTO [dbo].[ProdutoHD]
 		   (N'SE003', N'Camisa Elite L',   5, 45.9)
 ;
 
-insert into [dbo].ProdutoHD
+insert into [dbo].ProdutoSC
 	( Codigo, Designacao, Preco, StockQtd) 
 Values
 			('SC001',N'Camisa Senhora modelo Roxane', 59.90, 10),
@@ -67,7 +67,7 @@ INSERT INTO [dbo].[ProdutoSC]
 ;
 
 
-insert into [dbo].ProdutoSC
+insert into [dbo].ProdutoHD
 	( Codigo, Designacao, Preco, StockQtd) 
 Values
 			(N'HC001',N'Casaco Castanho Adulto', 54.99 , 7),
