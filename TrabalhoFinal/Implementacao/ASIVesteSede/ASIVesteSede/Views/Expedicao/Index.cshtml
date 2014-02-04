@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ASIVesteSede.Models.Venda>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "EXPEDIÇÃO";
 }
 
 <h2>Lista de Vendas para Expedição</h2>
@@ -33,10 +33,21 @@
              @Html.DisplayFor(modelItem => item.Estado)
         </td>
         <td>
-            @item.Produtos.Count
+           <table>
+            @foreach( var prod in item.Produtos ) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => prod.Codigo )
+                    </td>
+                    <td>
+                       @Html.DisplayFor(modelItem => prod.Qtd )
+                    </td>
+                </tr>    
+            }
+            </table>
         </td>
         <td>
-            @Html.ActionLink("Expedir Encomenda", "Expedicao", new { id=item.VendaID }) 
+            @Html.ActionLink("Expedir Venda", "Expedicao", new { id=item.VendaID }) 
         </td>
     </tr>
 }

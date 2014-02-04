@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ASIVesteSede.Models.Produto>
+
+@{
+    ViewBag.Title = "Stock";
+}
+
+<h2>Index</h2>
+
+<p>
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Designacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fornecedor )
+        </th>
+        <th>
+            Qtd
+        </th>
+       <th>
+            Minimo
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fornecedor.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StockQtd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StockMinimo)
+        </td>
+    </tr>
+}
+
+</table>

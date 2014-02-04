@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<ASIVesteSede.Models.Venda>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Vendas";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
 </p>
 <table>
     <tr>
@@ -18,6 +17,7 @@
             @Html.DisplayNameFor(model => model.MoradaCliente)
         </th>
         <th>Estado</th>
+        <th>Produtos</th>
         <th></th>
     </tr>
 
@@ -32,12 +32,27 @@
         <td>
              @Html.DisplayFor(modelItem => item.Estado)
         </td>
-
         <td>
+            <table>
+            @foreach( var prod in item.Produtos ) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => prod.Codigo )
+                    </td>
+                    <td>
+                       @Html.DisplayFor(modelItem => prod.Qtd )
+                    </td>
+                </tr>    
+            }
+            </table>
+
+        </td>
+        <!-- <td>
+
             @Html.ActionLink("Edit", "Edit", new { id=item.VendaID }) |
             @Html.ActionLink("Details", "Details", new { id=item.VendaID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.VendaID })
-        </td>
+        </td> -->
     </tr>
 }
 

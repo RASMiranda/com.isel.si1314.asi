@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<ASIVesteSede.Models.Produto>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Produtos";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Ver Stock", "Stock")
 </p>
 <table>
     <tr>
@@ -16,6 +16,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Designacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fornecedor )
         </th>
         <th>
             @Html.DisplayNameFor(model => model.StockQtd)
@@ -36,6 +39,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Designacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fornecedor.Nome)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.StockQtd)

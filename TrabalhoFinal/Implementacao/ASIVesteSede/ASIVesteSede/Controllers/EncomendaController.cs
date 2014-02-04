@@ -19,10 +19,35 @@ namespace ASIVesteSede.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Encomendas.ToList());
+            return View(db.Encomendas.Include(p => p.Produto).OrderBy( p=> p.EncomendaID).ToList());
         }
 
-        //
+        // dá entrada de uma encomenda pendente
+        // GET: /Encomenda/Entrada
+
+
+        public ActionResult Entrada(int id = 0)
+        {
+            Encomenda encomenda = db.Encomendas.Find(id); 
+
+            if (encomenda == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                encomenda.Estado = EstadoEncomenda.Recebida;
+                db.Entry(encomenda).State = EntityState.Modified;
+                db.SaveChanges();
+
+            }
+            return RedirectToAction("Index");
+        }
+
+
+
+
+        //s
         // GET: /Encomenda/Details/5
 
         public ActionResult Details(int id = 0)

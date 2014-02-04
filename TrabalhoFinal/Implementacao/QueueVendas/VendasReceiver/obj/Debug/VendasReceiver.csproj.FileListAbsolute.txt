@@ -1,0 +1,10 @@
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.exe.config
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.exe
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.pdb
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\EntityFramework.dll
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\QueueVendas.dll
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\QueueVendas.pdb
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\EntityFramework.xml
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.csprojResolveAssemblyReference.cache
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.exe
+C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.pdb

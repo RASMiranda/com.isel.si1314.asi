@@ -19,12 +19,12 @@ namespace ASIVesteSede.Controllers
 
         public ActionResult Index()
         {
-            //return View(db.Vendas.Include(s =>s.Produtos ).Where( s=> s.Estado == EstadoVenda.Pendente).ToList());
-            return View(db.Vendas.Where(s => s.Estado == EstadoVenda.Pendente).ToList());
+            return View(db.Vendas.Include(s =>s.Produtos ).Where( s=> s.Estado == EstadoVenda.Pendente).ToList());
+            //return View(db.Vendas.Where(s => s.Estado == EstadoVenda.Pendente).ToList());
         }
 
         //
-        // GET: /Expedicao/Details/5
+        // GET: /Expedicao/
 
         public ActionResult Expedicao(int id = 0)
         {

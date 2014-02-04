@@ -19,7 +19,12 @@ namespace ASIVesteSede.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Vendas.ToList());
+            
+            var vendas = db.Vendas.Include(v => v.Produtos).OrderBy( v => v.VendaID);
+
+            
+            
+            return View(vendas.ToList());
         }
 
         //

@@ -19,7 +19,16 @@ namespace ASIVesteSede.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Produtos.ToList());
+            var produtos = db.Produtos.Include(p => p.Fornecedor);
+            return View( produtos.ToList());
+        }
+
+        // GET: /ProdutoStock/
+
+        public ActionResult Stock()
+        {
+            var produtos = db.Produtos.Include(p => p.Fornecedor).OrderBy( p => p.Codigo );
+            return View(produtos.ToList());
         }
 
         //
