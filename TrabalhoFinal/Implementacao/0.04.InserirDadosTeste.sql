@@ -27,7 +27,7 @@ insert into [dbo].Produto
 	( Codigo, Tipo, Designacao, Preco, StockQtd, StockMinimo, [Fornecedor_FornecedorID]) 
 Values
 			(N'SC001',0,N'Camisa Senhora modelo Roxane', 59.90, 10, 5, 1),
-			(N'SC002',0,N'Camisa Senhora Ariane botões', 39.90, 10, 5, 1),
+			(N'SC022',0,N'Camisa Senhora Ariane botões', 39.90, 10, 5, 1),
 			(N'CC001',1,N'Casaco Castanho criança', 40, 5, 2, 1),
 			(N'CC002',1,N'Casaco Castanho junior', 45, 7, 2, 1),
 			(N'HC001',2,N'Casaco Castanho Adulto', 54.99 , 7, 5, 1),
@@ -52,7 +52,7 @@ insert into [dbo].ProdutoHD
 	( Codigo, Designacao, Preco, StockQtd) 
 Values
 			('SC001',N'Camisa Senhora modelo Roxane', 59.90, 10),
-			('SC002',N'Camisa Senhora Ariane botões', 39.90, 10),
+			('SC022',N'Camisa Senhora Ariane botões', 39.90, 10),
 			('CC001',N'Casaco Castanho criança', 40, 5),
 			('CC002',N'Casaco Castanho junior', 45, 7)
 ;
