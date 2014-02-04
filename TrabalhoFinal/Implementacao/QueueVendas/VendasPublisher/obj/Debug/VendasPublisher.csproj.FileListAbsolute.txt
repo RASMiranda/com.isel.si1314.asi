@@ -1,8 +1,0 @@
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\bin\Debug\VendasPublisher.exe.config
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\bin\Debug\VendasPublisher.exe
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\bin\Debug\VendasPublisher.pdb
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\bin\Debug\QueueVendas.dll
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\bin\Debug\QueueVendas.pdb
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\obj\Debug\VendasPublisher.csprojResolveAssemblyReference.cache
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\obj\Debug\VendasPublisher.exe
-C:\Users\Frederico\work\ISEL\github\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasPublisher\obj\Debug\VendasPublisher.pdb
