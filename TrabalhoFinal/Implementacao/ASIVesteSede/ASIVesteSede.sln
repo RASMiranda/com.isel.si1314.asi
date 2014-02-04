@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASIVesteSede", "ASIVesteSede\ASIVesteSede.csproj", "{A33500C3-EE26-4D3A-9663-7923BB3072B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueVendas", "..\QueueVendas\QueueVendas\QueueVendas.csproj", "{F9585BEF-766F-4253-8335-12B2E71F7CC5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendasReceiver", "..\QueueVendas\VendasReceiver\VendasReceiver.csproj", "{0F7860E1-E38F-455F-AED0-131F44DCD56A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueVendasInterfaces", "..\QueueVendasInterfaces\QueueVendasInterfaces.csproj", "{9C90C181-52DF-4033-B35E-1B5FC55C214C}"
@@ -19,10 +17,6 @@ Global
 		{A33500C3-EE26-4D3A-9663-7923BB3072B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A33500C3-EE26-4D3A-9663-7923BB3072B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A33500C3-EE26-4D3A-9663-7923BB3072B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F9585BEF-766F-4253-8335-12B2E71F7CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9585BEF-766F-4253-8335-12B2E71F7CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9585BEF-766F-4253-8335-12B2E71F7CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9585BEF-766F-4253-8335-12B2E71F7CC5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F7860E1-E38F-455F-AED0-131F44DCD56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F7860E1-E38F-455F-AED0-131F44DCD56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F7860E1-E38F-455F-AED0-131F44DCD56A}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -35,6 +35,46 @@
           <ScalarProperty Name="Fornecedor_FornecedorID" ColumnName="Fornecedor_FornecedorID" />
         </MappingFragment>
       </EntityTypeMapping>
+      <EntityTypeMapping TypeName="Model.Produto">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Model.Store.sp_inserirProduto">
+            <ScalarProperty Name="Fornecedor_FornecedorID" ParameterName="FornecedorId" />
+            <!--
+                  <AssociationEnd AssociationSet="FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID" From="Produto" To="Fornecedor">
+                    <ScalarProperty Name="FornecedorID" ParameterName="FornecedorId" />
+                  </AssociationEnd>
+                  -->
+            <ScalarProperty Name="Preco" ParameterName="Preco" />
+            <ScalarProperty Name="StockMinimo" ParameterName="StockMinimo" />
+            <ScalarProperty Name="StockQtd" ParameterName="StockQtd" />
+            <ScalarProperty Name="Designacao" ParameterName="Designacao" />
+            <ScalarProperty Name="Codigo" ParameterName="Codigo" />
+            <ScalarProperty Name="Tipo" ParameterName="Tipo" />
+            <ResultBinding Name="ProdutoID" ColumnName="ProdutoId" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Model.Store.sp_actualizarProduto">
+            <ScalarProperty Name="Codigo" ParameterName="novoCodigo" Version="Current" />
+            <ScalarProperty Name="Fornecedor_FornecedorID" ParameterName="FornecedorId" Version="Current" />
+            <ScalarProperty Name="ProdutoID" ParameterName="ProdutoId" Version="Original" />
+            <ScalarProperty Name="Preco" ParameterName="Preco" Version="Current" />
+            <ScalarProperty Name="StockMinimo" ParameterName="StockMinimo" Version="Current" />
+            <ScalarProperty Name="StockQtd" ParameterName="StockQtd" Version="Current" />
+            <ScalarProperty Name="Designacao" ParameterName="Designacao" Version="Current" />
+            <ScalarProperty Name="Codigo" ParameterName="Codigo" Version="Original" />
+            <ScalarProperty Name="Tipo" ParameterName="Tipo" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Model.Store.sp_removerProduto">
+            <ScalarProperty Name="ProdutoID" ParameterName="ProdutoId" />
+            <ScalarProperty Name="Codigo" ParameterName="Codigo" />
+          </DeleteFunction>
+          <!--
+                <DeleteFunction FunctionName="Model.Store.sp_removerProduto">
+                  <ScalarProperty Name="Codigo" ParameterName="Codigo" />
+                  <ScalarProperty Name="ProdutoId" ParameterName="ProdutoId" />
+                </DeleteFunction>
+                -->
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Vendas">
       <EntityTypeMapping TypeName="Model.Venda">
@@ -61,5 +101,8 @@
     <FunctionImportMapping FunctionImportName="sp_realizarEncomenda" FunctionName="Model.Store.sp_realizarEncomenda" />
     <FunctionImportMapping FunctionImportName="sp_realizarVenda" FunctionName="Model.Store.sp_realizarVenda" />
     <FunctionImportMapping FunctionImportName="sp_receberEncomenda" FunctionName="Model.Store.sp_receberEncomenda" />
+    <FunctionImportMapping FunctionImportName="sp_actualizarProduto" FunctionName="Model.Store.sp_actualizarProduto" />
+    <FunctionImportMapping FunctionImportName="sp_inserirProduto" FunctionName="Model.Store.sp_inserirProduto" />
+    <FunctionImportMapping FunctionImportName="sp_removerProduto" FunctionName="Model.Store.sp_removerProduto" />
   </EntityContainerMapping>
 </Mapping>

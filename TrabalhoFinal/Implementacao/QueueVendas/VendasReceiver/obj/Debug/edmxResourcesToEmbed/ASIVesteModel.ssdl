@@ -112,12 +112,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="sp_actualizarProduto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProdutoId" Type="int" Mode="In" />
+    <Parameter Name="Tipo" Type="int" Mode="In" />
+    <Parameter Name="Codigo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Designacao" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="StockQtd" Type="int" Mode="In" />
+    <Parameter Name="StockMinimo" Type="int" Mode="In" />
+    <Parameter Name="Preco" Type="real" Mode="In" />
+    <Parameter Name="FornecedorId" Type="int" Mode="In" />
+    <Parameter Name="novoCodigo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_inserirProduto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tipo" Type="int" Mode="In" />
+    <Parameter Name="Codigo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Designacao" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="StockQtd" Type="int" Mode="In" />
+    <Parameter Name="StockMinimo" Type="int" Mode="In" />
+    <Parameter Name="Preco" Type="real" Mode="In" />
+    <Parameter Name="FornecedorId" Type="int" Mode="In" />
+  </Function>
   <Function Name="sp_realizarEncomenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="CodigoProduto" Type="varchar" Mode="In" />
-    <Parameter Name="EncomendaRecebida" Type="int" Mode="In" />
     <Parameter Name="QtdEncomendada" Type="int" Mode="In" />
     <Parameter Name="VendaId" Type="int" Mode="In" />
-    <Parameter Name="EncomendaId" Type="int" Mode="InOut" />
   </Function>
   <Function Name="sp_realizarVenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="NomeCliente" Type="varchar" Mode="In" />
@@ -127,6 +145,10 @@
   </Function>
   <Function Name="sp_receberEncomenda" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="EncomendaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_removerProduto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProdutoId" Type="int" Mode="In" />
+    <Parameter Name="Codigo" Type="nvarchar(max)" Mode="In" />
   </Function>
   <EntityContainer Name="ModelStoreContainer">
     <EntitySet Name="Encomenda" EntityType="Self.Encomenda" Schema="dbo" store:Type="Tables" />

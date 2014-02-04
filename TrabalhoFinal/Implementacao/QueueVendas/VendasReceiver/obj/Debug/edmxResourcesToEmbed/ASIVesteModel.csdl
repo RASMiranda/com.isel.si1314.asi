@@ -150,10 +150,8 @@
     </AssociationSet>
     <FunctionImport Name="sp_realizarEncomenda">
       <Parameter Name="CodigoProduto" Mode="In" Type="String" />
-      <Parameter Name="EncomendaRecebida" Mode="In" Type="Int32" />
       <Parameter Name="QtdEncomendada" Mode="In" Type="Int32" />
       <Parameter Name="VendaId" Mode="In" Type="Int32" />
-      <Parameter Name="EncomendaId" Mode="InOut" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="sp_realizarVenda">
       <Parameter Name="NomeCliente" Mode="In" Type="String" />
@@ -163,6 +161,30 @@
     </FunctionImport>
     <FunctionImport Name="sp_receberEncomenda">
       <Parameter Name="EncomendaId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_actualizarProduto">
+      <Parameter Name="ProdutoId" Mode="In" Type="Int32" />
+      <Parameter Name="Tipo" Mode="In" Type="Int32" />
+      <Parameter Name="Codigo" Mode="In" Type="String" />
+      <Parameter Name="Designacao" Mode="In" Type="String" />
+      <Parameter Name="StockQtd" Mode="In" Type="Int32" />
+      <Parameter Name="StockMinimo" Mode="In" Type="Int32" />
+      <Parameter Name="Preco" Mode="In" Type="Single" />
+      <Parameter Name="FornecedorId" Mode="In" Type="Int32" />
+      <Parameter Name="novoCodigo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_inserirProduto">
+      <Parameter Name="Tipo" Mode="In" Type="Int32" />
+      <Parameter Name="Codigo" Mode="In" Type="String" />
+      <Parameter Name="Designacao" Mode="In" Type="String" />
+      <Parameter Name="StockQtd" Mode="In" Type="Int32" />
+      <Parameter Name="StockMinimo" Mode="In" Type="Int32" />
+      <Parameter Name="Preco" Mode="In" Type="Single" />
+      <Parameter Name="FornecedorId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_removerProduto">
+      <Parameter Name="ProdutoId" Mode="In" Type="Int32" />
+      <Parameter Name="Codigo" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
 </Schema>
