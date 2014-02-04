@@ -6,7 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using System.Transactions;
 
-using QueueVendas;
+using QueueVendasInterfaces;
 
 namespace VendasReceiver
 {

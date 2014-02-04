@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Messaging;
 using System.ServiceModel;
-using QueueVendas;
+using QueueVendasInterfaces;
 using System.Transactions;
 using ASIVesteLoja.Models;
 using ASIVesteLoja.DAL;

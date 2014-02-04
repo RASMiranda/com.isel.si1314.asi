@@ -12,8 +12,8 @@ D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.exe
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\VendasReceiver.pdb
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\EntityFramework.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\QueueVendas.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\QueueVendas.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\QueueVendasInterfaces.dll
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\QueueVendasInterfaces.pdb
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\bin\Debug\EntityFramework.xml
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.csprojResolveAssemblyReference.cache
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\VendasReceiver\obj\Debug\VendasReceiver.exe

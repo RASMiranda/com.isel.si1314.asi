@@ -424,9 +424,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\QueueVendas\QueueVendas\QueueVendas.csproj">
-      <Project>{f9585bef-766f-4253-8335-12b2e71f7cc5}</Project>
-      <Name>QueueVendas</Name>
+    <ProjectReference Include="..\..\QueueVendasInterfaces\QueueVendasInterfaces.csproj">
+      <Project>{9c90c181-52df-4033-b35e-1b5fc55c214c}</Project>
+      <Name>QueueVendasInterfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
