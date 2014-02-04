@@ -95,9 +95,13 @@ begin
 			print 'QE:' + cast(@QtdAEncomendar as varchar)
 
 			EXECUTE [dbo].[sp_realizarEncomenda]
-				@CodigoProduto = @CodigoProduto,	@EncomendaRecebida = @ENCOMENDA_AGUARDA_RECEPCAO,
-				@QtdEncomendada = @QtdAEncomendar, 	@VendaId = null,
-				@EncomendaId = @EncomendaId OUTPUT
+				@CodigoProduto = @CodigoProduto,	
+				@QtdEncomendada = @QtdAEncomendar, 
+				@VendaId = null
+			--EXECUTE [dbo].[sp_realizarEncomenda]
+			--	@CodigoProduto = @CodigoProduto,	@EncomendaRecebida = @ENCOMENDA_AGUARDA_RECEPCAO,
+			--	@QtdEncomendada = @QtdAEncomendar, 	@VendaId = null,
+			--	@EncomendaId = @EncomendaId OUTPUT
 		end
 
 	end
@@ -107,9 +111,13 @@ begin
 		SET @QtdAEncomendar = CASE WHEN 2*@StockMinimo > @Qtd THEN 2*@StockMinimo ELSE @Qtd END;
 
 		EXECUTE [dbo].[sp_realizarEncomenda]
-			@CodigoProduto = @CodigoProduto,	@EncomendaRecebida = @ENCOMENDA_AGUARDA_RECEPCAO, 
-			@QtdEncomendada = @QtdAEncomendar, 	@VendaId = @VendaId, -- @VendaId para se saber qual é a venda que provocou esta encomenda
-			@EncomendaId = @EncomendaId OUTPUT
+			@CodigoProduto = @CodigoProduto,	
+			@QtdEncomendada = @QtdAEncomendar, 	
+			@VendaId = @VendaId -- @VendaId para se saber qual é a venda que provocou esta encomenda
+		--EXECUTE [dbo].[sp_realizarEncomenda]
+		--	@CodigoProduto = @CodigoProduto,	@EncomendaRecebida = @ENCOMENDA_AGUARDA_RECEPCAO, 
+		--	@QtdEncomendada = @QtdAEncomendar, 	@VendaId = @VendaId, -- @VendaId para se saber qual é a venda que provocou esta encomenda
+		--	@EncomendaId = @EncomendaId OUTPUT
 
 	end
 
