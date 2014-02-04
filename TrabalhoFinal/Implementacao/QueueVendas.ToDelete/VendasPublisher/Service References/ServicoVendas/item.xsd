@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/QueueVendas" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/QueueVendas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="VendaOrdem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="moradaCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomeCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numItems" type="xs:int" />
+      <xs:element minOccurs="0" name="vendaEstado" type="tns:VendaEstados" />
+      <xs:element minOccurs="0" name="vendaItems" nillable="true" type="tns:ArrayOfVendaOrdemItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VendaOrdem" nillable="true" type="tns:VendaOrdem" />
+  <xs:simpleType name="VendaEstados">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pendente" />
+      <xs:enumeration value="encomenda" />
+      <xs:enumeration value="entregue" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="VendaEstados" nillable="true" type="tns:VendaEstados" />
+  <xs:complexType name="ArrayOfVendaOrdemItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VendaOrdemItem" nillable="true" type="tns:VendaOrdemItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVendaOrdemItem" nillable="true" type="tns:ArrayOfVendaOrdemItem" />
+  <xs:complexType name="VendaOrdemItem">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="VendaOrdemItem" nillable="true" type="tns:VendaOrdemItem" />
+</xs:schema>

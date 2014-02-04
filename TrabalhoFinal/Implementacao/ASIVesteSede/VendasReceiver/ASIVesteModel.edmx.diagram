@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9e4eab279d2841d1ae94eda322778ac0" Name="ASIVesteModelDiagram" ZoomLevel="55">
+        <EntityTypeShape EntityType="Model.Encomenda" Width="1.5" PointX="5.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Fornecedor" Width="1.5" PointX="0.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Produto" Width="2" PointX="2.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Venda" Width="1.5" PointX="9.5" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.VendaProduto" Width="1.5" PointX="7.375" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_dbo_Encomenda_dbo_Produto_Produto_ProdutoID" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Encomenda_dbo_VendaProdutos_VendaProduto_VendaProdutosID" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_Produto_dbo_Fornecedor_Fornecedor_FornecedorID" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_VendaProdutos_dbo_Produto_Produto_ProdutoID" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_VendaProdutos_dbo_Venda_Venda_VendaID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
