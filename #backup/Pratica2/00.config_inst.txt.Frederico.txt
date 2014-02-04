@@ -1,7 +1,0 @@
-PrincipalDB=aluno_siad-pc\one
-MirrorDB=aluno_siad-pc\two
-WitnessDB=aluno_siad-pc\three
-
-Rep0=FFSS
-Rep1=FFSS\ISELALFA
-Rep2=FFSS\ISELBETA

@@ -4,6 +4,8 @@ ISEL MEIC si1314 ASI Trabalho Final
 
 ===================
 ToDo
+	http://technet.microsoft.com/en-us/library/ms152543.aspx
+
 	Relatorio
 		Esquema Logico Global:
 			Produto(Id[PK],IdFornecedor[FK],Codigo,Tipo,Designacao,Preco,QuantidadeStock,QuantidadeStockMin)
