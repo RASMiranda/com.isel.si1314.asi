@@ -263,6 +263,15 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </Content>
+    <None Include="Web.config.RUI">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.config.Debug.RUI">
+      <DependentUpon>Web.config.RUI</DependentUpon>
+    </None>
+    <None Include="Web.config.Release.RUI">
+      <DependentUpon>Web.config.RUI</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
