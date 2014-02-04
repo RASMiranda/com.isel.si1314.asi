@@ -51,7 +51,7 @@ namespace ASIVesteLoja.Controllers
                         return false;
                     }
 
-                    //TODO: Assumindo que se aceita stock = 0, correcto?
+                    //TODO?: Assumindo que se aceita stock = 0, correcto?
                     if (produto.StockQtd - venda.quantidade < 0)
                     {
                         erro = "Stock indisponível";
@@ -62,9 +62,10 @@ namespace ASIVesteLoja.Controllers
 
                     produto.StockQtd = produto.StockQtd - venda.quantidade;
 
-                    //TODO: Validar iconsistencia? (se entretanto o produto da base de dados já foi actualizado por outra venda)
+                    //TODO!: Validar iconsistencia dados (se entretanto o produto da base de dados já foi actualizado por outra venda)
 
                     context.SaveChanges();
+
                 }
                 // Complete the transaction.
                 scope.Complete();
