@@ -99,3 +99,4 @@ D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteLoja
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteLoja\ASIVesteLoja\obj\Debug\ASIVesteLoja.pdb
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteLoja\ASIVesteLoja\bin\ASIVesteLoja.dll
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteLoja\ASIVesteLoja\bin\ASIVesteLoja.pdb
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteLoja\ASIVesteLoja\obj\Debug\ASIVesteLoja.Migrations.V7.resources
