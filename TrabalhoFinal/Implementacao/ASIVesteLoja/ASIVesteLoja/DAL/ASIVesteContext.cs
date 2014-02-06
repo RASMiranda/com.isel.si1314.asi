@@ -14,5 +14,7 @@ namespace ASIVesteLoja.DAL
         }
 
         public DbSet<Venda> Vendas { get; set; }
+
+        public DbSet<Reclamacao> Reclamacaos { get; set; }
      }
 }

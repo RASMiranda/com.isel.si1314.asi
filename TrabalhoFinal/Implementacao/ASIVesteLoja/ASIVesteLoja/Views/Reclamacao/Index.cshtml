@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ASIVesteLoja.Models.Reclamacao>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Reclamações</h2>
+
+<p>
+    @Html.ActionLink("Inserir Nova", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteBI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Texto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataInsercao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClienteBI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Texto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataInsercao)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.ReclamacaoID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.ReclamacaoID }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.ReclamacaoID })
+        </td>
+    </tr>
+}
+
+</table>

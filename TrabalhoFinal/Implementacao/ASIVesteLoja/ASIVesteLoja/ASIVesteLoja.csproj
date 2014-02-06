@@ -193,6 +193,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProdutoController.cs" />
+    <Compile Include="Controllers\ReclamacaoController.cs" />
     <Compile Include="Controllers\VendaController.cs" />
     <Compile Include="Controllers\VendaHelper.cs" />
     <Compile Include="DAL\ASIVesteContext.cs" />
@@ -240,8 +241,13 @@
     <Compile Include="Migrations\201402051953211_V7.Designer.cs">
       <DependentUpon>201402051953211_V7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201402060008533_V8_Reclamacao.cs" />
+    <Compile Include="Migrations\201402060008533_V8_Reclamacao.Designer.cs">
+      <DependentUpon>201402060008533_V8_Reclamacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Reclamacao.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Models\Venda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -304,6 +310,11 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Reclamacao\Index.cshtml" />
+    <Content Include="Views\Reclamacao\Details.cshtml" />
+    <Content Include="Views\Reclamacao\Create.cshtml" />
+    <Content Include="Views\Reclamacao\Edit.cshtml" />
+    <Content Include="Views\Reclamacao\Delete.cshtml" />
     <None Include="Web.config.Debug.LHD">
       <DependentUpon>Web.config.LHD</DependentUpon>
     </None>
@@ -428,6 +439,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201402051953211_V7.resx">
       <DependentUpon>201402051953211_V7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402060008533_V8_Reclamacao.resx">
+      <DependentUpon>201402060008533_V8_Reclamacao.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
