@@ -36,6 +36,7 @@ namespace ASIVesteLoja.Controllers
 
         internal static bool efectuaVenda(Venda venda, out String erro)
         {
+
             //TODO?: Try Catch->Pretty message?
 
             using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
@@ -55,21 +56,20 @@ namespace ASIVesteLoja.Controllers
                         }
 
                         //TODO?: Assumindo que se aceita stock = 0, correcto?
-                        if (produto.StockQtd - venda.quantidade < 0)
+                        if (produto.StockQtd <  venda.quantidade )
                         {
                             erro = "Stock indisponível";
                             return false;
                         }
 
-                        enviaVendaParaSede(venda, produto.Preco);
-
+                        //é usado um controlo transacional pessimista, pq é rápido: lê e actualiza (não tem tempos de utilizador nem grupo de actualização)
                         produto.StockQtd = produto.StockQtd - venda.quantidade;
-
-                        //TODO!: Validar iconsistencia dados (se entretanto o produto da base de dados já foi actualizado por outra venda)
-
                         context.SaveChanges();
+
+                        enviaVendaParaSede(venda, produto.Preco);
+                                                
                     }
-                    //catch (DbUpdateConcurrencyException ex)
+                    //nunca ocorrerá -TODO: retirar
                     catch (DbUpdateException ex)
                     {
                         var entry = ex.Entries.Single();
