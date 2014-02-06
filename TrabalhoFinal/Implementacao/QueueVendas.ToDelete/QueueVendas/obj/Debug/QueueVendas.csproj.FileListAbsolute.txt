@@ -1,5 +1,0 @@
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\QueueVendas\bin\QueueVendas.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\QueueVendas\bin\QueueVendas.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\QueueVendas\obj\Debug\QueueVendas.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\QueueVendas\obj\Debug\QueueVendas.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendas\QueueVendas\obj\Debug\QueueVendas.csprojResolveAssemblyReference.cache
