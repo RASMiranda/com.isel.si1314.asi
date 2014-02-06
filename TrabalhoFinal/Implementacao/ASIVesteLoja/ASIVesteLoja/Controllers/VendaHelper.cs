@@ -9,6 +9,7 @@ using QueueVendasInterfaces;
 using System.Transactions;
 using ASIVesteLoja.Models;
 using ASIVesteLoja.DAL;
+using System.Data.Entity.Infrastructure;
 
 namespace ASIVesteLoja.Controllers
 {
@@ -45,33 +46,55 @@ namespace ASIVesteLoja.Controllers
                                         .Where(b => b.Codigo == venda.codigoProduto)
                                         .FirstOrDefault();
 
-                    if (produto == null)
+                    try
                     {
-                        erro = "Produto inexistente";
-                        return false;
+                        if (produto == null)
+                        {
+                            erro = "Produto inexistente";
+                            return false;
+                        }
+
+                        //TODO?: Assumindo que se aceita stock = 0, correcto?
+                        if (produto.StockQtd - venda.quantidade < 0)
+                        {
+                            erro = "Stock indisponível";
+                            return false;
+                        }
+
+                        enviaVendaParaSede(venda, produto.Preco);
+
+                        produto.StockQtd = produto.StockQtd - venda.quantidade;
+
+                        //TODO!: Validar iconsistencia dados (se entretanto o produto da base de dados já foi actualizado por outra venda)
+
+                        context.SaveChanges();
+                    }
+                    //catch (DbUpdateConcurrencyException ex)
+                    catch (DbUpdateException ex)
+                    {
+                        var entry = ex.Entries.Single();
+                        var clientValues = (Produto)entry.Entity;
+                        var databaseValues = (Produto)entry.GetDatabaseValues().ToObject();
+
+                        if (databaseValues.StockQtd != clientValues.StockQtd)
+                        {
+                            //TODO databaseValues.StockQtd != clientValues.StockQtd
+                            throw new Exception("TODO databaseValues.StockQtd != clientValues.StockQtd");
+                        }
+                        produto.RowVersion = databaseValues.RowVersion;
                     }
 
-                    //TODO?: Assumindo que se aceita stock = 0, correcto?
-                    if (produto.StockQtd - venda.quantidade < 0)
-                    {
-                        erro = "Stock indisponível";
-                        return false;
-                    }
+                }//END using (var context = new ASIVesteContext())
 
-                    enviaVendaParaSede(venda, produto.Preco);
-
-                    produto.StockQtd = produto.StockQtd - venda.quantidade;
-
-                    //TODO!: Validar iconsistencia dados (se entretanto o produto da base de dados já foi actualizado por outra venda)
-
-                    context.SaveChanges();
-
-                }
                 // Complete the transaction.
                 scope.Complete();
-            }
+
+            }//END using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
+
             erro = "";
             return true;
-        }
-    }
+
+        }//END efectuaVenda
+
+    }//END class VendaHelper
 }
