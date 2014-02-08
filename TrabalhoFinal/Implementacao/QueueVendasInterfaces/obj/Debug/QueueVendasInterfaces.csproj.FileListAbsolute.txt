@@ -1,4 +1,0 @@
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendasInterfaces\bin\Debug\QueueVendasInterfaces.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendasInterfaces\bin\Debug\QueueVendasInterfaces.pdb
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendasInterfaces\obj\Debug\QueueVendasInterfaces.dll
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\QueueVendasInterfaces\obj\Debug\QueueVendasInterfaces.pdb
