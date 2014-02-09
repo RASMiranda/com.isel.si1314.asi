@@ -8,6 +8,7 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Objects;
 using System.Data.Entity.Infrastructure;
+using ASIVesteSede.Models;
 
 namespace ASIVesteSede.DAL
 {
@@ -158,6 +159,8 @@ namespace ASIVesteSede.DAL
 
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_removerProduto", produtoIdParameter, codigoParameter);
         }
+
+        public DbSet<Reclamacao> Reclamacaos { get; set; }
 
     }
     

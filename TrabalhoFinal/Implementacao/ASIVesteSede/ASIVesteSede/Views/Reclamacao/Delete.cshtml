@@ -1,0 +1,40 @@
+﻿@model ASIVesteSede.Models.Reclamacao
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Tem a certeza que pretende eliminar?</h3>
+<fieldset>
+    <legend>Reclamacao</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ClienteBI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ClienteBI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Texto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Texto)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataInsercao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataInsercao)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

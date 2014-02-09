@@ -164,6 +164,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="Controllers\ExpedicaoController.cs" />
+    <Compile Include="Controllers\ReclamacaoController.cs" />
     <Compile Include="Migrations\201401292027317_v0.cs" />
     <Compile Include="Migrations\201401292027317_v0.Designer.cs">
       <DependentUpon>201401292027317_v0.cs</DependentUpon>
@@ -185,6 +186,10 @@
     <Compile Include="Migrations\201402031603571_V1.Designer.cs">
       <DependentUpon>201402031603571_V1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201402091625402_V2-Reclamacao.cs" />
+    <Compile Include="Migrations\201402091625402_V2-Reclamacao.Designer.cs">
+      <DependentUpon>201402091625402_V2-Reclamacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Encomenda.cs" />
@@ -192,6 +197,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\Reclamacao.cs" />
     <Compile Include="Models\Venda.cs" />
     <Compile Include="Models\VendaProdutos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -263,6 +269,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Reclamacao\Index.cshtml" />
+    <Content Include="Views\Reclamacao\Details.cshtml" />
+    <Content Include="Views\Reclamacao\Create.cshtml" />
+    <Content Include="Views\Reclamacao\Edit.cshtml" />
+    <Content Include="Views\Reclamacao\Delete.cshtml" />
     <None Include="Web.config.RUI">
       <SubType>Designer</SubType>
     </None>
@@ -367,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201402031603571_V1.resx">
       <DependentUpon>201402031603571_V1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201402091625402_V2-Reclamacao.resx">
+      <DependentUpon>201402091625402_V2-Reclamacao.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

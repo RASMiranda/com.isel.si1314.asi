@@ -1,0 +1,36 @@
+﻿@model ASIVesteSede.Models.Reclamacao
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<fieldset>
+    <legend>Reclamacao</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ClienteBI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ClienteBI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Texto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Texto)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataInsercao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataInsercao)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id=Model.ReclamacaoID }) |
+    @Html.ActionLink("Voltar à Lista", "Index")
+</p>

@@ -15,18 +15,19 @@
                     <p class="site-title">@Html.ActionLink("ASIVeste", "Index", "Home")</p>
                 </div>
                 <div class="float-right">
-                    <section id="login">
+                    @*<section id="login">
                         @Html.Partial("_LoginPartial")
-                    </section>
+                    </section>*@
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            @*<li>@Html.ActionLink("About", "About", "Home")</li>*@
                             <li>@Html.ActionLink("Fornecedores", "Index", "Fornecedor")</li>
                             <li>@Html.ActionLink("Produtos", "Index", "Produto")</li>
                             <li>@Html.ActionLink("Vendas", "Index", "Venda")</li>
                             <li>@Html.ActionLink("Encomendas", "Index", "Encomenda")</li>
                             <li>@Html.ActionLink("Expedição", "Index", "Expedicao")</li>
+                            <li>@Html.ActionLink("Reclamações", "Index", "Reclamacao")</li>
                         </ul>
                     </nav>
                 </div>
