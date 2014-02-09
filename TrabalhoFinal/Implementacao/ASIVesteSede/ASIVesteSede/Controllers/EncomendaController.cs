@@ -25,24 +25,37 @@ namespace ASIVesteSede.Controllers
         // dá entrada de uma encomenda pendente
         // GET: /Encomenda/Entrada
 
-
         public ActionResult Entrada(int id = 0)
         {
-            Encomenda encomenda = db.Encomendas.Find(id); 
-
+            Encomenda encomenda = db.Encomendas.Find(id);
             if (encomenda == null)
             {
                 return HttpNotFound();
             }
             else
             {
-                encomenda.Estado = EstadoEncomenda.Recebida;
-                db.Entry(encomenda).State = EntityState.Modified;
-                db.SaveChanges();
-
+                db.sp_receberEncomenda(id);
             }
             return RedirectToAction("Index");
         }
+
+        //public ActionResult Entrada(int id = 0)
+        //{
+        //    Encomenda encomenda = db.Encomendas.Find(id); 
+
+        //    if (encomenda == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    else
+        //    {
+        //        encomenda.Estado = EstadoEncomenda.Recebida;
+        //        db.Entry(encomenda).State = EntityState.Modified;
+        //        db.SaveChanges();
+
+        //    }
+        //    return RedirectToAction("Index");
+        //}
 
 
 

@@ -9,6 +9,8 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Objects;
 using System.Data.Entity.Infrastructure;
 using ASIVesteSede.Models;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace ASIVesteSede.DAL
 {
@@ -66,12 +68,20 @@ namespace ASIVesteSede.DAL
 
         public virtual int sp_receberEncomenda(Nullable<int> encomendaId)
         {
-            var encomendaIdParameter = encomendaId.HasValue ?
-                new ObjectParameter("EncomendaId", encomendaId) :
-                new ObjectParameter("EncomendaId", typeof(int));
+            var encomendaIdParameter = new SqlParameter("Id", SqlDbType.Int);
+            encomendaIdParameter.Value = encomendaId;
 
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_receberEncomenda", encomendaIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteStoreCommand("sp_receberEncomenda @EncomendaId=@Id", encomendaIdParameter);
         }
+
+        //public virtual int sp_receberEncomenda(Nullable<int> encomendaId)
+        //{
+        //    var encomendaIdParameter = encomendaId.HasValue ?
+        //        new ObjectParameter("EncomendaId", encomendaId) :
+        //        new ObjectParameter("EncomendaId", typeof(int));
+        //"The FunctionImport 'sp_receberEncomenda' could not be found in the container 'ASIVesteContext'."
+        //    return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_receberEncomenda", encomendaIdParameter);
+        //}
 
         public virtual int sp_actualizarProduto(Nullable<int> produtoId, Nullable<int> tipo, string codigo, string designacao, Nullable<int> stockQtd, Nullable<int> stockMinimo, Nullable<float> preco, Nullable<int> fornecedorId, string novoCodigo)
         {
