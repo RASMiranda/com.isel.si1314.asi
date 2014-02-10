@@ -44,10 +44,14 @@ D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OAuth.xml
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.xml
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
-D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csprojResolveAssemblyReference.cache
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.Migrations.v0.resources
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.Migrations.V1.resources
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csproj.GenerateResource.Cache
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.dll
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.pdb
 D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.Migrations.V2Reclamacao.resources
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\PagedList.dll
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\PagedList.Mvc.dll
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\PagedList.xml
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\bin\PagedList.Mvc.xml
+D:\Documents\GitHub\com.isel.si1314.asi\TrabalhoFinal\Implementacao\ASIVesteSede\ASIVesteSede\obj\Debug\ASIVesteSede.csprojResolveAssemblyReference.cache
